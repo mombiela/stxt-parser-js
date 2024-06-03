@@ -8,6 +8,7 @@ import { NamespaceNode } from './js/NamespaceNode.js';
 import { Node } from './js/Node.js';
 import { ParseException } from './js/ParseException.js';
 import { RootGrammar } from './js/RootGrammar.js';
+import { GrammarRetrieve } from './js/GrammarRetrieve.js';
 
 getUrlContent('https://semantictext.info/es/chapter_02.stxt')
     .then(insertContent).catch(errorContent);
@@ -95,8 +96,19 @@ try {
 
 // Ejemplo de uso de RootGrammar
 const rootGrammar = RootGrammar.generateRootGrammar();
-console.log(rootGrammar);
+console.log("ROOT GRAMMAR = " + rootGrammar);
 
 const rootGrammarContent = RootGrammar.getRootGrammarContentString();
-console.log(rootGrammarContent);
+console.log("ROOT GRAMMAR Content = " + rootGrammarContent);
 
+// Ejemplo de uso de GrammarRetrieve
+const grammarRetrieve = new GrammarRetrieve();
+grammarRetrieve.addGrammarDefinition('custom.namespace', 'Custom content');
+
+GrammarRetrieve.getNameSpaceContent('www.semantictext.info/namespace.stxt')
+    .then(content => console.log("Get NameSpace content = " + content))
+    .catch(error => console.error('Error:', error));
+
+GrammarRetrieve.getNameSpaceContent('custom.namespace')
+    .then(content => console.log("Get NameSpace content custom = " + content))
+    .catch(error => console.error('Error:', error));
