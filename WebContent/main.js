@@ -9,6 +9,7 @@ import { Node } from './js/Node.js';
 import { ParseException } from './js/ParseException.js';
 import { RootGrammar } from './js/RootGrammar.js';
 import { GrammarRetrieve } from './js/GrammarRetrieve.js';
+import { NodeToGrammar } from './NodeToGrammar.js';
 
 getUrlContent('https://semantictext.info/es/chapter_02.stxt')
     .then(insertContent).catch(errorContent);
