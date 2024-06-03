@@ -1,6 +1,6 @@
-import { getUrlContent } from './utilsURL.js';
-import { uniform } from './utilsName.js';
-import { cleanupString } from './utilsCleanup.js';
+import { getUrlContent } from './js/utilsURL.js';
+import { uniform } from './js/utilsName.js';
+import { cleanupString } from './js/utilsCleanup.js';
 
 getUrlContent('https://semantictext.info/es/chapter_02.stxt')
     .then(insertContent).catch(errorContent);
