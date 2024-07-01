@@ -54,7 +54,7 @@ async function buildContent(hash)
 		// Obtenemos content
 		let contentFromUrl = "";
 		
-		if (esDominioValido(hashParts[0]))	contentFromUrl = await getUrlContentCors(stxtUrl); 
+		if (esDominioValido(hashParts[0]))	contentFromUrl = await getUrlContentCors(stxtUrl);
 		else 								contentFromUrl = await getUrlContent(stxtUrl);
 		
 		// Final
