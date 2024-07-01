@@ -12,7 +12,7 @@ async function ContentLoaded()
 // Función para cargar la página correcta basada en el hash
 async function loadPage() 
 {
-    const hash = window.location.hash || "#home";
+    const hash = window.location.hash || "#index";
     const content = document.getElementById("content");
 
     content.innerHTML = await buildContent(hash);
@@ -37,6 +37,17 @@ async function buildContent(hash)
 		if (esDominioValido(stxtUrl))				stxtUrl = "https://" + stxtUrl;
 		else if (esNombrePaginaValido(stxtUrl))		stxtUrl = obtenerBaseURL() + "/" + stxtUrl;
 		else										return buildError("Page definition not valid");
+		
+		// Miramos otras partes
+		for (let i = 1; i<hashParts.length; i++)
+		{
+			if (hashParts[i].length == 0) throw new Exception();
+			stxtUrl = stxtUrl + "/" + hashParts[i]; 
+		}
+		
+		// Miramos final
+		if (hashParts.length == 3 || hashParts.length == 1) stxtUrl += ".stxt";
+		else stxtUrl += "/index.stxt";
 		
 		// Final
 		return "<h1>" + hash + "</h1><p>" + stxtUrl + "</p>";
