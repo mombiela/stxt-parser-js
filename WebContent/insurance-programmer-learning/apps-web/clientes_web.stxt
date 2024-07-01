@@ -1,0 +1,96 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Papel de los clientes web
+	
+	Text: 
+	    Los clientes web son los dispositivos y aplicaciones que permiten a los usuarios interactuar con la web. Los más comunes son los navegadores web, aunque también incluyen aplicaciones móviles y otros programas que acceden a recursos web. Entender el papel de los clientes web es crucial para comprender cómo los usuarios acceden y consumen contenido en Internet.
+	    
+	h2: Funciones principales de los clientes web
+	
+	Text:
+	    
+	    * **Solicitud de recursos**: Los clientes web envían solicitudes a los servidores para acceder a recursos específicos. Estas solicitudes se realizan a través de HTTP o HTTPS, utilizando URLs para identificar los recursos.
+	    
+	    * **Renderización de contenido**: Los clientes web reciben y procesan las respuestas de los servidores, que suelen incluir HTML, CSS y JavaScript. El cliente renderiza este contenido para que el usuario pueda verlo e interactuar con él.
+	    
+	    * **Interacción del usuario**: Los clientes web facilitan la interacción del usuario con los recursos web. Esto incluye hacer clic en enlaces, rellenar formularios, enviar datos y navegar entre páginas.
+	    
+	    * **Gestión de sesiones y estado**: Los clientes web gestionan las sesiones y el estado del usuario, utilizando cookies y almacenamiento local para recordar información entre diferentes solicitudes y visitas.
+	    
+	h2: Proceso de interacción entre cliente y servidor
+	
+	Text:
+	    
+	    Cuando un usuario quiere acceder a una página web, el proceso típico es el siguiente:
+	    
+	    # **Ingreso de URL**: El usuario ingresa una URL en el navegador o hace clic en un enlace.
+	    
+	    # **Solicitud HTTP/HTTPS**: El cliente envía una solicitud HTTP o HTTPS al servidor web.
+	    
+	Code:
+	    GET /index.html HTTP/1.1
+	    Host: www.ejemplo.com
+	    Connection: keep-alive
+	
+	
+	Text:
+	    
+	    # **Respuesta del servidor**: El servidor procesa la solicitud y envía una respuesta.
+	    
+	Code:
+	    HTTP/1.1 200 OK
+	    Content-Type: text/html
+	    Content-Length: 1256
+	    
+	    <!DOCTYPE html>
+	    <html>
+	    <head>
+	    <title>Página de Ejemplo</title>
+	    </head>
+	    <body>
+	    <h1>Bienvenido a nuestra página de ejemplo</h1>
+	    <p>Este es un parrafo de ejemplo.</p>
+	    </body>
+	    </html>
+	
+	
+	Text:
+	    # **Renderización y visualización**: El cliente web renderiza el contenido recibido y lo muestra al usuario.
+	    
+	h2: Componentes principales de los clientes web
+	
+	Text:
+	    
+	    * **Navegador**: Es la aplicación principal que los usuarios utilizan para navegar por la web. Ejemplos incluyen Chrome, Firefox, Safari y Edge.
+	    
+	    * **Motor de renderizado**: Es el componente del navegador que interpreta el HTML, CSS y JavaScript para mostrar la página web. Ejemplos incluyen WebKit, Blink y Gecko.
+	    
+	    * **Motor JavaScript**: Es el componente que ejecuta el código JavaScript en el navegador. Ejemplos incluyen V8 (utilizado por Chrome y Edge) y SpiderMonkey (utilizado por Firefox).
+	    
+	    * **Almacenamiento local y cookies**: Los clientes web utilizan estas tecnologías para almacenar datos de usuario y estado entre sesiones, lo que permite recordar preferencias y mantener sesiones de usuario.
+	    
+	h2: Diagrama de interacción cliente-servidor
+	
+	Text:
+	    
+	    A continuación se presenta un diagrama de interacción que ilustra cómo un cliente web y un servidor web interactúan durante una solicitud y respuesta HTTP.
+	    
+	    ##startuml##
+	    actor Cliente
+	    participant "Servidor Web"
+	    
+	    Cliente -> "Servidor Web" : Solicitud HTTP/HTTPS
+	    "Servidor Web" -> "Servidor Web" : Procesa la solicitud
+	    "Servidor Web" -> Cliente : Respuesta HTTP/HTTPS con contenido
+	    
+	    note over Cliente, "Servidor Web"
+	    El cliente envía una solicitud HTTP/HTTPS al servidor web.
+	    El servidor procesa la solicitud y envía una respuesta con el contenido solicitado.
+	    end note
+	    ##enduml##
+	    
+	h2: Conclusión
+	
+	Text:
+	    
+	    Los clientes web son esenciales para acceder e interactuar con la web. Envían solicitudes a los servidores, procesan y renderizan las respuestas, y permiten a los usuarios interactuar con los recursos web. La comprensión de su papel y funcionamiento es vital para desarrollar aplicaciones web eficientes y efectivas. Para más detalles sobre navegadores web y sus componentes, puedes visitar [[https://developer.mozilla.org/es/docs/Web/HTTP/Overview|MDN Web Docs]].

@@ -1,0 +1,179 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Sets
+	
+	Text: 
+	h2: Sets en Python
+	
+	Text:
+	    
+	    Los sets (conjuntos) en Python son colecciones desordenadas de elementos únicos. Son útiles para almacenar elementos sin duplicados y para realizar operaciones matemáticas de conjuntos como unión, intersección, diferencia y diferencia simétrica.
+	    
+	h2: Creación de Sets
+	
+	Text:
+	    
+	    Los sets se crean usando llaves ##{}## o la función ##set()##.
+	    
+	    Ejemplo:
+	Code:
+	    mi_set = {1, 2, 3, 4}
+	
+	
+	Text:
+	    
+	    Para crear un set vacío, se debe usar la función ##set()##, ya que ##{}## crea un diccionario vacío.
+	Code:
+	    set_vacio = set()
+	
+	
+	Text:
+	    
+	h2: Añadir Elementos
+	
+	Text:
+	    
+	    Se pueden añadir elementos a un set usando el método ##add()##.
+	Code:
+	    mi_set.add(5)
+	
+	
+	Text:
+	    
+	    Para añadir múltiples elementos, se puede usar el método ##update()##.
+	Code:
+	    mi_set.update([6, 7])
+	
+	
+	Text:
+	    
+	h2: Eliminar Elementos
+	
+	Text:
+	    
+	    *  **##remove##**: Elimina un elemento específico. Si el elemento no está en el set, lanza un error ##KeyError##.
+	Code:
+	    mi_set.remove(3)
+	
+	
+	Text:
+	    
+	    *  **##discard##**: Elimina un elemento específico. Si el elemento no está en el set, no hace nada.
+	Code:
+	    mi_set.discard(4)
+	
+	
+	Text:
+	    
+	    *  **##pop##**: Elimina y devuelve un elemento aleatorio del set.
+	Code:
+	    elemento = mi_set.pop()
+	
+	
+	Text:
+	    
+	    *  **##clear##**: Elimina todos los elementos del set.
+	Code:
+	    mi_set.clear()
+	
+	
+	Text:
+	    
+	h2: Operaciones de Conjuntos
+	
+	Text:
+	    
+	    Los sets soportan varias operaciones matemáticas de conjuntos.
+	    
+	    *  **Unión**: Devuelve un nuevo set con todos los elementos que están en cualquiera de los dos sets.
+	Code:
+	    set1 = {1, 2, 3}
+	    set2 = {3, 4, 5}
+	    union = set1.union(set2) # {1, 2, 3, 4, 5}
+	
+	
+	Text:
+	    
+	    *  **Intersección**: Devuelve un nuevo set con los elementos que están en ambos sets.
+	Code:
+	    interseccion = set1.intersection(set2) # {3}
+	
+	
+	Text:
+	    
+	    *  **Diferencia**: Devuelve un nuevo set con los elementos que están en el primer set pero no en el segundo.
+	Code:
+	    diferencia = set1.difference(set2) # {1, 2}
+	
+	
+	Text:
+	    
+	    *  **Diferencia Simétrica**: Devuelve un nuevo set con los elementos que están en cualquiera de los dos sets, pero no en ambos.
+	Code:
+	    dif_simetrica = set1.symmetric_difference(set2) # {1, 2, 4, 5}
+	
+	
+	Text:
+	    
+	h2: Métodos de Sets
+	
+	Text:
+	    
+	    *  **##issubset##**: Devuelve ##True## si todos los elementos del set están en otro set.
+	Code:
+	    set1 = {1, 2, 3}
+	    set2 = {1, 2, 3, 4, 5}
+	    es_subconjunto = set1.issubset(set2) # True
+	
+	
+	Text:
+	    
+	    *  **##issuperset##**: Devuelve ##True## si todos los elementos de otro set están en el set.
+	Code:
+	    es_superconjunto = set2.issuperset(set1) # True
+	
+	
+	Text:
+	    
+	    *  **##isdisjoint##**: Devuelve ##True## si los sets no tienen elementos en común.
+	Code:
+	    set3 = {6, 7, 8}
+	    son_disjuntos = set1.isdisjoint(set3) # True
+	
+	
+	Text:
+	    
+	h2: Iteración sobre Sets
+	
+	Text:
+	    
+	    Se puede iterar sobre los elementos de un set usando un bucle ##for##.
+	Code:
+	    for elemento in mi_set:
+	    print(elemento)
+	
+	
+	Text:
+	    
+	h2: Comprensión de Sets
+	
+	Text:
+	    
+	    La comprensión de sets es una forma concisa de crear sets.
+	    
+	    Ejemplo:
+	Code:
+	    cuadrados = {x**2 for x in range(10)}
+	
+	
+	Text:
+	    
+	    Esto crea un set de los cuadrados de los números del 0 al 9.
+	    
+	h2: Ventajas de los Sets
+	
+	Text:
+	    
+	    *  **No permiten duplicados**: Ideal para almacenar elementos únicos.
+	    *  **Operaciones rápidas**: Las operaciones de pertenencia y eliminación son muy rápidas.
+	    *  **Operaciones de conjuntos**: Soportan las operaciones matemáticas de conjuntos.

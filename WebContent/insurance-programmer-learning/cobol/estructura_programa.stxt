@@ -1,0 +1,33 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Estructura básica de un programa COBOL
+	
+	Text: 
+	    Un programa COBOL se divide en cuatro divisiones principales, cada una con un propósito específico. A continuación, se describe la estructura básica de un programa COBOL:
+	    
+	    *  **Division de Identificación**: Esta división proporciona información sobre la identificación del programa. Incluye el nombre del programa y otros datos descriptivos.
+	    
+	    *  **Division de Ambiente**: Esta división especifica el entorno en el que se ejecuta el programa. Define los archivos externos y otros dispositivos de entrada y salida.
+	    
+	    *  **Division de Datos**: Esta división declara todas las variables y estructuras de datos que el programa utilizará. Incluye descripciones de archivos, registros y otros datos.
+	    
+	    *  **Division de Procedimiento**: Esta es la sección donde se escribe el código ejecutable. Contiene las instrucciones y la lógica del programa.
+	    
+	    A continuación, se muestra un ejemplo básico de la estructura de un programa COBOL:
+	    
+	Code:
+	    IDENTIFICATION DIVISION.
+	    PROGRAM-ID. HelloWorld.
+	    
+	    ENVIRONMENT DIVISION.
+	    
+	    DATA DIVISION.
+	    
+	    PROCEDURE DIVISION.
+	    DISPLAY "Hello, world!".
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	    Esta estructura básica proporciona un marco claro y organizado para escribir programas COBOL, facilitando la comprensión y el mantenimiento del código.

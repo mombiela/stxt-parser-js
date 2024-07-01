@@ -1,0 +1,34 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Descripción y uso de la División de Identificación
+	
+	Text: 
+	    La División de Identificación es la primera sección de un programa COBOL y tiene como objetivo proporcionar información básica sobre el programa. Esta división es obligatoria y suele incluir los siguientes elementos:
+	    
+	    *  **PROGRAM-ID**: Especifica el nombre del programa. Este nombre debe ser único y suele estar en mayúsculas.
+	    
+	    *  **AUTHOR**: Opcionalmente, puede incluirse el nombre del autor del programa.
+	    
+	    *  **INSTALLATION**: Opcionalmente, puede especificar la instalación o la organización donde se utiliza el programa.
+	    
+	    *  **DATE-WRITTEN**: Fecha en la que se escribió el programa.
+	    
+	    *  **DATE-COMPILED**: Fecha en la que se compiló el programa.
+	    
+	    *  **SECURITY**: Información de seguridad relacionada con el programa, si es necesaria.
+	    
+	    Un ejemplo básico de la División de Identificación en un programa COBOL es el siguiente:
+	    
+	Code:
+	    IDENTIFICATION DIVISION.
+	    PROGRAM-ID. MyFirstProgram.
+	    AUTHOR. Jane Doe.
+	    INSTALLATION. XYZ Corporation.
+	    DATE-WRITTEN. May 27, 2024.
+	    DATE-COMPILED. May 28, 2024.
+	    SECURITY. None.
+	
+	
+	Text:
+	    
+	    La División de Identificación proporciona un contexto importante para el programa, facilitando su identificación y gestión. Aunque algunos campos son opcionales, es una buena práctica incluir tanta información relevante como sea posible para mejorar la documentación y el mantenimiento del código.

@@ -1,0 +1,288 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Técnicas de entrada y salida de datos
+	
+	Text: 
+	    En COBOL, las técnicas de entrada y salida de datos (I/O) son fundamentales para interactuar con archivos, bases de datos y dispositivos externos. Estas técnicas incluyen operaciones básicas como leer, escribir, actualizar y eliminar datos. A continuación, se describen las técnicas de I/O más comunes en COBOL.
+	    
+	h2: Entrada y salida en archivos secuenciales
+	
+	Text:
+	    
+	    Los archivos secuenciales son uno de los tipos más comunes de archivos en COBOL. Se accede a ellos de manera secuencial, lo que significa que los registros se leen o escriben en el orden en que aparecen en el archivo.
+	    
+	h3: Lectura de archivos secuenciales
+	
+	Text:
+	    
+	    Para leer archivos secuenciales, se utiliza la sentencia ##READ## dentro de un bucle.
+	    
+	Code:
+	    FILE CONTROL.
+	    SELECT Entrada-Archivo ASSIGN TO 'ENTRADA.TXT'
+	    ORGANIZATION IS LINE SEQUENTIAL.
+	    
+	    DATA DIVISION.
+	    FILE SECTION.
+	    FD Entrada-Archivo.
+	    01 Registro-Entrada.
+	    05 Campo1 PIC X(10).
+	    05 Campo2 PIC 9(5).
+	    
+	    WORKING-STORAGE SECTION.
+	    01 Fin-De-Archivo PIC X(3) VALUE 'NO'.
+	    
+	    PROCEDURE DIVISION.
+	    OPEN INPUT Entrada-Archivo.
+	    PERFORM UNTIL Fin-De-Archivo = 'YES'
+	    READ Entrada-Archivo INTO Registro-Entrada
+	    AT END MOVE 'YES' TO Fin-De-Archivo
+	    NOT AT END DISPLAY Campo1 Campo2
+	    END-READ
+	    END-PERFORM.
+	    CLOSE Entrada-Archivo.
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##READ Entrada-Archivo INTO Registro-Entrada## lee registros secuencialmente hasta alcanzar el final del archivo.
+	    *  ##AT END## se utiliza para detectar el final del archivo y establecer la condición de fin de archivo.
+	    
+	h3: Escritura en archivos secuenciales
+	
+	Text:
+	    
+	    Para escribir en archivos secuenciales, se utiliza la sentencia ##WRITE##.
+	    
+	Code:
+	    FILE CONTROL.
+	    SELECT Salida-Archivo ASSIGN TO 'SALIDA.TXT'
+	    ORGANIZATION IS LINE SEQUENTIAL.
+	    
+	    DATA DIVISION.
+	    FILE SECTION.
+	    FD Salida-Archivo.
+	    01 Registro-Salida.
+	    05 Campo1 PIC X(10).
+	    05 Campo2 PIC 9(5).
+	    
+	    PROCEDURE DIVISION.
+	    OPEN OUTPUT Salida-Archivo.
+	    MOVE 'Dato1' TO Campo1.
+	    MOVE 12345 TO Campo2.
+	    WRITE Registro-Salida.
+	    CLOSE Salida-Archivo.
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##WRITE Registro-Salida## escribe un registro en el archivo secuencial.
+	    
+	h2: Entrada y salida en archivos indexados
+	
+	Text:
+	    
+	    Los archivos indexados permiten acceso aleatorio a registros mediante claves.
+	    
+	h3: Lectura de archivos indexados
+	
+	Text:
+	    
+	    Para leer registros específicos en archivos indexados, se utiliza la sentencia ##READ## con la clave de registro.
+	    
+	Code:
+	    FILE CONTROL.
+	    SELECT Clientes ASSIGN TO 'CLIENTES.DAT'
+	    ORGANIZATION IS INDEXED
+	    ACCESS MODE IS DYNAMIC
+	    RECORD KEY IS Cliente-ID.
+	    
+	    DATA DIVISION.
+	    FILE SECTION.
+	    FD Clientes.
+	    01 Registro-Cliente.
+	    05 Cliente-ID PIC 9(5).
+	    05 Cliente-Nombre PIC X(30).
+	    05 Cliente-Direccion PIC X(50).
+	    
+	    WORKING-STORAGE SECTION.
+	    01 WS-File-Status PIC XX.
+	    
+	    PROCEDURE DIVISION.
+	    OPEN I-O Clientes.
+	    MOVE 12345 TO Cliente-ID.
+	    READ Clientes INTO Registro-Cliente KEY IS Cliente-ID
+	    INVALID KEY DISPLAY 'Cliente no encontrado'.
+	    CLOSE Clientes.
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##READ Clientes INTO Registro-Cliente KEY IS Cliente-ID## lee un registro específico usando la clave primaria.
+	    
+	h3: Escritura en archivos indexados
+	
+	Text:
+	    
+	    Para escribir registros en archivos indexados, se utiliza la sentencia ##WRITE##.
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    OPEN I-O Clientes.
+	    MOVE 12345 TO Cliente-ID.
+	    MOVE 'Juan Pérez' TO Cliente-Nombre.
+	    MOVE 'Calle Falsa 123' TO Cliente-Direccion.
+	    WRITE Registro-Cliente.
+	    CLOSE Clientes.
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##WRITE Registro-Cliente## escribe un nuevo registro en el archivo indexado.
+	    
+	h2: Entrada y salida con bases de datos relacionales
+	
+	Text:
+	    
+	    El acceso a bases de datos relacionales en COBOL se realiza mediante SQL embebido.
+	    
+	h3: Lectura de datos en bases de datos relacionales
+	
+	Text:
+	    
+	    Para realizar consultas en una base de datos relacional, se utiliza la sentencia ##EXEC SQL SELECT##.
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    EXEC SQL INCLUDE SQLCA END-EXEC.
+	    01 CLIENTE-ID PIC 9(5).
+	    01 CLIENTE-NOMBRE PIC X(30).
+	    01 CLIENTE-DIRECCION PIC X(50).
+	    
+	    PROCEDURE DIVISION.
+	    EXEC SQL
+	    SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION
+	    INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION
+	    FROM CLIENTES
+	    WHERE CLIENTE_ID = 12345
+	    END-EXEC.
+	    
+	    IF SQLCODE = 0
+	    DISPLAY 'Cliente ID: ' CLIENTE-ID.
+	    DISPLAY 'Cliente Nombre: ' CLIENTE-NOMBRE.
+	    DISPLAY 'Cliente Dirección: ' CLIENTE-DIRECCION.
+	    ELSE
+	    DISPLAY 'Error en consulta: ' SQLCODE.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL SELECT## realiza una consulta en la base de datos y almacena los resultados en las variables correspondientes.
+	    
+	h3: Escritura de datos en bases de datos relacionales
+	
+	Text:
+	    
+	    Para insertar datos en una base de datos relacional, se utiliza la sentencia ##EXEC SQL INSERT##.
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    EXEC SQL
+	    INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION)
+	    VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION)
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error insertando datos: ' SQLCODE.
+	    ELSE
+	    DISPLAY 'Datos insertados correctamente'.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC## inserta un nuevo registro en la tabla CLIENTES.
+	    
+	h2: Manejo de errores en operaciones de I/O
+	
+	Text:
+	    
+	    Es crucial manejar errores durante las operaciones de entrada y salida para garantizar la integridad y robustez del programa. En COBOL, se utilizan el ##FILE STATUS## para archivos y ##SQLCODE## para bases de datos.
+	    
+	h3: Ejemplo de manejo de errores con FILE STATUS
+	
+	Text:
+	    
+	Code:
+	    FILE CONTROL.
+	    SELECT Entrada-Archivo ASSIGN TO 'ENTRADA.TXT'
+	    ORGANIZATION IS LINE SEQUENTIAL
+	    FILE STATUS IS WS-File-Status.
+	    
+	    WORKING-STORAGE SECTION.
+	    01 WS-File-Status PIC XX.
+	    
+	    PROCEDURE DIVISION.
+	    OPEN INPUT Entrada-Archivo.
+	    IF WS-File-Status NOT = '00'
+	    DISPLAY 'Error abriendo archivo: ' WS-File-Status.
+	    END-IF.
+	    CLOSE Entrada-Archivo.
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##FILE STATUS IS WS-File-Status## define una variable para capturar el estado del archivo.
+	    *  Se verifica ##WS-File-Status## para manejar errores durante las operaciones de archivo.
+	    
+	h3: Ejemplo de manejo de errores con SQLCODE
+	
+	Text:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    EXEC SQL INCLUDE SQLCA END-EXEC.
+	    
+	    PROCEDURE DIVISION.
+	    EXEC
+	    
+	    SQL
+	    CONNECT TO :DB-NAME USER :DB-USER USING :DB-PASSWORD
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error conectando a la base de datos: ' SQLCODE.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##SQLCODE## se utiliza para verificar y manejar errores en operaciones de base de datos.
+	    
+	h2: Conclusión
+	
+	Text:
+	    
+	    Las técnicas de entrada y salida de datos en COBOL son esenciales para interactuar con archivos y bases de datos. Comprender cómo definir, abrir, cerrar, leer, escribir y manejar errores en estas operaciones es fundamental para desarrollar aplicaciones COBOL robustas y eficientes.

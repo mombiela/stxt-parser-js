@@ -1,0 +1,59 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Conceptos básicos y estructura de un documento HTML
+	
+	Text: 
+	    *  **HTML** (HyperText Markup Language) es el estándar para crear páginas web. Es el lenguaje que define la estructura y el contenido de una página web.
+	    
+	    *  Un documento HTML está compuesto por una serie de elementos que representan distintos tipos de contenido.
+	    
+	    *  La estructura básica de un documento HTML incluye las siguientes partes:
+	    
+	Code:
+	    <!DOCTYPE html>
+	    <html>
+	    <head>
+	    <title> Título de la página</title>
+	    </head>
+	    <body>
+	    <h1> Encabezado Principal</h1>
+	    <p> Este es un párrafo de ejemplo.</p>
+	    </body>
+	    </html>
+	
+	
+	Text:
+	    
+	    *  La declaración ##<!DOCTYPE html>## especifica la versión de HTML que se está utilizando.
+	    
+	    *  El elemento ##<html>## es el contenedor raíz de todo el contenido de la página web.
+	    
+	    *  El elemento ##<head>## contiene metadatos sobre el documento, como el título que se muestra en la pestaña del navegador.
+	    
+	    *  El elemento ##<body>## contiene el contenido visible de la página web, como textos, imágenes y otros elementos multimedia.
+	    
+	    *  Los elementos de HTML se escriben con etiquetas, que suelen venir en pares: una etiqueta de apertura ##<tag>## y una etiqueta de cierre ##</tag>##.
+	    
+	    *  Los elementos pueden tener atributos que proporcionan información adicional sobre el elemento. Los atributos se escriben dentro de la etiqueta de apertura y generalmente tienen un formato de nombre-valor, por ejemplo: ##<elemento atributo="valor">##.
+	    
+	    *  Aquí tienes un ejemplo más detallado de un documento HTML:
+	    
+	Code:
+	    <!DOCTYPE html>
+	    <html>
+	    <head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title> Mi Primera Página Web</title>
+	    </head>
+	    <body>
+	    <h1> Bienvenido a mi página web</h1>
+	    <p> Este es un párrafo con <strong> texto en negrita</strong> y <em> texto en cursiva</em>.</p>
+	    <a href="https://www.example.com"> Visita Example.com</a>
+	    </body>
+	    </html>
+	
+	
+	Text:
+	    
+	    Hay algo más específico que te gustaría saber sobre este apartado?

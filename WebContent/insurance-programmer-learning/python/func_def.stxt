@@ -1,0 +1,114 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Definición y uso de funciones
+	
+	Text: 
+	h2: Definición y uso de funciones en Python
+	
+	Text:
+	    
+	    En Python, una función es un bloque de código reutilizable que realiza una tarea específica. Las funciones permiten organizar el código en partes más pequeñas y manejables, lo que facilita su lectura y mantenimiento. A continuación, exploraremos cómo definir y utilizar funciones en Python.
+	    
+	h2: Definición de funciones
+	
+	Text:
+	    
+	    Para definir una función en Python, utilizamos la palabra clave ##def## seguida del nombre de la función y un paréntesis que puede contener parámetros. El bloque de código que pertenece a la función debe estar indentado.
+	    
+	Code:
+	    def nombre_funcion(parametro1, parametro2):
+	    # Cuerpo de la función
+	    instrucciones
+	
+	
+	Text:
+	    
+	h2: Uso de funciones
+	
+	Text:
+	    
+	    Para utilizar una función, es decir, para "llamarla", escribimos su nombre seguido de un paréntesis que contiene los argumentos que deseamos pasarle.
+	    
+	Code:
+	    nombre_funcion(argumento1, argumento2)
+	
+	
+	Text:
+	    
+	h2: Ejemplo práctico
+	
+	Text:
+	    
+	    Consideremos un ejemplo donde definimos una función que suma dos números y devuelve el resultado.
+	    
+	Code:
+	    def suma(a, b):
+	    resultado = a + b
+	    return resultado
+	    
+	    # Llamada a la función
+	    print(suma(3, 5)) # Esto imprimirá 8
+	
+	
+	Text:
+	    
+	h2: Parámetros y argumentos
+	
+	Text:
+	    
+	    * Parámetros: Son las variables listadas dentro de los paréntesis en la definición de la función.
+	    * Argumentos: Son los valores que se pasan a la función cuando se llama.
+	    
+	h2: Funciones con valores predeterminados
+	
+	Text:
+	    
+	    Es posible definir funciones con parámetros que tienen valores predeterminados. Esto significa que si no se proporciona un argumento para ese parámetro, se utilizará el valor predeterminado.
+	    
+	Code:
+	    def saludo(nombre, mensaje="Hola"):
+	    print(mensaje, nombre)
+	    
+	    # Llamadas a la función
+	    saludo("Ana") # Imprime: Hola Ana
+	    saludo("Carlos", "Buenos días") # Imprime: Buenos días Carlos
+	
+	
+	Text:
+	    
+	h2: Funciones anónimas (lambdas)
+	
+	Text:
+	    
+	    Python también permite definir funciones pequeñas y anónimas con la palabra clave ##lambda##. Las funciones lambda pueden tener cualquier número de argumentos pero solo una expresión.
+	    
+	Code:
+	    suma = lambda a, b: a + b
+	    print(suma(3, 5)) # Imprime: 8
+	
+	
+	Text:
+	    
+	h2: Documentación de funciones
+	
+	Text:
+	    
+	    Para hacer que el código sea más comprensible, es una buena práctica incluir cadenas de documentación (docstrings) al definir funciones. Estas cadenas se colocan justo después de la línea ##def## y deben estar encerradas entre comillas triples.
+	    
+	Code:
+	    def suma(a, b):
+	    """
+	    Esta función suma dos números y devuelve el resultado.
+	    """
+	    return a + b
+	
+	
+	Text:
+	    
+	h2: Conclusión
+	
+	Text:
+	    
+	    Las funciones son herramientas esenciales en Python que permiten la modularidad y la reutilización del código. Al comprender cómo definir y utilizar funciones, así como las características avanzadas como valores predeterminados y funciones lambda, se puede escribir código más eficiente y organizado.
+	    
+	    Para más información sobre las funciones en Python, puedes visitar [[https://docs.python.org/3/tutorial/controlflow.html#defining-functions|Documentación oficial de Python]].

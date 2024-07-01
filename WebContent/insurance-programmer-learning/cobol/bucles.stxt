@@ -1,0 +1,123 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Implementación de bucles y repetición de tareas en COBOL
+	
+	Text: 
+	    En COBOL, los bucles y la repetición de tareas son esenciales para ejecutar bloques de código múltiples veces de manera controlada. Las sentencias más utilizadas para implementar bucles son ##PERFORM## y ##PERFORM VARYING##. A continuación, se describen estas sentencias y su uso.
+	    
+	h2: PERFORM
+	
+	Text:
+	    
+	    La sentencia ##PERFORM## se utiliza para ejecutar un bloque de código o llamar a un párrafo o sección repetidamente. Hay varias formas de utilizar ##PERFORM## para controlar la repetición.
+	    
+	h3: PERFORM UNTIL
+	
+	Text:
+	    
+	    Esta forma de ##PERFORM## ejecuta el bloque de código hasta que se cumpla una condición.
+	    
+	Code:
+	    PERFORM UNTIL WS-Index > 10
+	    DISPLAY 'Index: ' WS-Index
+	    ADD 1 TO WS-Index
+	    END-PERFORM.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##PERFORM UNTIL WS-Index > 10## ejecuta el bloque de código mientras ##WS-Index## sea menor o igual a 10.
+	    *  Durante cada iteración, se muestra el valor de ##WS-Index## y se incrementa en 1.
+	    
+	h3: PERFORM TIMES
+	
+	Text:
+	    
+	    Esta forma de ##PERFORM## ejecuta el bloque de código un número específico de veces.
+	    
+	Code:
+	    PERFORM 10 TIMES
+	    DISPLAY 'Hello, World!'
+	    END-PERFORM.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##PERFORM 10 TIMES## ejecuta el bloque de código 10 veces.
+	    *  Durante cada iteración, se muestra 'Hello, World!'.
+	    
+	h2: PERFORM VARYING
+	
+	Text:
+	    
+	    La sentencia ##PERFORM VARYING## se utiliza para implementar bucles con un control más fino, permitiendo variar un índice o una variable de control.
+	    
+	h3: PERFORM VARYING UNTIL
+	
+	Text:
+	    
+	    Esta forma de ##PERFORM VARYING## es útil para iterar sobre un rango de valores.
+	    
+	Code:
+	    PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index > 10
+	    DISPLAY 'Index: ' WS-Index
+	    END-PERFORM.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index > 10## inicia ##WS-Index## en 1, incrementa en 1 en cada iteración, y se detiene cuando ##WS-Index## es mayor que 10.
+	    *  Durante cada iteración, se muestra el valor de ##WS-Index##.
+	    
+	h3: PERFORM VARYING WITH NESTED LOOPS
+	
+	Text:
+	    
+	    COBOL permite anidar bucles utilizando ##PERFORM VARYING##, lo que es útil para manejar tablas bidimensionales o realizar operaciones más complejas.
+	    
+	Code:
+	    PERFORM VARYING WS-Outer-Index FROM 1 BY 1 UNTIL WS-Outer-Index > 5
+	    PERFORM VARYING WS-Inner-Index FROM 1 BY 1 UNTIL WS-Inner-Index > 10
+	    DISPLAY 'Outer Index: ' WS-Outer-Index ' Inner Index: ' WS-Inner-Index
+	    END-PERFORM
+	    END-PERFORM.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  El bucle externo ##PERFORM VARYING WS-Outer-Index FROM 1 BY 1 UNTIL WS-Outer-Index > 5## controla ##WS-Outer-Index##.
+	    *  Dentro del bucle externo, el bucle interno ##PERFORM VARYING WS-Inner-Index FROM 1 BY 1 UNTIL WS-Inner-Index > 10## controla ##WS-Inner-Index##.
+	    *  Durante cada iteración del bucle interno, se muestran los valores de ##WS-Outer-Index## y ##WS-Inner-Index##.
+	    
+	h2: PERFORM THRU
+	
+	Text:
+	    
+	    La sentencia ##PERFORM THRU## se utiliza para ejecutar una serie de párrafos en secuencia.
+	    
+	Code:
+	    PERFORM Initialize-Values THRU Finalize-Values.
+	    
+	    Initialize-Values.
+	    DISPLAY 'Initializing values...'.
+	    
+	    Finalize-Values.
+	    DISPLAY 'Finalizing values...'.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##PERFORM Initialize-Values THRU Finalize-Values## ejecuta todos los párrafos desde ##Initialize-Values## hasta ##Finalize-Values##.
+	    *  Se muestran los mensajes de inicialización y finalización.
+	    
+	    Las estructuras de bucles y repetición de tareas en COBOL son herramientas poderosas para controlar la ejecución de programas. Utilizando las diferentes formas de ##PERFORM##, es posible crear bucles eficientes y claros, mejorando así la legibilidad y mantenibilidad del código.

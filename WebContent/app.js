@@ -9,7 +9,38 @@ import { Node } from './js/Node.js';
 import { ParseException } from './js/ParseException.js';
 import { RootGrammar } from './js/RootGrammar.js';
 import { GrammarRetrieve } from './js/GrammarRetrieve.js';
-import { NodeToGrammar } from './NodeToGrammar.js';
+import { NodeToGrammar } from './js/NodeToGrammar.js';
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Función para cargar la página correcta basada en el hash
+    function loadPage() {
+        const hash = window.location.hash || "#home";
+        const content = document.getElementById("content");
+
+        switch (hash) {
+            case "#home":
+                content.innerHTML = "<h1>Home Page</h1><p>Welcome to the home page!</p>";
+                break;
+            case "#about":
+                content.innerHTML = "<h1>About Page</h1><p>Learn more about us on this page.</p>";
+                break;
+            case "#contact":
+                content.innerHTML = "<h1>Contact Page</h1><p>Get in touch with us through this page.</p>";
+                break;
+            default:
+                content.innerHTML = "<h1>404 Not Found</h1><p>The page you are looking for does not exist.</p>";
+                break;
+        }
+    }
+
+    // Cargar la página correcta al cargar la página inicial
+    loadPage();
+
+    // Escuchar los cambios en el hash de la URL
+    window.addEventListener("hashchange", loadPage);
+});
+
+
 
 getUrlContent('https://semantictext.info/es/chapter_02.stxt')
     .then(insertContent).catch(errorContent);

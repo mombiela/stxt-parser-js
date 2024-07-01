@@ -1,0 +1,105 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Lenguajes básicos del frontend: HTML, CSS y JavaScript.
+	
+	Text: 
+	h2: Lenguajes básicos del frontend: HTML, CSS y JavaScript
+	
+	Text:
+	    
+	h2: HTML (HyperText Markup Language)
+	
+	Text:
+	    
+	    **HTML** es el lenguaje estándar para crear y estructurar páginas web. Se utiliza para definir la estructura básica de un sitio web y su contenido. Aquí tienes algunos conceptos clave sobre HTML:
+	    
+	    *  //Etiquetas (tags)//: HTML utiliza etiquetas para definir elementos. Las etiquetas están encerradas entre corchetes angulares, por ejemplo, ##<div>##.
+	    *  //Atributos//: Las etiquetas pueden tener atributos que proporcionan información adicional sobre el elemento, como ##<a href="url">## para enlaces.
+	    *  //Elementos anidados//: Los elementos HTML pueden estar anidados dentro de otros elementos, creando una estructura jerárquica.
+	    
+	    Ejemplo básico de HTML:
+	    
+	Code:
+	    
+	    <!DOCTYPE html>
+	    <html>
+	    <head>
+	    <title> Título de la página</title>
+	    </head>
+	    <body>
+	    <h1> Encabezado 1</h1>
+	    <p> Este es un párrafo.</p>
+	    </body>
+	    </html>
+	
+	
+	Text:
+	h2: CSS (Cascading Style Sheets)
+	
+	Text:
+	    
+	    **CSS** es el lenguaje utilizado para describir la presentación de un documento escrito en HTML o XML. CSS controla el aspecto visual del sitio web, incluyendo colores, fuentes, y la disposición de los elementos en la página.
+	    
+	    Conceptos clave de CSS:
+	    
+	    *  //Selectores//: Indican qué elementos HTML se van a estilizar. Ejemplo: ##p## selecciona todos los párrafos.
+	    *  //Propiedades y valores//: Definen qué aspecto tendrá el elemento seleccionado. Ejemplo: ##color: blue;##.
+	    *  //Cascada//: El término "cascading" se refiere a cómo se aplican las reglas de estilo en función de su importancia y especificidad.
+	    
+	    Ejemplo básico de CSS:
+	    
+	Code:
+	    body {
+	    background-color: lightblue;
+	    }
+	    
+	    h1 {
+	    color: navy;
+	    font-family: Arial, sans-serif;
+	    }
+	    
+	    p {
+	    font-size: 16px;
+	    }
+	
+	
+	Text:
+	    
+	h2: JavaScript
+	
+	Text:
+	    
+	    **JavaScript** es un lenguaje de programación que permite agregar interactividad a las páginas web. Se ejecuta en el navegador del usuario y puede manipular elementos HTML y CSS, responder a eventos del usuario, validar datos de formularios, y mucho más.
+	    
+	    Conceptos clave de JavaScript:
+	    
+	    *  //Variables//: Usadas para almacenar datos. Ejemplo: ##let nombre = "Juan";##.
+	    *  //Funciones//: Bloques de código que realizan una tarea específica. Ejemplo: ##function saludar() { console.log("Hola"); }##.
+	    *  //Eventos//: Acciones que pueden ser detectadas y manejadas con JavaScript. Ejemplo: ##document.getElementById("miBoton").onclick = function() { alert("Botón clickeado"); };##.
+	    
+	    Ejemplo básico de JavaScript:
+	    
+	Code:
+	    
+	    <!DOCTYPE html>
+	    <html>
+	    <head>
+	    <title> Ejemplo de JavaScript</title>
+	    <script>
+	    function mostrarMensaje() {
+	    alert("Hola mundo!");
+	    }
+	    </script>
+	    </head>
+	    <body>
+	    <button onclick="mostrarMensaje()"> Click me</button>
+	    </body>
+	    </html>
+	
+	
+	Text:
+	h2: Conclusión
+	
+	Text:
+	    
+	    HTML, CSS y JavaScript son los tres pilares fundamentales del desarrollo frontend. **HTML** proporciona la estructura básica, **CSS** define la apariencia visual, y **JavaScript** añade interactividad y comportamiento dinámico a las páginas web. Con un buen dominio de estos lenguajes, se puede crear sitios web atractivos, funcionales y dinámicos.

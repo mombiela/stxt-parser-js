@@ -1,0 +1,42 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Tipos de datos disponibles en COBOL
+	
+	Text: 
+	    COBOL ofrece una variedad de tipos de datos que permiten a los programadores manejar diferentes tipos de información de manera eficiente. Los tipos de datos en COBOL se definen utilizando la cláusula ##PIC## (Picture), que especifica el formato y la longitud de los datos. A continuación se describen los tipos de datos más comunes:
+	    
+	    *  **Alfanuméricos (X)**: Representan datos de texto. Cada carácter se define con una ##X##. Por ejemplo, ##PIC X(10)## define una cadena de texto de 10 caracteres.
+	    
+	    *  **Numéricos (9)**: Representan datos numéricos. Cada dígito se define con un ##9##. Por ejemplo, ##PIC 9(5)## define un número entero de hasta 5 dígitos.
+	    
+	    *  **Numéricos con punto decimal implícito (V)**: Permiten la representación de números con decimales. El carácter ##V## indica la posición del punto decimal. Por ejemplo, ##PIC 9(3)V99## define un número con 3 dígitos enteros y 2 decimales.
+	    
+	    *  **Sinalizados (S)**: Indican que un número puede ser positivo o negativo. El carácter ##S## se usa para definir números sinalizados. Por ejemplo, ##PIC S9(4)## define un número entero de hasta 4 dígitos con signo.
+	    
+	    *  **Comp-3 (Packed Decimal)**: Representa datos numéricos en formato decimal empaquetado, lo que ahorra espacio. Se utiliza la cláusula ##COMP-3##. Por ejemplo, ##PIC 9(6) COMP-3## define un número empaquetado de hasta 6 dígitos.
+	    
+	    *  **Comp (Binary)**: Representa datos numéricos en formato binario, lo que permite cálculos más rápidos. Se utiliza la cláusula ##COMP##. Por ejemplo, ##PIC 9(4) COMP## define un número binario de hasta 4 dígitos.
+	    
+	    Ejemplos de definiciones de tipos de datos en COBOL:
+	    
+	Code:
+	    01 EmployeeName PIC X(30).
+	    01 EmployeeID PIC 9(5).
+	    01 EmployeeSalary PIC 9(7)V99.
+	    01 EmployeeAge PIC S9(3).
+	    01 PackedNumber PIC 9(6) COMP-3.
+	    01 BinaryNumber PIC 9(4) COMP.
+	
+	
+	Text:
+	    
+	    En este ejemplo, se definen varios tipos de datos:
+	    
+	    *  ##EmployeeName##: Una cadena de texto de 30 caracteres.
+	    *  ##EmployeeID##: Un número entero de 5 dígitos.
+	    *  ##EmployeeSalary##: Un número con 7 dígitos enteros y 2 decimales.
+	    *  ##EmployeeAge##: Un número entero de 3 dígitos con signo.
+	    *  ##PackedNumber##: Un número empaquetado de 6 dígitos.
+	    *  ##BinaryNumber##: Un número binario de 4 dígitos.
+	    
+	    Estos tipos de datos permiten a los programas COBOL manejar una amplia gama de información de manera efectiva y eficiente.

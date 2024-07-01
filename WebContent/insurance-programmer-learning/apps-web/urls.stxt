@@ -1,0 +1,77 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Estructura y uso de URLs.
+	
+	Text: 
+	    Una URL (Uniform Resource Locator) es la dirección que se utiliza para acceder a recursos en la web. Las URLs son fundamentales para la navegación y la localización de recursos en Internet. Veamos su estructura y cómo se utilizan.
+	    
+	h2: Componentes de una URL
+	
+	Text:
+	    
+	    Las URLs están compuestas por varias partes, cada una de las cuales tiene un propósito específico. Aquí se muestra la estructura general de una URL:
+	    
+	Code:
+	    protocolo://usuario:contraseña@host:puerto/ruta?consulta#fragmento
+	
+	
+	Text:
+	    
+	    Veamos cada componente en detalle:
+	    
+	    * **Protocolo**: Especifica el método de acceso al recurso. Los protocolos más comunes son HTTP y HTTPS. Por ejemplo, ##http## y ##https##.
+	    
+	    * **Usuario:Contraseña** (opcional): Proporciona credenciales de autenticación para acceder a ciertos recursos. Esta parte se utiliza raramente en la práctica debido a problemas de seguridad. Ejemplo: ##usuario:contraseña##.
+	    
+	    * **Host**: Indica el servidor en el que se encuentra el recurso. Puede ser una dirección IP (ej. ##192.168.1.1##) o un nombre de dominio (ej. ##www.ejemplo.com##).
+	    
+	    * **Puerto** (opcional): Especifica el puerto del servidor al que se accede. Si no se especifica, se usan los puertos predeterminados (80 para HTTP y 443 para HTTPS). Ejemplo: ##:8080##.
+	    
+	    * **Ruta**: Define la ubicación específica del recurso en el servidor. Se presenta como una ruta de archivo. Ejemplo: ##/directorio/recurso.html##.
+	    
+	    * **Consulta** (opcional): Contiene parámetros adicionales enviados al servidor. Se inicia con un signo de interrogación (##?##) y los parámetros están separados por el símbolo de ampersand (##&##). Ejemplo: ##?id=123&nombre=juan##.
+	    
+	    * **Fragmento** (opcional): Es una referencia interna dentro del recurso. Se inicia con una almohadilla (#####). Ejemplo: ###seccion2##.
+	    
+	h2: Ejemplo de una URL completa
+	
+	Text:
+	    
+	    A continuación se presenta un ejemplo de una URL completa con todos sus componentes:
+	    
+	Code:
+	    https://usuario:contraseña@www.ejemplo.com:8080/directorio/recurso.html?id=123&nombre=juan#seccion2
+	
+	
+	Text:
+	    
+	h2: Uso de URLs
+	
+	Text:
+	    
+	    # **Navegación**: Las URLs permiten a los usuarios navegar a diferentes páginas y recursos en la web. Al introducir una URL en la barra de direcciones del navegador, este realiza una solicitud al servidor correspondiente y muestra el recurso solicitado.
+	    
+	    # **Enlaces**: Las URLs se utilizan para crear enlaces (hipervínculos) en las páginas web. Estos enlaces permiten a los usuarios hacer clic y ser dirigidos a diferentes recursos o páginas.
+	    
+	Code:
+	    <a href="https://www.ejemplo.com">Visitar Ejemplo</a>
+	
+	
+	Text:
+	    
+	    # **Formularios**: En los formularios web, las URLs se utilizan para enviar datos al servidor. Los datos del formulario se agregan a la URL como parte de la consulta cuando se utiliza el método ##GET##.
+	    
+	Code:
+	    <form action="https://www.ejemplo.com/buscar" method="get">
+	    <input type="text" name="query">
+	    <input type="submit" value="Buscar">
+	    
+	    </form>
+	
+	
+	Text:
+	h2: Conclusión
+	
+	Text:
+	    
+	    Las URLs son esenciales para la estructura y funcionamiento de la web. Comprender sus componentes y cómo se utilizan permite una mejor navegación, desarrollo y manipulación de recursos en Internet. Para más detalles sobre la especificación de URLs, puedes consultar la RFC 3986 [[https://tools.ietf.org/html/rfc3986|RFC 3986 - Uniform Resource Identifier (URI): Generic Syntax]].

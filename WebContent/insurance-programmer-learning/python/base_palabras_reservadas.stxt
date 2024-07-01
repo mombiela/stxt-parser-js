@@ -1,0 +1,41 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Palabras reservadas
+	
+	Text: 
+	    |= Palabra Reservada |= Uso                                                                 |
+	    | ##code:True##              | Representa el valor booleano verdadero.                            |
+	    | ##code:False##             | Representa el valor booleano falso.                                |
+	    | ##code:None##              | Representa la ausencia de valor o un valor nulo.                    |
+	    | ##code:and##               | Operador lógico que devuelve True si ambas expresiones son verdaderas. |
+	    | ##code:as##                | Se usa para crear un alias, por ejemplo, en la importación de módulos. |
+	    | ##code:assert##            | Se usa para fines de depuración, para comprobar si una condición es verdadera. |
+	    | ##code:async##             | Declara una función asíncrona.                                     |
+	    | ##code:await##             | Se usa para esperar el resultado de una llamada asíncrona.         |
+	    | ##code:break##             | Termina el bucle actual.                                           |
+	    | ##code:class##             | Declara una nueva clase.                                           |
+	    | ##code:continue##          | Salta a la siguiente iteración de un bucle.                        |
+	    | ##code:def##               | Declara una nueva función.                                         |
+	    | ##code:del##               | Elimina un objeto.                                                 |
+	    | ##code:elif##              | Se usa en declaraciones condicionales, abreviatura de "else if".   |
+	    | ##code:else##              | Se usa en declaraciones condicionales para definir una acción alternativa si la condición es falsa. |
+	    | ##code:except##            | Se usa en bloques try para manejar excepciones.                    |
+	    | ##code:finally##           | Se usa en bloques try para especificar código que se ejecutará independientemente de si ocurre una excepción o no. |
+	    | ##code:for##               | Se usa para crear un bucle que itera sobre una secuencia.          |
+	    | ##code:from##              | Se usa para importar una parte específica de un módulo.            |
+	    | ##code:global##            | Declara una variable global.                                       |
+	    | ##code:if##                | Declara una condición.                                             |
+	    | ##code:import##            | Importa módulos en el programa.                                    |
+	    | ##code:in##                | Verifica si un valor está presente en una secuencia.               |
+	    | ##code:is##                | Comprueba si dos variables apuntan al mismo objeto.                |
+	    | ##code:lambda##            | Declara una función anónima.                                       |
+	    | ##code:nonlocal##          | Declara una variable no local.                                     |
+	    | ##code:not##               | Operador lógico que invierte el valor de una expresión.            |
+	    | ##code:or##                | Operador lógico que devuelve True si al menos una de las expresiones es verdadera. |
+	    | ##code:pass##              | Se usa como un marcador de posición para indicar que no se realiza ninguna acción. |
+	    | ##code:raise##             | Lanza una excepción.                                               |
+	    | ##code:return##            | Sale de una función y devuelve un valor.                           |
+	    | ##code:try##               | Intenta ejecutar un bloque de código y permite manejar excepciones. |
+	    | ##code:while##             | Crea un bucle que se ejecuta mientras una condición es verdadera.  |
+	    | ##code:with##              | Simplifica la gestión de recursos.                                 |
+	    | ##code:yield##             | Pausa una función y devuelve un valor del generador.               |

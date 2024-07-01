@@ -1,0 +1,137 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Herencia múltiple
+	
+	Text: 
+	    La herencia múltiple es una característica de algunos lenguajes de programación orientada a objetos que permite que una clase herede de más de una clase base. En Python, la herencia múltiple está permitida y se puede utilizar para crear clases que combinan comportamientos de múltiples clases base.
+	    
+	h2:  Sintaxis de Herencia Múltiple 
+	
+	Text:
+	    Para definir una clase que hereda de múltiples clases, se listan todas las clases base entre paréntesis, separadas por comas.
+	    
+	Code:
+	    class ClaseBase1:
+	    pass
+	    
+	    class ClaseBase2:
+	    pass
+	    
+	    ***class ClaseDerivada(ClaseBase1, ClaseBase2)***:
+	    pass
+	
+	
+	Text:
+	    
+	h2:  Ejemplo de Herencia Múltiple 
+	
+	Text:
+	    
+	    Veamos un ejemplo más práctico:
+	    
+	Code:
+	    class Volador:
+	    def volar(self):
+	    print("Este objeto puede volar.")
+	    
+	    class Nadador:
+	    def nadar(self):
+	    print("Este objeto puede nadar.")
+	    
+	    class Pato(Volador, Nadador):
+	    pass
+	    
+	    pato = Pato()
+	    pato.volar()  # Output: Este objeto puede volar.
+	    pato.nadar()  # Output: Este objeto puede nadar.
+	
+	
+	Text:
+	    
+	    En este ejemplo, ##Pato## hereda de ##Volador## y ##Nadador##, y por lo tanto puede usar los métodos ##volar## y ##nadar##.
+	    
+	h2:  Orden de Resolución de Métodos (MRO) 
+	
+	Text:
+	    Cuando una clase hereda de múltiples clases, puede haber conflictos en los métodos y atributos que se heredan. Python utiliza un algoritmo llamado C3 Linearization para determinar el orden en el que se deben buscar los métodos y atributos. Este orden se llama "Method Resolution Order" (MRO).
+	    
+	    Puedes ver el MRO de una clase usando el atributo ##__mro__## o la función ##mro()##.
+	    
+	Code:
+	    class A:
+	    def metodo(self):
+	    print("Método de A")
+	    
+	    class B(A):
+	    def metodo(self):
+	    print("Método de B")
+	    
+	    class C(A):
+	    def metodo(self):
+	    print("Método de C")
+	    
+	    class D(B, C):
+	    pass
+	    
+	    d = D()
+	    d.metodo()  # Output: Método de B
+	    
+	    print(D.__mro__)
+	    # Output: (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>,
+	    #          <class '__main__.A'>, <class 'object'>)
+	
+	
+	Text:
+	    
+	    En este caso, ##D## hereda de ##B## y ##C##. Cuando llamamos al método ##metodo## en una instancia de ##D##, Python sigue el MRO y encuentra ##metodo## primero en ##B## antes que en ##C##.
+	    
+	h2:  Super() en Herencia Múltiple 
+	
+	Text:
+	    
+	    El uso de ##super()## en herencia múltiple puede ser un poco más complejo, pero sigue las reglas del MRO. Cuando usas ##super()## en un método, llama al siguiente método en el MRO.
+	    
+	Code:
+	    class A:
+	    def metodo(self):
+	    print("Método de A")
+	    super().metodo()
+	    
+	    class B(A):
+	    def metodo(self):
+	    print("Método de B")
+	    super().metodo()
+	    
+	    class C(A):
+	    def metodo(self):
+	    print("Método de C")
+	    super().metodo()
+	    
+	    class D(B, C):
+	    def metodo(self):
+	    print("Método de D")
+	    super().metodo()
+	    
+	    d = D()
+	    d.metodo()
+	    # Output:
+	    # Método de D
+	    # Método de B
+	    # Método de C
+	    # Método de A
+	    
+	
+	
+	Text:
+	    
+	    En este ejemplo, cuando llamamos a ##d.metodo()##, se sigue el MRO: ##D##, ##B##, ##C##, ##A##.
+	    
+	h2:  Resumen 
+	
+	Text:
+	    
+	    * **Herencia múltiple**: Permite que una clase herede de más de una clase base.
+	    * **MRO (Method Resolution Order)**: Determina el orden en el que se buscan métodos y atributos.
+	    * ##super()##: Llama al siguiente método en el MRO.
+	    
+	    La herencia múltiple puede ser muy poderosa, pero también puede hacer que el diseño de clases sea más complejo. Es importante usarla con cuidado y entender bien el MRO para evitar conflictos y comportamientos inesperados.

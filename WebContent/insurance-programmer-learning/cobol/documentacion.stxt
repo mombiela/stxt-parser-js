@@ -1,0 +1,143 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Importancia de la documentación y comentarios en el código
+	
+	Text: 
+	    La documentación y los comentarios en el código son esenciales para el mantenimiento, comprensión y colaboración en proyectos de desarrollo. A continuación, se detalla su importancia en el contexto de la programación COBOL.
+	    
+	h2: 1. Facilita el Mantenimiento del Código
+	
+	Text:
+	    
+	    La documentación y los comentarios claros permiten a otros desarrolladores (o a uno mismo en el futuro) entender rápidamente la lógica y estructura del código, facilitando su mantenimiento y actualización.
+	    
+	h3: Ejemplo de comentario descriptivo
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Calcular-Salario.
+	    * Este código calcula el salario mensual de un empleado
+	    * basado en su salario base y horas extras.
+	    MOVE Salario-Base TO Salario-Mensual.
+	    IF Horas-Extras > 0
+	    MULTIPLY Horas-Extras BY Tarifa-Hora GIVING Extra-Pago.
+	    ADD Extra-Pago TO Salario-Mensual.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Los comentarios explican el propósito del código, haciendo más fácil entender su funcionamiento y realizar cambios si es necesario.
+	    
+	h2: 2. Mejora la Colaboración en Equipo
+	
+	Text:
+	    
+	    En proyectos colaborativos, la documentación ayuda a los miembros del equipo a comprender las diferentes partes del código, facilitando la integración y coordinación de las tareas.
+	    
+	h3: Ejemplo de comentario para colaboración en equipo
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Actualizar-Inventario.
+	    * Actualiza el inventario después de una venta.
+	    * @John Por favor revisa la función de descuento en la línea siguiente.
+	    PERFORM Calcular-Descuento.
+	    SUBTRACT Cantidad-Vendida FROM Inventario-Actual.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Un comentario dirigido a un miembro del equipo facilita la revisión y mejora de una parte específica del código.
+	    
+	h2: 3. Facilita la Depuración y Pruebas
+	
+	Text:
+	    
+	    Los comentarios pueden ayudar a identificar rápidamente secciones del código relevantes para la depuración y pruebas, ahorrando tiempo y esfuerzo.
+	    
+	h3: Ejemplo de comentario para depuración
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Generar-Reporte.
+	    * Depurar: Revisar si la variable Reporte se inicializa correctamente.
+	    INITIALIZE Reporte.
+	    * Generar reporte de ventas mensuales.
+	    PERFORM Calcular-Ventas-Mensuales.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Un comentario señala una parte específica del código para revisar durante la depuración.
+	    
+	h2: 4. Mejora la Comprensión del Código Complejo
+	
+	Text:
+	    
+	    El código complejo puede ser difícil de entender sin documentación adecuada. Los comentarios y la documentación ayudan a desglosar y explicar la lógica compleja.
+	    
+	h3: Ejemplo de comentario en código complejo
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Procesar-Pedido.
+	    * Si el cliente es VIP, aplica un descuento adicional
+	    * y actualiza el registro del cliente.
+	    IF Cliente-VIP = 'S'
+	    PERFORM Aplicar-Descuento-Adicional
+	    PERFORM Actualizar-Registro-Cliente.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Los comentarios explican el propósito de las condiciones y subprocesos, facilitando la comprensión del flujo del programa.
+	    
+	h2: 5. Ayuda en la Transferencia de Conocimiento
+	
+	Text:
+	    
+	    La documentación y los comentarios son vitales para la transferencia de conocimiento en caso de cambios en el equipo de desarrollo o cuando un nuevo desarrollador se une al proyecto.
+	    
+	h3: Ejemplo de documentación para transferencia de conocimiento
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Inicializar-Sistema.
+	    * Inicializa los parámetros del sistema y carga las configuraciones.
+	    * Nuevo Desarrollador: Revisa las configuraciones en el archivo Config.dat.
+	    OPEN INPUT Config-Archivo.
+	    READ Config-Archivo INTO Config-Registro.
+	    CLOSE Config-Archivo.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Los comentarios proporcionan instrucciones específicas para un nuevo desarrollador, facilitando la transferencia de conocimiento.
+	    
+	h2: Conclusión
+	
+	Text:
+	    
+	    La documentación y los comentarios en el código COBOL son fundamentales para garantizar la mantenibilidad, colaboración, depuración, comprensión y transferencia de conocimiento en los proyectos de desarrollo. Implementar una buena práctica de documentación mejora significativamente la calidad y sostenibilidad del código a lo largo del tiempo.

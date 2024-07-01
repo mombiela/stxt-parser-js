@@ -1,0 +1,77 @@
+Index(www.cursos.com/index.stxt):
+
+	title: HTML
+		
+	part: Introducción a HTML
+	
+	    Tema: (intro-html) Conceptos básicos y estructura de un documento HTML.
+	    Tema: (historia-html) Breve historia y evolución de HTML.
+	    Tema: (primer-documento) Creación y visualización de un primer documento HTML.
+	
+	part: Estructura básica de HTML
+	
+	    Tema: (doctype-html) La declaración <!DOCTYPE> y su importancia.
+	    Tema: (elementos-basicos) Introducción a los elementos básicos de HTML.
+	    Tema: (atributos-html) Uso de atributos en los elementos HTML.
+	
+	part: Formateo de texto en HTML
+	
+	    Tema: (parrafos-titulos) Creación de párrafos y títulos.
+	    Tema: (enfasis-texto) Uso de énfasis y otros elementos de formateo.
+	    Tema: (listas-html) Creación de listas ordenadas y no ordenadas.
+	
+	part: Enlaces e Imágenes
+	
+	    Tema: (enlaces-html) Creación de enlaces y navegación entre páginas.
+	    Tema: (imagenes-html) Inclusión de imágenes y atributos comunes.
+	    Tema: (imagenes-enlaces) Uso de imágenes como enlaces.
+	
+	part: Tablas en HTML
+	
+	    Tema: (creacion-tablas) Estructura básica de una tabla HTML.
+	    Tema: (atributos-tablas) Atributos y estilo en tablas.
+	    Tema: (tablas-avanzadas) Combinar celdas y técnicas avanzadas.
+	
+	part: Formularios en HTML
+	
+	    Tema: (elementos-formulario) Elementos básicos de un formulario.
+	    Tema: (inputs-formulario) Tipos de entradas de usuario.
+	    Tema: (envio-datos) Métodos de envío de datos de formularios.
+	
+	part: Introducción a CSS
+	
+	    Tema: (intro-css) Conceptos básicos de CSS y su integración con HTML.
+	    Tema: (selectores-css) Uso de selectores para aplicar estilos.
+	    Tema: (propiedades-css) Propiedades CSS comunes para formatear elementos.
+	
+	part: Maquetación y Diseño Web
+	
+	    Tema: (modelos-caja) El modelo de caja de CSS.
+	    Tema: (layout-css) Técnicas de diseño y disposición en CSS.
+	    Tema: (responsive-design) Diseño adaptable y técnicas de media queries.
+	
+	part: Buenas Prácticas y Accesibilidad
+	
+	    Tema: (semantica-html) Uso de etiquetas semánticas para mejorar la accesibilidad.
+	    Tema: (accesibilidad-web) Prácticas para hacer páginas web accesibles.
+	    Tema: (validacion-html) Validación de código HTML para evitar errores.
+	
+	part: Introducción a JavaScript
+	
+	    Tema: (intro-js) Conceptos básicos de JavaScript y su integración con HTML.
+	    Tema: (eventos-js) Manejo de eventos en JavaScript.
+	    Tema: (dom-js) Manipulación del DOM con JavaScript.
+	
+	part: Proyecto Final
+	
+	    Tema: (planificacion-proyecto) Planificación y estructura de un proyecto web.
+	    Tema: (desarrollo-proyecto) Desarrollo paso a paso de un sitio web completo.
+	    Tema: (revision-proyecto) Revisión y mejora del proyecto final.
+	
+	part: Recursos Adicionales
+	
+	    Tema: (recursos-online) Recursos y tutoriales online para continuar aprendiendo.
+	    Tema: (herramientas-web) Herramientas útiles para desarrolladores web.
+	    Tema: (comunidades-aprendizaje) Comunidades y foros para resolver dudas y compartir conocimientos.
+	
+		

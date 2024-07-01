@@ -1,0 +1,64 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Descripción y uso de la División de Procedimiento
+	
+	Text: 
+	    La División de Procedimiento en un programa COBOL es donde se escribe el código ejecutable. Esta división contiene las instrucciones que controlan la lógica del programa y determinan cómo se manipulan los datos definidos en la División de Datos. La estructura de esta división permite organizar el flujo del programa de manera clara y lógica.
+	    
+	    Aquí hay algunos componentes clave de la División de Procedimiento:
+	    
+	    *  **Parágrafos y Secciones**: La División de Procedimiento se organiza en parágrafos y secciones. Un parágrafo es una unidad lógica de código que realiza una tarea específica. Varias parágrafos pueden agruparse en una sección.
+	    
+	    *  **Sentencias y Estructuras de Control**: Esta división contiene las sentencias COBOL que realizan operaciones como mover datos, realizar cálculos, y controlar el flujo del programa mediante estructuras como IF, PERFORM, y GO TO.
+	    
+	    *  **Declaraciones de Entrada y Salida**: Aquí se incluyen las instrucciones para leer y escribir archivos, así como para interactuar con otros dispositivos de entrada y salida.
+	    
+	    Un ejemplo básico de la División de Procedimiento en un programa COBOL es el siguiente:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    
+	    Main-Section.
+	    Display-Message.
+	    DISPLAY "Processing Employee Records...".
+	    
+	    Open-Files.
+	    OPEN INPUT EmployeeFile.
+	    
+	    Read-Employees.
+	    PERFORM UNTIL EOF.
+	    READ EmployeeFile INTO EmployeeRecord
+	    AT END SET EOF TO TRUE.
+	    NOT AT END
+	    PERFORM Process-Employee
+	    END-READ
+	    END-PERFORM.
+	    
+	    Close-Files.
+	    CLOSE EmployeeFile.
+	    
+	    Stop-Run.
+	    STOP RUN.
+	    
+	    Process-Employee.
+	    ADD 1 TO WS-EmployeeCount.
+	    ADD EmployeeSalary TO WS-TotalSalary.
+	
+	
+	Text:
+	    
+	    En este ejemplo, la División de Procedimiento se organiza en varias secciones y parágrafos:
+	    
+	    *  //Main-Section//: Contiene la lógica principal del programa, incluyendo la apertura de archivos, la lectura de registros y el cierre de archivos.
+	    
+	    *  //Display-Message//: Muestra un mensaje en la pantalla.
+	    
+	    *  //Open-Files//: Abre el archivo de empleados.
+	    
+	    *  //Read-Employees//: Lee los registros de empleados en un bucle hasta que se alcance el final del archivo.
+	    
+	    *  //Close-Files//: Cierra el archivo de empleados.
+	    
+	    *  //Process-Employee//: Procesa cada registro de empleado, actualizando los contadores y sumas.
+	    
+	    La División de Procedimiento es crucial para la ejecución de un programa COBOL, ya que define la lógica operativa y las interacciones del programa con los datos y archivos. Su estructura organizada facilita el seguimiento del flujo del programa y el mantenimiento del código.

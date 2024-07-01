@@ -1,0 +1,198 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Conceptos avanzados OOP
+	
+	Text: 
+	    Hemos cubierto varios aspectos fundamentales de las clases en Python, como la definición de clases, atributos y métodos, herencia, polimorfismo, y encapsulación. Sin embargo, hay otros conceptos importantes y avanzados que vale la pena explorar para tener un conocimiento más completo de cómo trabajar con clases en Python.
+	    
+	h2:  Métodos de Clase (@@@classmethod@@) 
+	
+	Text:
+	    
+	    Un método de clase recibe la clase como primer argumento implícito, que se suele denominar ##cls##. Se utiliza el decorador ##@classmethod##.
+	    
+	Code:
+	    class MiClase:
+	    contador = 0
+	    
+	    def __init__(self):
+	    MiClase.contador += 1
+	    
+	    ***@classmethod***
+	    ***def obtener_contador(cls):***
+	    return cls.contador
+	    
+	    obj1 = MiClase()
+	    obj2 = MiClase()
+	    print(***MiClase.obtener_contador()***)  # Output: 2
+	
+	
+	Text:
+	    
+	h2:  Métodos Estáticos (@@@staticmethod@@)
+	
+	Text:
+	    
+	    Un método estático no recibe ni la instancia (##self##) ni la clase (##cls##) como primer argumento. Se utiliza el decorador ##@staticmethod##.
+	    
+	Code:
+	    class MiClase:
+	    ***@staticmethod***
+	    ***def metodo_estatico():***
+	    print("Este es un método estático.")
+	    ***MiClase.metodo_estatico()***  # Output: Este es un método estático.
+	
+	
+	Text:
+	    
+	h2:  Métodos Especiales (Dunder Methods) 
+	
+	Text:
+	    
+	    Los métodos especiales (también conocidos como métodos "dunder" debido a los dobles guiones bajos) permiten definir comportamientos específicos para operadores y funciones internas de Python.
+	    
+	    **Método `__str__` y `__repr__@@
+	    
+	    * ##__str__##: Define el comportamiento de la función ##str()## y ##print()##.
+	    * ##__repr__##: Define el comportamiento de la función ##repr()##, que debería devolver una representación detallada del objeto.
+	    
+	Code:
+	    class MiClase:
+	    def __init__(self, valor):
+	    self.valor = valor
+	    
+	    def __str__(self):
+	    return f"Valor: {self.valor}"
+	    
+	    def __repr__(self):
+	    return f"MiClase(valor={self.valor})"
+	    
+	    obj = MiClase(10)
+	    print(str(obj))  # Output: Valor: 10
+	    print(repr(obj))  # Output: MiClase(valor=10)
+	
+	
+	Text:
+	    
+	h2:  Métodos de Comparación 
+	
+	Text:
+	    
+	    Permiten definir el comportamiento de los operadores de comparación.
+	    
+	Code:
+	    class MiClase:
+	    def __init__(self, valor):
+	    self.valor = valor
+	    
+	    def __eq__(self, otro):
+	    return self.valor == otro.valor
+	    
+	    def __lt__(self, otro):
+	    return self.valor < otro.valor
+	    
+	    obj1 = MiClase(10)
+	    obj2 = MiClase(20)
+	    print(obj1 == obj2)  # Output: False
+	    print(obj1 < obj2)   # Output: True
+	
+	
+	Text:
+	    
+	h2:  Propiedades Avanzadas 
+	
+	Text:
+	    
+	    Además de los decoradores ##@property##, ##@getter##, y ##@setter##, Python permite definir propiedades de manera más avanzada para controlar el acceso a los atributos.
+	    
+	Code:
+	    class MiClase:
+	    def __init__(self, valor):
+	    self._valor = valor
+	    
+	    @property
+	    def valor(self):
+	    return self._valor
+	    
+	    @valor.setter
+	    def valor(self, nuevo_valor):
+	    if nuevo_valor < 0:
+	    raise ValueError("El valor no puede ser negativo.")
+	    self._valor = nuevo_valor
+	    
+	    obj = MiClase(10)
+	    print(obj.valor)  # Output: 10
+	    obj.valor = 20
+	    print(obj.valor)  # Output: 20
+	    # obj.valor = -5  # ValueError: El valor no puede ser negativo.
+	
+	
+	Text:
+	    
+	h2:  Herencia Múltiple y Resolución de Conflictos 
+	
+	Text:
+	    
+	    Cuando una clase hereda de múltiples clases, puede haber conflictos en la resolución de métodos. Python usa el MRO (Method Resolution Order) para determinar la prioridad de los métodos.
+	    
+	Code:
+	    class A:
+	    def metodo(self):
+	    print("Método de A")
+	    
+	    class B(A):
+	    def metodo(self):
+	    print("Método de B")
+	    
+	    class C(A):
+	    def metodo(self):
+	    print("Método de C")
+	    
+	    class D(B, C):
+	    pass
+	    
+	    d = D()
+	    d.metodo()  # Output: Método de B
+	    print(D.__mro__)
+	    # Output: (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>,
+	    #          <class '__main__.A'>, <class 'object'>)
+	
+	
+	Text:
+	    
+	h2:  Clases Abstractas 
+	
+	Text:
+	    
+	    Las clases abstractas no se pueden instanciar y están destinadas a ser subclaseadas. Python proporciona el módulo ##abc## para definir clases abstractas y métodos abstractos.
+	    
+	Code:
+	    from abc import ABC, abstractmethod
+	    
+	    class Animal(ABC):
+	    @abstractmethod
+	    def hacer_sonido(self):
+	    pass
+	    
+	    class Perro(Animal):
+	    def hacer_sonido(self):
+	    return "Guau"
+	    
+	    # animal = Animal()  # TypeError: Can't instantiate abstract class Animal with abstract methods hacer_sonido
+	    perro = Perro()
+	    print(perro.hacer_sonido())  # Output: Guau
+	
+	
+	Text:
+	    
+	h2:  Resumen 
+	
+	Text:
+	    
+	    Hemos cubierto muchos aspectos avanzados de las clases en Python:
+	    
+	    * **Métodos de Clase y Métodos Estáticos**: Uso de ##@classmethod## y ##@staticmethod##.
+	    * **Métodos Especiales (Dunder Methods)**: Como ##__str__##, ##__repr__##, y métodos de comparación.
+	    * **Propiedades Avanzadas**: Uso de ##@property## y control avanzado de acceso a atributos.
+	    * **Herencia Múltiple y Resolución de Conflictos**: Cómo Python maneja el MRO.
+	    * **Clases Abstractas**: Uso del módulo ##abc## para definir clases y métodos abstractos.

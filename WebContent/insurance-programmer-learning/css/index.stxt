@@ -1,0 +1,84 @@
+Index(www.cursos.com/index.stxt):
+
+	title: CSS
+		
+	part: Introducción a CSS
+	
+	    Tema: (historia_css) Historia y evolución de CSS.
+	    Tema: (que_es_css) Definición y propósito de CSS.
+	    Tema: (sintaxis_css) Estructura básica de una regla CSS.
+	    Tema: (aplicacion_css) Formas de aplicar CSS a un documento HTML.
+	    Tema: (selectores_basicos) Introducción a los selectores básicos en CSS.
+	
+	part: Selectores CSS
+	
+	    Tema: (selectores_tipos) Tipos de selectores en CSS.
+	    Tema: (selectores_clases) Uso de selectores de clase.
+	    Tema: (selectores_id) Uso de selectores por ID.
+	    Tema: (selectores_atributo) Selectores basados en atributos.
+	    Tema: (selectores_pseudoclases) Introducción a las pseudoclases.
+	
+	part: Propiedades Básicas de CSS
+	
+	    Tema: (color_fondo) Propiedades de color y fondo.
+	    Tema: (texto_fuente) Propiedades de texto y fuentes.
+	    Tema: (bordes) Propiedades de bordes y contornos.
+	    Tema: (margenes_relleno) Propiedades de márgenes y relleno.
+	    Tema: (dimension_posicion) Propiedades de dimensión y posición.
+	
+	part: Modelo de Caja (Box Model)
+	
+	    Tema: (que_es_boxmodel) Concepto del modelo de caja.
+	    Tema: (componentes_boxmodel) Componentes del modelo de caja.
+	    Tema: (bordes_boxmodel) Manejo de bordes en el modelo de caja.
+	    Tema: (margenes_boxmodel) Manejo de márgenes en el modelo de caja.
+	    Tema: (relleno_boxmodel) Manejo del relleno en el modelo de caja.
+	
+	part: Layout y Posicionamiento
+	
+	    Tema: (posicionamiento_estatico) Posicionamiento estático.
+	    Tema: (posicionamiento_relativo) Posicionamiento relativo.
+	    Tema: (posicionamiento_absoluto) Posicionamiento absoluto.
+	    Tema: (posicionamiento_fijo) Posicionamiento fijo.
+	    Tema: (display_visibility) Propiedades display y visibility.
+	
+	part: Flexbox
+	
+	    Tema: (que_es_flexbox) Introducción a Flexbox.
+	    Tema: (contenedor_flexbox) Propiedades del contenedor Flexbox.
+	    Tema: (items_flexbox) Propiedades de los ítems Flexbox.
+	    Tema: (alineacion_flexbox) Alineación y distribución en Flexbox.
+	    Tema: (ejemplos_flexbox) Ejemplos prácticos con Flexbox.
+	
+	part: CSS Grid
+	
+	    Tema: (que_es_grid) Introducción a CSS Grid.
+	    Tema: (contenedor_grid) Propiedades del contenedor Grid.
+	    Tema: (items_grid) Propiedades de los ítems Grid.
+	    Tema: (areas_grid) Definición de áreas en CSS Grid.
+	    Tema: (ejemplos_grid) Ejemplos prácticos con CSS Grid.
+	
+	part: Transiciones y Animaciones
+	
+	    Tema: (transiciones_css) Implementación de transiciones CSS.
+	    Tema: (keyframes) Uso de keyframes para animaciones.
+	    Tema: (animaciones_css) Creación de animaciones con CSS.
+	    Tema: (transformaciones) Uso de transformaciones en CSS.
+	    Tema: (ejemplos_animaciones) Ejemplos de transiciones y animaciones.
+	
+	part: Responsive Design
+	
+	    Tema: (que_es_responsive) Introducción al diseño responsive.
+	    Tema: (media_queries) Uso de media queries en CSS.
+	    Tema: (unidades_relativas) Uso de unidades relativas.
+	    Tema: (mobile_first) Enfoque mobile-first en CSS.
+	    Tema: (ejemplos_responsive) Ejemplos prácticos de diseño responsive.
+	
+	part: Buenas Prácticas y Optimización
+	
+	    Tema: (organizacion_css) Organización y estructura de CSS.
+	    Tema: (comentarios_css) Uso de comentarios en CSS.
+	    Tema: (performance_css) Optimización de rendimiento en CSS.
+	    Tema: (herramientas_css) Herramientas y recursos útiles para CSS.
+	    Tema: (accesibilidad_css) Mejores prácticas para accesibilidad en CSS.
+		

@@ -1,0 +1,213 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Bucles (for, while)
+	
+	Text: 
+	    Los bucles en Python se utilizan para repetir un bloque de código varias veces.
+	    Python soporta principalmente dos tipos de bucles: **for** y **while**.
+	    
+	h2:  Bucle for 
+	
+	Text:
+	    
+	    El bucle ##for## en Python se utiliza para iterar sobre
+	    una secuencia (como una lista, una tupla, un diccionario,
+	    un conjunto o una cadena de caracteres). A medida que itera,
+	    el bucle ejecuta el bloque de código para cada elemento en la secuencia.
+	    
+	h2:  Sintaxis: 
+	
+	Text:
+	    
+	Code:
+	    for variable in secuencia:
+	    # bloque de código
+	
+	
+	Text:
+	    
+	h2:  Ejemplo: 
+	
+	Text:
+	    
+	Code:
+	    frutas = ["manzana", "banana", "cereza"]
+	    for fruta in frutas:
+	    print(fruta)
+	
+	
+	Text:
+	    
+	    En este ejemplo, el bucle ##for## iterará sobre
+	    cada elemento de la lista ##frutas## y imprimirá cada fruta.
+	    
+	h2:  Uso de range() en for:
+	
+	Text:
+	    
+	    El método ##range()## se usa a menudo
+	    con ##for## para generar una secuencia de números.
+	    
+	h2:  Ejemplo:
+	
+	Text:
+	    
+	Code:
+	    for i in range(5):
+	    print(i)
+	
+	
+	Text:
+	    
+	    Este bucle imprimirá los números del 0 al 4.
+	    
+	h2:  Bucle while 
+	
+	Text:
+	    
+	    El bucle ##while## ejecuta el bloque de código
+	    mientras la condición especificada sea verdadera (##True##).
+	    
+	h2:  Sintaxis:
+	
+	Text:
+	    
+	Code:
+	    while condición:
+	    # bloque de código
+	
+	
+	Text:
+	    
+	h2:  Ejemplo:
+	
+	Text:
+	    
+	Code:
+	    i = 0
+	    while i < 5:
+	    print(i)
+	    i += 1
+	
+	
+	Text:
+	    
+	    En este ejemplo, el bucle ##while## continuará
+	    ejecutándose mientras ##i## sea menor que ##5##.
+	    Después de cada iteración, ##i## se incrementa en 1.
+	    
+	h2:  Control de bucles 
+	
+	Text:
+	    
+	    Python proporciona varias sentencias
+	    para controlar el flujo de los bucles:
+	    
+	    * **break**: Termina el bucle inmediatamente.
+	    * **continue**: Salta a la siguiente iteración del bucle.
+	    * **else**: Ejecuta un bloque de código
+	    al final del bucle, a menos que se haya terminado con ##break##.
+	    
+	h2:  Ejemplo de break:
+	
+	Text:
+	    
+	Code:
+	    for i in range(10):
+	    if i == 5:
+	    break
+	    print(i)
+	
+	
+	Text:
+	    
+	    Este bucle imprimirá los números del 0 al 4
+	    y luego se detendrá cuando ##i## sea igual a 5.
+	    
+	h2:  Ejemplo de continue:
+	
+	Text:
+	    
+	Code:
+	    for i in range(10):
+	    if i % 2 == 0:
+	    continue
+	    print(i)
+	
+	
+	Text:
+	    
+	    Este bucle imprimirá los números impares del 0 al 9,
+	    ya que ##continue## hace que el bucle salte a la
+	    siguiente iteración cuando ##i## es par.
+	    
+	h2:  Ejemplo de else en bucles:
+	
+	Text:
+	    
+	Code:
+	    for i in range(5):
+	    print(i)
+	    else:
+	    print("El bucle ha terminado")
+	
+	
+	Text:
+	    
+	    Este bucle imprimirá los números del 0 al 4 y
+	    luego imprimirá "El bucle ha terminado".
+	    
+	h2:  Combinando bucles for y while:
+	
+	Text:
+	    
+	    A veces, puedes necesitar combinar bucles ##for##
+	    y ##while## para resolver problemas más complejos.
+	    
+	h2:  Ejemplo:
+	
+	Text:
+	    
+	Code:
+	    while True:
+	    entrada = input("Escribe 'salir' para terminar: ")
+	    if entrada == 'salir':
+	    break
+	    for letra in entrada:
+	    print(letra)
+	
+	
+	Text:
+	    
+	    En este ejemplo, el bucle ##while## continuará
+	    ejecutándose hasta que el usuario escriba "salir".
+	    Para cada entrada del usuario, el bucle ##for##
+	    imprimirá cada letra de la entrada.
+	    
+	h2:  Importancia de la indentación 
+	
+	Text:
+	    
+	    Es crucial recordar que Python usa la indentación para
+	    definir bloques de código. Asegúrate de que todas las
+	    líneas de código dentro de un bucle estén correctamente indentadas.
+	    
+	Code:
+	    for i in range(5):
+	    print("Inicio del bucle")
+	    if i % 2 == 0:
+	    print(f"{i} es par")
+	    print("Fin del bucle")
+	
+	
+	Text:
+	    
+	    En resumen, los bucles ##for## y ##while## en Python son
+	    herramientas poderosas para repetir la ejecución de bloques de código.
+	    Entender cómo y cuándo usarlos es esencial para
+	    escribir programas efectivos y eficientes.
+	    
+	    
+	    
+	    
+	    

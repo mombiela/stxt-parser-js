@@ -1,0 +1,36 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Propiedades de márgenes y relleno
+	
+	Text: 
+	    *  **Propiedades de márgenes**
+	    *  ##margin##: Define el margen completo en una sola declaración. Ejemplo: ##margin: 10px;##
+	    *  ##margin-top##, ##margin-right##, ##margin-bottom##, ##margin-left##: Permiten definir márgenes individuales para cada lado. Ejemplo: ##margin-top: 20px;##
+	    *  ##margin:auto##: Centra un elemento horizontalmente dentro de su contenedor. Ejemplo: ##margin: 0 auto;##
+	    
+	    *  **Propiedades de relleno**
+	    *  ##padding##: Define el relleno completo en una sola declaración. Ejemplo: ##padding: 15px;##
+	    *  ##padding-top##, ##padding-right##, ##padding-bottom##, ##padding-left##: Permiten definir rellenos individuales para cada lado. Ejemplo: ##padding-left: 10px;##
+	    
+	h2: Ejemplo de uso de propiedades de márgenes y relleno
+	
+	Text:
+	    
+	Code:
+	    div {
+	    margin: 20px;
+	    padding: 15px;
+	    }
+	    p {
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	    padding-left: 5px;
+	    }
+	
+	
+	Text:
+	    
+	    Este ejemplo define un div con un margen de 20px alrededor y un relleno de 15px en todos los lados. Para un párrafo (##p##), establece un margen superior e inferior de 10px y un relleno izquierdo de 5px.
+	    
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/margin|Documentación sobre la propiedad margin en CSS]]
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/padding|Documentación sobre la propiedad padding en CSS]]

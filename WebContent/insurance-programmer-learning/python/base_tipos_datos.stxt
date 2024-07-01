@@ -1,0 +1,124 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Variables y tipos de datos (números, cadenas, listas, tuplas, diccionarios)
+	
+	Text: 
+	    En Python, las variables son contenedores utilizados para almacenar datos que pueden ser referenciados y manipulados en un programa. Python es un lenguaje de tipado dinámico, lo que significa que no es necesario declarar el tipo de una variable antes de usarla; el tipo se infiere automáticamente basado en el valor que se le asigna.
+	    
+	h2:  Declaración y Asignación de Variables 
+	
+	Text:
+	    
+	    En Python, puedes declarar y asignar valores a las variables de manera simple:
+	    
+	Code:
+	    x = 10           # Entero
+	    y = 3.14         # Flotante
+	    nombre = "Ana"   # Cadena de texto
+	    es_estudiante = True  # Booleano
+	
+	
+	Text:
+	    
+	    En estos ejemplos, ##x## es un entero, ##y## es un número de punto flotante, ##nombre## es una cadena de texto y ##es_estudiante## es un valor booleano.
+	    
+	h2:  Tipos de Datos Comunes 
+	
+	Text:
+	    
+	    Python maneja varios tipos de datos básicos:
+	    
+	    |= Tipo             |= Nombre              |= Descripción                                              |= Ejemplos                           |
+	    | ##code:int##      | Entero               | Números enteros sin decimales                             | ##code:10## \\ ##code:-5##                     |
+	    | ##code:float##    | Flotante             | Números con decimales                                     | ##code:3.14##, ##code:-0.001##               |
+	    | ##code:str##      | Cadena de texto      | Secuencias de caracteres delimitadas por comillas         | ##code:"Hola"## \\ ##code:'Python'## \\ ##code:'''Varias líneas## \\ ##code:de texto'''##          |
+	    | ##code:bool##     | Booleano             | Valores de verdad                                         | ##code:True## \\ ##code:False##                |
+	    | ##code:list##     | Lista                | Secuencias ordenadas de elementos de cualquier tipo       | ##code:[1, 2, 3]## \\ ##code:["a", "b", "c"]## |
+	    | ##code:tuple##    | Tupla                | Secuencias ordenadas e inmutables de elementos            | ##code:(1, 2, 3)## \\ ##code:("x", "y", "z")## |
+	    | ##code:dict##     | Diccionario          | Colecciones de pares clave-valor                          | ##code:{"name": "Ana", "age": 25}##  |
+	    
+	h2:  Ejemplos de Uso 
+	
+	Text:
+	    
+	    A continuación se muestran ejemplos de cómo trabajar con estos tipos de datos:
+	    
+	Code:
+	    # Enteros y flotantes
+	    a = 5
+	    b = 2.5
+	    suma = a + b  # 7.5
+	    print("Suma:", suma)
+	    
+	    # Cadenas de texto
+	    saludo = "Hola"
+	    nombre = "Mundo"
+	    mensaje = saludo + " " + nombre  # "Hola Mundo"
+	    print("Mensaje:", mensaje)
+	    
+	    # Booleanos
+	    es_mayor = True
+	    es_menor = False
+	    print("Es mayor:", es_mayor)
+	    print("Es menor:", es_menor)
+	    
+	    # Listas
+	    frutas = ["manzana", "banana", "cereza"]
+	    print("Primera fruta:", frutas[0])
+	    frutas.append("naranja")
+	    print("Frutas:", frutas)
+	    
+	    # Tuplas
+	    punto = (10, 20)
+	    print("Coordenadas del punto:", punto)
+	    
+	    # Diccionarios
+	    persona = {"nombre": "Ana", "edad": 25}
+	    print("Nombre:", persona["nombre"])
+	    print("Edad:", persona["edad"])
+	    
+	
+	
+	Text:
+	    
+	h2:  Operaciones Comunes 
+	
+	Text:
+	    
+	    Cada tipo de dato tiene sus propias operaciones y métodos. Por ejemplo:
+	    
+	    * **Cadenas de texto**: Puedes concatenar (##+##), repetir (##*##), y acceder a partes de la cadena (slicing).
+	    
+	Code:
+	    texto = "Python"
+	    print(texto[0:2])  # "Py"
+	    print(texto.upper())  # "PYTHON"
+	
+	
+	Text:
+	    
+	    * **Listas**: Puedes agregar (##append##), eliminar (##remove##), y acceder a elementos por índice.
+	    
+	Code:
+	    numeros = [1, 2, 3, 4]
+	    numeros.append(5)
+	    print(numeros)  # [1, 2, 3, 4, 5]
+	    numeros.remove(2)
+	    print(numeros)  # [1, 3, 4, 5]
+	
+	
+	Text:
+	    
+	    * **Diccionarios**: Puedes agregar pares clave-valor, eliminar entradas, y acceder a valores por clave.
+	    
+	Code:
+	    datos = {"nombre": "Carlos", "edad": 30}
+	    datos["edad"] = 31
+	    print(datos)  # {"nombre": "Carlos", "edad": 31}
+	    del datos["nombre"]
+	    print(datos)  # {"edad": 31}
+	
+	
+	Text:
+	    
+	    Entender cómo manejar variables y tipos de datos en Python es fundamental para escribir programas efectivos y eficientes. Cada tipo de dato tiene sus propias características y métodos, lo que te permite manipular y trabajar con datos de manera flexible y potente.

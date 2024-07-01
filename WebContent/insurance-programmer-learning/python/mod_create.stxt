@@ -1,0 +1,246 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Creación de módulos propios
+	
+	Text: 
+	h2: Módulos y paquetes. Creación de módulos propios
+	
+	Text:
+	    
+	    Crear módulos y paquetes propios en Python es una excelente manera de organizar el código, promover la reutilización y mantener la estructura de los proyectos. A continuación, se describe cómo crear módulos y paquetes en Python.
+	    
+	h2: Creación de Módulos
+	
+	Text:
+	    
+	    Un módulo en Python es simplemente un archivo con extensión ##.py## que contiene definiciones y declaraciones de Python. Puedes crear tus propios módulos para organizar funciones, clases y variables relacionadas.
+	    
+	    Ejemplo de un módulo simple:
+	    
+	    Crea un archivo llamado ##mimodulo.py##.
+	    Añade algunas funciones y variables a este archivo.
+	    Contenido de ##mimodulo.py##:
+	Code:
+	    # mimodulo.py
+	    def saludar():
+	    print("¡Hola, mundo!")
+	    
+	    def despedirse():
+	    print("Adiós, mundo!")
+	    
+	    pi = 3.14159
+	
+	
+	Text:
+	    
+	    Para utilizar este módulo en otro script, simplemente impórtalo usando ##import##.
+	    
+	    Ejemplo de uso del módulo:
+	    
+	Code:
+	    import mimodulo
+	    
+	    mimodulo.saludar()
+	    print(mimodulo.pi)
+	    mimodulo.despedirse()
+	
+	
+	Text:
+	    
+	    También puedes importar partes específicas del módulo:
+	Code:
+	    from mimodulo import saludar, pi
+	    
+	    saludar()
+	    print(pi)
+	
+	
+	Text:
+	    
+	h2: Creación de Paquetes
+	
+	Text:
+	    
+	    Un paquete es una colección de módulos organizados en directorios que incluyen un archivo especial ##init.py##. Este archivo puede estar vacío o puede ejecutar algún código de inicialización para el paquete.
+	    
+	    Ejemplo de creación de un paquete:
+	    
+	    Crea un directorio llamado ##mipaquete##.
+	    Dentro de ##mipaquete##, crea un archivo vacío llamado ##init.py##.
+	    Añade otros módulos al directorio.
+	    Estructura del paquete:
+	    ##startuml##
+	    package mipaquete {
+	    init.py
+	    modulo1.py
+	    modulo2.py
+	    }
+	    ##enduml##
+	    
+	    Contenido de ##modulo1.py##:
+	Code:
+	    # modulo1.py
+	    def funcion1():
+	    print("Función 1 de modulo1")
+	
+	
+	Text:
+	    
+	    Contenido de ##modulo2.py##:
+	Code:
+	    # modulo2.py
+	    def funcion2():
+	    print("Función 2 de modulo2")
+	
+	
+	Text:
+	    
+	    Para utilizar este paquete en otro script, puedes importarlo usando la sintaxis de punto.
+	    
+	    Ejemplo de uso del paquete:
+	Code:
+	    from mipaquete import modulo1, modulo2
+	    
+	    modulo1.funcion1()
+	    modulo2.funcion2()
+	
+	
+	Text:
+	    
+	h2: Importación de Submódulos
+	
+	Text:
+	    
+	    Puedes importar submódulos específicos de un paquete.
+	    
+	    Ejemplo:
+	Code:
+	    from mipaquete.modulo1 import funcion1
+	    
+	    funcion1()
+	
+	
+	Text:
+	    
+	h2: Inicialización del Paquete
+	
+	Text:
+	    
+	    El archivo ##init.py## puede contener código de inicialización para el paquete, lo que permite ejecutar algún código cuando se importa el paquete.
+	    
+	    Ejemplo de contenido de ##init.py##:
+	Code:
+	    # init.py
+	    from .modulo1 import funcion1
+	    from .modulo2 import funcion2
+	
+	
+	Text:
+	    
+	    Ahora puedes importar y usar el paquete completo:
+	Code:
+	    import mipaquete
+	    
+	    mipaquete.funcion1()
+	    mipaquete.funcion2()
+	
+	
+	Text:
+	    
+	h2: Instalación y Uso de Paquetes Externos
+	
+	Text:
+	    
+	    Python tiene un sistema de gestión de paquetes llamado ##pip##, que permite instalar paquetes externos desde el Python Package Index (PyPI).
+	    
+	    Para instalar un paquete:
+	Code:
+	    pip install nombre_paquete
+	
+	
+	Text:
+	    
+	    Para usar un paquete instalado:
+	Code:
+	    import nombre_paquete
+	
+	
+	Text:
+	    
+	h2: Ventajas del Uso de Módulos y Paquetes
+	
+	Text:
+	    
+	    *  **Organización**: Permiten estructurar el código en componentes más pequeños y manejables.
+	    *  **Reutilización**: Facilitan la reutilización del código en diferentes proyectos.
+	    *  **Mantenimiento**: Hacen que el código sea más fácil de mantener y actualizar.
+	    *  **Colaboración**: Facilitan la colaboración entre varios desarrolladores.
+	    
+	h2: Ejemplo Completo
+	
+	Text:
+	    
+	    Aquí tienes un ejemplo completo que muestra cómo crear y usar un módulo y un paquete en Python.
+	    
+	    Estructura del proyecto:
+	    ##startuml##
+	    proyecto/
+	    main.py
+	    mimodulo.py
+	    mipaquete/
+	    init.py
+	    modulo1.py
+	    modulo2.py
+	    ##enduml##
+	    
+	    Contenido de ##mimodulo.py##:
+	Code:
+	    # mimodulo.py
+	    def saludar():
+	    print("¡Hola, mundo!")
+	    
+	    pi = 3.14159
+	
+	
+	Text:
+	    
+	    Contenido de ##mipaquete/modulo1.py##:
+	Code:
+	    # modulo1.py
+	    def funcion1():
+	    print("Función 1 de modulo1")
+	
+	
+	Text:
+	    
+	    Contenido de ##mipaquete/modulo2.py##:
+	Code:
+	    # modulo2.py
+	    def funcion2():
+	    print("Función 2 de modulo2")
+	
+	
+	Text:
+	    
+	    Contenido de ##mipaquete/init.py##:
+	Code:
+	    # init.py
+	    from .modulo1 import funcion1
+	    from .modulo2 import funcion2
+	
+	
+	Text:
+	    
+	    Contenido de ##main.py##:
+	Code:
+	    import mimodulo
+	    import mipaquete
+	    
+	    mimodulo.saludar()
+	    print(mimodulo.pi)
+	    
+	    mipaquete.funcion1()
+	    mipaquete.funcion2()
+	
+	
+	Text:

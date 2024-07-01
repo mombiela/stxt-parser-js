@@ -1,0 +1,40 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Propiedades de bordes y contornos
+	
+	Text: 
+	    *  **Propiedades de bordes**
+	    *  ##border##: Define el borde completo en una sola declaración. Ejemplo: ##border: 1px solid black;##
+	    *  ##border-width##: Especifica el grosor del borde. Ejemplo: ##border-width: 2px;##
+	    *  ##border-style##: Define el estilo del borde. Valores comunes: ##solid##, ##dotted##, ##dashed##, ##double##. Ejemplo: ##border-style: solid;##
+	    *  ##border-color##: Establece el color del borde. Ejemplo: ##border-color: red;##
+	    *  ##border-radius##: Redondea las esquinas del borde. Ejemplo: ##border-radius: 10px;##
+	    *  ##border-top##, ##border-right##, ##border-bottom##, ##border-left##: Permiten definir bordes individuales para cada lado. Ejemplo: ##border-top: 2px dashed blue;##
+	    
+	    *  **Propiedades de contornos**
+	    *  ##outline##: Define el contorno completo en una sola declaración. Ejemplo: ##outline: 1px solid red;##
+	    *  ##outline-width##: Especifica el grosor del contorno. Ejemplo: ##outline-width: 3px;##
+	    *  ##outline-style##: Define el estilo del contorno. Valores comunes: ##solid##, ##dotted##, ##dashed##, ##double##. Ejemplo: ##outline-style: dashed;##
+	    *  ##outline-color##: Establece el color del contorno. Ejemplo: ##outline-color: green;##
+	    *  ##outline-offset##: Define el espacio entre el contorno y el borde del elemento. Ejemplo: ##outline-offset: 5px;##
+	    
+	h2: Ejemplo de uso de propiedades de bordes y contornos
+	
+	Text:
+	    
+	Code:
+	    div {
+	    border: 2px solid blue;
+	    border-radius: 15px;
+	    outline: 3px dotted red;
+	    outline-offset: 10px;
+	    }
+	
+	
+	Text:
+	    
+	    Este ejemplo define un div con un borde azul sólido de 2px, esquinas redondeadas de 15px, un contorno rojo punteado de 3px y un espacio de 10px entre el borde y el contorno.
+	    
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/border|Documentación sobre la propiedad border en CSS]]
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/outline|Documentación sobre la propiedad outline en CSS]]
+	    

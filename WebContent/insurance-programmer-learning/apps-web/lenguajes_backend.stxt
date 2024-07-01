@@ -1,0 +1,113 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Lenguajes comunes en el backend
+	
+	Text: 
+	    En el desarrollo de aplicaciones web, el backend es una parte fundamental que se encarga de la lógica del servidor, la base de datos, la autenticación de usuarios, y más. Vamos a explorar algunos de los lenguajes más comunes utilizados en el backend: **Python**, **PHP**, **Node.js** y **Java**, y cómo se utilizan en la práctica.
+	    
+	h2: Python
+	
+	Text:
+	    
+	    //Python// es un lenguaje de programación interpretado, de alto nivel y con una sintaxis clara y concisa. Es conocido por su facilidad de uso y su amplio ecosistema de bibliotecas y frameworks.
+	    
+	    *  Uno de los frameworks más populares para el desarrollo web con Python es **Django**. Proporciona una estructura sólida y muchas características integradas, como un ORM (Object-Relational Mapping), autenticación, y un panel de administración automático.
+	    *  Otro framework popular es **Flask**, que es más ligero y flexible que Django, ideal para aplicaciones más pequeñas o microservicios.
+	    
+	Code:
+	    from flask import Flask, jsonify
+	    
+	    app = Flask(name)
+	    
+	    @app.route('/')
+	    def home():
+	    return jsonify(message="Hello, World!")
+	    
+	    if name == 'main':
+	    app.run(debug=True)
+	
+	
+	Text:
+	    
+	h2: PHP
+	
+	Text:
+	    
+	    //PHP// es un lenguaje de scripting del lado del servidor, diseñado específicamente para el desarrollo web. Es uno de los lenguajes más antiguos y es ampliamente utilizado para crear páginas web dinámicas.
+	    
+	    *  Uno de los frameworks más utilizados con PHP es **Laravel**. Laravel ofrece una sintaxis elegante y proporciona herramientas y recursos para realizar tareas comunes como enrutamiento, sesiones, caché y autenticación.
+	    *  **Symfony** es otro framework potente que se centra en la escalabilidad y la reutilización de componentes.
+	    
+	Code:
+	    
+	    <?php
+	    
+	    use Illuminate\Support\Facades\Route;
+	    
+	    Route::get('/', function () {
+	    return view('welcome');
+	    });
+	
+	
+	Text:
+	    
+	h2: Node.js
+	
+	Text:
+	    
+	    //Node.js// es un entorno de ejecución para JavaScript construido con el motor V8 de Chrome. Permite ejecutar JavaScript en el servidor, lo que facilita el desarrollo de aplicaciones de red escalables y rápidas.
+	    
+	    *  Uno de los frameworks más populares en Node.js es **Express.js**. Es un framework minimalista y flexible que proporciona un robusto conjunto de características para aplicaciones web y móviles.
+	    *  Otro framework es **NestJS**, que utiliza TypeScript y es adecuado para la construcción de aplicaciones escalables y mantenibles.
+	    
+	Code:
+	    const express = require('express');
+	    const app = express();
+	    
+	    app.get('/', (req, res) => {
+	    res.send('Hello, World!');
+	    });
+	    
+	    app.listen(3000, () => {
+	    console.log('Server is running on port 3000');
+	    });
+	
+	
+	Text:
+	    
+	h2: Java
+	
+	Text:
+	    
+	    //Java// es un lenguaje de programación robusto y ampliamente utilizado en el desarrollo de aplicaciones empresariales. Es conocido por su portabilidad y rendimiento.
+	    
+	    *  **Spring Boot** es un framework basado en Java que simplifica el desarrollo de aplicaciones nuevas con el motor Spring. Ofrece una configuración mínima y una arquitectura robusta, ideal para aplicaciones empresariales de gran escala.
+	    *  Otro framework importante es **Jakarta EE** (anteriormente Java EE), que proporciona una plataforma completa para desarrollar aplicaciones web y empresariales.
+	    
+	Code:
+	    import org.springframework.boot.SpringApplication;
+	    import org.springframework.boot.autoconfigure.SpringBootApplication;
+	    import org.springframework.web.bind.annotation.GetMapping;
+	    import org.springframework.web.bind.annotation.RestController;
+	    
+	    @SpringBootApplication
+	    public class DemoApplication {
+	    
+	    public static void main(String[] args) {
+	    SpringApplication.run(DemoApplication.class, args);
+	    }
+	    }
+	    
+	    @RestController
+	    class HelloController {
+	    
+	    @GetMapping("/")
+	    public String hello() {
+	    return "Hello, World!";
+	    }
+	    }
+	
+	
+	Text:
+	    
+	    Estos lenguajes y frameworks proporcionan diversas herramientas y enfoques para el desarrollo de aplicaciones web, permitiendo a los desarrolladores elegir la mejor opción según las necesidades específicas del proyecto.

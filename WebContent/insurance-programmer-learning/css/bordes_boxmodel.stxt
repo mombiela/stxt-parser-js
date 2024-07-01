@@ -1,0 +1,44 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Manejo de bordes en el modelo de caja
+	
+	Text: 
+	    El borde en el modelo de caja es el contorno que rodea el relleno (padding) y el contenido. Los bordes se pueden personalizar en términos de grosor, estilo y color. A continuación, se describen las propiedades utilizadas para manejar los bordes en CSS.
+	    
+	    *  **Propiedades de bordes**:
+	    *  ##border##: Define el borde completo en una sola declaración. Ejemplo: ##border: 1px solid black;##
+	    *  ##border-width##: Especifica el grosor del borde. Ejemplo: ##border-width: 2px;##
+	    *  ##border-style##: Define el estilo del borde. Valores comunes: ##solid##, ##dotted##, ##dashed##, ##double##. Ejemplo: ##border-style: solid;##
+	    *  ##border-color##: Establece el color del borde. Ejemplo: ##border-color: red;##
+	    
+	    *  **Propiedades para bordes individuales**:
+	    *  ##border-top##, ##border-right##, ##border-bottom##, ##border-left##: Permiten definir bordes individuales para cada lado. Ejemplo: ##border-top: 2px dashed blue;##
+	    *  ##border-top-width##, ##border-right-width##, ##border-bottom-width##, ##border-left-width##: Especifican el grosor del borde de un lado. Ejemplo: ##border-bottom-width: 4px;##
+	    *  ##border-top-style##, ##border-right-style##, ##border-bottom-style##, ##border-left-style##: Definen el estilo del borde de un lado. Ejemplo: ##border-left-style: dotted;##
+	    *  ##border-top-color##, ##border-right-color##, ##border-bottom-color##, ##border-left-color##: Establecen el color del borde de un lado. Ejemplo: ##border-right-color: green;##
+	    
+	    *  **Propiedades de bordes redondeados**:
+	    *  ##border-radius##: Redondea las esquinas del borde. Puede especificar valores individuales para cada esquina. Ejemplo: ##border-radius: 10px;##
+	    *  ##border-top-left-radius##, ##border-top-right-radius##, ##border-bottom-right-radius##, ##border-bottom-left-radius##: Permiten definir el radio de cada esquina individualmente. Ejemplo: ##border-top-left-radius: 5px;##
+	    
+	h2: Ejemplo de uso de propiedades de bordes
+	
+	Text:
+	    
+	Code:
+	    div {
+	    border: 2px solid black;
+	    border-top-width: 5px;
+	    border-right-style: dashed;
+	    border-bottom-color: red;
+	    border-left: 3px solid blue;
+	    border-radius: 15px;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo, un div tiene un borde negro sólido de 2px, un borde superior de 5px, un borde derecho con estilo punteado (dashed), un borde inferior de color rojo, un borde izquierdo sólido azul de 3px y esquinas redondeadas con un radio de 15px.
+	    
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/border|Documentación sobre la propiedad border en CSS]]
+	    

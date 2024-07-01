@@ -1,0 +1,131 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Creación y uso de subprogramas
+	
+	Text: 
+	    Los subprogramas en COBOL permiten modularizar el código, facilitando su mantenimiento y reutilización. Un subprograma es un programa independiente que puede ser llamado por otro programa, conocido como programa principal o llamador. A continuación, se explica cómo crear y usar subprogramas en COBOL.
+	    
+	h2: Definición de un subprograma
+	
+	Text:
+	    
+	    Un subprograma se define en un archivo separado y contiene una división de identificación, una división de ambiente, una división de datos y una división de procedimiento, similar a un programa principal.
+	    
+	h3: Ejemplo de un subprograma
+	
+	Text:
+	    
+	Code:
+	    IDENTIFICATION DIVISION.
+	    PROGRAM-ID. Subprograma-Ejemplo.
+	    
+	    ENVIRONMENT DIVISION.
+	    
+	    DATA DIVISION.
+	    WORKING-STORAGE SECTION.
+	    01 WS-Param1 PIC 9(3).
+	    01 WS-Param2 PIC X(10).
+	    01 WS-Result PIC 9(3).
+	    
+	    LINKAGE SECTION.
+	    01 LS-Param1 PIC 9(3).
+	    01 LS-Param2 PIC X(10).
+	    01 LS-Result PIC 9(3).
+	    
+	    PROCEDURE DIVISION USING LS-Param1 LS-Param2 LS-Result.
+	    MOVE LS-Param1 TO WS-Param1.
+	    MOVE LS-Param2 TO WS-Param2.
+	    ADD WS-Param1 TO 3 GIVING WS-Result.
+	    MOVE WS-Result TO LS-Result.
+	    EXIT PROGRAM.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  La ##IDENTIFICATION DIVISION## define el identificador del programa como ##Subprograma-Ejemplo##.
+	    *  La ##LINKAGE SECTION## declara los parámetros que serán recibidos del programa llamador.
+	    *  La ##PROCEDURE DIVISION USING## especifica los parámetros que serán usados por el subprograma.
+	    *  El subprograma suma 3 a ##LS-Param1## y almacena el resultado en ##LS-Result##.
+	    
+	h2: Llamando a un subprograma desde el programa principal
+	
+	Text:
+	    
+	    Para llamar a un subprograma, el programa principal debe declarar los parámetros en la ##WORKING-STORAGE SECTION## y utilizar la sentencia ##CALL##.
+	    
+	h3: Ejemplo de un programa principal llamando a un subprograma
+	
+	Text:
+	    
+	Code:
+	    IDENTIFICATION DIVISION.
+	    PROGRAM-ID. Programa-Principal.
+	    
+	    ENVIRONMENT DIVISION.
+	    
+	    DATA DIVISION.
+	    WORKING-STORAGE SECTION.
+	    01 WS-Param1 PIC 9(3) VALUE 5.
+	    01 WS-Param2 PIC X(10) VALUE 'Test'.
+	    01 WS-Result PIC 9(3).
+	    
+	    PROCEDURE DIVISION.
+	    CALL 'Subprograma-Ejemplo' USING WS-Param1 WS-Param2 WS-Result.
+	    DISPLAY 'Resultado: ' WS-Result.
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  El programa principal define los parámetros ##WS-Param1##, ##WS-Param2## y ##WS-Result## en la ##WORKING-STORAGE SECTION##.
+	    *  Utiliza la sentencia ##CALL 'Subprograma-Ejemplo' USING WS-Param1 WS-Param2 WS-Result## para llamar al subprograma.
+	    *  Después de la llamada, el resultado almacenado en ##WS-Result## se muestra utilizando ##DISPLAY##.
+	    
+	h2: Pasando parámetros entre el programa principal y el subprograma
+	
+	Text:
+	    
+	    Los parámetros se pasan por referencia, lo que significa que cualquier cambio en los parámetros dentro del subprograma se refleja en el programa principal.
+	    
+	h3: Ejemplo de paso de parámetros por referencia
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    MOVE 10 TO WS-Param1.
+	    CALL 'Subprograma-Ejemplo' USING WS-Param1 WS-Param2 WS-Result.
+	    DISPLAY 'Nuevo Resultado: ' WS-Result.
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Antes de llamar al subprograma, el valor de ##WS-Param1## se cambia a 10.
+	    *  El subprograma se llama con los nuevos valores de los parámetros, y el resultado actualizado se muestra.
+	    
+	h2: Uso de la sentencia CANCEL
+	
+	Text:
+	    
+	    La sentencia ##CANCEL## se utiliza para liberar la memoria utilizada por un subprograma después de que haya sido llamado, permitiendo que se cargue de nuevo si es necesario.
+	    
+	Code:
+	    CALL 'Subprograma-Ejemplo' USING WS-Param1 WS-Param2 WS-Result.
+	    CANCEL Subprograma-Ejemplo.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##CALL 'Subprograma-Ejemplo' USING WS-Param1 WS-Param2 WS-Result## llama al subprograma.
+	    *  ##CANCEL Subprograma-Ejemplo## libera la memoria utilizada por el subprograma.
+	    
+	    La creación y uso de subprogramas en COBOL permiten la modularización del código y la reutilización de funciones comunes, mejorando la estructura y mantenibilidad del programa.

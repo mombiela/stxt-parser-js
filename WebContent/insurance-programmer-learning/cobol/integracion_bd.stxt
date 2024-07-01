@@ -1,0 +1,288 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Integración de bases de datos en aplicaciones COBOL
+	
+	Text: 
+	    La integración de bases de datos en aplicaciones COBOL es una práctica esencial para aprovechar las capacidades de almacenamiento y manipulación de datos de los sistemas de gestión de bases de datos relacionales (RDBMS). Esta integración se logra mediante el uso de Embedded SQL (SQL embebido) dentro del código COBOL. A continuación, se describen los pasos y las técnicas necesarias para integrar bases de datos en aplicaciones COBOL de manera efectiva.
+	    
+	h2: Configuración inicial
+	
+	Text:
+	    
+	    Para comenzar a utilizar SQL embebido en COBOL, es necesario incluir la estructura SQL Communication Area (SQLCA) que maneja el estado y los errores de SQL.
+	    
+	h3: Incluir SQLCA
+	
+	Text:
+	    
+	Code:
+	    EXEC SQL INCLUDE SQLCA END-EXEC.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL INCLUDE SQLCA END-EXEC## incluye la estructura SQLCA, que es utilizada para manejar errores y condiciones SQL.
+	    
+	h2: Conexión a la base de datos
+	
+	Text:
+	    
+	    La conexión a una base de datos se establece mediante la sentencia ##CONNECT##. Es crucial manejar correctamente las credenciales y la información de conexión.
+	    
+	h3: Ejemplo de conexión a la base de datos
+	
+	Text:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 DB-CONNECTION-INFO.
+	    05 DB-USER PIC X(20) VALUE 'usuario'.
+	    05 DB-PASSWORD PIC X(20) VALUE 'contraseña'.
+	    05 DB-NAME PIC X(20) VALUE 'nombre_db'.
+	    
+	    PROCEDURE DIVISION.
+	    Conectar-Base-De-Datos.
+	    EXEC SQL
+	    CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD
+	    USING :DB-NAME
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error conectando a la base de datos: ' SQLCODE.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD USING :DB-NAME END-EXEC## establece la conexión a la base de datos utilizando las credenciales proporcionadas.
+	    *  ##SQLCODE## se verifica para asegurar que la conexión fue exitosa.
+	    
+	h2: Operaciones básicas de SQL
+	
+	Text:
+	    
+	    Las operaciones básicas de SQL, como SELECT, INSERT, UPDATE y DELETE, se utilizan para interactuar con la base de datos.
+	    
+	h3: Ejemplo de consulta (SELECT)
+	
+	Text:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 CLIENTE-ID PIC 9(5).
+	    01 CLIENTE-NOMBRE PIC X(30).
+	    01 CLIENTE-DIRECCION PIC X(50).
+	    
+	    PROCEDURE DIVISION.
+	    Consultar-Base-De-Datos.
+	    EXEC SQL
+	    SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION
+	    INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION
+	    FROM CLIENTES
+	    WHERE CLIENTE_ID = 12345
+	    END-EXEC.
+	    
+	    IF SQLCODE = 0
+	    DISPLAY 'Cliente ID: ' CLIENTE-ID.
+	    DISPLAY 'Cliente Nombre: ' CLIENTE-NOMBRE.
+	    DISPLAY 'Cliente Dirección: ' CLIENTE-DIRECCION.
+	    ELSE
+	    DISPLAY 'Error en consulta: ' SQLCODE.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION FROM CLIENTES WHERE CLIENTE_ID = 12345 END-EXEC## ejecuta una consulta SQL para obtener los datos de un cliente específico.
+	    
+	h3: Ejemplo de inserción (INSERT)
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Insertar-En-Base-De-Datos.
+	    EXEC SQL
+	    INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION)
+	    VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION)
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error insertando datos: ' SQLCODE.
+	    ELSE
+	    DISPLAY 'Datos insertados correctamente'.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC## inserta un nuevo registro en la tabla CLIENTES.
+	    
+	h3: Ejemplo de actualización (UPDATE)
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Actualizar-En-Base-De-Datos.
+	    EXEC SQL
+	    UPDATE CLIENTES
+	    SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION
+	    WHERE CLIENTE_ID = :CLIENTE-ID
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error actualizando datos: ' SQLCODE.
+	    ELSE
+	    DISPLAY 'Datos actualizados correctamente'.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL UPDATE CLIENTES SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC## actualiza la dirección del cliente con el ID especificado.
+	    
+	h3: Ejemplo de eliminación (DELETE)
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Eliminar-En-Base-De-Datos.
+	    EXEC SQL
+	    DELETE FROM CLIENTES
+	    WHERE CLIENTE_ID = :CLIENTE-ID
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error eliminando datos: ' SQLCODE.
+	    ELSE
+	    DISPLAY 'Datos eliminados correctamente'.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL DELETE FROM CLIENTES WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC## elimina el registro del cliente con el ID especificado.
+	    
+	h2: Manejo de transacciones
+	
+	Text:
+	    
+	    El manejo de transacciones es crucial para asegurar la integridad de los datos. Las sentencias ##COMMIT## y ##ROLLBACK## se utilizan para manejar transacciones.
+	    
+	h3: Ejemplo de manejo de transacciones
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Transaccion-En-Base-De-Datos.
+	    EXEC SQL
+	    UPDATE CLIENTES
+	    SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION
+	    WHERE CLIENTE_ID = :CLIENTE-ID
+	    END-EXEC.
+	    
+	    IF SQLCODE = 0
+	    EXEC SQL COMMIT END-EXEC
+	    DISPLAY 'Transacción completada exitosamente'.
+	    ELSE
+	    EXEC SQL ROLLBACK END-EXEC
+	    DISPLAY 'Error en transacción, cambios revertidos: ' SQLCODE.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL COMMIT END-EXEC## confirma la transacción si la operación de actualización es exitosa.
+	    *  ##EXEC SQL ROLLBACK END-EXEC## revierte los cambios si ocurre un error.
+	    
+	h2: Manejo de errores y excepciones
+	
+	Text:
+	    
+	    Es crucial manejar los errores y excepciones durante las operaciones con bases de datos.
+	    
+	h3: Ejemplo de manejo de errores
+	
+	Text:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    EXEC SQL INCLUDE SQLCA END-EXEC.
+	    
+	    PROCEDURE DIVISION.
+	    Manejar-Errores-SQL.
+	    EXEC SQL
+	    SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION
+	    INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION
+	    FROM CLIENTES
+	    WHERE CLIENTE_ID = 99999
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error en consulta: ' SQLCODE ':' SQLERRMC.
+	    ELSE
+	    DISPLAY 'Consulta exitosa: ' CLIENTE-NOMBRE ',' CLIENTE-DIRECCION.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##SQLCODE## y ##SQLERRMC## se utilizan para verificar y mostrar mensajes de error en operaciones de
+	    
+	    base de datos.
+	    
+	h2: Desconexión de la base de datos
+	
+	Text:
+	    
+	    Para desconectar de la base de datos, se utiliza la sentencia ##DISCONNECT##.
+	    
+	h3: Ejemplo de desconexión de la base de datos
+	
+	Text:
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Desconectar-Base-De-Datos.
+	    EXEC SQL
+	    DISCONNECT
+	    END-EXEC.
+	    
+	    IF SQLCODE <> 0
+	    DISPLAY 'Error desconectando de la base de datos: ' SQLCODE.
+	    ELSE
+	    DISPLAY 'Desconectado correctamente de la base de datos'.
+	    END-IF.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##EXEC SQL DISCONNECT END-EXEC## desconecta la sesión de la base de datos.
+	    *  ##SQLCODE## se verifica para asegurar que la desconexión fue exitosa.
+	    
+	h2: Conclusión
+	
+	Text:
+	    
+	    La integración de bases de datos en aplicaciones COBOL mediante Embedded SQL permite una interacción eficiente con sistemas de gestión de bases de datos relacionales. Comprender cómo establecer conexiones, realizar operaciones básicas de SQL, manejar transacciones y errores es esencial para desarrollar aplicaciones COBOL robustas y eficientes.

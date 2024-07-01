@@ -1,0 +1,114 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Funciones lambda
+	
+	Text: 
+	h2: Funciones Lambda en Python
+	
+	Text:
+	    
+	    Las funciones lambda en Python son funciones anónimas, es decir, funciones que no tienen un nombre explícito. Se utilizan para crear pequeñas funciones desechables sobre la marcha, especialmente útiles en situaciones donde se requiere una función de corta duración.
+	    
+	h2: Sintaxis de las Funciones Lambda
+	
+	Text:
+	    
+	    La sintaxis básica de una función lambda es:
+	Code:
+	    lambda argumentos : expresión
+	
+	
+	Text:
+	    
+	    Donde:
+	    *  ##lambda## es la palabra clave para definir una función lambda.
+	    *  ##argumentos## es una lista separada por comas de los argumentos que la función toma.
+	    *  ##expresión## es una única expresión cuyo resultado será el valor de retorno de la función.
+	    
+	    Ejemplo:
+	Code:
+	    mi_lambda = lambda x, y : x + y
+	    print(mi_lambda(5, 3)) # Imprime 8
+	
+	
+	Text:
+	    
+	    En este ejemplo, ##mi_lambda## es una función lambda que toma dos argumentos ##x## y ##y##, y devuelve su suma.
+	    
+	h2: Usos Comunes de las Funciones Lambda
+	
+	Text:
+	    
+	    *  **En funciones de orden superior**: Las funciones lambda se usan frecuentemente como argumentos para funciones de orden superior como ##map##, ##filter## y ##sorted##.
+	    *  **En funciones de callback**: Las funciones lambda son útiles cuando se necesita definir una función rápida para ser usada como callback.
+	    
+	    Ejemplos:
+	    
+	    Usando ##map## con una función lambda:
+	Code:
+	    numeros = [1, 2, 3, 4]
+	    cuadrados = list(map(lambda x : x**2, numeros))
+	    print(cuadrados) # Imprime [1, 4, 9, 16]
+	
+	
+	Text:
+	    
+	    Usando ##filter## con una función lambda:
+	Code:
+	    numeros = [1, 2, 3, 4]
+	    pares = list(filter(lambda x : x % 2 == 0, numeros))
+	    print(pares) # Imprime [2, 4]
+	
+	
+	Text:
+	    
+	    Usando ##sorted## con una función lambda para ordenar por una clave específica:
+	Code:
+	    puntos = [(1, 2), (3, 1), (5, 0)]
+	    ordenados = sorted(puntos, key=lambda p : p[1])
+	    print(ordenados) # Imprime [(5, 0), (3, 1), (1, 2)]
+	
+	
+	Text:
+	    
+	h2: Limitaciones de las Funciones Lambda
+	
+	Text:
+	    
+	    *  **Solo una expresión**: Las funciones lambda solo pueden contener una única expresión. No se pueden usar declaraciones ni múltiples expresiones.
+	    *  **Legibilidad**: Las funciones lambda pueden hacer que el código sea menos legible si se abusa de ellas o si se utilizan en situaciones complejas.
+	    
+	    Ejemplo de una limitación:
+	Code:
+	    # Esto es válido
+	    suma = lambda x, y : x + y
+	    
+	    # Esto no es válido
+	    # lambda x, y : x += y; print(x)
+	
+	
+	Text:
+	    
+	h2: Comparación con las Funciones Definidas con "def"
+	
+	Text:
+	    
+	    Las funciones lambda y las funciones definidas con ##def## tienen propósitos diferentes:
+	    
+	    *  **Funciones lambda**: Son útiles para definir funciones pequeñas y desechables en el lugar donde se necesitan.
+	    *  **Funciones definidas con "def"**: Son mejores para definir funciones complejas o reutilizables con múltiples declaraciones y lógica detallada.
+	    
+	    Ejemplo de comparación:
+	Code:
+	    # Función lambda
+	    suma = lambda x, y : x + y
+	    
+	    # Función def
+	    def suma_def(x, y):
+	    return x + y
+	    
+	    print(suma(5, 3)) # Imprime 8
+	    print(suma_def(5, 3)) # Imprime 8
+	
+	
+	Text:

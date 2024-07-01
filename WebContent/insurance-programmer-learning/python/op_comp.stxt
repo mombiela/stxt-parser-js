@@ -1,0 +1,32 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Operadores de Comparación
+	
+	Text: 
+	    Estos operadores se utilizan para comparar dos valores.
+	    
+	    |= Operador    |= Descripción     |= Ejemplo
+	    | ##code:==## | Igual a           | ##code:a == b##
+	    | ##code:!=## | No igual a        | ##code:a != b##
+	    | ##code:>##  | Mayor que         | ##code:a > b##
+	    | ##code:<##  | Menor que         | ##code:a < b##
+	    | ##code:>=## | Mayor o igual que | ##code:a >= b##
+	    | ##code:<=## | Menor o igual que | ##code:a <= b##
+	    
+	h2:  Ejemplo: 
+	
+	Text:
+	    
+	Code:
+	    a = 5
+	    b = 3
+	    print(a == b)  # False
+	    print(a != b)  # True
+	    print(a > b)   # True
+	    print(a < b)   # False
+	
+	
+	Text:
+	    
+	    
+	    

@@ -1,0 +1,46 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Manejo de márgenes en el modelo de caja
+	
+	Text: 
+	    Los márgenes en el modelo de caja son el espacio exterior que separa el borde de un elemento de otros elementos en la página. Los márgenes son transparentes y no afectan el contenido del elemento ni su borde, pero sí influyen en la distribución del espacio en la página.
+	    
+	    *  **Propiedades de márgenes**:
+	    *  ##margin##: Define el margen completo en una sola declaración. Ejemplo: ##margin: 10px;##
+	    *  ##margin-top##, ##margin-right##, ##margin-bottom##, ##margin-left##: Permiten definir márgenes individuales para cada lado. Ejemplo: ##margin-top: 20px;##
+	    *  ##margin:auto##: Centra un elemento horizontalmente dentro de su contenedor. Ejemplo: ##margin: 0 auto;##
+	    
+	    *  **Valores especiales para márgenes**:
+	    *  ##margin: 0 auto##: Utilizado comúnmente para centrar elementos bloque horizontalmente dentro de su contenedor.
+	    *  ##margin: 0##: Elimina los márgenes de un elemento.
+	    
+	    *  **Propiedades de colapso de márgenes**:
+	    *  Los márgenes superiores e inferiores de los elementos adyacentes pueden colapsar, es decir, se combinan en un solo margen cuyo tamaño es igual al mayor de los márgenes colapsados.
+	    
+	h2: Ejemplo de uso de propiedades de márgenes
+	
+	Text:
+	    
+	Code:
+	    div {
+	    margin: 20px;
+	    }
+	    p {
+	    margin-top: 10px;
+	    margin-bottom: 15px;
+	    }
+	    .container {
+	    width: 80%;
+	    margin: 0 auto;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    *  Un div tiene un margen de 20px en todos los lados.
+	    *  Un párrafo (##p##) tiene un margen superior de 10px y un margen inferior de 15px.
+	    *  Un contenedor (##.container##) se centra horizontalmente dentro de su contenedor principal con un ancho del 80% y márgenes horizontales automáticos.
+	    
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/margin|Documentación sobre la propiedad margin en CSS]]
+	    

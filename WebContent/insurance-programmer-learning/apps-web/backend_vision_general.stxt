@@ -1,0 +1,106 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Conceptos y tecnologías del backend
+	
+	Text: 
+	    El desarrollo backend se refiere a la parte del desarrollo web que se enfoca en lo que sucede en el servidor. Incluye la gestión de bases de datos, autenticación de usuarios, lógica de negocio, y la comunicación con el frontend. A continuación, se presentan algunos conceptos y tecnologías clave del backend, incluyendo Java y COBOL.
+	    
+	h2: Conceptos Clave
+	
+	Text:
+	    
+	    *  Servidor: Una máquina o programa que proporciona servicios a otros programas o dispositivos. Ejemplo: un servidor web que entrega páginas HTML a los navegadores.
+	    *  API (Interfaz de Programación de Aplicaciones): Un conjunto de reglas que permiten a diferentes aplicaciones comunicarse entre sí. Ejemplo: RESTful APIs.
+	    *  Base de Datos: Un sistema para almacenar y recuperar datos. Ejemplo: MySQL, PostgreSQL, MongoDB.
+	    *  Autenticación y Autorización: Procesos de verificar la identidad de un usuario (autenticación) y determinar sus permisos (autorización). Ejemplo: OAuth, JWT.
+	    *  Frameworks y Librerías: Herramientas que facilitan el desarrollo backend. Ejemplo: Spring Boot para Java, Express.js para Node.js.
+	    *  DevOps: Un enfoque que combina desarrollo de software y operaciones de TI para mejorar la colaboración y productividad mediante la automatización de procesos de infraestructura y despliegue.
+	    
+	h2: Java
+	
+	Text:
+	    
+	    Java es un lenguaje de programación ampliamente utilizado en el desarrollo backend debido a su robustez, escalabilidad y seguridad.
+	    
+	    *  Características de Java:
+	    #  Portabilidad: El código Java puede ejecutarse en cualquier plataforma que tenga una Máquina Virtual Java (JVM).
+	    #  Orientado a Objetos: Java está diseñado en torno a objetos, lo que facilita la reutilización del código y el mantenimiento.
+	    #  Seguridad: Java tiene varias características de seguridad integradas, como la gestión automática de memoria y la comprobación de bytecode en tiempo de ejecución.
+	    
+	    *  Frameworks populares en Java:
+	    #  Spring Boot: Facilita la creación de aplicaciones Java independientes y productivas.
+	    #  Hibernate: Un framework de mapeo objeto-relacional (ORM) que facilita la interacción con bases de datos.
+	    
+	    Ejemplo básico de un controlador en Spring Boot:
+	    
+	Code:
+	    import org.springframework.web.bind.annotation.GetMapping;
+	    import org.springframework.web.bind.annotation.RestController;
+	    
+	    @RestController
+	    public class HelloController {
+	    
+	    @GetMapping("/hello")
+	    public String sayHello() {
+	    return "Hello, World!";
+	    }
+	    }
+	
+	
+	Text:
+	    
+	h2: COBOL
+	
+	Text:
+	    
+	    COBOL (Common Business Oriented Language) es un lenguaje de programación veterano, especialmente utilizado en sistemas de negocios y financieros.
+	    
+	    *  Características de COBOL:
+	    #  Orientado a Negocios: Diseñado específicamente para aplicaciones de gestión y procesamiento de datos comerciales.
+	    #  Legibilidad: Su sintaxis es similar al inglés, lo que facilita la lectura y comprensión del código.
+	    #  Manejo de Transacciones: Ideal para aplicaciones que requieren procesamiento de grandes volúmenes de transacciones, como sistemas bancarios y financieros.
+	    
+	    Ejemplo básico de un programa COBOL:
+	    
+	Code:
+	    IDENTIFICATION DIVISION.
+	    PROGRAM-ID. HelloWorld.
+	    PROCEDURE DIVISION.
+	    DISPLAY 'Hello, World!'.
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	h2: Otras Tecnologías del Backend
+	
+	Text:
+	    
+	    #  Node.js: Un entorno de ejecución para JavaScript en el servidor, conocido por su eficiencia en aplicaciones de I/O intensivas.
+	    #  Python: Utilizado ampliamente con frameworks como Django y Flask para el desarrollo web.
+	    #  Ruby: Popularizado por el framework Ruby on Rails, conocido por su facilidad de uso y rapidez en el desarrollo.
+	    #  PHP: Un lenguaje de scripting ampliamente utilizado para el desarrollo web con frameworks como Laravel y Symfony.
+	    
+	    Ejemplo básico en Node.js:
+	    
+	Code:
+	    const http = require('http');
+	    
+	    const server = http.createServer((req, res) => {
+	    res.statusCode = 200;
+	    res.setHeader('Content-Type', 'text/plain');
+	    res.end('Hello, World!\n');
+	    });
+	    
+	    server.listen(3000, '127.0.0.1', () => {
+	    console.log('Server running at http://127.0.0.1:3000/');
+	    });
+	
+	
+	Text:
+	    
+	h2: Conclusión
+	
+	Text:
+	    
+	    El desarrollo backend es crucial para crear aplicaciones web robustas y eficientes. Java y COBOL son dos lenguajes que, aunque diferentes en su enfoque y uso, han demostrado ser indispensables en diversos sectores. Junto con otras tecnologías modernas como Node.js, Python, Ruby y PHP, forman la columna vertebral del desarrollo de aplicaciones web y servicios empresariales.

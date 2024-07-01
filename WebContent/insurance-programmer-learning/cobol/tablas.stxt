@@ -1,0 +1,121 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Creación y uso de tablas (arrays) en COBOL
+	
+	Text: 
+	    En COBOL, las tablas (o arrays) se utilizan para almacenar y manipular conjuntos de datos relacionados de manera eficiente. Las tablas permiten acceder a elementos de datos mediante índices y son útiles para organizar grandes volúmenes de información de forma estructurada. A continuación, se explica cómo crear y usar tablas en COBOL.
+	    
+	h2: Declaración de Tablas
+	
+	Text:
+	    
+	    Para declarar una tabla en COBOL, se utiliza la cláusula ##OCCURS##. Esta cláusula define cuántas veces se repite un grupo de datos. Aquí hay un ejemplo básico de cómo declarar una tabla:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 WS-EmployeeTable.
+	    05 EmployeeRecord OCCURS 10 TIMES.
+	    10 EmployeeID PIC 9(5).
+	    10 EmployeeName PIC X(30).
+	    10 EmployeeSalary PIC 9(7)V99.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##WS-EmployeeTable## es la tabla principal.
+	    *  ##EmployeeRecord## se repite 10 veces, creando un array de registros de empleados.
+	    *  Cada ##EmployeeRecord## contiene los campos ##EmployeeID##, ##EmployeeName## y ##EmployeeSalary##.
+	    
+	h2: Acceso a Elementos de la Tabla
+	
+	Text:
+	    
+	    Para acceder a los elementos individuales de una tabla, se utilizan índices. COBOL permite usar índices explícitos o números literales para referenciar elementos específicos. Aquí hay ejemplos de acceso a elementos de la tabla:
+	    
+	Code:
+	    MOVE 1 TO WS-Index.
+	    
+	    MOVE 12345 TO EmployeeID(WS-Index).
+	    MOVE 'John Doe' TO EmployeeName(WS-Index).
+	    MOVE 50000.00 TO EmployeeSalary(WS-Index).
+	    
+	    DISPLAY EmployeeID(1).
+	    DISPLAY EmployeeName(1).
+	    DISPLAY EmployeeSalary(1).
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  El índice ##WS-Index## se inicializa en 1.
+	    *  Los valores se mueven al primer registro de ##EmployeeRecord## usando ##WS-Index##.
+	    *  Los valores del primer registro se muestran en la pantalla.
+	    
+	h2: Iteración sobre Tablas
+	
+	Text:
+	    
+	    Es común recorrer todas las entradas de una tabla utilizando bucles. El siguiente ejemplo muestra cómo iterar sobre una tabla:
+	    
+	Code:
+	    PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index > 10
+	    DISPLAY EmployeeID(WS-Index)
+	    DISPLAY EmployeeName(WS-Index)
+	    DISPLAY EmployeeSalary(WS-Index)
+	    END-PERFORM.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  El bucle ##PERFORM VARYING## recorre todos los elementos de la tabla desde 1 hasta 10.
+	    *  Los valores de cada registro se muestran en la pantalla durante cada iteración.
+	    
+	h2: Tablas Multidimensionales
+	
+	Text:
+	    
+	    COBOL también permite declarar tablas multidimensionales utilizando múltiples cláusulas ##OCCURS##. Aquí hay un ejemplo de una tabla bidimensional:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 WS-MultiTable.
+	    05 Department OCCURS 5 TIMES.
+	    10 Employee OCCURS 10 TIMES.
+	    15 EmployeeID PIC 9(5).
+	    15 EmployeeName PIC X(30).
+	    15 EmployeeSalary PIC 9(7)V99.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##WS-MultiTable## es una tabla bidimensional.
+	    *  ##Department## se repite 5 veces.
+	    *  Dentro de cada ##Department##, ##Employee## se repite 10 veces.
+	    
+	    Para acceder a elementos en una tabla bidimensional, se utilizan dos índices:
+	    
+	Code:
+	    MOVE 1 TO Dept-Index.
+	    MOVE 1 TO Emp-Index.
+	    
+	    MOVE 12345 TO EmployeeID(Dept-Index, Emp-Index).
+	    MOVE 'Jane Smith' TO EmployeeName(Dept-Index, Emp-Index).
+	    MOVE 60000.00 TO EmployeeSalary(Dept-Index, Emp-Index).
+	    
+	    DISPLAY EmployeeID(1, 1).
+	    DISPLAY EmployeeName(1, 1).
+	    DISPLAY EmployeeSalary(1, 1).
+	
+	
+	Text:
+	    
+	    En este ejemplo, se accede al primer registro del primer departamento utilizando índices para ambas dimensiones.
+	    
+	    Las tablas en COBOL son herramientas poderosas para organizar y manejar grandes conjuntos de datos de manera estructurada y eficiente. Su correcta utilización puede mejorar significativamente la eficiencia y claridad de un programa COBOL.

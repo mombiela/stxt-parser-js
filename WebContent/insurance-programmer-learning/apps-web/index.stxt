@@ -1,0 +1,37 @@
+Index(www.cursos.com/index.stxt):
+
+	title: Aplicaciones Web
+		
+	part: Introducción al Funcionamiento de la Web
+	
+	    Tema: (introduccion_web) Visión general de cómo funciona la web.
+	
+	part: URLs, Servidores y Clientes
+	
+	    Tema: (urls_servidores_clientes) Qué son URLs, servidores y clientes.
+	    Tema: (urls) Estructura y uso de URLs.
+	    Tema: (servidores_web) Papel de los servidores web.
+	    Tema: (clientes_web) Papel de los clientes web.
+	    Tema: (peticiones_http) Métodos y uso de peticiones HTTP.
+	
+	part: Fundamentos del Frontend
+	
+	    Tema: (frontend_fundamentos) Lenguajes básicos del frontend: HTML, CSS y JavaScript.
+	
+	    Tema: (html_fundamentos) Elementos y estructura del HTML.
+	    Tema: (css_fundamentos) Estilizado con CSS.
+	    Tema: (javascript_fundamentos) Sintaxis y uso de JavaScript.
+	    Tema: (dom) Manipulación del DOM con JavaScript.
+	
+	part: Visión General del Backend
+	
+	    Tema: (backend_vision_general) Conceptos y tecnologías del backend.
+	    Tema: (servidores_backend) Papel de los servidores backend.
+	    Tema: (lenguajes_backend) Lenguajes comunes en el backend.
+	    Tema: (bases_datos) Explicación de BBDD.
+	    Tema: (api_rest) APIs RESTful.
+	
+	part: Conclusión
+	
+	    Tema: (conclusion) Resumen y recomendaciones.
+		

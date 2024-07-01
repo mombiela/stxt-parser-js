@@ -1,0 +1,302 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Uso de paquetes estándar de Python (os, sys, math, etc.)
+	
+	Text: 
+	    Python viene con una extensa biblioteca estándar que proporciona módulos y paquetes útiles para realizar una amplia variedad de tareas. A continuación, se describen algunos de los módulos estándar más comúnmente utilizados: ##os##, ##sys##, ##math##, y otros.
+	    
+	h2: Módulo os
+	
+	Text:
+	    
+	    El módulo ##os## proporciona una forma de usar funcionalidades dependientes del sistema operativo como leer o escribir en el sistema de archivos.
+	    
+	    *  ##os.getcwd()##: Devuelve el directorio de trabajo actual.
+	Code:
+	    import os
+	    
+	    cwd = os.getcwd()
+	    print("Directorio de trabajo actual:", cwd)
+	
+	
+	Text:
+	    
+	    *  ##os.listdir()##: Lista los archivos y directorios en un directorio específico.
+	Code:
+	    import os
+	    
+	    archivos = os.listdir('.')
+	    print("Archivos y directorios en el directorio actual:", archivos)
+	
+	
+	Text:
+	    
+	    *  ##os.mkdir()##: Crea un nuevo directorio.
+	Code:
+	    import os
+	    
+	    os.mkdir('nuevo_directorio')
+	
+	
+	Text:
+	    
+	    *  ##os.remove()## y ##os.rmdir()##: Elimina un archivo o un directorio, respectivamente.
+	Code:
+	    import os
+	    
+	    os.remove('archivo_a_eliminar.txt')
+	    os.rmdir('directorio_a_eliminar')
+	
+	
+	Text:
+	    
+	h2: Módulo sys
+	
+	Text:
+	    
+	    El módulo ##sys## proporciona acceso a algunas variables y funciones que interactúan fuertemente con el intérprete de Python.
+	    
+	    *  ##sys.argv##: Lista de argumentos pasados al script de Python.
+	Code:
+	    import sys
+	    
+	    print("Argumentos pasados al script:", sys.argv)
+	
+	
+	Text:
+	    
+	    *  ##sys.exit()##: Termina el programa con un estado de salida opcional.
+	Code:
+	    import sys
+	    
+	    sys.exit("Terminando el programa")
+	
+	
+	Text:
+	    
+	    *  ##sys.path##: Lista de rutas donde Python busca módulos.
+	Code:
+	    import sys
+	    
+	    print("Rutas de búsqueda de módulos:", sys.path)
+	
+	
+	Text:
+	    
+	h2: Módulo math
+	
+	Text:
+	    
+	    El módulo ##math## proporciona acceso a las funciones matemáticas más comunes.
+	    
+	    *  ##math.sqrt()##: Devuelve la raíz cuadrada de un número.
+	Code:
+	    import math
+	    
+	    raiz = math.sqrt(16)
+	    print("Raíz cuadrada de 16:", raiz)
+	
+	
+	Text:
+	    
+	    *  ##math.factorial()##: Devuelve el factorial de un número.
+	Code:
+	    import math
+	    
+	    factorial = math.factorial(5)
+	    print("Factorial de 5:", factorial)
+	
+	
+	Text:
+	    
+	    *  ##math.pow()##: Devuelve el resultado de elevar un número a una potencia.
+	Code:
+	    import math
+	    
+	    potencia = math.pow(2, 3)
+	    print("2 elevado a la potencia de 3:", potencia)
+	
+	
+	Text:
+	    
+	h2: Módulo datetime
+	
+	Text:
+	    
+	    El módulo ##datetime## proporciona clases para manipular fechas y horas.
+	    
+	    *  ##datetime.datetime.now()##: Devuelve la fecha y hora actual.
+	Code:
+	    import datetime
+	    
+	    ahora = datetime.datetime.now()
+	    print("Fecha y hora actual:", ahora)
+	
+	
+	Text:
+	    
+	    *  ##datetime.datetime.strptime()##: Convierte una cadena de texto en un objeto datetime.
+	Code:
+	    import datetime
+	    
+	    fecha_str = "2023-05-27"
+	    fecha_obj = datetime.datetime.strptime(fecha_str, "%Y-%m-%d")
+	    print("Fecha como objeto datetime:", fecha_obj)
+	
+	
+	Text:
+	    
+	    *  ##datetime.datetime.strftime()##: Convierte un objeto datetime en una cadena de texto.
+	Code:
+	    import datetime
+	    
+	    ahora = datetime.datetime.now()
+	    fecha_str = ahora.strftime("%Y-%m-%d")
+	    print("Fecha como cadena de texto:", fecha_str)
+	
+	
+	Text:
+	    
+	h2: Módulo random
+	
+	Text:
+	    
+	    El módulo ##random## proporciona funciones para generar números aleatorios y realizar operaciones aleatorias.
+	    
+	    *  ##random.randint()##: Devuelve un número entero aleatorio entre un rango especificado.
+	Code:
+	    import random
+	    
+	    numero_aleatorio = random.randint(1, 10)
+	    print("Número aleatorio entre 1 y 10:", numero_aleatorio)
+	
+	
+	Text:
+	    
+	    *  ##random.choice()##: Devuelve un elemento aleatorio de una secuencia.
+	Code:
+	    import random
+	    
+	    elemento_aleatorio = random.choice(['a', 'b', 'c', 'd'])
+	    print("Elemento aleatorio de la lista:", elemento_aleatorio)
+	
+	
+	Text:
+	    
+	    *  ##random.shuffle()##: Mezcla los elementos de una lista.
+	Code:
+	    import random
+	    
+	    lista = [1, 2, 3, 4, 5]
+	    random.shuffle(lista)
+	    print("Lista mezclada:", lista)
+	
+	
+	Text:
+	    
+	h2: Módulo json
+	
+	Text:
+	    
+	    El módulo ##json## permite trabajar con datos en formato JSON.
+	    
+	    *  ##json.loads()##: Convierte una cadena JSON en un objeto Python.
+	Code:
+	    import json
+	    
+	    json_str = '{"nombre": "Juan", "edad": 30}'
+	    datos = json.loads(json_str)
+	    print("Datos como diccionario:", datos)
+	
+	
+	Text:
+	    
+	    *  ##json.dumps()##: Convierte un objeto Python en una cadena JSON.
+	Code:
+	    import json
+	    
+	    datos = {"nombre": "Juan", "edad": 30}
+	    json_str = json.dumps(datos)
+	    print("Datos como cadena JSON:", json_str)
+	
+	
+	Text:
+	    
+	h2: Módulo re
+	
+	Text:
+	    
+	    El módulo ##re## proporciona herramientas para trabajar con expresiones regulares.
+	    
+	    *  ##re.match()##: Determina si una expresión regular coincide con el comienzo de una cadena.
+	Code:
+	    import re
+	    
+	    texto = "Hola mundo"
+	    coincidencia = re.match(r'Hola', texto)
+	    print("Coincidencia:", coincidencia)
+	
+	
+	Text:
+	    
+	    *  ##re.search()##: Busca una coincidencia de una expresión regular en toda la cadena.
+	Code:
+	    import re
+	    
+	    texto = "Hola mundo"
+	    coincidencia = re.search(r'mundo', texto)
+	    print("Coincidencia:", coincidencia)
+	
+	
+	Text:
+	    
+	    *  ##re.findall()##: Encuentra todas las coincidencias de una expresión regular en una cadena.
+	Code:
+	    import re
+	    
+	    texto = "Hola mundo, Hola Python"
+	    coincidencias = re.findall(r'Hola', texto)
+	    print("Todas las coincidencias:", coincidencias)
+	
+	
+	Text:
+	    
+	    *  ##re.sub()##: Reemplaza las coincidencias de una expresión regular en una cadena con otra cadena.
+	Code:
+	    import re
+	    
+	    texto = "Hola mundo"
+	    nuevo_texto = re.sub(r'mundo', 'Python', texto)
+	    print("Texto modificado:", nuevo_texto)
+	
+	
+	Text:
+	    
+	h2: Módulo collections
+	
+	Text:
+	    
+	    El módulo ##collections## proporciona tipos de datos especializados como ##namedtuple##, ##deque##, ##Counter##, y otros.
+	    
+	    *  ##collections.namedtuple()##: Crea una tupla con nombre.
+	Code:
+	    import collections
+	    
+	    Punto = collections.namedtuple('Punto', ['x', 'y'])
+	    p = Punto(1, 2)
+	    print("Punto:", p)
+	    print("Coordenada x:", p.x)
+	    print("Coordenada y:", p.y)
+	
+	
+	Text:
+	    
+	    *  ##collections.Counter()##: Un contador que cuenta la cantidad de elementos en una colección.
+	Code:
+	    import collections
+	    
+	    contador = collections.Counter(['a', 'b', 'a', 'c', 'b', 'a'])
+	    print("Contador:", contador)
+	
+	
+	Text:

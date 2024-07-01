@@ -1,0 +1,223 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Listas
+	
+	Text: 
+	h2: Listas en Python
+	
+	Text:
+	    
+	    Las listas en Python son uno de los tipos de datos más versátiles y utilizados. Son contenedores ordenados y mutables que pueden almacenar elementos de diferentes tipos. A continuación, se detallan las características, métodos y usos comunes de las listas en Python.
+	    
+	h2: Creación de Listas
+	
+	Text:
+	    
+	    Las listas se crean usando corchetes ##[]##.
+	    
+	    Ejemplo:
+	Code:
+	    mi_lista = [1, 2, 3, 4]
+	
+	
+	Text:
+	    
+	    También se pueden crear listas vacías:
+	Code:
+	    lista_vacia = []
+	
+	
+	Text:
+	    
+	h2: Acceso a Elementos
+	
+	Text:
+	    
+	    Los elementos de una lista se pueden acceder mediante índices, comenzando desde 0.
+	    
+	    Ejemplo:
+	Code:
+	    primer_elemento = mi_lista[0]
+	    segundo_elemento = mi_lista[1]
+	
+	
+	Text:
+	    
+	    Para acceder a los elementos desde el final, se pueden usar índices negativos.
+	    
+	    Ejemplo:
+	Code:
+	    ultimo_elemento = mi_lista[-1]
+	    penultimo_elemento = mi_lista[-2]
+	
+	
+	Text:
+	    
+	h2: Modificación de Elementos
+	
+	Text:
+	    
+	    Las listas son mutables, lo que significa que se pueden cambiar sus elementos después de la creación.
+	    
+	    Ejemplo:
+	Code:
+	    mi_lista[1] = 20 # Modifica el segundo elemento
+	
+	
+	Text:
+	    
+	h2: Añadir Elementos
+	
+	Text:
+	    
+	    *  **##append##**: Añade un elemento al final de la lista.
+	Code:
+	    mi_lista.append(5)
+	
+	
+	Text:
+	    
+	    *  **##insert##**: Inserta un elemento en una posición específica.
+	Code:
+	    mi_lista.insert(1, 15) # Inserta 15 en la posición 1
+	
+	
+	Text:
+	    
+	    *  **##extend##**: Añade múltiples elementos al final de la lista.
+	Code:
+	    mi_lista.extend([6, 7])
+	
+	
+	Text:
+	    
+	h2: Eliminar Elementos
+	
+	Text:
+	    
+	    *  **##remove##**: Elimina la primera ocurrencia de un valor.
+	Code:
+	    mi_lista.remove(3)
+	
+	
+	Text:
+	    
+	    *  **##pop##**: Elimina y devuelve un elemento en una posición específica.
+	Code:
+	    elemento = mi_lista.pop(1) # Elimina y devuelve el elemento en la posición 1
+	
+	
+	Text:
+	    
+	    *  **##clear##**: Elimina todos los elementos de la lista.
+	Code:
+	    mi_lista.clear()
+	
+	
+	Text:
+	    
+	h2: Operaciones con Listas
+	
+	Text:
+	    
+	    *  **Concatenación**: Se pueden concatenar listas usando el operador ##+##.
+	Code:
+	    lista1 = [1, 2]
+	    lista2 = [3, 4]
+	    lista_concatenada = lista1 + lista2 # [1, 2, 3, 4]
+	
+	
+	Text:
+	    
+	    *  **Repetición**: Se pueden repetir los elementos de una lista usando el operador ####.
+	Code:
+	    lista_repetida = lista1  3 # [1, 2, 1, 2, 1, 2]
+	
+	
+	Text:
+	    
+	    *  **Comprobación de Membresía**: Se puede verificar si un elemento está en una lista usando ##in##.
+	Code:
+	    existe = 3 in mi_lista
+	
+	
+	Text:
+	    
+	h2: Métodos de Listas
+	
+	Text:
+	    
+	    *  **##sort##**: Ordena los elementos de la lista.
+	Code:
+	    mi_lista.sort()
+	
+	
+	Text:
+	    
+	    *  **##reverse##**: Invierte el orden de los elementos de la lista.
+	Code:
+	    mi_lista.reverse()
+	
+	
+	Text:
+	    
+	    *  **##index##**: Devuelve el índice de la primera ocurrencia de un valor.
+	Code:
+	    indice = mi_lista.index(20)
+	
+	
+	Text:
+	    
+	    *  **##count##**: Devuelve el número de ocurrencias de un valor.
+	Code:
+	    contador = mi_lista.count(20)
+	
+	
+	Text:
+	    
+	h2: Comprensión de Listas
+	
+	Text:
+	    
+	    La comprensión de listas es una forma concisa de crear listas.
+	    
+	    Ejemplo:
+	Code:
+	    cuadrados = [x**2 for x in range(10)]
+	
+	
+	Text:
+	    
+	    Esto crea una lista de los cuadrados de los números del 0 al 9.
+	    
+	h2: Iteración sobre Listas
+	
+	Text:
+	    
+	    Se puede iterar sobre los elementos de una lista usando un bucle ##for##.
+	Code:
+	    for elemento in mi_lista:
+	    print(elemento)
+	
+	
+	Text:
+	    
+	h2: Copiar Listas
+	
+	Text:
+	    
+	    Para copiar una lista, se puede usar el método ##copy## o la notación de rebanado.
+	    
+	    Ejemplo con ##copy##:
+	Code:
+	    lista_copiada = mi_lista.copy()
+	
+	
+	Text:
+	    
+	    Ejemplo con rebanado:
+	Code:
+	    lista_copiada = mi_lista[:]
+	
+	
+	Text:

@@ -1,0 +1,152 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Estilizado con CSS
+	
+	Text: 
+	    CSS (Cascading Style Sheets) es el lenguaje utilizado para describir la presentación de un documento HTML. CSS permite controlar el aspecto visual de una página web, incluyendo colores, fuentes, disposición y otros aspectos de diseño.
+	    
+	h2: Selectores de CSS
+	
+	Text:
+	    
+	    Los selectores se utilizan para apuntar a los elementos HTML que queremos estilizar. Aquí están algunos de los selectores más comunes:
+	    
+	    *  Selector de tipo: Selecciona todos los elementos de un tipo específico. Ejemplo: ##p## selecciona todos los párrafos.
+	    *  Selector de clase: Selecciona todos los elementos con una clase específica. Se define con un punto seguido del nombre de la clase. Ejemplo: ##.miClase##.
+	    *  Selector de ID: Selecciona un único elemento con un ID específico. Se define con un símbolo de almohadilla seguido del ID. Ejemplo: ###miID##.
+	    *  Selector universal: Selecciona todos los elementos. Se define con un asterisco. Ejemplo: ##*##.
+	    *  Selectores de atributo: Selecciona elementos en función de un atributo o su valor. Ejemplo: ##a[href]## selecciona todos los enlaces con un atributo href.
+	    
+	    Ejemplo de selectores en CSS:
+	    
+	Code:
+	    p {
+	    color: blue;
+	    }
+	    
+	    .miClase {
+	    font-size: 18px;
+	    }
+	    
+	    #miID {
+	    background-color: yellow;
+	    }
+	    
+	    *[data-custom] {
+	    border: 1px solid black;
+	    }
+	
+	
+	Text:
+	    
+	h2: Propiedades de CSS
+	
+	Text:
+	    
+	    Las propiedades CSS se utilizan para definir estilos específicos para los elementos seleccionados. Algunas de las propiedades más comunes incluyen:
+	    
+	    *  Color y fondo: ##color##, ##background-color##
+	    *  Tipografía: ##font-family##, ##font-size##, ##font-weight##, ##text-align##
+	    *  Espaciado: ##margin##, ##padding##
+	    *  Bordes: ##border##, ##border-radius##
+	    *  Dimensiones: ##width##, ##height##
+	    
+	    Ejemplo de uso de propiedades CSS:
+	    
+	Code:
+	    body {
+	    font-family: Arial, sans-serif;
+	    background-color: #f0f0f0;
+	    }
+	    
+	    h1 {
+	    color: navy;
+	    text-align: center;
+	    }
+	    
+	    p {
+	    margin: 20px;
+	    padding: 10px;
+	    }
+	    
+	    div {
+	    border: 1px solid #ccc;
+	    width: 80%;
+	    height: auto;
+	    }
+	
+	
+	Text:
+	    
+	h2: Modelo de Caja (Box Model)
+	
+	Text:
+	    
+	    El modelo de caja en CSS es esencial para entender cómo se disponen los elementos en una página web. Cada elemento se representa como una caja rectangular, que consta de los siguientes componentes:
+	    
+	    *  Contenido: El área donde se muestra el contenido (texto, imágenes, etc.).
+	    *  Relleno (padding): El espacio entre el contenido y el borde.
+	    *  Borde (border): El contorno del elemento.
+	    *  Margen (margin): El espacio fuera del borde, separando el elemento de otros elementos.
+	    
+	    Ejemplo del modelo de caja:
+	    
+	Code:
+	    div {
+	    width: 300px;
+	    padding: 20px;
+	    border: 5px solid red;
+	    margin: 10px;
+	    }
+	
+	
+	Text:
+	    
+	h2: Layouts con CSS
+	
+	Text:
+	    
+	    CSS permite crear diseños de página complejos mediante diversas técnicas. Aquí hay algunas de las más utilizadas:
+	    
+	    *  Floats: Se utilizan para posicionar elementos a la izquierda o derecha. Ejemplo: ##float: left;##.
+	    *  Flexbox: Un modelo de diseño unidimensional que distribuye el espacio entre los elementos de un contenedor y permite alinear los elementos de manera predecible. Ejemplo: ##display: flex;##.
+	    *  Grid: Un modelo de diseño bidimensional que permite crear layouts más complejos. Ejemplo: ##display: grid;##.
+	    
+	    Ejemplo de Flexbox:
+	    
+	Code:
+	    .container {
+	    display: flex;
+	    justify-content: space-between;
+	    }
+	    
+	    .item {
+	    flex: 1;
+	    margin: 10px;
+	    }
+	
+	
+	Text:
+	    
+	    Ejemplo de Grid:
+	    
+	Code:
+	    .container {
+	    display: grid;
+	    grid-template-columns: 1fr 2fr;
+	    grid-gap: 10px;
+	    }
+	    
+	    .item {
+	    background-color: #ccc;
+	    padding: 20px;
+	    }
+	
+	
+	Text:
+	    
+	h2: Conclusión
+	
+	Text:
+	    
+	    CSS es una herramienta poderosa para el estilizado de páginas web. Con una comprensión sólida de los selectores, propiedades, el modelo de caja y técnicas de layout, puedes crear diseños atractivos y funcionales. CSS trabaja junto con HTML y JavaScript para proporcionar una experiencia de usuario completa y enriquecida en la web.

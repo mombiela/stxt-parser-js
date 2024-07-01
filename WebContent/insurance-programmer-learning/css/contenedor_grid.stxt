@@ -1,0 +1,113 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Propiedades del contenedor Grid
+	
+	Text: 
+	    El contenedor Grid es el elemento padre al que se le aplica la propiedad ##display: grid;## o ##display: inline-grid;##. Estas propiedades permiten utilizar un conjunto de propiedades adicionales que controlan la estructura y el comportamiento de la cuadrícula.
+	    
+	    *  **display**:
+	    *  Define el elemento como un contenedor de cuadrícula.
+	    *  Ejemplos:
+	    *  ##display: grid;##
+	    *  ##display: inline-grid;##
+	    
+	    *  **grid-template-columns**:
+	    *  Define el número y el tamaño de las columnas en la cuadrícula.
+	    *  Ejemplo: ##grid-template-columns: 1fr 2fr 1fr;## (tres columnas con la segunda columna dos veces más ancha que las otras)
+	    
+	    *  **grid-template-rows**:
+	    *  Define el número y el tamaño de las filas en la cuadrícula.
+	    *  Ejemplo: ##grid-template-rows: 100px auto 100px;## (tres filas, la primera y la última de 100px, la del medio ajustándose al contenido)
+	    
+	    *  **grid-template-areas**:
+	    *  Permite nombrar áreas dentro de la cuadrícula para facilitar la colocación de los ítems.
+	    *  Ejemplo:
+	Code:
+	    grid-template-areas:
+	    "header header header"
+	    "sidebar content content"
+	    "footer footer footer";
+	
+	
+	Text:
+	    
+	    *  **grid-column-gap** y **grid-row-gap**:
+	    *  Define el espacio entre columnas y entre filas respectivamente.
+	    *  Ejemplo: ##grid-column-gap: 10px;##, ##grid-row-gap: 15px;##
+	    
+	    *  **gap**:
+	    *  Propiedad abreviada para definir el espacio entre filas y columnas.
+	    *  Ejemplo: ##gap: 10px 15px;## (10px entre filas y 15px entre columnas)
+	    
+	    *  **grid-auto-rows** y **grid-auto-columns**:
+	    *  Define el tamaño de las filas y columnas generadas automáticamente.
+	    *  Ejemplo: ##grid-auto-rows: 50px;##
+	    
+	    *  **grid-auto-flow**:
+	    *  Controla el orden en que se colocan los ítems automáticos en la cuadrícula.
+	    *  Valores: ##row## (por defecto), ##column##, ##dense##
+	    *  Ejemplo: ##grid-auto-flow: row dense;##
+	    
+	h2: Ejemplo de código CSS para un contenedor Grid
+	
+	Text:
+	    
+	Code:
+	    .container {
+	    display: grid;
+	    grid-template-columns: 1fr 2fr 1fr;
+	    grid-template-rows: 100px auto 100px;
+	    grid-template-areas:
+	    "header header header"
+	    "sidebar content content"
+	    "footer footer footer";
+	    gap: 10px;
+	    }
+	    .header {
+	    grid-area: header;
+	    background-color: lightblue;
+	    }
+	    .sidebar {
+	    grid-area: sidebar;
+	    background-color: lightgreen;
+	    }
+	    .content {
+	    grid-area: content;
+	    background-color: lightcoral;
+	    }
+	    .footer {
+	    grid-area: footer;
+	    background-color: lightgray;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    *  El contenedor de cuadrícula tiene tres columnas y tres filas definidas con ##grid-template-columns## y ##grid-template-rows##.
+	    *  Las áreas de cuadrícula se definen con ##grid-template-areas##.
+	    *  Se utiliza ##gap## para definir el espacio entre filas y columnas.
+	    *  Los ítems se posicionan utilizando ##grid-area##.
+	    
+	h2: Diagrama de un contenedor Grid
+	
+	Text:
+	    
+	    ##startuml##
+	    +--------------------------------------------------+
+	    | Contenedor (display: grid)                       |
+	    | +-------------------+-------------------+--------|
+	    | |       header         |       header         |        |
+	    | +-------------------+-------------------+--------|
+	    | | sidebar             |      content          |        |
+	    | | sidebar             |      content          |        |
+	    | +-------------------+-------------------+--------|
+	    | | footer                   |      footer              |
+	    | +-------------------+-------------------+--------|
+	    +--------------------------------------------------+
+	    ##enduml##
+	    
+	    En este diagrama, se muestra cómo los ítems se posicionan y se distribuyen dentro del contenedor de cuadrícula utilizando las propiedades mencionadas.
+	    
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout|Documentación sobre CSS Grid en CSS]]
+	    

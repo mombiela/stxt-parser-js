@@ -1,0 +1,28 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Operadores de Identidad
+	
+	Text: 
+	    Estos operadores se utilizan para comparar objetos.
+	    
+	    |= Operador    |= Descripción                 |= Ejemplo
+	    | ##code:is##     | Es el mismo objeto    | ##code:a is b##
+	    | ##code:is not## | No es el mismo objeto | ##code:a is not b##
+	    
+	h2:  Ejemplo: 
+	
+	Text:
+	    
+	Code:
+	    a = [1, 2, 3]
+	    b = a
+	    c = [1, 2, 3]
+	    print(a is b)    # True
+	    print(a is c)    # False
+	    print(a is not c) # True
+	
+	
+	Text:
+	    
+	    
+	    

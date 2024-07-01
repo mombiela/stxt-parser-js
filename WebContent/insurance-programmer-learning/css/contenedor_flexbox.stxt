@@ -1,0 +1,108 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Propiedades del contenedor Flexbox
+	
+	Text: 
+	    El contenedor Flexbox es el elemento padre al que se le aplica la propiedad ##display: flex## o ##display: inline-flex##. Estas propiedades permiten utilizar un conjunto de propiedades adicionales que controlan el comportamiento y la distribución de los elementos flexibles (flex items) dentro del contenedor.
+	    
+	    *  **display**:
+	    *  Define el elemento como un contenedor flexible.
+	    *  Ejemplos:
+	    *  ##display: flex;##
+	    *  ##display: inline-flex;##
+	    
+	    *  **flex-direction**:
+	    *  Define la dirección principal en la que se colocan los elementos flexibles.
+	    *  Valores:
+	    *  ##row##: Los elementos se colocan en una fila horizontal (valor predeterminado).
+	    *  ##row-reverse##: Los elementos se colocan en una fila horizontal, pero en orden inverso.
+	    *  ##column##: Los elementos se colocan en una columna vertical.
+	    *  ##column-reverse##: Los elementos se colocan en una columna vertical, pero en orden inverso.
+	    
+	    *  **flex-wrap**:
+	    *  Controla si los elementos flexibles se envuelven o no dentro del contenedor.
+	    *  Valores:
+	    *  ##nowrap##: Todos los elementos se colocan en una sola línea (valor predeterminado).
+	    *  ##wrap##: Los elementos se envuelven en varias líneas según sea necesario.
+	    *  ##wrap-reverse##: Los elementos se envuelven en varias líneas, pero en orden inverso.
+	    
+	    *  **flex-flow**:
+	    *  Es una propiedad abreviada para ##flex-direction## y ##flex-wrap##.
+	    *  Ejemplo:
+	    *  ##flex-flow: row wrap;##
+	    
+	    *  **justify-content**:
+	    *  Define cómo se distribuye el espacio entre los elementos a lo largo de la dirección principal.
+	    *  Valores:
+	    *  ##flex-start##: Los elementos se alinean al inicio del contenedor (valor predeterminado).
+	    *  ##flex-end##: Los elementos se alinean al final del contenedor.
+	    *  ##center##: Los elementos se alinean al centro del contenedor.
+	    *  ##space-between##: El espacio entre los elementos se distribuye uniformemente.
+	    *  ##space-around##: El espacio alrededor de los elementos se distribuye uniformemente.
+	    *  ##space-evenly##: El espacio entre los elementos se distribuye uniformemente con igual espacio antes, entre y después de ellos.
+	    
+	    *  **align-items**:
+	    *  Define cómo se alinean los elementos a lo largo del eje transversal (perpendicular al eje principal).
+	    *  Valores:
+	    *  ##flex-start##: Los elementos se alinean al inicio del contenedor.
+	    *  ##flex-end##: Los elementos se alinean al final del contenedor.
+	    *  ##center##: Los elementos se alinean al centro del contenedor.
+	    *  ##baseline##: Los elementos se alinean según la línea base del texto.
+	    *  ##stretch##: Los elementos se estiran para llenar el contenedor (valor predeterminado).
+	    
+	    *  **align-content**:
+	    *  Define cómo se distribuye el espacio entre las líneas cuando hay múltiples líneas de elementos flexibles.
+	    *  Solo tiene efecto cuando hay múltiples líneas de elementos flexibles.
+	    *  Valores:
+	    *  ##flex-start##: Las líneas se alinean al inicio del contenedor.
+	    *  ##flex-end##: Las líneas se alinean al final del contenedor.
+	    *  ##center##: Las líneas se alinean al centro del contenedor.
+	    *  ##space-between##: El espacio entre las líneas se distribuye uniformemente.
+	    *  ##space-around##: El espacio alrededor de las líneas se distribuye uniformemente.
+	    *  ##stretch##: Las líneas se estiran para llenar el contenedor (valor predeterminado).
+	    
+	h2: Ejemplo de código CSS para un contenedor Flexbox
+	
+	Text:
+	    
+	Code:
+	    .container {
+	    display: flex;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+	    align-items: center;
+	    align-content: space-around;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo, el contenedor Flexbox:
+	    *  Se define como un contenedor flexible con ##display: flex;##.
+	    *  Los elementos flexibles se colocan en una fila con ##flex-direction: row;##.
+	    *  Los elementos flexibles se envuelven en varias líneas con ##flex-wrap: wrap;##.
+	    *  El espacio entre los elementos se distribuye uniformemente con ##justify-content: space-between;##.
+	    *  Los elementos se alinean al centro del eje transversal con ##align-items: center;##.
+	    *  El espacio entre las líneas se distribuye uniformemente con ##align-content: space-around;##.
+	    
+	h2: Diagrama de un contenedor Flexbox con propiedades aplicadas
+	
+	Text:
+	    
+	    ##startuml##
+	    +------------------------------------------------+
+	    | Contenedor (display: flex)                      |
+	    | +----------------+ +----------------+          |
+	    | | Item 1         | | Item 2         |          |
+	    | +----------------+ +----------------+          |
+	    | +----------------+ +----------------+          |
+	    | | Item 3         | | Item 4         |          |
+	    | +----------------+ +----------------+          |
+	    +------------------------------------------------+
+	    ##enduml##
+	    
+	    En este diagrama, se muestra cómo se distribuyen y alinean los elementos dentro del contenedor Flexbox utilizando las propiedades mencionadas.
+	    
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes|Guía completa sobre el uso de Flexbox en CSS]]
+	    

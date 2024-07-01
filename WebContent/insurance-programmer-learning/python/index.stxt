@@ -1,0 +1,54 @@
+Index(www.cursos.com/index.stxt):
+
+	title: Python
+		
+	part: Fundamentos de Programación en Python
+		tema: (base_sintaxis) Sintaxis básica y comentarios
+		tema: (base_palabras_reservadas) Palabras reservadas
+		tema: (base_tipos_datos) Variables y tipos de datos
+		tema: (base_nomenclatura) Nomenclatura
+	
+	part: Operadores
+		tema: (op_arit) Operadores Aritméticos
+		tema: (op_asig) Operadores de Asignación
+		tema: (op_comp) Operadores de Comparación
+		tema: (op_logi) Operadores Lógicos
+		tema: (op_iden) Operadores de Identidad
+		tema: (op_pert) Operadores de Pertenencia
+		tema: (op_bitb) Operadores Bit a Bit
+	
+	part: Estructuras de Control
+		tema: (control_cond) Condicionales
+		tema: (control_bucle) Bucles
+		tema: (control_list_comprenh) Comprensiones de listas
+		tema: (file_excep) Manejo de excepciones
+	
+	part: Funciones
+		tema: (func_def) Definición y uso de funciones
+		tema: (func_params) Parámetros y argumentos
+		tema: (func_scope) Alcance de las variables
+		tema: (func_lambda) Funciones lambda
+	
+	part: Tipos contenedores
+		tema: (cont_comunes) Operaciones comunes
+		tema: (cont_listas) Listas
+		tema: (cont_tuplas) Tuplas
+		tema: (cont_sets) Sets
+		tema: (cont_dic) Diccionarios
+		tema: (cont_strings) Strings
+	
+	part: Programación Orientada a Objetos (POO)
+		tema: (oop_base) Clases y objetos
+		tema: (oop_multiple) Herencia múltiple
+		tema: (oop_polimorfismo) Polimorfismo
+		tema: (oop_encapsulacion) Encapsulación
+		tema: (oop_avanzados) Conceptos avanzados OOP
+	
+	part: Manejo de Archivos
+		tema: (file_open) Apertura y cierre de archivos
+		tema: (file_write) Lectura y escritura de archivos
+	
+	part: Módulos y Paquetes
+		tema: (mod_import) Importación de módulos
+		tema: (mod_create) Creación de módulos propios
+		tema: (mod_std) Uso de paquetes estándar de Python

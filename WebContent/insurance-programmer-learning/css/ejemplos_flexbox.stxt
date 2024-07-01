@@ -1,0 +1,202 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Ejemplos prácticos con Flexbox
+	
+	Text: 
+	    Los ejemplos prácticos de Flexbox muestran cómo se pueden utilizar las propiedades de Flexbox para crear diseños flexibles y adaptables. A continuación, se presentan algunos ejemplos comunes:
+	    
+	h2: Ejemplo 1: Centro de un elemento en un contenedor
+	
+	Text:
+	    
+	Code:
+	    .container {
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    height: 100vh;
+	    background-color: lightgray;
+	    }
+	    .item {
+	    background-color: lightcoral;
+	    padding: 20px;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo, el ítem se centra horizontal y verticalmente dentro del contenedor usando ##justify-content: center;## y ##align-items: center;##.
+	    
+	h2: Ejemplo 2: Diseño de barra de navegación
+	
+	Text:
+	    
+	Code:
+	    .nav {
+	    display: flex;
+	    justify-content: space-between;
+	    background-color: darkblue;
+	    padding: 10px;
+	    }
+	    .nav a {
+	    color: white;
+	    text-decoration: none;
+	    padding: 10px;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo, una barra de navegación con enlaces se distribuye uniformemente utilizando ##justify-content: space-between;##.
+	    
+	h2: Ejemplo 3: Tarjetas con altura y ancho iguales
+	
+	Text:
+	    
+	Code:
+	    .container {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    }
+	    .card {
+	    flex: 1 1 200px;
+	    margin: 10px;
+	    background-color: lightblue;
+	    padding: 20px;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo, las tarjetas dentro del contenedor se envuelven en varias líneas si es necesario y cada tarjeta tiene un ancho mínimo de 200px utilizando ##flex: 1 1 200px;##.
+	    
+	h2: Ejemplo 4: Diseño de pie de página con distribución espacial
+	
+	Text:
+	    
+	Code:
+	    .footer {
+	    display: flex;
+	    justify-content: space-around;
+	    background-color: black;
+	    color: white;
+	    padding: 20px;
+	    }
+	    .footer div {
+	    padding: 10px;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo, los elementos dentro del pie de página se distribuyen uniformemente utilizando ##justify-content: space-around;##.
+	    
+	h2: Ejemplo 5: Columna de igual altura en diseño de tres columnas
+	
+	Text:
+	    
+	Code:
+	    .container {
+	    display: flex;
+	    }
+	    .column {
+	    flex: 1;
+	    background-color: lightgreen;
+	    margin: 5px;
+	    padding: 20px;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo, tres columnas se crean dentro de un contenedor flexible, todas con igual altura y ancho utilizando ##flex: 1;##.
+	    
+	h2: Diagramas de ejemplos prácticos con Flexbox
+	
+	Text:
+	    
+	    **Ejemplo 1: Centro de un elemento en un contenedor**
+	    
+	    ##startuml##
+	    +---------------------------------------+
+	    | Contenedor (display: flex)              |
+	    |        justify-content: center         |
+	    |        align-items: center            |
+	    |        height: 100vh                  |
+	    |    +-----------------------+          |
+	    |    | Item centrado                    |
+	    |    +-----------------------+          |
+	    +---------------------------------------+
+	    ##enduml##
+	    
+	    **Ejemplo 2: Diseño de barra de navegación**
+	    
+	    ##startuml##
+	    +--------------------------------------------------+
+	    | Nav (display: flex)                               |
+	    | justify-content: space-between                   |
+	    | background-color: darkblue                       |
+	    |  +-------+                                      |
+	    |  | Link  |                                      |
+	    |  |   1   |                                      |
+	    |  +-------+                                      |
+	    |  +-------+                                      |
+	    |  | Link  |                                      |
+	    |  |   2   |                                      |
+	    |  +-------+                                      |
+	    |  +-------+
+	    
+	    ##startuml##
+	    | | Link  |                                      |
+	    |  |   3   |                                      |
+	    |  +-------+                                      |
+	    +--------------------------------------------------+
+	    ##enduml##
+	    
+	    **Ejemplo 3: Tarjetas con altura y ancho iguales**
+	    
+	    ##startuml##
+	    +--------------------------------------------------+
+	    | Contenedor (display: flex)                       |
+	    | flex-wrap: wrap                                  |
+	    | justify-content: center                         |
+	    | +-------------------+ +-------------------+      |
+	    | | Card              | | Card               |      |
+	    | | 1                   | | 2                  |      |
+	    | +-------------------+ +-------------------+      |
+	    | +-------------------+ +-------------------+      |
+	    | | Card              | | Card              |      |
+	    | | 3                   | | 4                  |      |
+	    | +-------------------+ +-------------------+      |
+	    +--------------------------------------------------+
+	    ##enduml##
+	    
+	    **Ejemplo 4: Diseño de pie de página con distribución espacial**
+	    
+	    ##startuml##
+	    +---------------------------------------------------+
+	    | Footer (display: flex)                             |
+	    | justify-content: space-around                     |
+	    | background-color: black                            |
+	    | +--------+ +--------+ +--------+ +--------+      |
+	    | | Div     | | Div     | | Div     | | Div     |      |
+	    | +--------+ +--------+ +--------+ +--------+      |
+	    +---------------------------------------------------+
+	    ##enduml##
+	    
+	    **Ejemplo 5: Columna de igual altura en diseño de tres columnas**
+	    
+	    ##startuml##
+	    +---------------------------------------------------+
+	    | Contenedor (display: flex)                         |
+	    | +-------------+ +-------------+ +-------------+      |
+	    | | Column 1     | | Column 2     | | Column 3     |      |
+	    | +-------------+ +-------------+ +-------------+      |
+	    +---------------------------------------------------+
+	    ##enduml##
+	    
+	    Estos ejemplos prácticos demuestran cómo Flexbox puede utilizarse para crear diseños flexibles y adaptables para diversas aplicaciones.
+	    
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout|Documentación sobre Flexbox en CSS]]
+	    

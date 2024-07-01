@@ -1,0 +1,79 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Introducción a los selectores básicos en CSS
+	
+	Text: 
+	h2: Introducción a los selectores básicos en CSS
+	
+	Text:
+	    
+	    *  **Definición**
+	    Los selectores en CSS permiten seleccionar y estilizar elementos específicos dentro de un documento HTML. Los selectores básicos son fundamentales para aplicar estilos de manera eficiente y precisa.
+	    
+	    *  **Tipos de selectores básicos**
+	    ##startalert##
+	    *  **Selector de tipo**: Selecciona todos los elementos de un tipo específico.
+	    *  **Selector de clase**: Selecciona todos los elementos que tienen una clase específica.
+	    *  **Selector de ID**: Selecciona un único elemento que tiene un ID específico.
+	    *  **Selector universal**: Selecciona todos los elementos en la página.
+	    *  **Selector de atributo**: Selecciona elementos que tienen un atributo específico.
+	    ##endalert##
+	    
+	    *  **Selector de tipo**
+	    El selector de tipo selecciona todos los elementos de un tipo específico, como todos los párrafos ##<p>## o todos los encabezados ##<h1>##.
+	Code:
+	    p {
+	    color: blue;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector de clase**
+	    El selector de clase selecciona todos los elementos que tienen una clase específica, definida por el atributo ##class## en HTML. Se utiliza un punto (.) antes del nombre de la clase.
+	Code:
+	    .intro {
+	    font-size: 14px;
+	    color: green;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector de ID**
+	    El selector de ID selecciona un único elemento que tiene un ID específico, definido por el atributo ##id## en HTML. Se utiliza un símbolo de almohadilla (#) antes del nombre del ID.
+	Code:
+	    #header {
+	    background-color: yellow;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector universal**
+	    El selector universal selecciona todos los elementos en la página y se denota con un asterisco (*).
+	Code:
+	    * {
+	    margin: 0;
+	    padding: 0;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector de atributo**
+	    El selector de atributo selecciona elementos que tienen un atributo específico, y puede filtrar por el valor del atributo si es necesario.
+	Code:
+	    a[href] {
+	    color: red;
+	    }
+	    
+	    input[type="text"] {
+	    border: 1px solid black;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Conclusión**
+	    Entender y utilizar los selectores básicos en CSS es esencial para aplicar estilos de manera efectiva y eficiente. Estos selectores permiten apuntar a los elementos deseados y aplicarles los estilos necesarios para lograr el diseño deseado.

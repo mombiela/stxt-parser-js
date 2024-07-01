@@ -1,0 +1,180 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Tipos de selectores en CSS
+	
+	Text: 
+	    *  **Introducción**
+	    Los selectores en CSS permiten a los desarrolladores apuntar a elementos específicos dentro de un documento HTML para aplicarles estilos. Existen varios tipos de selectores, cada uno con sus propias características y usos.
+	    
+	    *  **Selectores básicos**
+	    ##startalert##
+	    *  **Selector de tipo**: Selecciona todos los elementos de un tipo específico.
+	Code:
+	    p {
+	    color: blue;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector de clase**: Selecciona todos los elementos que tienen una clase específica.
+	Code:
+	    .intro {
+	    font-size: 14px;
+	    color: green;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector de ID**: Selecciona un único elemento que tiene un ID específico.
+	Code:
+	    #header {
+	    background-color: yellow;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector universal**: Selecciona todos los elementos en la página.
+	Code:
+	    * {
+	    margin: 0;
+	    padding: 0;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector de atributo**: Selecciona elementos que tienen un atributo específico.
+	Code:
+	    a[href] {
+	    color: red;
+	    }
+	
+	
+	Text:
+	    ##endalert##
+	    
+	    *  **Selectores de combinadores**
+	    ##startalert##
+	    *  **Selector descendiente**: Selecciona elementos que son descendientes de otro elemento.
+	Code:
+	    div p {
+	    color: blue;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector hijo**: Selecciona elementos que son hijos directos de otro elemento.
+	Code:
+	    div > p {
+	    color: green;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector de adyacente inmediato**: Selecciona el elemento que está inmediatamente después de otro.
+	Code:
+	    h1 + p {
+	    margin-top: 0;
+	    }
+	
+	
+	Text:
+	    
+	    *  **Selector de hermanos generales**: Selecciona todos los elementos que son hermanos de un elemento especificado.
+	Code:
+	    h1 ~ p {
+	    color: red;
+	    }
+	
+	
+	Text:
+	    ##endalert##
+	    
+	    *  **Selectores de pseudoclases**
+	    ##startalert##
+	    *  **:hover**: Selecciona elementos cuando el usuario pasa el cursor sobre ellos.
+	Code:
+	    a:hover {
+	    color: red;
+	    }
+	
+	
+	Text:
+	    
+	    *  **:first-child**: Selecciona el primer hijo de su elemento padre.
+	Code:
+	    p:first-child {
+	    font-weight: bold;
+	    }
+	
+	
+	Text:
+	    
+	    *  **:nth-child(n)**: Selecciona el enésimo hijo de su elemento padre.
+	Code:
+	    li:nth-child(2) {
+	    color: blue;
+	    }
+	
+	
+	Text:
+	    
+	    *  **:not(selector)**: Selecciona todos los elementos que no coinciden con el selector dado.
+	Code:
+	    :not(p) {
+	    color: gray;
+	    }
+	
+	
+	Text:
+	    ##endalert##
+	    
+	    *  **Selectores de pseudoelementos**
+	    ##startalert##
+	    *  **::before**: Inserta contenido antes del contenido de un elemento.
+	Code:
+	    p::before {
+	    content: "Nota: ";
+	    color: red;
+	    }
+	
+	
+	Text:
+	    
+	    *  **::after**: Inserta contenido después del contenido de un elemento.
+	Code:
+	    p::after {
+	    content: " (Leído)";
+	    color: blue;
+	    }
+	
+	
+	Text:
+	    
+	    *  **::first-letter**: Selecciona la primera letra de un elemento.
+	Code:
+	    p::first-letter {
+	    font-size: 2em;
+	    color: green;
+	    }
+	
+	
+	Text:
+	    
+	    *  **::first-line**: Selecciona la primera línea de un elemento.
+	Code:
+	    p::first-line {
+	    font-weight: bold;
+	    }
+	
+	
+	Text:
+	    ##endalert##
+	    
+	    *  **Conclusión**
+	    Conocer los distintos tipos de selectores en CSS es crucial para aplicar estilos de manera eficiente y precisa. Cada tipo de selector tiene su propósito y uso específicos, permitiendo una gran flexibilidad en el diseño y desarrollo de sitios web.

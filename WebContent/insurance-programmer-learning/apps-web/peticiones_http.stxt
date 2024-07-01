@@ -1,0 +1,99 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Métodos y uso de peticiones HTTP.
+	
+	Text: 
+	    HTTP (Hypertext Transfer Protocol) es el protocolo fundamental utilizado en la web para la comunicación entre clientes y servidores. Los métodos HTTP especifican la acción que se desea realizar sobre un recurso. Cada método tiene un propósito específico y se utiliza en diferentes contextos.
+	    
+	h2: Métodos HTTP principales
+	
+	Text:
+	    
+	    A continuación se presentan los métodos HTTP más utilizados:
+	    
+	    * **GET**: El método ##GET## solicita un recurso específico del servidor. Es el método más común y se utiliza principalmente para recuperar datos. Las solicitudes ##GET## no deben tener efectos secundarios (es decir, deben ser seguras y no alterar el estado del servidor).
+	    
+	Code:
+	    GET /recurso HTTP/1.1
+	    Host: www.ejemplo.com
+	
+	
+	Text:
+	    
+	    * **POST**: El método ##POST## se utiliza para enviar datos al servidor, generalmente para crear o actualizar un recurso. A diferencia de ##GET##, las solicitudes ##POST## pueden tener efectos secundarios y no son idempotentes (pueden causar cambios en el servidor cada vez que se ejecutan).
+	    
+	Code:
+	    POST /recurso HTTP/1.1
+	    Host: www.ejemplo.com
+	    Content-Type: application/x-www-form-urlencoded
+	    Content-Length: 27
+	    
+	    nombre=Juan&edad=30
+	
+	
+	Text:
+	    
+	    * **PUT**: El método ##PUT## se utiliza para actualizar un recurso existente o crear uno nuevo si no existe. Las solicitudes ##PUT## son idempotentes, lo que significa que aplicar la misma solicitud varias veces no debería cambiar el resultado.
+	    
+	Code:
+	    PUT /recurso/123 HTTP/1.1
+	    Host: www.ejemplo.com
+	    Content-Type: application/json
+	    Content-Length: 49
+	    
+	    {"nombre":"Juan","edad":30,"email":"juan@ejemplo.com"}
+	
+	
+	Text:
+	    
+	    * **DELETE**: El método ##DELETE## se utiliza para eliminar un recurso específico del servidor. Al igual que ##PUT##, las solicitudes ##DELETE## son idempotentes.
+	    
+	Code:
+	    DELETE /recurso/123 HTTP/1.1
+	    Host: www.ejemplo.com
+	
+	
+	Text:
+	    
+	    * **HEAD**: El método ##HEAD## es similar a ##GET##, pero solo solicita los encabezados de la respuesta, sin el cuerpo. Se utiliza principalmente para obtener metadatos sobre un recurso, como su tamaño o tipo, sin transferir el contenido completo.
+	    
+	Code:
+	    HEAD /recurso HTTP/1.1
+	    Host: www.ejemplo.com
+	
+	
+	Text:
+	    
+	    * **OPTIONS**: El método ##OPTIONS## se utiliza para describir las opciones de comunicación disponibles para el recurso objetivo. Es útil para determinar las capacidades del servidor o las políticas de CORS (Cross-Origin Resource Sharing).
+	    
+	Code:
+	    OPTIONS /recurso HTTP/1.1
+	    Host: www.ejemplo.com
+	
+	
+	Text:
+	    
+	h2: Códigos de respuesta HTTP más habituales
+	
+	Text:
+	    
+	    Los códigos de respuesta HTTP indican el resultado de la solicitud realizada por el cliente al servidor. Estos códigos se agrupan en cinco categorías principales: informativos, éxitos, redirecciones, errores del cliente y errores del servidor. A continuación, se presentan los códigos de respuesta más habituales en una tabla:
+	    
+	    |= Código |= Significado |= Descripción
+	    | 200 | OK | La solicitud ha tenido éxito y el servidor ha devuelto el recurso solicitado.
+	    | 201 | Created | La solicitud ha sido completada y ha resultado en la creación de un nuevo recurso.
+	    | 204 | No Content | La solicitud ha tenido éxito, pero el servidor no devuelve ningún contenido en la respuesta.
+	    | 301 | Moved Permanently | El recurso solicitado ha sido movido permanentemente a una nueva URL.
+	    | 302 | Found | El recurso solicitado se encuentra temporalmente en una URL diferente.
+	    | 304 | Not Modified | El recurso no ha sido modificado desde la última solicitud. Se puede usar la versión en caché.
+	    | 400 | Bad Request | La solicitud no puede ser procesada debido a un error del cliente (por ejemplo, sintaxis incorrecta).
+	    | 401 | Unauthorized | La solicitud requiere autenticación del usuario.
+	    | 403 | Forbidden | El servidor ha entendido la solicitud, pero se niega a autorizarla.
+	    | 404 | Not Found | El recurso solicitado no ha sido encontrado en el servidor.
+	    | 405 | Method Not Allowed | El método HTTP utilizado no está permitido para el recurso solicitado.
+	    | 500 | Internal Server Error | El servidor encontró una condición inesperada que le impidió completar la solicitud.
+	    | 501 | Not Implemented | El servidor no reconoce el método de la solicitud o carece de la capacidad para completarla.
+	    | 502 | Bad Gateway | El servidor, actuando como una puerta de enlace o proxy, recibió una respuesta inválida del servidor de respaldo.
+	    | 503 | Service Unavailable | El servidor no puede manejar la solicitud en este momento, generalmente debido a mantenimiento o sobrecarga.
+	    
+	    Estos códigos de respuesta proporcionan información importante sobre el estado de la solicitud y ayudan a diagnosticar y resolver problemas en la comunicación entre clientes y servidores en la web.

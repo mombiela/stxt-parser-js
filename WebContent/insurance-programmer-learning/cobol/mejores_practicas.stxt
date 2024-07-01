@@ -1,0 +1,236 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Mejores prácticas de programación en COBOL
+	
+	Text: 
+	    La programación en COBOL, un lenguaje robusto y ampliamente utilizado en sistemas financieros y de negocios, se beneficia enormemente de seguir ciertas mejores prácticas. Estas prácticas aseguran que el código sea eficiente, mantenible y libre de errores. A continuación, se describen algunas de las mejores prácticas esenciales para la programación en COBOL.
+	    
+	h2: Estructura y Organización del Código
+	
+	Text:
+	    
+	    Una estructura clara y bien organizada del código facilita la comprensión y el mantenimiento.
+	    
+	    *  **Divisiones claramente definidas**: Asegúrate de que las divisiones IDENTIFICATION, ENVIRONMENT, DATA y PROCEDURE estén claramente definidas y comentadas.
+	    
+	    *  **Uso de comentarios**: Utiliza comentarios para explicar la lógica y los propósitos de bloques de código. Esto es especialmente útil en secciones complejas.
+	    
+	Code:
+	    IDENTIFICATION DIVISION.
+	    PROGRAM-ID. MiPrograma.
+	    AUTHOR. Juan Perez.
+	    
+	    ENVIRONMENT DIVISION.
+	    CONFIGURATION SECTION.
+	    
+	    DATA DIVISION.
+	    WORKING-STORAGE SECTION.
+	    01 Contador PIC 9(4) VALUE 0.   *> Inicializa contador a cero
+	    
+	    PROCEDURE DIVISION.
+	    MAIN-PROCEDURE.
+	    DISPLAY 'Iniciando programa...'.
+	    PERFORM Contar-Hasta-Diez.
+	    STOP RUN.
+	    
+	    Contar-Hasta-Diez.
+	    PERFORM VARYING Contador FROM 1 BY 1 UNTIL Contador > 10
+	    DISPLAY 'Contador: ' Contador
+	    END-PERFORM.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Las divisiones están claramente definidas.
+	    *  Se utilizan comentarios para describir la inicialización del contador.
+	    
+	h2: Nombres Significativos y Consistentes
+	
+	Text:
+	    
+	    Utiliza nombres significativos y consistentes para variables, secciones y parágrafos.
+	    
+	    *  **Nombres descriptivos**: Los nombres deben reflejar claramente el propósito de la variable o sección.
+	    
+	    *  **Convenciones de nomenclatura**: Sigue una convención de nomenclatura consistente, como el uso de prefijos para identificar el tipo de variable (por ejemplo, ##WS-## para variables de WORKING-STORAGE).
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 WS-Total-Ventas PIC 9(9)V99.
+	    01 WS-Contador-Clientes PIC 9(4).
+	    01 WS-Nombre-Cliente PIC X(50).
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Los nombres de las variables son descriptivos y siguen una convención consistente.
+	    
+	h2: Modularización del Código
+	
+	Text:
+	    
+	    Dividir el código en módulos más pequeños y manejables mejora la claridad y la reutilización.
+	    
+	    *  **Uso de subprogramas**: Crea subprogramas para realizar tareas específicas y llamarlos desde el programa principal.
+	    
+	    *  **Secciones y párrafos**: Divide la PROCEDURE DIVISION en secciones y párrafos lógicos.
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    MAIN-PROCEDURE.
+	    PERFORM Inicializar.
+	    PERFORM Procesar-Ventas.
+	    PERFORM Finalizar.
+	    STOP RUN.
+	    
+	    Inicializar.
+	    DISPLAY 'Inicializando...'.
+	    MOVE 0 TO WS-Total-Ventas.
+	    
+	    Procesar-Ventas.
+	    DISPLAY 'Procesando ventas...'.
+	    PERFORM Leer-Ventas.
+	    
+	    Leer-Ventas.
+	    READ VENTAS-FILE INTO WS-VENTA-RECORD
+	    AT END SET No-Mas-Ventas TO TRUE
+	    END-READ.
+	    
+	    Finalizar.
+	    DISPLAY 'Finalizando programa...'.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  El código está dividido en secciones lógicas para inicialización, procesamiento y finalización.
+	    
+	h2: Manejo Eficiente de Errores
+	
+	Text:
+	    
+	    Implementar un manejo adecuado de errores es crucial para la robustez del programa.
+	    
+	    *  **Verificación de estados de archivos**: Utiliza ##FILE STATUS## para verificar el estado de las operaciones de archivo.
+	    
+	    *  **Manejo de errores SQL**: Verifica ##SQLCODE## después de las operaciones SQL para manejar errores adecuadamente.
+	    
+	Code:
+	    FILE CONTROL.
+	    SELECT Clientes ASSIGN TO 'CLIENTES.DAT'
+	    ORGANIZATION IS INDEXED
+	    ACCESS MODE IS DYNAMIC
+	    RECORD KEY IS Cliente-ID
+	    FILE STATUS IS WS-File-Status.
+	    
+	    WORKING-STORAGE SECTION.
+	    01 WS-File-Status PIC XX.
+	    
+	    PROCEDURE DIVISION.
+	    OPEN I-O Clientes.
+	    IF WS-File-Status NOT = '00'
+	    DISPLAY 'Error abriendo archivo: ' WS-File-Status.
+	    END-IF.
+	    CLOSE Clientes.
+	    STOP RUN.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##FILE STATUS IS WS-File-Status## se utiliza para verificar el estado del archivo.
+	    *  Se muestra un mensaje de error si hay un problema al abrir el archivo.
+	    
+	h2: Optimización del Rendimiento
+	
+	Text:
+	    
+	    Optimiza el rendimiento del programa mediante técnicas eficientes de manejo de datos y algoritmos.
+	    
+	    *  **Lectura y escritura eficientes**: Minimiza las operaciones de I/O innecesarias.
+	    
+	    *  **Uso de índices**: Utiliza índices para acceder rápidamente a los registros en archivos indexados.
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    Leer-Todos-Los-Registros.
+	    PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index > WS-Num-Registros
+	    READ Clientes INTO WS-Cliente-Record KEY IS Cliente-ID
+	    INVALID KEY
+	    DISPLAY 'Registro no encontrado'
+	    NOT INVALID KEY
+	    DISPLAY Cliente-Nombre Cliente-Direccion
+	    END-READ
+	    END-PERFORM.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Se utiliza un bucle eficiente para leer todos los registros de un archivo indexado.
+	    
+	h2: Mantenimiento de la Seguridad
+	
+	Text:
+	    
+	    Asegura que el programa maneje adecuadamente la seguridad y privacidad de los datos.
+	    
+	    *  **Enmascaramiento de datos**: Enmascara o cifra datos sensibles.
+	    
+	    *  **Manejo de contraseñas**: No codifiques contraseñas directamente en el código; utiliza variables seguras y técnicas de encriptación.
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 WS-Password PIC X(20).
+	    01 WS-Encrypted-Password PIC X(50).
+	    
+	    PROCEDURE DIVISION.
+	    Encriptar-Contraseña.
+	    MOVE 'contraseña-secreta' TO WS-Password.
+	    CALL 'Encrypt-Function' USING WS-Password GIVING WS-Encrypted-Password.
+	    DISPLAY 'Contraseña encriptada: ' WS-Encrypted-Password.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  La contraseña se encripta antes de ser utilizada o almacenada.
+	    
+	h2: Documentación y Comentarios
+	
+	Text:
+	    
+	    Documenta adecuadamente el código para facilitar su mantenimiento y comprensión futura.
+	    
+	    *  **Comentarios explicativos**: Incluye comentarios que expliquen la lógica y el propósito de secciones clave del código.
+	    
+	    *  **Manual de usuario y técnico**: Proporciona documentación adicional para usuarios y técnicos sobre el funcionamiento del programa.
+	    
+	Code:
+	    PROCEDURE DIVISION.
+	    * Este procedimiento inicializa las variables principales
+	    Inicializar.
+	    DISPLAY 'Inicializando variables...'.
+	    MOVE 0 TO WS-Contador.
+	    MOVE 'N/A' TO WS-Estado.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  Se incluye un comentario explicativo sobre el propósito del procedimiento de inicialización.
+	    
+	h2: Conclusión
+	
+	Text:
+	    
+	    Seguir estas mejores prácticas en la programación en COBOL no solo mejora la calidad del código, sino que también facilita su mantenimiento, escalabilidad y seguridad. La claridad en la estructura, la modularización adecuada, el manejo eficiente de errores y el rendimiento optimizado son esenciales para desarrollar aplicaciones COBOL robustas y eficientes.

@@ -1,0 +1,94 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Introducción a Flexbox
+	
+	Text: 
+	h2: Introducción a Flexbox
+	
+	Text:
+	    
+	    Flexbox, o "Flexible Box Layout", es un modelo de diseño en CSS que facilita la creación de estructuras de diseño complejas y adaptables. Flexbox permite alinear y distribuir espacio entre los elementos de un contenedor de manera eficiente, incluso cuando su tamaño es desconocido o dinámico.
+	    
+	    *  **Características principales de Flexbox**:
+	    *  Proporciona un diseño unidimensional, alineando elementos en una sola dirección: fila o columna.
+	    *  Facilita la alineación de elementos y la distribución de espacio entre ellos.
+	    *  Ofrece mayor control sobre el tamaño y el espacio de los elementos dentro de un contenedor flexible (flex container).
+	    
+	h2: Componentes de Flexbox
+	
+	Text:
+	    
+	    *  **Flex Container**:
+	    *  El elemento contenedor que utiliza Flexbox. Se define con la propiedad ##display: flex;## o ##display: inline-flex;##.
+	    
+	    *  **Flex Items**:
+	    *  Los elementos hijos directos del contenedor flexible, que se disponen y alinean utilizando Flexbox.
+	    
+	h2: Propiedades del contenedor Flexbox
+	
+	Text:
+	    
+	    *  **display**:
+	    *  Define el elemento como un contenedor flexible.
+	    *  Ejemplos: ##display: flex;##, ##display: inline-flex;##
+	    
+	    *  **flex-direction**:
+	    *  Define la dirección principal en la que se colocan los elementos flexibles.
+	    *  Valores: ##row##, ##row-reverse##, ##column##, ##column-reverse##
+	    
+	    *  **flex-wrap**:
+	    *  Controla si los elementos flexibles se envuelven o no dentro del contenedor.
+	    *  Valores: ##nowrap##, ##wrap##, ##wrap-reverse##
+	    
+	    *  **justify-content**:
+	    *  Define cómo se distribuye el espacio entre los elementos a lo largo de la dirección principal.
+	    *  Valores: ##flex-start##, ##flex-end##, ##center##, ##space-between##, ##space-around##, ##space-evenly##
+	    
+	    *  **align-items**:
+	    *  Define cómo se alinean los elementos a lo largo del eje transversal (perpendicular al eje principal).
+	    *  Valores: ##flex-start##, ##flex-end##, ##center##, ##baseline##, ##stretch##
+	    
+	    *  **align-content**:
+	    *  Define cómo se distribuye el espacio entre las líneas cuando hay múltiples líneas de elementos flexibles.
+	    *  Valores: ##flex-start##, ##flex-end##, ##center##, ##space-between##, ##space-around##, ##stretch##
+	    
+	h2: Ejemplo básico de Flexbox
+	
+	Text:
+	    
+	Code:
+	    .container {
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: space-between;
+	    align-items: center;
+	    }
+	    .item {
+	    background-color: lightcoral;
+	    padding: 10px;
+	    margin: 5px;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo, un contenedor flexible tiene elementos distribuidos en una fila con espacio entre ellos, y los elementos se alinean al centro del eje transversal.
+	    
+	h2: Diagrama de Flexbox
+	
+	Text:
+	    
+	    ##startuml##
+	    +--------------------------------------+
+	    | Contenedor (display: flex)            |
+	    | +--------+ +--------+ +--------+    |
+	    | | Item 1 | | Item 2 | | Item 3 |    |
+	    | +--------+ +--------+ +--------+    |
+	    +--------------------------------------+
+	    ##enduml##
+	    
+	    En este diagrama, se muestra cómo los elementos dentro del contenedor se distribuyen utilizando Flexbox.
+	    
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout|Documentación sobre Flexbox en CSS]]
+	    
+	    Si necesitas más detalles sobre algún punto específico, házmelo saber.

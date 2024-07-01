@@ -1,0 +1,74 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Cómo declarar variables y constantes en COBOL
+	
+	Text: 
+	    Declarar variables y constantes en COBOL es una parte fundamental del desarrollo de programas. Estas declaraciones se realizan principalmente en la sección ##WORKING-STORAGE## de la División de Datos. A continuación se describen los pasos y la sintaxis para declarar variables y constantes.
+	    
+	h2: Declaración de Variables
+	
+	Text:
+	    
+	    Las variables se declaran utilizando la cláusula ##PIC## (Picture), que especifica el tipo y el formato de los datos. Aquí hay algunos ejemplos de cómo declarar diferentes tipos de variables:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 WS-EmployeeName PIC X(30).
+	    01 WS-EmployeeID PIC 9(5).
+	    01 WS-EmployeeSalary PIC 9(7)V99.
+	    01 WS-EmployeeAge PIC S9(3).
+	    01 WS-PackedNumber PIC 9(6) COMP-3.
+	    01 WS-BinaryNumber PIC 9(4) COMP.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##WS-EmployeeName##: Una variable de texto de 30 caracteres.
+	    *  ##WS-EmployeeID##: Una variable numérica de 5 dígitos.
+	    *  ##WS-EmployeeSalary##: Una variable numérica con 7 dígitos enteros y 2 decimales.
+	    *  ##WS-EmployeeAge##: Una variable numérica de 3 dígitos con signo.
+	    *  ##WS-PackedNumber##: Una variable numérica empaquetada de 6 dígitos.
+	    *  ##WS-BinaryNumber##: Una variable numérica binaria de 4 dígitos.
+	    
+	h2: Declaración de Constantes
+	
+	Text:
+	    
+	    Las constantes en COBOL se declaran utilizando la cláusula ##VALUE## para asignar un valor fijo a una variable en el momento de su declaración. Aquí hay algunos ejemplos de cómo declarar constantes:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 WS-CompanyName PIC X(20) VALUE 'ACME Corp'.
+	    01 WS-TaxRate PIC 9(2)V99 VALUE 0.15.
+	    01 WS-MaxEmployees PIC 9(3) VALUE 100.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##WS-CompanyName##: Una constante de texto con el valor 'ACME Corp'.
+	    *  ##WS-TaxRate##: Una constante numérica con el valor 0.15.
+	    *  ##WS-MaxEmployees##: Una constante numérica con el valor 100.
+	    
+	h2: Subniveles en Declaraciones
+	
+	Text:
+	    
+	    COBOL permite declarar variables en varios niveles jerárquicos, lo que es útil para definir estructuras de datos complejas. Los subniveles se indican con niveles numéricos (01, 05, 10, etc.). Aquí hay un ejemplo:
+	    
+	Code:
+	    WORKING-STORAGE SECTION.
+	    01 WS-EmployeeRecord.
+	    05 EmployeeID PIC 9(5).
+	    05 EmployeeName PIC X(30).
+	    05 EmployeeSalary PIC 9(7)V99.
+	
+	
+	Text:
+	    
+	    En este ejemplo, ##WS-EmployeeRecord## es una estructura que contiene tres campos: ##EmployeeID##, ##EmployeeName##, y ##EmployeeSalary##.
+	    
+	    La declaración adecuada de variables y constantes en COBOL es crucial para gestionar datos de manera eficiente y asegurar la claridad y mantenibilidad del código.

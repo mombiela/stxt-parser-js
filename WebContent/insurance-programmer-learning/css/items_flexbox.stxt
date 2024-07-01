@@ -1,0 +1,97 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Propiedades de los ítems Flexbox
+	
+	Text: 
+	h2: Propiedades de los ítems Flexbox
+	
+	Text:
+	    
+	    Las propiedades de los ítems Flexbox controlan cómo se comportan y se distribuyen los elementos hijos dentro de un contenedor flexible (flex container). Estas propiedades permiten ajustar el crecimiento, la contracción, la alineación y el orden de los elementos flexibles.
+	    
+	    *  **order**:
+	    *  Define el orden de los ítems flexibles dentro del contenedor.
+	    *  Valor predeterminado: 0
+	    *  Ejemplo: ##order: 2;##
+	    
+	    *  **flex-grow**:
+	    *  Define la capacidad de un ítem flexible para crecer si es necesario.
+	    *  Valor predeterminado: 0 (no crece)
+	    *  Ejemplo: ##flex-grow: 1;##
+	    
+	    *  **flex-shrink**:
+	    *  Define la capacidad de un ítem flexible para encogerse si es necesario.
+	    *  Valor predeterminado: 1 (puede encogerse)
+	    *  Ejemplo: ##flex-shrink: 0;##
+	    
+	    *  **flex-basis**:
+	    *  Define el tamaño inicial de un ítem flexible antes de que se distribuya el espacio restante.
+	    *  Valor predeterminado: ##auto##
+	    *  Ejemplo: ##flex-basis: 200px;##
+	    
+	    *  **flex**:
+	    *  Es una propiedad abreviada para ##flex-grow##, ##flex-shrink## y ##flex-basis##.
+	    *  Ejemplo: ##flex: 1 0 200px;##
+	    
+	    *  **align-self**:
+	    *  Permite alinear individualmente un ítem flexible a lo largo del eje transversal, sobrescribiendo la alineación definida por ##align-items## del contenedor.
+	    *  Valores:
+	    *  ##auto##: Usa el valor de ##align-items## del contenedor.
+	    *  ##flex-start##: Alinea el ítem al inicio del contenedor.
+	    *  ##flex-end##: Alinea el ítem al final del contenedor.
+	    *  ##center##: Alinea el ítem al centro del contenedor.
+	    *  ##baseline##: Alinea el ítem según la línea base del texto.
+	    *  ##stretch##: Estira el ítem para llenar el contenedor (valor predeterminado).
+	    *  Ejemplo: ##align-self: center;##
+	    
+	h2: Ejemplo de código CSS para ítems Flexbox
+	
+	Text:
+	    
+	Code:
+	    .container {
+	    display: flex;
+	    }
+	    .item1 {
+	    order: 2;
+	    flex-grow: 1;
+	    flex-shrink: 0;
+	    flex-basis: 100px;
+	    }
+	    .item2 {
+	    order: 1;
+	    flex: 0 1 150px;
+	    align-self: flex-end;
+	    }
+	    .item3 {
+	    order: 3;
+	    flex: 1 0 auto;
+	    }
+	
+	
+	Text:
+	    
+	    En este ejemplo, tres ítems flexibles dentro de un contenedor Flexbox tienen diferentes propiedades aplicadas:
+	    
+	    *  ##.item1## tiene un orden de 2, puede crecer y no encogerse, y tiene una base de 100px.
+	    *  ##.item2## tiene un orden de 1, no puede crecer pero puede encogerse con una base de 150px, y se alinea al final del contenedor.
+	    *  ##.item3## tiene un orden de 3, puede crecer y no encogerse, y tiene una base automática.
+	    
+	h2: Diagrama de ítems Flexbox con propiedades aplicadas
+	
+	Text:
+	    
+	    ##startuml##
+	    +-------------------------------------+
+	    | Contenedor (display: flex)           |
+	    | +---------+ +---------+ +---------+ |
+	    | | Item 2  | | Item 1  | | Item 3  | |
+	    | +---------+ +---------+ +---------+ |
+	    +-------------------------------------+
+	    ##enduml##
+	    
+	    En este diagrama, se muestra cómo los ítems flexibles se ordenan y se distribuyen dentro del contenedor Flexbox utilizando las propiedades mencionadas.
+	    
+	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox|Conceptos básicos de Flexbox en CSS]]
+	    
+	    Si necesitas más detalles sobre algún punto específico, házmelo saber.

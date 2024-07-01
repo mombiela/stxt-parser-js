@@ -1,0 +1,91 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Elementos y estructura del HTML
+	
+	Text: 
+	    HTML (HyperText Markup Language) es el lenguaje básico para crear y estructurar contenido en la web. A continuación, se describen los elementos y la estructura básica de un documento HTML.
+	    
+	h2: Elementos de HTML
+	
+	Text:
+	    
+	    Los elementos HTML son los componentes básicos de un documento HTML. Están formados por etiquetas (tags) que indican el inicio y el final del elemento. Un elemento HTML típico tiene la siguiente estructura:
+	    
+	Code:
+	    <tagname>Contenido del elemento</tagname>
+	
+	
+	Text:
+	    
+	    *  //Etiquetas//: Las etiquetas HTML están encerradas entre corchetes angulares, como ##<div>## y ##</div>##.
+	    *  //Atributos//: Las etiquetas pueden tener atributos que proporcionan información adicional sobre el elemento, como ##<a href="url">Enlace</a>##.
+	    *  //Contenido//: Es el texto o los elementos anidados dentro de una etiqueta HTML.
+	    
+	h2: Estructura básica de un documento HTML
+	
+	Text:
+	    
+	    Un documento HTML se compone de varias partes esenciales. A continuación se muestra la estructura básica:
+	    
+	Code:
+	    
+	    <!DOCTYPE html>
+	    <html>
+	    <head>
+	    <title> Título de la página</title>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    </head>
+	    <body>
+	    <!-- Contenido de la página -->
+	    </body>
+	    </html>
+	
+	
+	Text:
+	    *  ##<!DOCTYPE html>##: Declara el tipo de documento y la versión de HTML que se está utilizando. HTML5 es la versión más reciente y comúnmente utilizada.
+	    *  ##<html>##: El elemento raíz que encierra todo el contenido de la página web.
+	    *  ##<head>##: Contiene metadatos sobre el documento, como el título, enlaces a hojas de estilo, y metaetiquetas.
+	    *  ##<title>##: Define el título del documento que se muestra en la barra de título del navegador o en la pestaña.
+	    *  ##<meta>##: Proporciona metadatos adicionales como el conjunto de caracteres y la configuración de la vista del dispositivo.
+	    *  ##<body>##: Contiene el contenido visible de la página web, como texto, imágenes, enlaces, y otros elementos multimedia.
+	    
+	h2: Elementos comunes en HTML
+	
+	Text:
+	    
+	    #  Encabezados: Los encabezados se utilizan para definir títulos y subtítulos en un documento. Los niveles van de ##<h1>## a ##<h6>##, siendo ##<h1>## el más importante.
+	    #  Párrafos: Los párrafos se definen con ##<p>## y se utilizan para contener bloques de texto.
+	    #  Listas: Las listas pueden ser ordenadas (##<ol>##) o desordenadas (##<ul>##), y los elementos de la lista se definen con ##<li>##.
+	    #  Enlaces: Los enlaces se crean con ##<a>## y permiten la navegación entre diferentes páginas o recursos.
+	    #  Imágenes: Las imágenes se insertan utilizando ##<img>## con atributos como ##src## (fuente de la imagen) y ##alt## (texto alternativo).
+	    #  Divisiones y spans: ##<div>## y ##<span>## se utilizan para agrupar y aplicar estilos a bloques de contenido y texto en línea, respectivamente.
+	    
+	    Ejemplo de elementos comunes:
+	    
+	Code:
+	    
+	    <!DOCTYPE html>
+	    <html>
+	    <head>
+	    <title> Ejemplo de elementos HTML</title>
+	    </head>
+	    <body>
+	    <h1> Este es un encabezado</h1>
+	    <p> Este es un párrafo de texto.</p>
+	    <ul>
+	    <li> Elemento de lista desordenada</li>
+	    <li> Otro elemento de lista</li>
+	    </ul>
+	    <a href="https://www.ejemplo.com"> Enlace a otro sitio</a>
+	    <img src="imagen.jpg" alt="Descripción de la imagen">
+	    </body>
+	    </html>
+	
+	
+	Text:
+	h2: Conclusión
+	
+	Text:
+	    
+	    Comprender los elementos y la estructura del HTML es fundamental para el desarrollo web. HTML proporciona la base sobre la cual se construyen las páginas web, permitiendo organizar y presentar contenido de manera estructurada y accesible.

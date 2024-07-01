@@ -1,0 +1,134 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Alcance de las variables
+	
+	Text: 
+	h2: Alcance de las Variables en Python
+	
+	Text:
+	    
+	    El alcance de una variable define la región del programa en la que se puede acceder a esa variable. En Python, las variables tienen diferentes niveles de alcance dependiendo de dónde se declaren.
+	    
+	h2: Tipos de Alcance
+	
+	Text:
+	    
+	    *  **Alcance Local**: Las variables declaradas dentro de una función sólo son accesibles dentro de esa función.
+	    *  **Alcance Global**: Las variables declaradas fuera de cualquier función son accesibles en cualquier parte del script.
+	    *  **Alcance de Variables No Locales**: Las variables en funciones anidadas pueden tener un alcance no local (intermedio).
+	    
+	h2: Alcance Local
+	
+	Text:
+	    
+	    Las variables definidas dentro de una función tienen un alcance local y no se puede acceder a ellas fuera de la función.
+	    
+	    Ejemplo:
+	Code:
+	    def mi_funcion():
+	    variable_local = 10
+	    print(variable_local)
+	    
+	    mi_funcion()
+	    print(variable_local) # Esto dará un error
+	
+	
+	Text:
+	    
+	    En este ejemplo, ##variable_local## sólo es accesible dentro de ##mi_funcion##.
+	    
+	h2: Alcance Global
+	
+	Text:
+	    
+	    Las variables definidas fuera de cualquier función tienen un alcance global y se puede acceder a ellas desde cualquier parte del código.
+	    
+	    Ejemplo:
+	Code:
+	    variable_global = 20
+	    
+	    def mi_funcion():
+	    print(variable_global)
+	    
+	    mi_funcion()
+	    print(variable_global)
+	
+	
+	Text:
+	    
+	    Aquí, ##variable_global## es accesible tanto dentro como fuera de ##mi_funcion##.
+	    
+	h2: Palabra Clave "global"
+	
+	Text:
+	    
+	    Si se necesita modificar una variable global dentro de una función, se debe usar la palabra clave ##global##.
+	    
+	    Ejemplo:
+	Code:
+	    variable_global = 20
+	    
+	    def mi_funcion():
+	    global variable_global
+	    variable_global = 30
+	    
+	    mi_funcion()
+	    print(variable_global) # Esto imprimirá 30
+	
+	
+	Text:
+	    
+	    En este caso, la palabra clave ##global## permite modificar ##variable_global## dentro de ##mi_funcion##.
+	    
+	h2: Alcance No Local
+	
+	Text:
+	    
+	    En funciones anidadas, las variables pueden tener un alcance no local. La palabra clave ##nonlocal## se usa para declarar que una variable en una función anidada refiere a una variable en la función externa.
+	    
+	    Ejemplo:
+	Code:
+	    def funcion_externa():
+	    variable = "original"
+	    
+	    def funcion_interna():
+	    nonlocal variable
+	    variable = "modificada"
+	    
+	    funcion_interna()
+	    print(variable)
+	    
+	    funcion_externa() # Esto imprimirá "modificada"
+	
+	
+	Text:
+	    
+	    Aquí, la palabra clave ##nonlocal## permite que ##funcion_interna## modifique ##variable## definida en ##funcion_externa##.
+	    
+	h2: Reglas LEGB
+	
+	Text:
+	    
+	    Python sigue las reglas LEGB para resolver los nombres de las variables:
+	    #  **Local**: Definido dentro de la función actual.
+	    #  **Enclosing**: Definido dentro de funciones englobantes.
+	    #  **Global**: Definido en el nivel más alto del script.
+	    #  **Built-in**: Nombres predefinidos en Python (como ##print##, ##len##, etc.).
+	    
+	    Ejemplo:
+	Code:
+	    def funcion_externa():
+	    variable = "local"
+	    
+	    def funcion_interna():
+	    print(variable) # Buscará en el ámbito englobante
+	    
+	    funcion_interna()
+	    
+	    variable = "global"
+	    funcion_externa()
+	
+	
+	Text:
+	    
+	    En este ejemplo, ##funcion_interna## primero busca ##variable## en su ámbito local, luego en el ámbito englobante de ##funcion_externa##, y finalmente en el ámbito global.

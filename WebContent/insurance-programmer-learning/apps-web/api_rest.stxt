@@ -1,0 +1,136 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: APIs RESTful
+	
+	Text: 
+	    Las APIs RESTful (Representational State Transfer) son un estilo de arquitectura para diseñar servicios web que permiten la comunicación entre diferentes sistemas a través de HTTP. Son ampliamente utilizadas debido a su simplicidad y escalabilidad.
+	    
+	h2: Principios de las APIs RESTful
+	
+	Text:
+	    
+	    Las APIs RESTful se basan en varios principios clave:
+	    
+	    *  Cliente-Servidor: Separación de responsabilidades entre el cliente y el servidor, lo que mejora la portabilidad y escalabilidad.
+	    *  Stateless (Sin Estado): Cada solicitud del cliente al servidor debe contener toda la información necesaria para entender y procesar la solicitud. El servidor no almacena el estado de las sesiones del cliente.
+	    *  Cacheable (Cachable): Las respuestas deben definir si son cacheables o no para mejorar la eficiencia y reducir la carga en el servidor.
+	    *  Interfaz Uniforme: Uso de una interfaz estándar para interactuar con los recursos, facilitando la interoperabilidad.
+	    *  Sistema en Capas: La arquitectura debe estar organizada en capas, donde cada una tiene una función específica y puede interactuar solo con la capa adyacente.
+	    *  Código Bajo Demanda (Opcional): Permite enviar código ejecutable al cliente bajo demanda para extender la funcionalidad (por ejemplo, JavaScript).
+	    
+	h2: Componentes de las APIs RESTful
+	
+	Text:
+	    
+	    Las APIs RESTful operan sobre recursos que se identifican mediante URIs (Uniform Resource Identifiers). Los componentes básicos incluyen:
+	    
+	    *  Recursos: Entidades del sistema que se exponen a través de la API. Ejemplos: usuarios, productos, órdenes.
+	    *  URIs: Direcciones que identifican de forma única a cada recurso. Ejemplo: [[http://api.ejemplo.com/usuarios/1]]
+	    *  Métodos HTTP: Acciones que se pueden realizar sobre los recursos.
+	    #  GET: Recuperar información de un recurso.
+	    #  POST: Crear un nuevo recurso.
+	    #  PUT: Actualizar un recurso existente.
+	    #  DELETE: Eliminar un recurso.
+	    #  PATCH: Actualizar parcialmente un recurso.
+	    
+	h2: Ejemplo de Diseño de API RESTful
+	
+	Text:
+	    
+	    Supongamos que estamos diseñando una API para gestionar usuarios.
+	    
+	    *  GET /usuarios: Recuperar una lista de usuarios.
+	    *  GET /usuarios/{id}: Recuperar un usuario específico por ID.
+	    *  POST /usuarios: Crear un nuevo usuario.
+	    *  PUT /usuarios/{id}: Actualizar un usuario existente por ID.
+	    *  DELETE /usuarios/{id}: Eliminar un usuario por ID.
+	    
+	h2: Ejemplo Práctico en Node.js con Express
+	
+	Text:
+	    
+	    A continuación, un ejemplo práctico de cómo implementar una API RESTful en Node.js utilizando Express.
+	    
+	Code:
+	    const express = require('express');
+	    const app = express();
+	    app.use(express.json());
+	    
+	    let usuarios = [
+	    { id: 1, nombre: 'Juan', correo: 'juan@example.com' },
+	    { id: 2, nombre: 'Maria', correo: 'maria@example.com' }
+	    ];
+	    
+	    app.get('/usuarios', (req, res) => {
+	    res.json(usuarios);
+	    });
+	    
+	    app.get('/usuarios/
+	    ', (req, res) => {
+	    const usuario = usuarios.find(u => u.id === parseInt(req.params.id));
+	    if (!usuario) return res.status(404).send('El usuario no fue encontrado');
+	    res.json(usuario);
+	    });
+	    
+	    app.post('/usuarios', (req, res) => {
+	    const usuario = {
+	    id: usuarios.length + 1,
+	    nombre: req.body.nombre,
+	    correo: req.body.correo
+	    };
+	    usuarios.push(usuario);
+	    res.status(201).json(usuario);
+	    });
+	    
+	    app.put('/usuarios/
+	    ', (req, res) => {
+	    const usuario = usuarios.find(u => u.id === parseInt(req.params.id));
+	    if (!usuario) return res.status(404).send('El usuario no fue encontrado');
+	    
+	    usuario.nombre = req.body.nombre;
+	    usuario.correo = req.body.correo;
+	    res.json(usuario);
+	    });
+	    
+	    app.delete('/usuarios/
+	    ', (req, res) => {
+	    const usuario = usuarios.find(u => u.id === parseInt(req.params.id));
+	    if (!usuario) return res.status(404).send('El usuario no fue encontrado');
+	    
+	    const index = usuarios.indexOf(usuario);
+	    usuarios.splice(index, 1);
+	    res.json(usuario);
+	    });
+	    
+	    const port = process.env.PORT || 3000;
+	    app.listen(port, () => console.log(Servidor escuchando en el puerto ${port}...));
+	
+	
+	Text:
+	    
+	h2: Ventajas de las APIs RESTful
+	
+	Text:
+	    
+	    Las APIs RESTful ofrecen varias ventajas:
+	    
+	    *  Simplicidad: Son fáciles de entender y utilizar, ya que se basan en HTTP estándar.
+	    *  Escalabilidad: Permiten una arquitectura en capas que facilita la escalabilidad horizontal.
+	    *  Flexibilidad: Pueden ser consumidas por cualquier cliente que entienda HTTP.
+	    *  Interoperabilidad: Facilitan la comunicación entre diferentes sistemas y plataformas.
+	    
+	h2: Desafíos de las APIs RESTful
+	
+	Text:
+	    
+	    A pesar de sus ventajas, las APIs RESTful también presentan algunos desafíos:
+	    
+	    *  Manejo de estados complejos: Las aplicaciones que requieren mantener estados complejos pueden encontrar REST limitante debido a su naturaleza sin estado.
+	    *  Paginación y filtrado: Implementar paginación y filtrado eficiente puede ser complejo.
+	    *  Seguridad: Asegurar las APIs RESTful contra ataques como la inyección SQL, CSRF, y XSS es crucial.
+	    
+	h2: Conclusión
+	
+	Text:
+	    
+	    Las APIs RESTful son una herramienta poderosa para construir servicios web escalables y eficientes. Con una buena comprensión de sus principios y componentes, los desarrolladores pueden crear interfaces de programación de aplicaciones que sean robustas, flexibles y fáciles de mantener.

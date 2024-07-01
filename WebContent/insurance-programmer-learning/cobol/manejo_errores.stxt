@@ -1,0 +1,131 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Técnicas de manejo de errores y excepciones
+	
+	Text: 
+	    En COBOL, el manejo de errores y excepciones es crucial para garantizar que los programas funcionen correctamente y puedan recuperarse de situaciones inesperadas. Aunque COBOL no tiene un sistema de excepciones tan robusto como otros lenguajes modernos, proporciona varias técnicas y sentencias para gestionar errores y situaciones excepcionales.
+	    
+	h2: USE FOR DEBUGGING
+	
+	Text:
+	    
+	    La sentencia ##USE FOR DEBUGGING## se utiliza para capturar errores y mensajes de depuración. Permite redirigir mensajes de error a un procedimiento específico donde se pueden gestionar adecuadamente.
+	    
+	Code:
+	    USE AFTER EXCEPTION ON FILE INFILE
+	    DISPLAY 'Error reading INFILE'.
+	    END-USE.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##USE AFTER EXCEPTION ON FILE INFILE## especifica que después de una excepción en el archivo ##INFILE##, se debe ejecutar el bloque de código.
+	    *  Dentro del bloque, se muestra un mensaje de error indicando un problema al leer el archivo ##INFILE##.
+	    
+	h2: FILE STATUS
+	
+	Text:
+	    
+	    La cláusula ##FILE STATUS## se utiliza para asignar un campo de estado a un archivo, que se puede verificar después de cada operación de archivo para determinar si se produjo un error.
+	    
+	Code:
+	    FILE CONTROL.
+	    SELECT INFILE ASSIGN TO 'input.dat'
+	    ORGANIZATION IS LINE SEQUENTIAL
+	    FILE STATUS IS WS-File-Status.
+	    
+	    DATA DIVISION.
+	    FILE SECTION.
+	    FD INFILE.
+	    01 INFILE-RECORD.
+	    05 INFILE-DATA PIC X(100).
+	    
+	    WORKING-STORAGE SECTION.
+	    01 WS-File-Status PIC XX.
+	    
+	    PROCEDURE DIVISION.
+	    OPEN INPUT INFILE.
+	    IF WS-File-Status NOT = '00'
+	    DISPLAY 'Error opening file: ' WS-File-Status.
+	    END-IF.
+	    CLOSE INFILE.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##FILE STATUS IS WS-File-Status## asigna el campo ##WS-File-Status## para contener el estado del archivo después de cada operación.
+	    *  Después de abrir el archivo, se verifica ##WS-File-Status## para determinar si hubo un error.
+	    *  Si el estado no es '00', se muestra un mensaje de error con el código de estado.
+	    
+	h2: ON SIZE ERROR
+	
+	Text:
+	    
+	    La cláusula ##ON SIZE ERROR## se utiliza para manejar errores que ocurren durante operaciones aritméticas, como desbordamientos.
+	    
+	Code:
+	    COMPUTE WS-Result = WS-Value1 * WS-Value2
+	    ON SIZE ERROR
+	    DISPLAY 'Size error occurred during multiplication.'
+	    END-COMPUTE.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##ON SIZE ERROR## especifica un bloque de código que se ejecuta si ocurre un error de tamaño durante la operación ##COMPUTE##.
+	    *  Si hay un desbordamiento, se muestra un mensaje de error indicando que ocurrió un error de tamaño durante la multiplicación.
+	    
+	h2: Declaraciones DECLARATIVES
+	
+	Text:
+	    
+	    La sección ##DECLARATIVES## se utiliza para definir procedimientos que se ejecutan automáticamente en respuesta a ciertas condiciones de error en el archivo.
+	    
+	Code:
+	    DECLARATIVES.
+	    ERROR-HANDLING SECTION.
+	    USE AFTER EXCEPTION ON INFILE.
+	    
+	    ERROR-PARA.
+	    DISPLAY 'An error occurred with INFILE.'
+	    END-DECLARATIVES.
+	    
+	    PROCEDURE DIVISION.
+	    OPEN INPUT INFILE.
+	    READ INFILE.
+	    CLOSE INFILE.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  La sección ##DECLARATIVES## contiene un bloque ##USE AFTER EXCEPTION ON INFILE## que maneja excepciones después de operaciones en ##INFILE##.
+	    *  Si ocurre un error, el procedimiento ##ERROR-PARA## se ejecuta, mostrando un mensaje de error.
+	    
+	h2: Manejo de errores en transacciones CICS
+	
+	Text:
+	    
+	    En entornos CICS, el manejo de errores se puede realizar utilizando la sentencia ##HANDLE CONDITION## para capturar condiciones de error específicas.
+	    
+	Code:
+	    EXEC CICS HANDLE CONDITION ERROR (Error-Routine)
+	    EXEC CICS READ FILE ('FILEA') INTO (WS-AREA)
+	    END-EXEC.
+	
+	
+	Text:
+	    
+	    En este ejemplo:
+	    
+	    *  ##HANDLE CONDITION ERROR (Error-Routine)## especifica que si ocurre una condición de error ##ERROR##, se debe transferir el control a ##Error-Routine##.
+	    *  Si ocurre un error durante la lectura del archivo ##FILEA##, se ejecuta ##Error-Routine##.
+	    
+	    El manejo de errores y excepciones en COBOL es esencial para asegurar la robustez y fiabilidad del programa. Mediante el uso de técnicas como ##USE FOR DEBUGGING##, ##FILE STATUS##, ##ON SIZE ERROR##, ##DECLARATIVES## y ##HANDLE CONDITION##, los programadores pueden identificar, gestionar y resolver errores de manera eficiente.
