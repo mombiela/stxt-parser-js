@@ -1,20 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Función para cargar la página correcta basada en el hash
-    function loadPage() {
-        const hash = window.location.hash || "#home";
-        const content = document.getElementById("content");
+document.addEventListener("DOMContentLoaded", ContentLoaded);
 
-        content.innerHTML = buildContent(hash);
-    }
-
-    // Cargar la página correcta al cargar la página inicial
-    loadPage();
-
+async function ContentLoaded()
+{
     // Escuchar los cambios en el hash de la URL
     window.addEventListener("hashchange", loadPage);
-});
 
-function buildContent(hash)
+    // Cargar la página correcta al cargar la página inicial
+    await loadPage();
+} 
+
+// Función para cargar la página correcta basada en el hash
+async function loadPage() 
+{
+    const hash = window.location.hash || "#home";
+    const content = document.getElementById("content");
+
+    content.innerHTML = await buildContent(hash);
+}
+
+async function buildContent(hash)
 {
 	try
 	{
@@ -42,6 +46,10 @@ function buildContent(hash)
 		return buildError("Page definition not valid");
 	}
 }
+
+// --------------------
+// Funciones auxiliares
+// --------------------
 
 function buildError(message)
 {
