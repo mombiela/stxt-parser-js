@@ -1,4 +1,3 @@
-/*
 export async function getUrlContent(url) {
     const headers = new Headers({
         "User-Agent": "Mozilla/5.0",
@@ -18,9 +17,8 @@ export async function getUrlContent(url) {
     const text = await response.text();
     return text;
 }
-*/
 
-export async function getUrlContent(url) {
+export async function getUrlContentCors(url) {
     const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
 
     const response = await fetch(proxyUrl);

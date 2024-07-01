@@ -1,3 +1,5 @@
+import { getUrlContent, getUrlContentCors } from './js/utilsURL.js';
+
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
 async function ContentLoaded()
@@ -49,8 +51,14 @@ async function buildContent(hash)
 		if (hashParts.length == 3 || hashParts.length == 1) stxtUrl += ".stxt";
 		else stxtUrl += "/index.stxt";
 		
+		// Obtenemos content
+		let contentFromUrl = "";
+		
+		if (esDominioValido(hashParts[0]))	contentFromUrl = await getUrlContentCors(stxtUrl); 
+		else 								contentFromUrl = await getUrlContent(stxtUrl);
+		
 		// Final
-		return "<h1>" + hash + "</h1><p>" + stxtUrl + "</p>";
+		return "<h1>" + hash + "</h1><p>" + stxtUrl + "</p>" + "<pre>" + contentFromUrl + "</pre>";
 	}
 	catch(exception)
 	{
