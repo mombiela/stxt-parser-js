@@ -28,11 +28,15 @@ async function buildContent(hash)
 		if (!hash.startsWith("#")) return buildError("Page not valid");
 		hash = hash.substring(1);
 		
+		// Is dir?
+		let isDir = hash.endsWith("/");
+		if (isDir) hash = hash.substring(0, hash.length -1);
+		
 		// Miramos si es local o remota y que tenga params válidos
 		let hashParts = hash.split("/");
 		
 		// Miramos tamaño máximo
-		if (hashParts.length > 3)  return buildError("Page definition not valid");
+		if (hashParts.length > 5)  return buildError("Page definition not valid");
 		
 		// Miramos partes
 		let stxtUrl = hashParts[0];
@@ -48,8 +52,8 @@ async function buildContent(hash)
 		}
 		
 		// Miramos final
-		if (hashParts.length == 3 || hashParts.length == 1) stxtUrl += ".stxt";
-		else stxtUrl += "/index.stxt";
+		if (isDir)	stxtUrl += "/index.stxt";
+		else     	stxtUrl += ".stxt";
 		
 		// Obtenemos content
 		let contentFromUrl = "";
