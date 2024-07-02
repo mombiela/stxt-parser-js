@@ -1,6 +1,13 @@
 import { getUrlContent, getUrlContentCors } from './js/utilsURL.js';
-import { Constants } from './js/Constants.js';
-import { ParseException } from './js/ParseException.js';
+import { testConstants } from './js/Constants.js';
+import { testParseException } from './js/ParseException.js';
+import { testLineIndent } from './js/LineIndent.js';
+
+const funciones = {
+	testConstants, 
+	testParseException,
+	testLineIndent
+}
 
 /* **************** */
 /* Carga SPA y test */
@@ -48,40 +55,4 @@ function buildError(message)
 {
 	return "<h1>" + message + "</h1>"
 }
-
-// -----------------
-// Funciones de test
-// -----------------
-
-const funciones = {
-	testConstants, 
-	testParseException
-}
-
-async function testConstants()
-{
-	let result = "";
-	result += Constants.COMMENT_CHAR + "<br>";
-	result += Constants.TAB_SPACES + "<br>";
-	result += Constants.TAB + "<br>";
-	result += Constants.SPACE + "<br>";  
-	result += Constants.SEP_NODE + "<br>";
-	result += Constants.ENCODING + "<br>";
-	result += Constants.NAMESPACE + "<br>";
-	return result;
-}
-
-async function testParseException() {
-    let result = "";
-    try {
-        throw new ParseException("An error occurred", 42);
-    } catch (e) {
-        result += e.message + "<br>"; // Line 42: An error occurred
-        result += e.line + "<br>";    // 42
-        result += e.name + "<br>";    // ParseException
-    }
-    return result;
-}
-
-
 
