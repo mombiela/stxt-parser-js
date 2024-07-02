@@ -5,7 +5,7 @@ import { Processor } from './Processor.js';
 
 export class Parser {
     constructor() {
-        this.debug = false;
+        this.debug = true;
         this.nodeProcessors = [];
         this.document = null;
         this.stack = [];
@@ -184,6 +184,7 @@ root: Root Node
 
     const document = await parser.parse(content);
     result += `Parsed document: ${JSON.stringify(document)}<br>`;
+	result += document[0].toString();
 
     return result;
 }
