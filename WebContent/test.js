@@ -10,6 +10,7 @@ import { testParser } from './js/Parser.js';
 import { testRawCustomProcessor } from './js/RawCustomProcessor.js';
 import { testNamespaceType } from './js/NamespaceType.js';
 import { testNamespaceChild } from './js/NamespaceChild.js';
+import { testNamespaceNode } from './js/NamespaceNode.js';
 
 const funciones = {
 	testUtils,
@@ -23,7 +24,8 @@ const funciones = {
 	testParser,
 	testRawCustomProcessor,
 	testNamespaceType,
-	testNamespaceChild
+	testNamespaceChild,
+	testNamespaceNode
 }
 
 /* **************** */
