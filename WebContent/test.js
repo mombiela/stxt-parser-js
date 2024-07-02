@@ -7,6 +7,7 @@ import { testNodeLine } from './js/NodeLine.js';
 import { testNode } from './js/Node.js';
 import { testProcessor } from './js/Processor.js';
 import { testParser } from './js/Parser.js';
+import { testRawCustomProcessor } from './js/RawCustomProcessor.js';
 
 const funciones = {
 	testConstants, 
@@ -16,7 +17,8 @@ const funciones = {
 	testNodeLine,
 	testNode,
 	testProcessor,
-	testParser
+	testParser,
+	testRawCustomProcessor
 }
 
 /* **************** */
