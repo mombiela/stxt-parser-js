@@ -5,6 +5,7 @@ import { testLineIndent } from './js/LineIndent.js';
 import { testLineSplitter } from './js/LineSplitter.js';
 import { testNodeLine } from './js/NodeLine.js';
 import { testNode } from './js/Node.js';
+import { testProcessor } from './js/Processor.js';
 
 const funciones = {
 	testConstants, 
@@ -12,7 +13,8 @@ const funciones = {
 	testLineIndent,
 	testLineSplitter,
 	testNodeLine,
-	testNode
+	testNode,
+	testProcessor
 }
 
 /* **************** */
