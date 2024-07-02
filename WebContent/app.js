@@ -1,4 +1,4 @@
-import { getUrlContent, getUrlContentCors } from './js/utilsURL.js';
+import { getUrlContent, getUrlContentCors } from './js/Utils.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 

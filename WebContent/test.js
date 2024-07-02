@@ -1,4 +1,4 @@
-import { getUrlContent, getUrlContentCors } from './js/utilsURL.js';
+import { testUtils } from './js/Utils.js';
 import { testConstants } from './js/Constants.js';
 import { testParseException } from './js/ParseException.js';
 import { testLineIndent } from './js/LineIndent.js';
@@ -10,6 +10,7 @@ import { testParser } from './js/Parser.js';
 import { testRawCustomProcessor } from './js/RawCustomProcessor.js';
 
 const funciones = {
+	testUtils,
 	testConstants, 
 	testParseException,
 	testLineIndent,
