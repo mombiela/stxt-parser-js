@@ -14,6 +14,7 @@ import { testNamespaceNode } from './js/NamespaceNode.js';
 import { testNamespace } from './js/Namespace.js';
 import { testNamespaceValidator } from './js/NamespaceValidator.js';
 import { testNamespaceRawTransformer } from './js/NamespaceRawTransformer.js';
+import { testNamespaceRetriever } from './js/NamespaceRetriever.js';
 
 const funciones = {
 	testUtils,
@@ -31,7 +32,8 @@ const funciones = {
 	testNamespaceNode,
 	testNamespace,
 	testNamespaceValidator,
-	testNamespaceRawTransformer
+	testNamespaceRawTransformer,
+	testNamespaceRetriever
 }
 
 /* **************** */
