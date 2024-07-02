@@ -31,9 +31,10 @@ async function buildContent(hash)
 	try
 	{
 		if (!hash) return "<h1>Inicial</h1>";
-		if (hash == "#test1")			return await test1();
-		else if (hash == "#test2")		return await test2();
-		else if (hash == "#constants")	return await constants();
+		hash = hash.substring(1);
+		if (hash == "test1")			return await test1();
+		else if (hash == "test2")		return await test2();
+		else if (hash == "constants")	return await constants();
 		else return "<h1>NOT FOUND TEST</h1>";
 	}
 	catch(exception)
