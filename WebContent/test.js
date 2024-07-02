@@ -12,6 +12,7 @@ import { testNamespaceType } from './js/NamespaceType.js';
 import { testNamespaceChild } from './js/NamespaceChild.js';
 import { testNamespaceNode } from './js/NamespaceNode.js';
 import { testNamespace } from './js/Namespace.js';
+import { testNamespaceValidator } from './js/NamespaceValidator.js';
 
 const funciones = {
 	testUtils,
@@ -27,7 +28,8 @@ const funciones = {
 	testNamespaceType,
 	testNamespaceChild,
 	testNamespaceNode,
-	testNamespace
+	testNamespace,
+	testNamespaceValidator
 }
 
 /* **************** */

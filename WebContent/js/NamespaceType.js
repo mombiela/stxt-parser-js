@@ -1,31 +1,35 @@
-const TEXT = "TEXT";
-const STRING = "STRING";
-const NUMBER = "NUMBER";
-const BOOLEAN = "BOOLEAN";
-const REGEX = "REGEX";
-const ENUM = "ENUM";
-const DATE = "DATE";
-const TIMESTAMP = "TIMESTAMP";
-const EMAIL = "EMAIL";
-const URL_TYPE = "URL";
-const HEXADECIMAL = "HEXADECIMAL";
-const BASE64 = "BASE64";
-const EMPTY = "EMPTY";
-const INTEGER = "INTEGER";
-const NATURAL = "NATURAL";
+export const NamespaceType = {
+    TEXT: "TEXT",
+    STRING: "STRING",
+    NUMBER: "NUMBER",
+    BOOLEAN: "BOOLEAN",
+    REGEX: "REGEX",
+    ENUM: "ENUM",
+    DATE: "DATE",
+    TIMESTAMP: "TIMESTAMP",
+    EMAIL: "EMAIL",
+    URL: "URL",
+    HEXADECIMAL: "HEXADECIMAL",
+    BASE64: "BASE64",
+    EMPTY: "EMPTY",
+    INTEGER: "INTEGER",
+    NATURAL: "NATURAL"
+};
 
-const MULTILINE_TYPES = new Set([TEXT, BASE64, HEXADECIMAL]);
+const MULTILINE_TYPES = new Set([NamespaceType.TEXT, NamespaceType.BASE64, NamespaceType.HEXADECIMAL]);
 const SINGLELINE_TYPES = new Set([
-    STRING, NUMBER, BOOLEAN, REGEX, ENUM, DATE, TIMESTAMP, EMAIL, URL_TYPE, EMPTY, INTEGER, NATURAL
+    NamespaceType.STRING, NamespaceType.NUMBER, NamespaceType.BOOLEAN, NamespaceType.REGEX, NamespaceType.ENUM,
+    NamespaceType.DATE, NamespaceType.TIMESTAMP, NamespaceType.EMAIL, NamespaceType.URL, NamespaceType.EMPTY,
+    NamespaceType.INTEGER, NamespaceType.NATURAL
 ]);
 const ALL_TYPES = new Set([...SINGLELINE_TYPES, ...MULTILINE_TYPES]);
-const VALUES_TYPES = new Set([ENUM, REGEX]);
+const VALUES_TYPES = new Set([NamespaceType.ENUM, NamespaceType.REGEX]);
 const ALLOWED_COUNT = new Set(["*", "+", "?"]);
 
 const COUNT = /^\d+(\+|-)?$/;
 
 export function getDefault() {
-    return STRING;
+    return NamespaceType.STRING;
 }
 
 export function isValidType(type) {
@@ -68,7 +72,7 @@ export async function testNamespaceType() {
     result += `Is multiline (STRING): ${isMultiline("STRING")}<br>`;
     result += `Is values type (ENUM): ${isValuesType("ENUM")}<br>`;
     result += `Is values type (STRING): ${isValuesType("STRING")}<br>`;
-    result += `Is valid namespace (example.com/example.stxt): ${isValidNamespace("example.com/example.stxt")}<br>`;
+    result += `Is valid namespace (example.stxt): ${isValidNamespace("example.stxt")}<br>`;
     result += `Is valid namespace (example.txt): ${isValidNamespace("example.txt")}<br>`;
     result += `Is valid count (*): ${isValidCount("*")}<br>`;
     result += `Is valid count (5+): ${isValidCount("5+")}<br>`;
