@@ -1,5 +1,6 @@
 import { getUrlContent, getUrlContentCors } from './js/utilsURL.js';
-import { Constants } from './js/constants.js';
+import { Constants } from './js/Constants.js';
+import { ParseException } from './js/ParseException.js';
 
 /* **************** */
 /* Carga SPA y test */
@@ -53,20 +54,11 @@ function buildError(message)
 // -----------------
 
 const funciones = {
-	test1, test2, constants
+	testConstants, 
+	testParseException
 }
 
-async function test1()
-{
-	return "<h1>TEST 1 OK</h1><p>TEST 1 OK</p>";
-}
-
-async function test2()
-{
-	return "<h1>TEST 2 OK</h1><p>TEST 2 OK</p>";
-}
-
-async function constants()
+async function testConstants()
 {
 	let result = "";
 	result += Constants.COMMENT_CHAR + "<br>";
@@ -79,7 +71,17 @@ async function constants()
 	return result;
 }
 
-
+async function testParseException() {
+    let result = "";
+    try {
+        throw new ParseException("An error occurred", 42);
+    } catch (e) {
+        result += e.message + "<br>"; // Line 42: An error occurred
+        result += e.line + "<br>";    // 42
+        result += e.name + "<br>";    // ParseException
+    }
+    return result;
+}
 
 
 
