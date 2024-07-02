@@ -1,4 +1,9 @@
 import { getUrlContent, getUrlContentCors } from './js/utilsURL.js';
+import { Constants } from './js/constants.js';
+
+/* **************** */
+/* Carga SPA y test */
+/* **************** */
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
@@ -26,13 +31,15 @@ async function buildContent(hash)
 	try
 	{
 		if (!hash) return "<h1>Inicial</h1>";
-		if (hash == "#test1")		return await test1();
-		else if (hash == "#test2")	return await test2();
+		if (hash == "#test1")			return await test1();
+		else if (hash == "#test2")		return await test2();
+		else if (hash == "#constants")	return await constants();
 		else return "<h1>NOT FOUND TEST</h1>";
 	}
 	catch(exception)
 	{
-		return buildError("Page definition not valid");
+		console.log(exception);
+		return buildError("Page definition not valid: " + exception);
 	}
 }
 
@@ -54,4 +61,22 @@ async function test2()
 {
 	return "<h1>TEST 2 OK</h1><p>TEST 2 OK</p>";
 }
+
+async function constants()
+{
+	let result = "";
+	result += Constants.COMMENT_CHAR + "<br>";
+	result += Constants.TAB_SPACES + "<br>";
+	result += Constants.TAB + "<br>";
+	result += Constants.SPACE + "<br>";  
+	result += Constants.SEP_NODE + "<br>";
+	result += Constants.ENCODING + "<br>";
+	result += Constants.NAMESPACE + "<br>";
+	return result;
+}
+
+
+
+
+
 
