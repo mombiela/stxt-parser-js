@@ -15,6 +15,7 @@ import { testNamespace } from './js/Namespace.js';
 import { testNamespaceValidator } from './js/NamespaceValidator.js';
 import { testNamespaceRawTransformer } from './js/NamespaceRawTransformer.js';
 import { testNamespaceRetriever } from './js/NamespaceRetriever.js';
+import { testSTXTProcessor } from './js/STXTProcessor.js';
 
 const funciones = {
 	testUtils,
@@ -33,7 +34,8 @@ const funciones = {
 	testNamespace,
 	testNamespaceValidator,
 	testNamespaceRawTransformer,
-	testNamespaceRetriever
+	testNamespaceRetriever,
+	testSTXTProcessor
 }
 
 /* **************** */
@@ -85,6 +87,7 @@ async function buildContent(hash)
 			}
 			catch (e)
 			{
+				console.log(e);
 				total += "\nERROR: " + e;
 			}	
 			return total;
