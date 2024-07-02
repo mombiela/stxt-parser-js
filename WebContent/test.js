@@ -11,6 +11,7 @@ import { testRawCustomProcessor } from './js/RawCustomProcessor.js';
 import { testNamespaceType } from './js/NamespaceType.js';
 import { testNamespaceChild } from './js/NamespaceChild.js';
 import { testNamespaceNode } from './js/NamespaceNode.js';
+import { testNamespace } from './js/Namespace.js';
 
 const funciones = {
 	testUtils,
@@ -25,7 +26,8 @@ const funciones = {
 	testRawCustomProcessor,
 	testNamespaceType,
 	testNamespaceChild,
-	testNamespaceNode
+	testNamespaceNode,
+	testNamespace
 }
 
 /* **************** */
