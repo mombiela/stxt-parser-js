@@ -59,11 +59,18 @@ async function buildContent(hash)
 		if (!hash)
 		{
 			let total = "";
-			for (let x in funciones)
+			try
 			{
-				total += "************ " + x + " ***************\n";
-				total += await funciones[x]();
-				total += "\n"
+				for (let x in funciones)
+				{
+					total += "************ " + x + " ***************\n";
+					total += await funciones[x]();
+					total += "\n"
+				}
+			}
+			catch (e)
+			{
+				total += "\nERROR: " + e;
 			}	
 			return total;
 		}
