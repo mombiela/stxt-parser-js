@@ -17,6 +17,12 @@ document.addEventListener("DOMContentLoaded", ContentLoaded);
 
 async function ContentLoaded()
 {
+	// Añadimos botones
+	for (let x in funciones)
+	{
+		let link = $("<a href='#" + x + "'>" + x + "</a>").appendTo("#nav");
+	}	
+	
     // Escuchar los cambios en el hash de la URL
     window.addEventListener("hashchange", loadPage);
 
