@@ -3,12 +3,14 @@ import { testConstants } from './js/Constants.js';
 import { testParseException } from './js/ParseException.js';
 import { testLineIndent } from './js/LineIndent.js';
 import { testLineSplitter } from './js/LineSplitter.js';
+import { testNodeLine } from './js/NodeLine.js';
 
 const funciones = {
 	testConstants, 
 	testParseException,
 	testLineIndent,
-	testLineSplitter
+	testLineSplitter,
+	testNodeLine
 }
 
 /* **************** */
