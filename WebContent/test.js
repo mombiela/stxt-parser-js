@@ -38,7 +38,17 @@ async function buildContent(hash)
 	console.log("Hash = " + hash);
 	try
 	{
-		if (!hash) return "<h1>Inicial</h1>";
+		if (!hash)
+		{
+			let total = "";
+			for (let x in funciones)
+			{
+				total += "************" + x + "***************\n";
+				total += await funciones[x]();
+				total += "\n"
+			}	
+			return total;
+		}
 		hash = hash.substring(1);
 		
 		if (funciones[hash]) return await funciones[hash]();
