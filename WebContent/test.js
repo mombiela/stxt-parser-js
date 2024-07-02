@@ -2,11 +2,13 @@ import { getUrlContent, getUrlContentCors } from './js/utilsURL.js';
 import { testConstants } from './js/Constants.js';
 import { testParseException } from './js/ParseException.js';
 import { testLineIndent } from './js/LineIndent.js';
+import { testLineSplitter } from './js/LineSplitter.js';
 
 const funciones = {
 	testConstants, 
 	testParseException,
-	testLineIndent
+	testLineIndent,
+	testLineSplitter
 }
 
 /* **************** */
@@ -49,7 +51,7 @@ async function buildContent(hash)
 			let total = "";
 			for (let x in funciones)
 			{
-				total += "************" + x + "***************\n";
+				total += "************ " + x + " ***************\n";
 				total += await funciones[x]();
 				total += "\n"
 			}	
