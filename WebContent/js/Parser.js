@@ -1,4 +1,5 @@
 import { Node } from './Node.js';
+import { NodeLine} from './NodeLine.js';
 import { LineIndent } from './LineIndent.js';
 import { ParseException } from './ParseException.js';
 import { Processor } from './Processor.js';

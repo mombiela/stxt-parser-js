@@ -18,7 +18,7 @@ export async function TestParserSTX01Raw()
 
     const namespaceRetriever = new NamespaceRetriever();
 	await namespaceRetriever.addGrammarDefinition(g_client);
-	//await namespaceRetriever.addGrammarDefinition(g_doc_simple);
+	await namespaceRetriever.addGrammarDefinition(g_doc_simple);
 	let namespace = await namespaceRetriever.getNameSpace("www.gymstxt.com/client.stxt");
 	
 	return namespace.toString() + "\n" + ns.toString() + "\n" + g_client + "\n" + g_doc_simple + "\n" + doc.toString();
