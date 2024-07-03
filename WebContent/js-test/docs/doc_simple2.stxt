@@ -1,0 +1,28 @@
+Namespace(www.semantictext.info/namespace.stxt): www.dokumentando.com/doc_simple2.stxt
+
+Node: Documento
+	Child: Título
+		Count: 1
+	Child: Secciones
+		Count: *
+	Child: Description
+		Count: 1
+	Child: Tipo Documento
+		Count: 1
+	
+Node: Título
+
+Node: Secciones
+	Child: Seccion
+		Count: +
+
+Node: Description
+	Type: TEXT
+
+Node: Tipo Documento
+	Type: ENUM
+	Value: informe
+	Value: artículo
+	Value: ensayo
+	
+Node: Seccion
