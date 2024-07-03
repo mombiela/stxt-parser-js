@@ -1,0 +1,14 @@
+Namespace: www.dokumentando.com/doc_simple.stxt
+
+	Documento:
+        Título: (1)
+        Secciones: (*)
+        Description: (1) TEXT
+        Tipo Documento: (1) ENUM
+        	:informe
+        	:artículo
+        	:ensayo
+        
+    Secciones:
+        Seccion: (+) TEXT
+

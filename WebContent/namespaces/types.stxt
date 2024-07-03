@@ -1,0 +1,13 @@
+Namespace: www.semantictext.info/type_check.stxt
+
+	Type List:
+		text: (+) TEXT
+		natural: (+) NATURAL
+		integer: (+) INTEGER
+		number: (+) NUMBER
+		hexadecimal: (+) HEXADECIMAL
+		base64: (+) BASE64
+		boolean: (+) BOOLEAN
+		url: (+) URL
+		
+		

@@ -1,0 +1,8 @@
+# ------
+# Receta
+# ------
+
+Namespace: www.kocinando.com/recetario.stxt
+
+	Recetario:
+		Receta: (+) (www.kocinando.com/receta.stxt)

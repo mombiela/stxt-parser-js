@@ -1,0 +1,119 @@
+# -----------------------------------------------------------------
+# 
+#            ======================================
+#            Structure of a Definition of Namespace
+#            ======================================
+# 
+# 
+# This definition could be a formal definition of a namespace.
+# More information on https://www.semantictext.info
+# Actually is not implemented because it's more easy to
+# see the structure with a //document without namespace//
+# 
+# -----------------------------------------------------------------
+ 
+Namespace: www.semantictext.info/namespace.stxt
+
+	Node: STRING
+		Type: (?) ENUM
+			:STRING
+			:TEXT
+			:NUMBER
+			:BOOLEAN
+			:DATE
+			:TIMESTAMP
+			:EMAIL
+			:URL
+			:REGEX
+			:ENUM
+			:EMPTY
+			:HEXADECIMAL
+			:BASE64			
+		Value: (*)
+		Child: (*)
+			Count: (1)
+			Namespace: (?)
+
+#   
+#   
+#   =====
+#   Types
+#   =====
+#   
+#   STRING: Literal of text (**DEFAULT TYPE**)
+#   TEXT (multiline): Multiline text
+#   NUMBER: 123, -123, 12.55, -3.14296, -2.5e-7,...
+#   BOOLEAN: true / false
+#   DATE (YYYY-MM-DD): 
+#   TIMESTAMP (ISO 8601): 2024-06-08T14:30:00Z, 2024-06-08T16:30:00+02:00,...
+#   EMAIL: admin@example.com
+#   URL: https://www.semantictext.info/namespace.stxt
+#   REGEX: Regular Expresion. Example:
+#   	Postal Code: REGEX
+#			: ^\d{5}$
+#           : ^\d{12}$
+#   HEXADECIMAL (multiline): 536F6D652048657861646563696D616C2056616C7565
+#   BASE64 (multiline): Base64 value. Example: U29tZSBCYXNlNjQgVmFsdWU=
+#   ENUM: Composed of allowed values. Example:
+#       Dificulty: ENUM
+#			: Very Easy
+#			: Easy
+#			: Normal
+#			: Hard
+#			: Very Hard
+#         
+#   =====
+#   Count
+#   =====
+#   
+#   *: Any number (**DEFAULT COUNT**)
+#   +: 1 or more
+#   ?: 0 or 1
+#   n: An exact number
+#   n+: n or more
+#   n-: n or less
+#       
+#       Examples of child:
+#       Child: (1) name
+#       Child: (?) web site (URL) 
+#       Child: section (TEXT)
+#       Child: section
+#       Child: (*) Section (www.demo.com/name_namespace.stxt)
+#        
+#   ------------------
+#   Example Definition
+#   ------------------
+#   
+#   Definition (www.semantictext.info/namespace.stxt): www.sample_namespace.com/simple_document.stxt
+#   
+#       document
+#           title: (1)
+#           autor: (?)
+#           reference: (*)
+#           sections: (?)
+#   
+#       	secctions: (1)
+#       		section: (+)
+#					metadata: (?) (www.sample_namespace.com/other_document.stxt) 
+#           		content: (1) TEXT
+#           
+#   ----------------
+#   Example document
+#   ----------------
+#   
+#   Document (www.sample_namespace.com/simple_document.stxt)
+#   	Title: A title
+#		Autor: An autor
+#		Reference: Ref 1
+#		Reference: Ref 2
+#		Secions:
+#			Section: Section 1
+#				Content
+#					This is a multiline content
+#					Second line
+#						<xml>
+#							Demo
+#						</xml>
+
+
+

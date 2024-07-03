@@ -1,0 +1,18 @@
+Namespace: www.gymstxt.com/client.stxt
+
+	Cliente:
+		Datos Personales: (1)
+		Datos Bancarios: (1)
+	
+	Datos Personales:
+		Nombre: (1)
+		Primer apellido: (1)
+		Segundo apellido: (?)
+		Edad: (?) NUMBER 
+		Cliente vip: (?) BOOLEAN
+		Foto: (*) BASE64
+		
+	Datos Bancarios:
+		Titular cuenta: (?)
+	    Número cuenta: (1) 
+	
