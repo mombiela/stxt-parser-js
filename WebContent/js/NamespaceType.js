@@ -13,7 +13,13 @@ export const NamespaceType = {
     BASE64: "BASE64",
     EMPTY: "EMPTY",
     INTEGER: "INTEGER",
-    NATURAL: "NATURAL"
+    NATURAL: "NATURAL",
+	"getDefault": getDefault,
+	"isValidType": isValidType,
+	"isMultiline": isMultiline,
+	"isValuesType": isValuesType,
+	"isValidNamespace": isValidNamespace,
+	"isValidCount": isValidCount
 };
 
 const MULTILINE_TYPES = new Set([NamespaceType.TEXT, NamespaceType.BASE64, NamespaceType.HEXADECIMAL]);

@@ -14,10 +14,11 @@ export async function TestParserSTX01Raw()
 	let parser = new Parser();
 	let doc = (await parser.parse(g_client))[0];
 	
-	// Creamos parser
-	/*
     const namespaceRetriever = new NamespaceRetriever();
 	await namespaceRetriever.addGrammarDefinition(g_client);
+
+	// Creamos parser
+	/*
 	
 	let namespace = await namespaceRetriever.getNameSpace("www.gymstxt.com/client.stxt");
 	*/
