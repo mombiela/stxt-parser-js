@@ -57,7 +57,8 @@ export class NamespaceRawTransformer {
 
         // Nodo normal
         let nsNode = currentNamespace.getNode(name);
-        if (nsNode === null) {
+        if (!nsNode) 
+		{
             nsNode = new NamespaceNode();
             nsNode.setName(name);
             nsNode.setType(type);
