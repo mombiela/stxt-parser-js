@@ -1,4 +1,5 @@
 import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
+import { NamespaceRawTransformer } from '../js/NamespaceRawTransformer.js';
 import { STXTParser } from '../js/STXTParser.js';
 import { Parser } from '../js/Parser.js';
 import { Node } from '../js/Node.js';
@@ -14,14 +15,14 @@ export async function TestParserSTX01Raw()
 	let parser = new Parser();
 	let doc = (await parser.parse(g_client))[0];
 	
-    const namespaceRetriever = new NamespaceRetriever();
-	await namespaceRetriever.addGrammarDefinition(g_client);
+	let ns = await NamespaceRawTransformer.transformRawNode(doc);
 
 	// Creamos parser
 	/*
-	
+    const namespaceRetriever = new NamespaceRetriever();
+	await namespaceRetriever.addGrammarDefinition(g_client);
 	let namespace = await namespaceRetriever.getNameSpace("www.gymstxt.com/client.stxt");
 	*/
 	
-	return g_client + "\n" + g_doc_simple + "\n" + doc.toString();
+	return ns.toString() + "\n" + g_client + "\n" + g_doc_simple + "\n" + doc.toString();
 }
