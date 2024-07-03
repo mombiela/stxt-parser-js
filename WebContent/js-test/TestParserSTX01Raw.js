@@ -11,7 +11,7 @@ export async function TestParserSTX01Raw()
 	// Buscamos contents
 	let g_client = await getUrlContent("/namespaces/client.stxt");
 	let g_doc_simple = await getUrlContent("/namespaces/doc_simple.stxt");
-	
+	let client_raw =  await getUrlContent("/js-test/docs/client_raw.stxt");
 	/*
 	let parser = new Parser();
 	let doc = (await parser.parse(g_client))[0];
@@ -24,5 +24,8 @@ export async function TestParserSTX01Raw()
 	let namespace1 = await namespaceRetriever.getNameSpace("www.gymstxt.com/client.stxt");
 	let namespace2 = await namespaceRetriever.getNameSpace("www.dokumentando.com/doc_simple.stxt");
 	
-	return namespace1 + "\n" + namespace2;
+	let parser = new STXTParser(namespaceRetriever);
+	let doc = (await parser.parse(client_raw))[0];
+	
+	return namespace1 + "\n" + namespace2 + "\n" + client_raw + "\n" + doc;
 }
