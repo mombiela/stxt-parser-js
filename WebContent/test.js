@@ -18,6 +18,7 @@ import { testNamespaceRetriever } from './js/NamespaceRetriever.js';
 import { testSTXTProcessor } from './js/STXTProcessor.js';
 import { testSTXTParser } from './js/STXTParser.js';
 import { TestParserSTX01Raw } from './js-test/TestParserSTX01Raw.js';
+import { TestParserSTX01 } from './js-test/TestParserSTX01.js';
 
 const funciones = {
 	testUtils,
@@ -39,7 +40,8 @@ const funciones = {
 	testNamespaceRetriever,
 	testSTXTProcessor,
 	testSTXTParser,
-	TestParserSTX01Raw
+	TestParserSTX01Raw,
+	TestParserSTX01
 }
 
 /* **************** */
