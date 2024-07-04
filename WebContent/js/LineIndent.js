@@ -33,13 +33,13 @@ export class LineIndent {
             let charPointer = aLine.charAt(pointer);
 
             // Update level
-            if (charPointer == Constants.SPACE) {
+            if (charPointer === Constants.SPACE) {
                 spaces++;
-                if (spaces == Constants.TAB_SPACES) {
+                if (spaces === Constants.TAB_SPACES) {
                     level++;
                     spaces = 0;
                 }
-            } else if (charPointer == Constants.TAB) {
+            } else if (charPointer === Constants.TAB) {
                 level++;
                 spaces = 0;
             } else {
