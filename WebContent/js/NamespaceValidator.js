@@ -56,21 +56,23 @@ export class NamespaceValidator {
 
     static verifyCount(chNode, num, node) {
         const count = chNode.getNum();
-
-        if (count === "*") return;
-        if (count === "?" && num > 1) {
-            throw new ParseException(`Node '${node.getName()}' can have only 1 child of name '${chNode.getName()}' and have ${num}`, node.getLineCreation());
+		console.log("!!!verifyCount: " + count);
+        if (count == "*") return;
+        else if (count == "?") {
+			if (num > 1)
+            	throw new ParseException(`Node '${node.getName()}' can have only 1 child of name '${chNode.getName()}' and have ${num}`, node.getLineCreation());
         }
-        if (count === "+" && num === 0) {
-            throw new ParseException(`Node '${node.getName()}' should have at least 1 child of name '${chNode.getName()}'`, node.getLineCreation());
+        else if (count == "+") {
+			if (num == 0)
+            	throw new ParseException(`Node '${node.getName()}' should have at least 1 child of name '${chNode.getName()}'`, node.getLineCreation());
         }
-        if (count.endsWith("+")) {
+        else if (count.endsWith("+")) {
             const expectedNum = parseInt(count.slice(0, -1), 10);
             if (num < expectedNum) {
                 throw new ParseException(`Node '${node.getName()}' should have at least ${expectedNum} childs of name '${chNode.getName()}', and have ${num}`, node.getLineCreation());
             }
         }
-        if (count.endsWith("-")) {
+        else if (count.endsWith("-")) {
             const expectedNum = parseInt(count.slice(0, -1), 10);
             if (num > expectedNum) {
                 throw new ParseException(`Node '${node.getName()}' should have maximum of ${expectedNum} childs of name '${chNode.getName()}', and have ${num}`, node.getLineCreation());

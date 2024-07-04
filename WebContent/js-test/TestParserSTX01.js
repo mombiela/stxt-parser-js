@@ -28,5 +28,5 @@ export async function TestParserSTX01()
 	let parser = new STXTParser(namespaceRetriever);
 	let doc = (await parser.parse(client))[0];
 	
-	return namespace1 + "\n" + namespace2 + "\n" + client_raw + "\n" + doc;
+	return namespace1 + "\n" + namespace2 + "\n" + client + "\n" + doc;
 }
