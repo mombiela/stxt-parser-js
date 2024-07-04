@@ -11,6 +11,9 @@ export class LineIndent {
         this.indentLevel = level;
         this.lineWithoutIndent = line;
     }
+    toString() {
+		return "[" + this.indentLevel + "]: " + this.lineWithoutIndent;
+	}
 
     static parseLine(aLine, lastNodeMultiline, stackSize, numLine) {
         // Validate if empty line or comment

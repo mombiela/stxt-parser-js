@@ -29,8 +29,9 @@ export class Parser {
         content = LineIndent.removeUTF8BOM(content);
         const lines = content.split('\n');
 
-        for (const line of lines) {
+        for (let line of lines) {
             this.lineNumber++;
+			line = line.replace(/\r/g, '');
             await this.processLine(line);
         }
 
