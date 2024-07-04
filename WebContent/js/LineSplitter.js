@@ -32,7 +32,7 @@ export class LineSplitter {
             prefix = null;
             suffix = null;
         }
-        if (centralText && centralText.length === 0) centralText = null;
+        if (centralText && centralText.length == 0) centralText = null;
         
         return new LineSplitter(prefix, centralText, suffix);
     }

@@ -90,6 +90,7 @@ async function buildContent(hash)
 					total += await funciones[x]();
 					total += "\n"
 				}
+				total = "******\nALL OK\n******\n\n" + total;
 			}
 			catch (e)
 			{
