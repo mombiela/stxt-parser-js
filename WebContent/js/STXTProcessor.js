@@ -23,7 +23,7 @@ export class STXTProcessor {
         if (this.currentDocRaw) return; // No process
 
         const namespace = node.getMetadata(NAMESPACE);
-        const nsNode = await this.namespaceRetriever.getNameSpace(namespace).getNode(node.getName());
+        const nsNode = (await this.namespaceRetriever.getNameSpace(namespace)).getNode(node.getName());
 
         await NamespaceValidator.validateCount(nsNode, node);
 
@@ -40,8 +40,8 @@ export class STXTProcessor {
         // Get namespace parent
         const parentNamespace = parent.getMetadata(NAMESPACE);
         const parentName = parent.getName();
-
-        const nsNodeParent = await this.namespaceRetriever.getNameSpace(parentNamespace).getNode(parentName);
+        
+        const nsNodeParent = (await this.namespaceRetriever.getNameSpace(parentNamespace)).getNode(parentName);
 
         // Check child name exist
         const nsChild = nsNodeParent.getChilds().get(child.getName());
