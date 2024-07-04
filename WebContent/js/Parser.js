@@ -107,10 +107,17 @@ export class Parser {
         if (i === -1) throw new ParseException("Line not valid: " + line, this.lineNumber);
 
         name = line.substring(0, i).trim();
-        value = line.substring(i + 1).trim();
+        value = line.substring(i + 1);
 
-        if (name === "") name = null;
-        else if (value === "") value = null;
+        if (name === "")
+		{
+			 name = null;
+		}
+        else
+		{
+			value = value.trim();
+			if (value === "") value = null;
+		}
         
         return new Node(this.lineNumber, this.currentLevel, name === null ? name : name.toLowerCase(), value);
     }
