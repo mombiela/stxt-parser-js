@@ -1,30 +1,51 @@
 import { getUrlContent, getUrlContentCors } from './js/Utils.js';
+import { STXTParser } from '../js/STXTParser.js';
+import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
+
+let grammar1 = `Namespace: www.cursos.com/tema.stxt
+	Tema:
+		h1: (?)
+		h2: (*)
+		h3: (*)
+		text: (*) TEXT
+		code: (*) TEXT
+		plantuml: (*) TEXT
+		assert: (*) TEXT
+		alert: (*) TEXT
+		html: (*) TEXT`;
+		
+let grammar2 = `Namespace: www.cursos.com/index.stxt
+	Index:
+		title: (1)
+		part: (+)
+			tema: (+)`;
 
 async function ContentLoaded()
 {
     // Escuchar los cambios en el hash de la URL
     window.addEventListener("hashchange", loadPage);
 
-    // Cargar la página correcta al cargar la página inicial
+    // Cargar la pï¿½gina correcta al cargar la pï¿½gina inicial
     await loadPage();
 } 
 
-// Función para cargar la página correcta basada en el hash
+// Funciï¿½n para cargar la pï¿½gina correcta basada en el hash
 async function loadPage() 
 {
     const hash = window.location.hash || "#index";
-    const content = document.getElementById("content");
-
-    content.innerHTML = await buildContent(hash);
+    await buildContent(hash);
 }
 
-async function buildContent(hash)
+async function buildContent(hashIni)
 {
+    const content = $("#content");
+    content.empty();
 	try
 	{
 		// Validamos que empieze por "#"
+		let hash = hashIni;
 		if (!hash.startsWith("#")) return buildError("Page not valid");
 		hash = hash.substring(1);
 		
@@ -32,10 +53,10 @@ async function buildContent(hash)
 		let isDir = hash.endsWith("/");
 		if (isDir) hash = hash.substring(0, hash.length -1);
 		
-		// Miramos si es local o remota y que tenga params válidos
+		// Miramos si es local o remota y que tenga params vï¿½lidos
 		let hashParts = hash.split("/");
 		
-		// Miramos tamaño máximo
+		// Miramos tamaÃ±o mÃ¡ximo
 		if (hashParts.length > 5)  return buildError("Page definition not valid");
 		
 		// Miramos partes
@@ -60,15 +81,25 @@ async function buildContent(hash)
 		
 		console.log("URL = " + stxtUrl);
 		
-		if (esDominioValido(hashParts[0]))	contentFromUrl = await getUrlContentCors(stxtUrl);
-		else 								contentFromUrl = await getUrlContent(stxtUrl);
+		if (esDominioValido(hashParts[0]))	contentFromUrl = await getUrlContentCors(stxtUrl + "?ts=" + new Date().getTime());
+		else 								contentFromUrl = await getUrlContent(stxtUrl + "?ts=" + new Date().getTime());
 		
 		// Final
-		return "<h1>" + hash + "</h1><p>" + stxtUrl + "</p>" + "<pre>" + contentFromUrl + "</pre>";
+		
+	    const namespaceRetriever = new NamespaceRetriever();
+		await namespaceRetriever.addGrammarDefinition(grammar1);
+		await namespaceRetriever.addGrammarDefinition(grammar2);
+		const parser = new STXTParser(namespaceRetriever);
+		const node = (await parser.parse(contentFromUrl))[0];
+
+		content.append("<h1>" + hashIni + "</h1>");
+		let pre = $("<pre>").text(node.toString());
+		content.append(pre);
 	}
 	catch(exception)
 	{
-		return buildError("Page definition not valid");
+		console.log("Error: " + exception);
+		content.append("<pre>" + "Page definition not valid: " + exception + "</pre>");
 	}
 }
 
@@ -83,14 +114,14 @@ function buildError(message)
 
 function esDominioValido(dominio) 
 {
-    // Expresión regular para verificar nombres de dominio válidos
+    // Expresiï¿½n regular para verificar nombres de dominio vï¿½lidos
     const regexDominio = /^([a-zA-Z0-9-_]{1,63}\.)+[a-zA-Z]{2,6}$/;
     return regexDominio.test(dominio);
 }
 
 function esNombrePaginaValido(pagina) 
 {
-    // Expresión regular para verificar página válida
+    // Expresiï¿½n regular para verificar pï¿½gina vï¿½lida
     const regexDominio = /^[a-zA-Z0-9-_]+$/;
     return regexDominio.test(pagina);
 }

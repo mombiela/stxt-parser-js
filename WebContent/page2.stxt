@@ -1,0 +1,16 @@
+Index(www.cursos.com/index.stxt):
+
+	title: Insurance Programmer Learning (page 2)
+	
+	part: Aplicaciones Web
+		Tema: (apps-web) Aplicaciones Web
+		
+	part: Lenguajes Frontend
+		Tema: (html) HTML
+		Tema: (css) CSS
+		Tema: (javascript) Javascript
+		
+	part: Lenguajes Backend
+		Tema: (cobol) Cobol
+		Tema: (java) Java
+		Tema: (python) Python
