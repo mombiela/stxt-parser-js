@@ -1,6 +1,7 @@
 import { getUrlContent, getUrlContentCors } from './js/Utils.js';
 import { STXTParser } from '../js/STXTParser.js';
 import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
+import { transform } from './transform.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
@@ -92,9 +93,8 @@ async function buildContent(hashIni)
 		const parser = new STXTParser(namespaceRetriever);
 		const node = (await parser.parse(contentFromUrl))[0];
 
-		content.append("<h1>" + hashIni + "</h1>");
-		let pre = $("<pre>").text(node.toString());
-		content.append(pre);
+		let elem = transform(hashIni, node);
+		content.append(elem);
 	}
 	catch(exception)
 	{
