@@ -93,8 +93,7 @@ async function buildContent(hashIni)
 		const parser = new STXTParser(namespaceRetriever);
 		const node = (await parser.parse(contentFromUrl))[0];
 
-		let elem = transform(hashIni, node);
-		content.append(elem);
+		transform(hashIni, node);
 	}
 	catch(exception)
 	{
