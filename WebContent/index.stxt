@@ -1,8 +1,9 @@
-Index(www.cursos.com/index.stxt):
+Tema(www.cursos.com/tema.stxt):
 
-	title: Index!!
+	h1: Links actuales en index 
 	
-	part: Lenguajes Backend
-		Tema: (cobol) Cobol
-		Tema: (java) Java
-		Tema: (python) Python
+	text:
+		* [[insurance-programmer-learning|Insurance Programmer Learning]]
+		* [[prompt | Prompts de cursos]]
+		* [[demo | Demo completo ]]
+		
