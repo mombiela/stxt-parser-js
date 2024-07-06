@@ -6,15 +6,16 @@ export function transform(hash, node)
 
 	// Primera parte del contenido	
 	content.append(mainConent);
-	let result = $("<div>");
-	result.append("<h1>HASH: " + hash + "</h1>");
+	
+	// Para debug
+	let result = $("<div class='container-fluid'>");
+	result.append("<h2>HASH: " + hash + "</h2>");
 	let pre = $("<pre>").text(node.toString());
 	result.append(pre);
 	content.append(result);
 	
-	// Insertamos texto
+	// Insertamos childs
 	const innerContent = $("#inner_content");
-	
 	const childs = node.getChilds();
 	for(let i = 0; i<childs.length; i++)
 	{
@@ -23,7 +24,16 @@ export function transform(hash, node)
 	}
 }
 
-function renderChild(child, innerContent)
+function renderChild(child, parent)
 {
-		$("<pre>").text(child.toString()).appendTo(innerContent);
+	let node = $("<div>").addClass("node_" + child.getName());
+	
+	if(child.getName() == "h1" || child.getName() == "title")
+	{
+		$("<h1>").text(child.getText()).appendTo(node).appendTo(parent);
+	}
+	else
+	{
+		$("<pre>").text(child.toString()).appendTo(parent);
+	}	
 }
