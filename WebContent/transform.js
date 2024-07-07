@@ -18,6 +18,8 @@ export function transform(hash, node)
 	// Insertamos childs
 	const innerContent = $("#inner_content");
 	const childs = node.getChilds();
+	let code = 0;
+	let plantuml = 0;
 	for(let i = 0; i<childs.length; i++)
 	{
 		let child = childs[i];
@@ -46,6 +48,10 @@ function renderChild(child, parent)
 	else if(name == "text")
 	{
 		$("<pre>").text(text).appendTo(parent);
+	}
+	else if(name == "code" || name == "plantuml")
+	{
+		$("<pre class='code'>").text(text).appendTo(parent);
 	}
 	else if (name == "part")
 	{
