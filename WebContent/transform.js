@@ -1,4 +1,5 @@
 import { mainConent } from './transform_main.js';
+import { LineSplitter } from './js/LineSplitter.js';
 
 export function transform(hash, node) 
 {
@@ -34,19 +35,47 @@ function renderChild(child, parent)
 	{
 		$("<h1>").text(text).appendTo(parent);
 	}
+	else if(name == "h2")
+	{
+		$("<h2>").text(text).appendTo(parent);
+	}
+	else if(name == "h3")
+	{
+		$("<h3>").text(text).appendTo(parent);
+	}
+	else if(name == "text")
+	{
+		$("<pre>").text(text).appendTo(parent);
+	}
 	else if (name == "part")
 	{
-		$("<h3>").text(text + "->" + childs.length).appendTo(parent);
+		$("<h3>").text(text).appendTo(parent);
+		
+		// Childs
+		let ul = $("<ul>").appendTo(parent);
+		for(let i = 0; i<childs.length; i++)
+		{
+			let ch = renderTema(childs[i]);
+			ch.appendTo(ul);
+		}		
 	}
 	else
 	{
 		$("<pre>").text(child.toString()).appendTo(parent);
 	}
-	
-	// Childs
-	for(let i = 0; i<childs.length; i++)
-	{
-		let ch = childs[i];
-		renderChild(ch, parent);
-	}		
 }
+
+function renderTema(child)
+{
+	let text = child.getText();
+	let lineSplitter = LineSplitter.split(text);
+	let url = lineSplitter.prefix;
+	let descrip = lineSplitter.centralText;
+	let link = $("<a>").attr("href",window.location.href + url).text(descrip);
+	let li = $("<li>").append(link);
+	return li;
+}
+
+
+
+
