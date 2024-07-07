@@ -26,14 +26,28 @@ export function transform(hash, node)
 
 function renderChild(child, parent)
 {
-	let node = $("<div>").addClass("node_" + child.getName());
+	const node = $("<div>").addClass("node_" + child.getName());
+	const name = child.getName();
+	const text = child.getText();
+	const childs = child.getChilds();
 	
-	if(child.getName() == "h1" || child.getName() == "title")
+	if(name == "h1" || name == "title")
 	{
-		$("<h1>").text(child.getText()).appendTo(node).appendTo(parent);
+		$("<h1>").text(text).appendTo(node).appendTo(parent);
+	}
+	else if (name == "part")
+	{
+		$("<h3>").text(text + "->" + childs.length).appendTo(node).appendTo(parent);
 	}
 	else
 	{
 		$("<pre>").text(child.toString()).appendTo(parent);
-	}	
+	}
+	
+	// Childs
+	for(let i = 0; i<childs.length; i++)
+	{
+		let ch = childs[i];
+		renderChild(ch, parent);
+	}		
 }
