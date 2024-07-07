@@ -98,7 +98,7 @@ async function buildContent(hashIni)
 	catch(exception)
 	{
 		console.log("Error: " + exception);
-		content.append("<pre>" + "Page definition not valid: " + exception + "</pre>");
+		content.append($("<pre>").text("Page definition not valid: " + exception));
 	}
 }
 
