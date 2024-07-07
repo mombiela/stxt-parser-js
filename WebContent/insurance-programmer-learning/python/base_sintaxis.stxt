@@ -56,9 +56,9 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    En este ejemplo:
 	    
-	    * Se define una constante ##PI## para el valor de pi.
+	    * Se define una constante ```PI``` para el valor de pi.
 	    * Se solicita al usuario que introduzca el radio del círculo.
-	    * Se calcula el área del círculo utilizando la fórmula ##{{{area = PI * radio ** 2}}}##.
+	    * Se calcula el área del círculo utilizando la fórmula ```area = PI * radio ** 2```.
 	    * Se muestra el resultado al usuario.
 	    
 	    Los comentarios explican qué hace cada parte del código, lo que ayuda a que el código sea más comprensible. Además, la correcta identación y la claridad en la declaración de variables hacen que el código sea fácil de leer y mantener.
