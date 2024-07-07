@@ -21,9 +21,9 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En estos ejemplos:
 	    
-	    *  El literal numérico ##100## se mueve a ##WS-Variable##.
-	    *  El literal numérico ##25.75## se suma a ##WS-Amount##.
-	    *  El literal numérico ##-50## se resta de ##WS-Balance##.
+	    *  El literal numérico ```100``` se mueve a ```WS-Variable```.
+	    *  El literal numérico ```25.75``` se suma a ```WS-Amount```.
+	    *  El literal numérico ```-50``` se resta de ```WS-Balance```.
 	    
 	h2: Literales Alfanuméricos
 	
@@ -41,15 +41,15 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En estos ejemplos:
 	    
-	    *  El literal alfanumérico ##'Hello, World!'## se mueve a ##WS-Greeting##.
-	    *  El literal alfanumérico ##'John Doe'## se mueve a ##WS-Name##.
-	    *  El literal alfanumérico ##'Processing Complete'## se muestra en la pantalla.
+	    *  El literal alfanumérico ```'Hello, World!'``` se mueve a ```WS-Greeting```.
+	    *  El literal alfanumérico ```'John Doe'``` se mueve a ```WS-Name```.
+	    *  El literal alfanumérico ```'Processing Complete'``` se muestra en la pantalla.
 	    
 	h2: Literales Figurativos
 	
 	Text:
 	    
-	    Los literales figurativos son palabras reservadas que representan valores comunes. Los más utilizados son ##SPACE## (o ##SPACES##), ##ZERO## (o ##ZEROS## o ##ZEROES##), y ##HIGH-VALUE## (o ##HIGH-VALUES##). Ejemplos:
+	    Los literales figurativos son palabras reservadas que representan valores comunes. Los más utilizados son ```SPACE``` (o ```SPACES```), ```ZERO``` (o ```ZEROS``` o ```ZEROES```), y ```HIGH-VALUE``` (o ```HIGH-VALUES```). Ejemplos:
 	    
 	Code:
 	    MOVE SPACE TO WS-TextField.
@@ -61,9 +61,9 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En estos ejemplos:
 	    
-	    *  El literal figurativo ##SPACE## se mueve a ##WS-TextField##, llenándolo con espacios en blanco.
-	    *  El literal figurativo ##ZEROS## se mueve a ##WS-Count##, estableciéndolo en cero.
-	    *  El literal figurativo ##HIGH-VALUE## se mueve a ##WS-Flag##, asignándole el valor más alto posible para el tipo de dato.
+	    *  El literal figurativo ```SPACE``` se mueve a ```WS-TextField```, llenándolo con espacios en blanco.
+	    *  El literal figurativo ```ZEROS``` se mueve a ```WS-Count```, estableciéndolo en cero.
+	    *  El literal figurativo ```HIGH-VALUE``` se mueve a ```WS-Flag```, asignándole el valor más alto posible para el tipo de dato.
 	    
 	h2: Uso en Sentencias
 	
@@ -85,8 +85,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En estos ejemplos:
 	    
-	    *  El literal numérico ##1000## se utiliza en una condición ##IF##.
-	    *  El literal numérico ##0.1## se utiliza en una operación ##COMPUTE##.
-	    *  El literal alfanumérico ##'EOF'## se utiliza en una sentencia ##MOVE##.
+	    *  El literal numérico ```1000``` se utiliza en una condición ```IF```.
+	    *  El literal numérico ```0.1``` se utiliza en una operación ```COMPUTE```.
+	    *  El literal alfanumérico ```'EOF'``` se utiliza en una sentencia ```MOVE```.
 	    
 	    Los literales en COBOL permiten que el código sea más claro y comprensible, ya que representan valores constantes directamente en el programa. Su uso adecuado es esencial para escribir programas COBOL efectivos y mantenibles.

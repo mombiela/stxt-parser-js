@@ -20,7 +20,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En estos ejemplos, ##x## es un entero, ##y## es un número de punto flotante, ##nombre## es una cadena de texto y ##es_estudiante## es un valor booleano.
+	    En estos ejemplos, ```x``` es un entero, ```y``` es un número de punto flotante, ```nombre``` es una cadena de texto y ```es_estudiante``` es un valor booleano.
 	    
 	h2:  Tipos de Datos Comunes 
 	
@@ -29,13 +29,13 @@ Tema(www.cursos.com/tema.stxt):
 	    Python maneja varios tipos de datos básicos:
 	    
 	    |= Tipo             |= Nombre              |= Descripción                                              |= Ejemplos                           |
-	    | ##code:int##      | Entero               | Números enteros sin decimales                             | ##code:10## \\ ##code:-5##                     |
-	    | ##code:float##    | Flotante             | Números con decimales                                     | ##code:3.14##, ##code:-0.001##               |
-	    | ##code:str##      | Cadena de texto      | Secuencias de caracteres delimitadas por comillas         | ##code:"Hola"## \\ ##code:'Python'## \\ ##code:'''Varias líneas## \\ ##code:de texto'''##          |
-	    | ##code:bool##     | Booleano             | Valores de verdad                                         | ##code:True## \\ ##code:False##                |
-	    | ##code:list##     | Lista                | Secuencias ordenadas de elementos de cualquier tipo       | ##code:[1, 2, 3]## \\ ##code:["a", "b", "c"]## |
-	    | ##code:tuple##    | Tupla                | Secuencias ordenadas e inmutables de elementos            | ##code:(1, 2, 3)## \\ ##code:("x", "y", "z")## |
-	    | ##code:dict##     | Diccionario          | Colecciones de pares clave-valor                          | ##code:{"name": "Ana", "age": 25}##  |
+	    | ```code:int```      | Entero               | Números enteros sin decimales                             | ```code:10``` \\ ```code:-5```                     |
+	    | ```code:float```    | Flotante             | Números con decimales                                     | ```code:3.14```, ```code:-0.001```               |
+	    | ```code:str```      | Cadena de texto      | Secuencias de caracteres delimitadas por comillas         | ```code:"Hola"``` \\ ```code:'Python'``` \\ ```code:'''Varias líneas``` \\ ```code:de texto'''```          |
+	    | ```code:bool```     | Booleano             | Valores de verdad                                         | ```code:True``` \\ ```code:False```                |
+	    | ```code:list```     | Lista                | Secuencias ordenadas de elementos de cualquier tipo       | ```code:[1, 2, 3]``` \\ ```code:["a", "b", "c"]``` |
+	    | ```code:tuple```    | Tupla                | Secuencias ordenadas e inmutables de elementos            | ```code:(1, 2, 3)``` \\ ```code:("x", "y", "z")``` |
+	    | ```code:dict```     | Diccionario          | Colecciones de pares clave-valor                          | ```code:{"name": "Ana", "age": 25}```  |
 	    
 	h2:  Ejemplos de Uso 
 	
@@ -87,7 +87,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Cada tipo de dato tiene sus propias operaciones y métodos. Por ejemplo:
 	    
-	    * **Cadenas de texto**: Puedes concatenar (##+##), repetir (##*##), y acceder a partes de la cadena (slicing).
+	    * **Cadenas de texto**: Puedes concatenar (```+```), repetir (```*```), y acceder a partes de la cadena (slicing).
 	    
 	Code:
 	    texto = "Python"
@@ -97,7 +97,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    * **Listas**: Puedes agregar (##append##), eliminar (##remove##), y acceder a elementos por índice.
+	    * **Listas**: Puedes agregar (```append```), eliminar (```remove```), y acceder a elementos por índice.
 	    
 	Code:
 	    numeros = [1, 2, 3, 4]

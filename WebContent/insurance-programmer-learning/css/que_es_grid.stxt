@@ -16,7 +16,7 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **Grid Container**:
-	    *  El elemento contenedor al que se aplica la propiedad ##display: grid;## o ##display: inline-grid;##.
+	    *  El elemento contenedor al que se aplica la propiedad ```display: grid;``` o ```display: inline-grid;```.
 	    *  Define un nuevo contexto de cuadrícula para sus elementos hijos (grid items).
 	    
 	    *  **Grid Items**:
@@ -30,20 +30,20 @@ Tema(www.cursos.com/tema.stxt):
 	    *  **display**:
 	    *  Define el elemento como un contenedor de cuadrícula.
 	    *  Ejemplos:
-	    *  ##display: grid;##
-	    *  ##display: inline-grid;##
+	    *  ```display: grid;```
+	    *  ```display: inline-grid;```
 	    
 	    *  **grid-template-columns**:
 	    *  Define el número y el tamaño de las columnas en la cuadrícula.
-	    *  Ejemplo: ##grid-template-columns: 1fr 2fr 1fr;##
+	    *  Ejemplo: ```grid-template-columns: 1fr 2fr 1fr;```
 	    
 	    *  **grid-template-rows**:
 	    *  Define el número y el tamaño de las filas en la cuadrícula.
-	    *  Ejemplo: ##grid-template-rows: 100px auto 100px;##
+	    *  Ejemplo: ```grid-template-rows: 100px auto 100px;```
 	    
-	    *  **grid-gap** (o ##gap##):
+	    *  **grid-gap** (o ```gap```):
 	    *  Define el espacio entre filas y columnas en la cuadrícula.
-	    *  Ejemplo: ##grid-gap: 10px;##
+	    *  Ejemplo: ```grid-gap: 10px;```
 	    
 	    *  **grid-template-areas**:
 	    *  Permite nombrar áreas dentro de la cuadrícula para facilitar la colocación de los ítems.
@@ -63,15 +63,15 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    *  **grid-column**:
 	    *  Define la posición y el tamaño del ítem en las columnas.
-	    *  Ejemplo: ##grid-column: 1 / 3;## (el ítem se extiende desde la columna 1 hasta la 3)
+	    *  Ejemplo: ```grid-column: 1 / 3;``` (el ítem se extiende desde la columna 1 hasta la 3)
 	    
 	    *  **grid-row**:
 	    *  Define la posición y el tamaño del ítem en las filas.
-	    *  Ejemplo: ##grid-row: 2 / 4;## (el ítem se extiende desde la fila 2 hasta la 4)
+	    *  Ejemplo: ```grid-row: 2 / 4;``` (el ítem se extiende desde la fila 2 hasta la 4)
 	    
 	    *  **grid-area**:
-	    *  Asigna un ítem a un área nombrada definida por ##grid-template-areas##.
-	    *  Ejemplo: ##grid-area: header;##
+	    *  Asigna un ítem a un área nombrada definida por ```grid-template-areas```.
+	    *  Ejemplo: ```grid-area: header;```
 	    
 	h2: Ejemplo básico de CSS Grid
 	
@@ -105,15 +105,15 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    En este ejemplo:
-	    *  El contenedor de cuadrícula tiene tres columnas y tres filas definidas con ##grid-template-columns## y ##grid-template-rows##.
-	    *  Se utiliza ##grid-gap## para definir el espacio entre filas y columnas.
-	    *  Los ítems se posicionan utilizando ##grid-area##.
+	    *  El contenedor de cuadrícula tiene tres columnas y tres filas definidas con ```grid-template-columns``` y ```grid-template-rows```.
+	    *  Se utiliza ```grid-gap``` para definir el espacio entre filas y columnas.
+	    *  Los ítems se posicionan utilizando ```grid-area```.
 	    
 	h2: Diagrama de CSS Grid
 	
 	Text:
 	    
-	    ##startuml##
+	    ```startuml```
 	    +--------------------------------------------------+
 	    | Contenedor (display: grid)                       |
 	    | +-------------------+-------------------+--------|
@@ -125,7 +125,7 @@ Tema(www.cursos.com/tema.stxt):
 	    | | footer                   |      footer              |
 	    | +-------------------+-------------------+--------|
 	    +--------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    En este diagrama, se muestra cómo los ítems se posicionan y se distribuyen dentro del contenedor de cuadrícula utilizando las propiedades mencionadas.
 	    

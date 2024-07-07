@@ -28,6 +28,6 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, la sección CONFIGURATION especifica la computadora fuente y la computadora objeto, mientras que la sección INPUT-OUTPUT define un archivo llamado ##EmployeeFile## que está asignado a un archivo físico llamado ##EMP.DAT## con una organización secuencial de líneas.
+	    En este ejemplo, la sección CONFIGURATION especifica la computadora fuente y la computadora objeto, mientras que la sección INPUT-OUTPUT define un archivo llamado ```EmployeeFile``` que está asignado a un archivo físico llamado ```EMP.DAT``` con una organización secuencial de líneas.
 	    
 	    La División de Ambiente es esencial para definir cómo el programa interactúa con su entorno, asegurando que los archivos y dispositivos necesarios estén correctamente configurados y disponibles durante la ejecución del programa.

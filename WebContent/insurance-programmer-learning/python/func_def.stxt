@@ -13,7 +13,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para definir una función en Python, utilizamos la palabra clave ##def## seguida del nombre de la función y un paréntesis que puede contener parámetros. El bloque de código que pertenece a la función debe estar indentado.
+	    Para definir una función en Python, utilizamos la palabra clave ```def``` seguida del nombre de la función y un paréntesis que puede contener parámetros. El bloque de código que pertenece a la función debe estar indentado.
 	    
 	Code:
 	    def nombre_funcion(parametro1, parametro2):
@@ -80,7 +80,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Python también permite definir funciones pequeñas y anónimas con la palabra clave ##lambda##. Las funciones lambda pueden tener cualquier número de argumentos pero solo una expresión.
+	    Python también permite definir funciones pequeñas y anónimas con la palabra clave ```lambda```. Las funciones lambda pueden tener cualquier número de argumentos pero solo una expresión.
 	    
 	Code:
 	    suma = lambda a, b: a + b
@@ -93,7 +93,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para hacer que el código sea más comprensible, es una buena práctica incluir cadenas de documentación (docstrings) al definir funciones. Estas cadenas se colocan justo después de la línea ##def## y deben estar encerradas entre comillas triples.
+	    Para hacer que el código sea más comprensible, es una buena práctica incluir cadenas de documentación (docstrings) al definir funciones. Estas cadenas se colocan justo después de la línea ```def``` y deben estar encerradas entre comillas triples.
 	    
 	Code:
 	    def suma(a, b):

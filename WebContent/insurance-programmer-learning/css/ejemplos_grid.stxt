@@ -42,8 +42,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    *  El contenedor de cuadrícula define tres columnas y tres filas.
-	    *  Se utiliza ##grid-template-areas## para nombrar las áreas de la cuadrícula.
-	    *  Los ítems se posicionan utilizando ##grid-area##.
+	    *  Se utiliza ```grid-template-areas``` para nombrar las áreas de la cuadrícula.
+	    *  Los ítems se posicionan utilizando ```grid-area```.
 	    
 	h2: Ejemplo 2: Galería de imágenes responsiva
 	
@@ -208,7 +208,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    **Ejemplo 1: Diseño de una página básica**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +---------------------------------------------------+
 	    | Contenedor (display: grid)                         |
 	    | grid-template-areas:                               |
@@ -224,15 +224,15 @@ Tema(www.cursos.com/tema.stxt):
 	    | | footer                                          |
 	    | +-----------------+-------------------+--------  |
 	    +---------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    **Ejemplo 2: Galería de imágenes responsiva**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +---------------------------------------------------+
 	    | Galería (display: grid)
 	    
-	    ##startuml##
+	    ```startuml```
 	    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); |
 	    | grid-gap: 10px;                                           |
 	    | +-------------+ +-------------+ +-------------+ +-------------+|
@@ -242,11 +242,11 @@ Tema(www.cursos.com/tema.stxt):
 	    | | Imagen 5      | | Imagen 6      | | Imagen 7      | | Imagen 8      |
 	    | +-------------+ +-------------+ +-------------+ +-------------+|
 	    +---------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    **Ejemplo 3: Diseño de una tarjeta de perfil**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +----------------------------------------------+
 	    | Tarjeta de perfil (display: grid)              |
 	    | grid-template-areas:                            |
@@ -261,11 +261,11 @@ Tema(www.cursos.com/tema.stxt):
 	    | | Avatar      |  Footer                          |
 	    | +-------------+-------------------------+      |
 	    +----------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    **Ejemplo 4: Diseño de una página de revista**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +---------------------------------------------------+
 	    | Página de revista (display: grid)                  |
 	    | grid-template-areas:                              |
@@ -280,18 +280,18 @@ Tema(www.cursos.com/tema.stxt):
 	    | +-------------------+---------------+---------+  |
 	    | |    article2          |    sidebar
 	    
-	    ##startuml##
+	    ```startuml```
 	    | +-------------------+---------------+---------+  |
 	    | |         article2    |    sidebar                |
 	    | +-------------------+---------------+---------+  |
 	    | |    footer           |        footer              |
 	    | +-------------------+---------------+---------+  |
 	    +---------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    **Ejemplo 5: Diseño de un formulario complejo**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +-----------------------------------------------------+
 	    | Formulario (display: grid)                           |
 	    | grid-template-areas:                                 |
@@ -312,7 +312,7 @@ Tema(www.cursos.com/tema.stxt):
 	    | |           |  Submit Button                         |
 	    | +---------------------------------------+          |
 	    +-----------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    Estos ejemplos prácticos demuestran cómo CSS Grid puede utilizarse para crear diseños flexibles y adaptables para diversas aplicaciones.
 	    

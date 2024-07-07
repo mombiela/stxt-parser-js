@@ -13,13 +13,13 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para abrir un archivo en Python, se utiliza la función ##open()##, que devuelve un objeto de archivo. Esta función toma dos argumentos principales: el nombre del archivo y el modo en el que se quiere abrir.
+	    Para abrir un archivo en Python, se utiliza la función ```open()```, que devuelve un objeto de archivo. Esta función toma dos argumentos principales: el nombre del archivo y el modo en el que se quiere abrir.
 	    
 	    Modos comunes de apertura:
-	    *  ##'r'##: Lectura (modo predeterminado). El archivo debe existir.
-	    *  ##'w'##: Escritura. Crea un archivo nuevo o sobrescribe el existente.
-	    *  ##'a'##: Añadir. Abre el archivo para añadir datos al final sin sobrescribir.
-	    *  ##'b'##: Modo binario. Se usa junto con otros modos (por ejemplo, ##'rb'##, ##'wb'##).
+	    *  ```'r'```: Lectura (modo predeterminado). El archivo debe existir.
+	    *  ```'w'```: Escritura. Crea un archivo nuevo o sobrescribe el existente.
+	    *  ```'a'```: Añadir. Abre el archivo para añadir datos al final sin sobrescribir.
+	    *  ```'b'```: Modo binario. Se usa junto con otros modos (por ejemplo, ```'rb'```, ```'wb'```).
 	    
 	    Ejemplo:
 	Code:
@@ -34,21 +34,21 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Existen varias formas de leer datos desde un archivo.
 	    
-	    *  ##read()##: Lee todo el contenido del archivo.
+	    *  ```read()```: Lee todo el contenido del archivo.
 	Code:
 	    contenido = archivo.read()
 	
 	
 	Text:
 	    
-	    *  ##readline()##: Lee una sola línea del archivo.
+	    *  ```readline()```: Lee una sola línea del archivo.
 	Code:
 	    linea = archivo.readline()
 	
 	
 	Text:
 	    
-	    *  ##readlines()##: Lee todas las líneas del archivo y devuelve una lista.
+	    *  ```readlines()```: Lee todas las líneas del archivo y devuelve una lista.
 	Code:
 	    lineas = archivo.readlines()
 	
@@ -59,9 +59,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para escribir datos en un archivo, se puede usar el modo ##'w'## o ##'a'## y los métodos de escritura.
+	    Para escribir datos en un archivo, se puede usar el modo ```'w'``` o ```'a'``` y los métodos de escritura.
 	    
-	    *  ##write()##: Escribe una cadena en el archivo.
+	    *  ```write()```: Escribe una cadena en el archivo.
 	Code:
 	    archivo = open("ejemplo.txt", "w")
 	    archivo.write("Hola, mundo!")
@@ -69,7 +69,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##writelines()##: Escribe una lista de cadenas en el archivo.
+	    *  ```writelines()```: Escribe una lista de cadenas en el archivo.
 	Code:
 	    lineas = ["Primera línea\n", "Segunda línea\n"]
 	    archivo.writelines(lineas)
@@ -83,7 +83,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Es importante cerrar los archivos después de haber terminado de trabajar con ellos para liberar recursos.
 	    
-	    Se cierra un archivo usando el método ##close()##.
+	    Se cierra un archivo usando el método ```close()```.
 	Code:
 	    archivo.close()
 	
@@ -94,7 +94,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El uso de ##with## asegura que los archivos se cierren correctamente después de su uso, incluso si ocurre una excepción. Esta es la forma recomendada de manejar archivos.
+	    El uso de ```with``` asegura que los archivos se cierren correctamente después de su uso, incluso si ocurre una excepción. Esta es la forma recomendada de manejar archivos.
 	    
 	    Ejemplo:
 	Code:
@@ -109,9 +109,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##'r+'##: Lectura y escritura. El archivo debe existir.
-	    *  ##'w+'##: Escritura y lectura. Sobrescribe el archivo existente o crea uno nuevo.
-	    *  ##'a+'##: Añadir y lectura. Crea el archivo si no existe.
+	    *  ```'r+'```: Lectura y escritura. El archivo debe existir.
+	    *  ```'w+'```: Escritura y lectura. Sobrescribe el archivo existente o crea uno nuevo.
+	    *  ```'a+'```: Añadir y lectura. Crea el archivo si no existe.
 	    
 	    Ejemplo:
 	Code:
@@ -128,7 +128,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para trabajar con archivos binarios, se utilizan los modos ##'rb'## y ##'wb'##.
+	    Para trabajar con archivos binarios, se utilizan los modos ```'rb'``` y ```'wb'```.
 	    
 	    Ejemplo de lectura binaria:
 	Code:
@@ -150,6 +150,6 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **Eficiencia y Seguridad**: El uso de ##with## asegura que los archivos se cierren adecuadamente, evitando pérdidas de datos y liberando recursos.
+	    *  **Eficiencia y Seguridad**: El uso de ```with``` asegura que los archivos se cierren adecuadamente, evitando pérdidas de datos y liberando recursos.
 	    *  **Flexibilidad**: Diferentes modos de apertura permiten una gran variedad de operaciones de lectura y escritura.
 	    *  **Compatibilidad**: Python permite trabajar con archivos de texto y binarios de manera sencilla.

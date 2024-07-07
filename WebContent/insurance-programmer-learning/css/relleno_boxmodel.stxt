@@ -6,12 +6,12 @@ Tema(www.cursos.com/tema.stxt):
 	    El relleno (padding) en el modelo de caja es el espacio entre el contenido de un elemento y su borde. El relleno es transparente y afecta el tamaño total del elemento, ya que se suma a las dimensiones del contenido.
 	    
 	    *  **Propiedades de relleno**:
-	    *  ##padding##: Define el relleno completo en una sola declaración. Ejemplo: ##padding: 10px;##
-	    *  ##padding-top##, ##padding-right##, ##padding-bottom##, ##padding-left##: Permiten definir rellenos individuales para cada lado. Ejemplo: ##padding-top: 20px;##
+	    *  ```padding```: Define el relleno completo en una sola declaración. Ejemplo: ```padding: 10px;```
+	    *  ```padding-top```, ```padding-right```, ```padding-bottom```, ```padding-left```: Permiten definir rellenos individuales para cada lado. Ejemplo: ```padding-top: 20px;```
 	    
 	    *  **Valores para el relleno**:
-	    *  Valores en unidades de longitud: ##px##, ##em##, ##rem##, ##%##, etc. Ejemplo: ##padding: 10px;## o ##padding: 1em;##
-	    *  Valores múltiples: Es posible definir diferentes valores para cada lado. Ejemplo: ##padding: 10px 20px 15px 5px;## (arriba, derecha, abajo, izquierda)
+	    *  Valores en unidades de longitud: ```px```, ```em```, ```rem```, ```%```, etc. Ejemplo: ```padding: 10px;``` o ```padding: 1em;```
+	    *  Valores múltiples: Es posible definir diferentes valores para cada lado. Ejemplo: ```padding: 10px 20px 15px 5px;``` (arriba, derecha, abajo, izquierda)
 	    
 	    *  **Propiedades de colapso de relleno**:
 	    *  El relleno no colapsa como los márgenes. Cada lado del relleno se aplica de manera independiente y no se combina con los rellenos de elementos adyacentes.
@@ -37,8 +37,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    *  Un div tiene un relleno de 15px en todos los lados.
-	    *  Un párrafo (##p##) tiene un relleno superior de 10px y un relleno inferior de 20px.
-	    *  Un contenedor (##.container##) tiene rellenos de 5px arriba, 10px a la derecha, 15px abajo y 20px a la izquierda.
+	    *  Un párrafo (```p```) tiene un relleno superior de 10px y un relleno inferior de 20px.
+	    *  Un contenedor (```.container```) tiene rellenos de 5px arriba, 10px a la derecha, 15px abajo y 20px a la izquierda.
 	    
 	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/padding|Documentación sobre la propiedad padding en CSS]]
 	    

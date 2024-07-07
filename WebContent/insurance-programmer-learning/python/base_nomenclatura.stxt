@@ -4,16 +4,16 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text: 
 	    |= Tipo                                         |= Convención                    |= Ejemplo                         |
-	    | Variables                                     | ##{{{minúsculas_con_guiones_bajos}}}##   | ##code:mi_variable##                    |
-	    | Constantes                                    | ##{{{MAYÚSCULAS_CON_GUIONES_BAJOS}}}##   | ##code:MI_CONSTANTE##                   |
-	    | Clases                                        | ##{{{CamelCase}}}##                      | ##code:MiClase##                        |
-	    | Métodos                                       | ##{{{minúsculas_con_guiones_bajos}}}##   | ##code:mi_metodo##                      |
-	    | Funciones                                     | ##{{{minúsculas_con_guiones_bajos}}}##   | ##code:mi_funcion##                     |
-	    | Módulos                                       | ##{{{minúsculas_con_guiones_bajos}}}##   | ##code:mi_modulo.py##                   |
-	    | Paquetes                                      | ##{{{minúsculas_sin_guiones_bajos}}}##   | ##code:mipaquete##                      |
-	    | Variables Globales                            | ##{{{minúsculas_con_guiones_bajos}}}##   | ##code:_mi_variable_global##            |
-	    | Variables de Instancia                        | ##{{{minúsculas_con_guiones_bajos}}}##   | ##code:self.mi_variable##               |
-	    | Variables Privadas (instancia)                | ##{{{_minúsculas_con_guiones_bajos}}}##  | ##code:self._mi_variable_privada##       |
-	    | Variables "Fuertemente Privadas" (instancia)  | ##{{{__minúsculas_con_guiones_bajos}}}## | ##code:self.__mi_variable_fuertemente_privada## |
-	    | Métodos Privados                              | ##{{{_minúsculas_con_guiones_bajos}}}##  | ##code:_mi_metodo_privado##    |
-	    | Métodos "Fuertemente Privados"                | ##{{{__minúsculas_con_guiones_bajos}}}## | ##code:__mi_metodo_fuertemente_privado## |
+	    | Variables                                     | ```{{{minúsculas_con_guiones_bajos}}}```   | ```code:mi_variable```                    |
+	    | Constantes                                    | ```{{{MAYÚSCULAS_CON_GUIONES_BAJOS}}}```   | ```code:MI_CONSTANTE```                   |
+	    | Clases                                        | ```{{{CamelCase}}}```                      | ```code:MiClase```                        |
+	    | Métodos                                       | ```{{{minúsculas_con_guiones_bajos}}}```   | ```code:mi_metodo```                      |
+	    | Funciones                                     | ```{{{minúsculas_con_guiones_bajos}}}```   | ```code:mi_funcion```                     |
+	    | Módulos                                       | ```{{{minúsculas_con_guiones_bajos}}}```   | ```code:mi_modulo.py```                   |
+	    | Paquetes                                      | ```{{{minúsculas_sin_guiones_bajos}}}```   | ```code:mipaquete```                      |
+	    | Variables Globales                            | ```{{{minúsculas_con_guiones_bajos}}}```   | ```code:_mi_variable_global```            |
+	    | Variables de Instancia                        | ```{{{minúsculas_con_guiones_bajos}}}```   | ```code:self.mi_variable```               |
+	    | Variables Privadas (instancia)                | ```{{{_minúsculas_con_guiones_bajos}}}```  | ```code:self._mi_variable_privada```       |
+	    | Variables "Fuertemente Privadas" (instancia)  | ```{{{__minúsculas_con_guiones_bajos}}}``` | ```code:self.__mi_variable_fuertemente_privada``` |
+	    | Métodos Privados                              | ```{{{_minúsculas_con_guiones_bajos}}}```  | ```code:_mi_metodo_privado```    |
+	    | Métodos "Fuertemente Privados"                | ```{{{__minúsculas_con_guiones_bajos}}}``` | ```code:__mi_metodo_fuertemente_privado``` |

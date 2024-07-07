@@ -32,16 +32,16 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##FILE CONTROL## define el archivo lógico ##Entrada-Archivo## y lo asigna al archivo físico 'ENTRADA.TXT'.
-	    *  ##ORGANIZATION IS LINE SEQUENTIAL## indica que el archivo es secuencial.
-	    *  ##FD Entrada-Archivo## define el formato del archivo.
-	    *  ##01 Registro-Entrada## define la estructura del registro del archivo.
+	    *  ```FILE CONTROL``` define el archivo lógico ```Entrada-Archivo``` y lo asigna al archivo físico 'ENTRADA.TXT'.
+	    *  ```ORGANIZATION IS LINE SEQUENTIAL``` indica que el archivo es secuencial.
+	    *  ```FD Entrada-Archivo``` define el formato del archivo.
+	    *  ```01 Registro-Entrada``` define la estructura del registro del archivo.
 	    
 	h2: Apertura y cierre de archivos
 	
 	Text:
 	    
-	    Antes de realizar cualquier operación de lectura o escritura, los archivos deben ser abiertos con la sentencia ##OPEN## y cerrados al finalizar con la sentencia ##CLOSE##.
+	    Antes de realizar cualquier operación de lectura o escritura, los archivos deben ser abiertos con la sentencia ```OPEN``` y cerrados al finalizar con la sentencia ```CLOSE```.
 	    
 	h3: Ejemplo de apertura y cierre de archivos
 	
@@ -59,15 +59,15 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##OPEN INPUT Entrada-Archivo## abre el archivo para lectura.
-	    *  ##PERFORM Leer-Registros## llama a un procedimiento para leer los registros.
-	    *  ##CLOSE Entrada-Archivo## cierra el archivo al finalizar.
+	    *  ```OPEN INPUT Entrada-Archivo``` abre el archivo para lectura.
+	    *  ```PERFORM Leer-Registros``` llama a un procedimiento para leer los registros.
+	    *  ```CLOSE Entrada-Archivo``` cierra el archivo al finalizar.
 	    
 	h2: Lectura de archivos secuenciales
 	
 	Text:
 	    
-	    La lectura de archivos secuenciales se realiza utilizando la sentencia ##READ## en un bucle que continúa hasta el final del archivo.
+	    La lectura de archivos secuenciales se realiza utilizando la sentencia ```READ``` en un bucle que continúa hasta el final del archivo.
 	    
 	h3: Ejemplo de lectura de registros
 	
@@ -94,15 +94,15 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  La sentencia ##READ Entrada-Archivo INTO Registro-Entrada## lee un registro del archivo.
-	    *  ##AT END## se utiliza para detectar el final del archivo y establecer la condición ##Fin-De-Archivo##.
-	    *  Los registros se muestran utilizando ##DISPLAY##.
+	    *  La sentencia ```READ Entrada-Archivo INTO Registro-Entrada``` lee un registro del archivo.
+	    *  ```AT END``` se utiliza para detectar el final del archivo y establecer la condición ```Fin-De-Archivo```.
+	    *  Los registros se muestran utilizando ```DISPLAY```.
 	    
 	h2: Escritura en archivos secuenciales
 	
 	Text:
 	    
-	    Para escribir en archivos secuenciales, se utiliza la sentencia ##WRITE## después de abrir el archivo en modo de salida.
+	    Para escribir en archivos secuenciales, se utiliza la sentencia ```WRITE``` después de abrir el archivo en modo de salida.
 	    
 	h3: Ejemplo de escritura de registros
 	
@@ -133,16 +133,16 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##FILE CONTROL## define el archivo lógico ##Salida-Archivo##.
-	    *  ##OPEN OUTPUT Salida-Archivo## abre el archivo para escritura.
-	    *  ##WRITE Registro-Salida FROM Campo1 Campo2## escribe el registro en el archivo.
-	    *  ##CLOSE Salida-Archivo## cierra el archivo al finalizar.
+	    *  ```FILE CONTROL``` define el archivo lógico ```Salida-Archivo```.
+	    *  ```OPEN OUTPUT Salida-Archivo``` abre el archivo para escritura.
+	    *  ```WRITE Registro-Salida FROM Campo1 Campo2``` escribe el registro en el archivo.
+	    *  ```CLOSE Salida-Archivo``` cierra el archivo al finalizar.
 	    
 	h2: Manejo de errores en operaciones con archivos
 	
 	Text:
 	    
-	    Es importante manejar los posibles errores durante las operaciones con archivos. COBOL proporciona el uso de ##FILE STATUS## para capturar y manejar estos errores.
+	    Es importante manejar los posibles errores durante las operaciones con archivos. COBOL proporciona el uso de ```FILE STATUS``` para capturar y manejar estos errores.
 	    
 	h3: Ejemplo de manejo de errores con FILE STATUS
 	
@@ -177,8 +177,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##FILE STATUS IS WS-File-Status## define una variable para capturar el estado del archivo.
-	    *  Se verifica ##WS-File-Status## después de abrir el archivo para manejar cualquier error que ocurra.
+	    *  ```FILE STATUS IS WS-File-Status``` define una variable para capturar el estado del archivo.
+	    *  Se verifica ```WS-File-Status``` después de abrir el archivo para manejar cualquier error que ocurra.
 	    
 	h2: Conclusión
 	

@@ -19,7 +19,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ##parametro1## y ##parametro2## son parámetros.
+	    En este ejemplo, ```parametro1``` y ```parametro2``` son parámetros.
 	    
 	h2: Argumentos
 	
@@ -34,7 +34,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Aquí, ##10## y ##20## son argumentos que se pasan a la función ##mi_funcion##.
+	    Aquí, ```10``` y ```20``` son argumentos que se pasan a la función ```mi_funcion```.
 	    
 	h2: Tipos de Argumentos
 	
@@ -83,7 +83,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En el último ejemplo, ##*numeros## permite que la función ##imprimir_numeros## acepte cualquier número de argumentos.
+	    En el último ejemplo, ```*numeros``` permite que la función ```imprimir_numeros``` acepte cualquier número de argumentos.
 	    
 	h2: Parámetros Especiales en Python
 	
@@ -104,4 +104,4 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este caso, ##a## y ##b## deben pasarse como argumentos posicionales, mientras que ##c## y ##d## deben pasarse como argumentos nombrados.
+	    En este caso, ```a``` y ```b``` deben pasarse como argumentos posicionales, mientras que ```c``` y ```d``` deben pasarse como argumentos nombrados.

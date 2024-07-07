@@ -13,8 +13,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    **HTML** es el lenguaje estándar para crear y estructurar páginas web. Se utiliza para definir la estructura básica de un sitio web y su contenido. Aquí tienes algunos conceptos clave sobre HTML:
 	    
-	    *  //Etiquetas (tags)//: HTML utiliza etiquetas para definir elementos. Las etiquetas están encerradas entre corchetes angulares, por ejemplo, ##<div>##.
-	    *  //Atributos//: Las etiquetas pueden tener atributos que proporcionan información adicional sobre el elemento, como ##<a href="url">## para enlaces.
+	    *  //Etiquetas (tags)//: HTML utiliza etiquetas para definir elementos. Las etiquetas están encerradas entre corchetes angulares, por ejemplo, ```<div>```.
+	    *  //Atributos//: Las etiquetas pueden tener atributos que proporcionan información adicional sobre el elemento, como ```<a href="url">``` para enlaces.
 	    *  //Elementos anidados//: Los elementos HTML pueden estar anidados dentro de otros elementos, creando una estructura jerárquica.
 	    
 	    Ejemplo básico de HTML:
@@ -42,8 +42,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Conceptos clave de CSS:
 	    
-	    *  //Selectores//: Indican qué elementos HTML se van a estilizar. Ejemplo: ##p## selecciona todos los párrafos.
-	    *  //Propiedades y valores//: Definen qué aspecto tendrá el elemento seleccionado. Ejemplo: ##color: blue;##.
+	    *  //Selectores//: Indican qué elementos HTML se van a estilizar. Ejemplo: ```p``` selecciona todos los párrafos.
+	    *  //Propiedades y valores//: Definen qué aspecto tendrá el elemento seleccionado. Ejemplo: ```color: blue;```.
 	    *  //Cascada//: El término "cascading" se refiere a cómo se aplican las reglas de estilo en función de su importancia y especificidad.
 	    
 	    Ejemplo básico de CSS:
@@ -73,9 +73,9 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Conceptos clave de JavaScript:
 	    
-	    *  //Variables//: Usadas para almacenar datos. Ejemplo: ##let nombre = "Juan";##.
-	    *  //Funciones//: Bloques de código que realizan una tarea específica. Ejemplo: ##function saludar() { console.log("Hola"); }##.
-	    *  //Eventos//: Acciones que pueden ser detectadas y manejadas con JavaScript. Ejemplo: ##document.getElementById("miBoton").onclick = function() { alert("Botón clickeado"); };##.
+	    *  //Variables//: Usadas para almacenar datos. Ejemplo: ```let nombre = "Juan";```.
+	    *  //Funciones//: Bloques de código que realizan una tarea específica. Ejemplo: ```function saludar() { console.log("Hola"); }```.
+	    *  //Eventos//: Acciones que pueden ser detectadas y manejadas con JavaScript. Ejemplo: ```document.getElementById("miBoton").onclick = function() { alert("Botón clickeado"); };```.
 	    
 	    Ejemplo básico de JavaScript:
 	    

@@ -15,7 +15,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para leer archivos secuenciales, se utiliza la sentencia ##READ## dentro de un bucle.
+	    Para leer archivos secuenciales, se utiliza la sentencia ```READ``` dentro de un bucle.
 	    
 	Code:
 	    FILE CONTROL.
@@ -48,14 +48,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##READ Entrada-Archivo INTO Registro-Entrada## lee registros secuencialmente hasta alcanzar el final del archivo.
-	    *  ##AT END## se utiliza para detectar el final del archivo y establecer la condición de fin de archivo.
+	    *  ```READ Entrada-Archivo INTO Registro-Entrada``` lee registros secuencialmente hasta alcanzar el final del archivo.
+	    *  ```AT END``` se utiliza para detectar el final del archivo y establecer la condición de fin de archivo.
 	    
 	h3: Escritura en archivos secuenciales
 	
 	Text:
 	    
-	    Para escribir en archivos secuenciales, se utiliza la sentencia ##WRITE##.
+	    Para escribir en archivos secuenciales, se utiliza la sentencia ```WRITE```.
 	    
 	Code:
 	    FILE CONTROL.
@@ -82,7 +82,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##WRITE Registro-Salida## escribe un registro en el archivo secuencial.
+	    *  ```WRITE Registro-Salida``` escribe un registro en el archivo secuencial.
 	    
 	h2: Entrada y salida en archivos indexados
 	
@@ -94,7 +94,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para leer registros específicos en archivos indexados, se utiliza la sentencia ##READ## con la clave de registro.
+	    Para leer registros específicos en archivos indexados, se utiliza la sentencia ```READ``` con la clave de registro.
 	    
 	Code:
 	    FILE CONTROL.
@@ -127,13 +127,13 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##READ Clientes INTO Registro-Cliente KEY IS Cliente-ID## lee un registro específico usando la clave primaria.
+	    *  ```READ Clientes INTO Registro-Cliente KEY IS Cliente-ID``` lee un registro específico usando la clave primaria.
 	    
 	h3: Escritura en archivos indexados
 	
 	Text:
 	    
-	    Para escribir registros en archivos indexados, se utiliza la sentencia ##WRITE##.
+	    Para escribir registros en archivos indexados, se utiliza la sentencia ```WRITE```.
 	    
 	Code:
 	    PROCEDURE DIVISION.
@@ -150,7 +150,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##WRITE Registro-Cliente## escribe un nuevo registro en el archivo indexado.
+	    *  ```WRITE Registro-Cliente``` escribe un nuevo registro en el archivo indexado.
 	    
 	h2: Entrada y salida con bases de datos relacionales
 	
@@ -162,7 +162,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para realizar consultas en una base de datos relacional, se utiliza la sentencia ##EXEC SQL SELECT##.
+	    Para realizar consultas en una base de datos relacional, se utiliza la sentencia ```EXEC SQL SELECT```.
 	    
 	Code:
 	    WORKING-STORAGE SECTION.
@@ -192,13 +192,13 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL SELECT## realiza una consulta en la base de datos y almacena los resultados en las variables correspondientes.
+	    *  ```EXEC SQL SELECT``` realiza una consulta en la base de datos y almacena los resultados en las variables correspondientes.
 	    
 	h3: Escritura de datos en bases de datos relacionales
 	
 	Text:
 	    
-	    Para insertar datos en una base de datos relacional, se utiliza la sentencia ##EXEC SQL INSERT##.
+	    Para insertar datos en una base de datos relacional, se utiliza la sentencia ```EXEC SQL INSERT```.
 	    
 	Code:
 	    PROCEDURE DIVISION.
@@ -218,13 +218,13 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC## inserta un nuevo registro en la tabla CLIENTES.
+	    *  ```EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC``` inserta un nuevo registro en la tabla CLIENTES.
 	    
 	h2: Manejo de errores en operaciones de I/O
 	
 	Text:
 	    
-	    Es crucial manejar errores durante las operaciones de entrada y salida para garantizar la integridad y robustez del programa. En COBOL, se utilizan el ##FILE STATUS## para archivos y ##SQLCODE## para bases de datos.
+	    Es crucial manejar errores durante las operaciones de entrada y salida para garantizar la integridad y robustez del programa. En COBOL, se utilizan el ```FILE STATUS``` para archivos y ```SQLCODE``` para bases de datos.
 	    
 	h3: Ejemplo de manejo de errores con FILE STATUS
 	
@@ -252,8 +252,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##FILE STATUS IS WS-File-Status## define una variable para capturar el estado del archivo.
-	    *  Se verifica ##WS-File-Status## para manejar errores durante las operaciones de archivo.
+	    *  ```FILE STATUS IS WS-File-Status``` define una variable para capturar el estado del archivo.
+	    *  Se verifica ```WS-File-Status``` para manejar errores durante las operaciones de archivo.
 	    
 	h3: Ejemplo de manejo de errores con SQLCODE
 	
@@ -279,7 +279,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##SQLCODE## se utiliza para verificar y manejar errores en operaciones de base de datos.
+	    *  ```SQLCODE``` se utiliza para verificar y manejar errores en operaciones de base de datos.
 	    
 	h2: Conclusión
 	

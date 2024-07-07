@@ -43,7 +43,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, tanto ##Perro## como ##Gato## son subclases de ##Animal## y ambos implementan el método ##hacer_sonido##. La función ##hacer_sonido_animal## puede aceptar cualquier objeto que sea una instancia de ##Animal## o sus subclases.
+	    En este ejemplo, tanto ```Perro``` como ```Gato``` son subclases de ```Animal``` y ambos implementan el método ```hacer_sonido```. La función ```hacer_sonido_animal``` puede aceptar cualquier objeto que sea una instancia de ```Animal``` o sus subclases.
 	    
 	h2:  Polimorfismo sin Herencia (Duck Typing) 
 	
@@ -78,7 +78,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Aquí, ##Perro##, ##Gato## y ##Vaca## no comparten una clase base común, pero todos tienen el método ##hacer_sonido##. La función ##hacer_sonido_animal## puede trabajar con cualquier objeto que implemente este método.
+	    Aquí, ```Perro```, ```Gato``` y ```Vaca``` no comparten una clase base común, pero todos tienen el método ```hacer_sonido```. La función ```hacer_sonido_animal``` puede trabajar con cualquier objeto que implemente este método.
 	    
 	h2:  Ejemplo de Polimorfismo en Funciones y Métodos 
 	
@@ -97,7 +97,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este caso, la función ##agregar## se comporta de manera polimórfica porque puede sumar tanto números como concatenar cadenas de texto, dependiendo del tipo de los argumentos.
+	    En este caso, la función ```agregar``` se comporta de manera polimórfica porque puede sumar tanto números como concatenar cadenas de texto, dependiendo del tipo de los argumentos.
 	    
 	h2:  Resumen 
 	

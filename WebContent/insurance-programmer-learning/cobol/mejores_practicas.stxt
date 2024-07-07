@@ -54,7 +54,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    *  **Nombres descriptivos**: Los nombres deben reflejar claramente el propósito de la variable o sección.
 	    
-	    *  **Convenciones de nomenclatura**: Sigue una convención de nomenclatura consistente, como el uso de prefijos para identificar el tipo de variable (por ejemplo, ##WS-## para variables de WORKING-STORAGE).
+	    *  **Convenciones de nomenclatura**: Sigue una convención de nomenclatura consistente, como el uso de prefijos para identificar el tipo de variable (por ejemplo, ```WS-``` para variables de WORKING-STORAGE).
 	    
 	Code:
 	    WORKING-STORAGE SECTION.
@@ -116,9 +116,9 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Implementar un manejo adecuado de errores es crucial para la robustez del programa.
 	    
-	    *  **Verificación de estados de archivos**: Utiliza ##FILE STATUS## para verificar el estado de las operaciones de archivo.
+	    *  **Verificación de estados de archivos**: Utiliza ```FILE STATUS``` para verificar el estado de las operaciones de archivo.
 	    
-	    *  **Manejo de errores SQL**: Verifica ##SQLCODE## después de las operaciones SQL para manejar errores adecuadamente.
+	    *  **Manejo de errores SQL**: Verifica ```SQLCODE``` después de las operaciones SQL para manejar errores adecuadamente.
 	    
 	Code:
 	    FILE CONTROL.
@@ -144,7 +144,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##FILE STATUS IS WS-File-Status## se utiliza para verificar el estado del archivo.
+	    *  ```FILE STATUS IS WS-File-Status``` se utiliza para verificar el estado del archivo.
 	    *  Se muestra un mensaje de error si hay un problema al abrir el archivo.
 	    
 	h2: Optimización del Rendimiento

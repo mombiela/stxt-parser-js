@@ -3,16 +3,16 @@ Tema(www.cursos.com/tema.stxt):
 	h1: Posicionamiento relativo
 	
 	Text: 
-	    El posicionamiento relativo permite mover un elemento desde su posición original en el flujo del documento sin alterar el espacio que ocupa originalmente. Esto significa que el elemento sigue ocupando el mismo espacio en el flujo normal del documento, pero se puede desplazar utilizando las propiedades ##top##, ##right##, ##bottom## y ##left##.
+	    El posicionamiento relativo permite mover un elemento desde su posición original en el flujo del documento sin alterar el espacio que ocupa originalmente. Esto significa que el elemento sigue ocupando el mismo espacio en el flujo normal del documento, pero se puede desplazar utilizando las propiedades ```top```, ```right```, ```bottom``` y ```left```.
 	    
 	    *  **Características del posicionamiento relativo**:
-	    *  Utiliza la propiedad ##position: relative;##.
-	    *  Las propiedades ##top##, ##right##, ##bottom## y ##left## se utilizan para desplazar el elemento desde su posición original.
+	    *  Utiliza la propiedad ```position: relative;```.
+	    *  Las propiedades ```top```, ```right```, ```bottom``` y ```left``` se utilizan para desplazar el elemento desde su posición original.
 	    *  El espacio original del elemento en el flujo del documento se mantiene, lo que puede causar superposición con otros elementos.
 	    
 	    *  **Uso del posicionamiento relativo**:
-	    *  Se especifica ##position: relative;## en el CSS del elemento.
-	    *  Las propiedades ##top##, ##right##, ##bottom## y ##left## se utilizan para ajustar la posición del elemento.
+	    *  Se especifica ```position: relative;``` en el CSS del elemento.
+	    *  Las propiedades ```top```, ```right```, ```bottom``` y ```left``` se utilizan para ajustar la posición del elemento.
 	    
 	h2: Ejemplo de código CSS con posicionamiento relativo
 	
@@ -34,7 +34,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    *  **Posicionamiento relativo en acción**:
 	    
-	    ##startuml##
+	    ```startuml```
 	    start
 	    :Div original;
 	    |

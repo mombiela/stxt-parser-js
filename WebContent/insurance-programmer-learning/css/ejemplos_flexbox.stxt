@@ -25,7 +25,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, el ítem se centra horizontal y verticalmente dentro del contenedor usando ##justify-content: center;## y ##align-items: center;##.
+	    En este ejemplo, el ítem se centra horizontal y verticalmente dentro del contenedor usando ```justify-content: center;``` y ```align-items: center;```.
 	    
 	h2: Ejemplo 2: Diseño de barra de navegación
 	
@@ -47,7 +47,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, una barra de navegación con enlaces se distribuye uniformemente utilizando ##justify-content: space-between;##.
+	    En este ejemplo, una barra de navegación con enlaces se distribuye uniformemente utilizando ```justify-content: space-between;```.
 	    
 	h2: Ejemplo 3: Tarjetas con altura y ancho iguales
 	
@@ -69,7 +69,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, las tarjetas dentro del contenedor se envuelven en varias líneas si es necesario y cada tarjeta tiene un ancho mínimo de 200px utilizando ##flex: 1 1 200px;##.
+	    En este ejemplo, las tarjetas dentro del contenedor se envuelven en varias líneas si es necesario y cada tarjeta tiene un ancho mínimo de 200px utilizando ```flex: 1 1 200px;```.
 	    
 	h2: Ejemplo 4: Diseño de pie de página con distribución espacial
 	
@@ -90,7 +90,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, los elementos dentro del pie de página se distribuyen uniformemente utilizando ##justify-content: space-around;##.
+	    En este ejemplo, los elementos dentro del pie de página se distribuyen uniformemente utilizando ```justify-content: space-around;```.
 	    
 	h2: Ejemplo 5: Columna de igual altura en diseño de tres columnas
 	
@@ -110,7 +110,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, tres columnas se crean dentro de un contenedor flexible, todas con igual altura y ancho utilizando ##flex: 1;##.
+	    En este ejemplo, tres columnas se crean dentro de un contenedor flexible, todas con igual altura y ancho utilizando ```flex: 1;```.
 	    
 	h2: Diagramas de ejemplos prácticos con Flexbox
 	
@@ -118,7 +118,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    **Ejemplo 1: Centro de un elemento en un contenedor**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +---------------------------------------+
 	    | Contenedor (display: flex)              |
 	    |        justify-content: center         |
@@ -128,11 +128,11 @@ Tema(www.cursos.com/tema.stxt):
 	    |    | Item centrado                    |
 	    |    +-----------------------+          |
 	    +---------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    **Ejemplo 2: Diseño de barra de navegación**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +--------------------------------------------------+
 	    | Nav (display: flex)                               |
 	    | justify-content: space-between                   |
@@ -147,16 +147,16 @@ Tema(www.cursos.com/tema.stxt):
 	    |  +-------+                                      |
 	    |  +-------+
 	    
-	    ##startuml##
+	    ```startuml```
 	    | | Link  |                                      |
 	    |  |   3   |                                      |
 	    |  +-------+                                      |
 	    +--------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    **Ejemplo 3: Tarjetas con altura y ancho iguales**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +--------------------------------------------------+
 	    | Contenedor (display: flex)                       |
 	    | flex-wrap: wrap                                  |
@@ -170,11 +170,11 @@ Tema(www.cursos.com/tema.stxt):
 	    | | 3                   | | 4                  |      |
 	    | +-------------------+ +-------------------+      |
 	    +--------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    **Ejemplo 4: Diseño de pie de página con distribución espacial**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +---------------------------------------------------+
 	    | Footer (display: flex)                             |
 	    | justify-content: space-around                     |
@@ -183,18 +183,18 @@ Tema(www.cursos.com/tema.stxt):
 	    | | Div     | | Div     | | Div     | | Div     |      |
 	    | +--------+ +--------+ +--------+ +--------+      |
 	    +---------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    **Ejemplo 5: Columna de igual altura en diseño de tres columnas**
 	    
-	    ##startuml##
+	    ```startuml```
 	    +---------------------------------------------------+
 	    | Contenedor (display: flex)                         |
 	    | +-------------+ +-------------+ +-------------+      |
 	    | | Column 1     | | Column 2     | | Column 3     |      |
 	    | +-------------+ +-------------+ +-------------+      |
 	    +---------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    Estos ejemplos prácticos demuestran cómo Flexbox puede utilizarse para crear diseños flexibles y adaptables para diversas aplicaciones.
 	    

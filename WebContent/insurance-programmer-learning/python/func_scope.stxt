@@ -35,7 +35,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ##variable_local## sólo es accesible dentro de ##mi_funcion##.
+	    En este ejemplo, ```variable_local``` sólo es accesible dentro de ```mi_funcion```.
 	    
 	h2: Alcance Global
 	
@@ -56,13 +56,13 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Aquí, ##variable_global## es accesible tanto dentro como fuera de ##mi_funcion##.
+	    Aquí, ```variable_global``` es accesible tanto dentro como fuera de ```mi_funcion```.
 	    
 	h2: Palabra Clave "global"
 	
 	Text:
 	    
-	    Si se necesita modificar una variable global dentro de una función, se debe usar la palabra clave ##global##.
+	    Si se necesita modificar una variable global dentro de una función, se debe usar la palabra clave ```global```.
 	    
 	    Ejemplo:
 	Code:
@@ -78,13 +78,13 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este caso, la palabra clave ##global## permite modificar ##variable_global## dentro de ##mi_funcion##.
+	    En este caso, la palabra clave ```global``` permite modificar ```variable_global``` dentro de ```mi_funcion```.
 	    
 	h2: Alcance No Local
 	
 	Text:
 	    
-	    En funciones anidadas, las variables pueden tener un alcance no local. La palabra clave ##nonlocal## se usa para declarar que una variable en una función anidada refiere a una variable en la función externa.
+	    En funciones anidadas, las variables pueden tener un alcance no local. La palabra clave ```nonlocal``` se usa para declarar que una variable en una función anidada refiere a una variable en la función externa.
 	    
 	    Ejemplo:
 	Code:
@@ -103,7 +103,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Aquí, la palabra clave ##nonlocal## permite que ##funcion_interna## modifique ##variable## definida en ##funcion_externa##.
+	    Aquí, la palabra clave ```nonlocal``` permite que ```funcion_interna``` modifique ```variable``` definida en ```funcion_externa```.
 	    
 	h2: Reglas LEGB
 	
@@ -113,7 +113,7 @@ Tema(www.cursos.com/tema.stxt):
 	    #  **Local**: Definido dentro de la función actual.
 	    #  **Enclosing**: Definido dentro de funciones englobantes.
 	    #  **Global**: Definido en el nivel más alto del script.
-	    #  **Built-in**: Nombres predefinidos en Python (como ##print##, ##len##, etc.).
+	    #  **Built-in**: Nombres predefinidos en Python (como ```print```, ```len```, etc.).
 	    
 	    Ejemplo:
 	Code:
@@ -131,4 +131,4 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ##funcion_interna## primero busca ##variable## en su ámbito local, luego en el ámbito englobante de ##funcion_externa##, y finalmente en el ámbito global.
+	    En este ejemplo, ```funcion_interna``` primero busca ```variable``` en su ámbito local, luego en el ámbito englobante de ```funcion_externa```, y finalmente en el ámbito global.

@@ -3,13 +3,13 @@ Tema(www.cursos.com/tema.stxt):
 	h1: Estructuras de control de flujo: IF, PERFORM, etc.
 	
 	Text: 
-	    COBOL proporciona varias estructuras de control de flujo que permiten dirigir la ejecución del programa basándose en condiciones y repeticiones. Entre las más comunes se encuentran ##IF##, ##PERFORM##, ##EVALUATE## y ##GO TO##. A continuación, se explican estas estructuras y su uso.
+	    COBOL proporciona varias estructuras de control de flujo que permiten dirigir la ejecución del programa basándose en condiciones y repeticiones. Entre las más comunes se encuentran ```IF```, ```PERFORM```, ```EVALUATE``` y ```GO TO```. A continuación, se explican estas estructuras y su uso.
 	    
 	h2: IF
 	
 	Text:
 	    
-	    La sentencia ##IF## se utiliza para tomar decisiones basadas en condiciones. Si la condición es verdadera, se ejecutan las sentencias especificadas; de lo contrario, se pueden ejecutar sentencias alternativas usando ##ELSE##.
+	    La sentencia ```IF``` se utiliza para tomar decisiones basadas en condiciones. Si la condición es verdadera, se ejecutan las sentencias especificadas; de lo contrario, se pueden ejecutar sentencias alternativas usando ```ELSE```.
 	    
 	Code:
 	    IF WS-Total > 1000
@@ -23,7 +23,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##IF WS-Total > 1000## verifica si ##WS-Total## es mayor que 1000.
+	    *  ```IF WS-Total > 1000``` verifica si ```WS-Total``` es mayor que 1000.
 	    *  Si la condición es verdadera, se muestra 'Total exceeds threshold'.
 	    *  Si la condición es falsa, se muestra 'Total is within limit'.
 	    
@@ -31,7 +31,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    La sentencia ##PERFORM## se utiliza para ejecutar bloques de código repetidamente o para llamar a párrafos o secciones de código.
+	    La sentencia ```PERFORM``` se utiliza para ejecutar bloques de código repetidamente o para llamar a párrafos o secciones de código.
 	    
 	Code:
 	    PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index > 10
@@ -45,10 +45,10 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index > 10## ejecuta el bloque de código mientras ##WS-Index## sea menor o igual a 10.
-	    *  Durante cada iteración, se muestran el ##EmployeeID##, ##EmployeeName## y ##EmployeeSalary## correspondientes al índice actual.
+	    *  ```PERFORM VARYING WS-Index FROM 1 BY 1 UNTIL WS-Index > 10``` ejecuta el bloque de código mientras ```WS-Index``` sea menor o igual a 10.
+	    *  Durante cada iteración, se muestran el ```EmployeeID```, ```EmployeeName``` y ```EmployeeSalary``` correspondientes al índice actual.
 	    
-	    La sentencia ##PERFORM## también se puede usar para llamar a párrafos específicos:
+	    La sentencia ```PERFORM``` también se puede usar para llamar a párrafos específicos:
 	    
 	Code:
 	    PERFORM Process-Records.
@@ -65,13 +65,13 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##PERFORM Process-Records## llama al párrafo ##Process-Records##, que a su vez llama al párrafo ##READ-RECORD##.
+	    *  ```PERFORM Process-Records``` llama al párrafo ```Process-Records```, que a su vez llama al párrafo ```READ-RECORD```.
 	    
 	h2: EVALUATE
 	
 	Text:
 	    
-	    La sentencia ##EVALUATE## es similar a un ##CASE## o ##SWITCH## en otros lenguajes de programación. Permite evaluar una expresión y ejecutar diferentes bloques de código basados en el valor de la expresión.
+	    La sentencia ```EVALUATE``` es similar a un ```CASE``` o ```SWITCH``` en otros lenguajes de programación. Permite evaluar una expresión y ejecutar diferentes bloques de código basados en el valor de la expresión.
 	    
 	Code:
 	    EVALUATE WS-Grade
@@ -90,14 +90,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EVALUATE WS-Grade## evalúa el valor de ##WS-Grade##.
+	    *  ```EVALUATE WS-Grade``` evalúa el valor de ```WS-Grade```.
 	    *  Dependiendo del valor, se muestra un mensaje correspondiente ('Excellent', 'Good', 'Average', o 'Other grade').
 	    
 	h2: GO TO
 	
 	Text:
 	    
-	    La sentencia ##GO TO## transfiere el control del programa a un párrafo o sección específica. Su uso se desaconseja en programación estructurada, ya que puede dificultar la comprensión y el mantenimiento del código.
+	    La sentencia ```GO TO``` transfiere el control del programa a un párrafo o sección específica. Su uso se desaconseja en programación estructurada, ya que puede dificultar la comprensión y el mantenimiento del código.
 	    
 	Code:
 	    IF WS-Error = 'Y'
@@ -108,13 +108,13 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  Si ##WS-Error## es igual a 'Y', el control se transfiere al párrafo ##Error-Handler##.
+	    *  Si ```WS-Error``` es igual a 'Y', el control se transfiere al párrafo ```Error-Handler```.
 	    
 	h2: EXIT
 	
 	Text:
 	    
-	    La sentencia ##EXIT## se utiliza para finalizar un bloque de código o un bucle. Es especialmente útil en programas anidados o complejos.
+	    La sentencia ```EXIT``` se utiliza para finalizar un bloque de código o un bucle. Es especialmente útil en programas anidados o complejos.
 	    
 	Code:
 	    PERFORM UNTIL WS-Done
@@ -129,7 +129,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  El bucle ##PERFORM UNTIL WS-Done## continúa ejecutándose hasta que ##WS-Done## sea verdadero.
-	    *  La sentencia ##EXIT## finaliza el bloque de código.
+	    *  El bucle ```PERFORM UNTIL WS-Done``` continúa ejecutándose hasta que ```WS-Done``` sea verdadero.
+	    *  La sentencia ```EXIT``` finaliza el bloque de código.
 	    
 	    Las estructuras de control de flujo en COBOL son fundamentales para dirigir la ejecución del programa basándose en condiciones y repeticiones. Su uso adecuado permite escribir programas claros, eficientes y fáciles de mantener.

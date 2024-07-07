@@ -40,8 +40,8 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ##n ** 2## es la expresión que se aplica
-	    a cada elemento ##n## de la lista ##numeros##.
+	    En este ejemplo, ```n ** 2``` es la expresión que se aplica
+	    a cada elemento ```n``` de la lista ```numeros```.
 	    
 	    **2. Filtrar elementos con una condición:**
 	    
@@ -53,7 +53,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Aquí, ##n % 2 == 0## es la condición que filtra los números pares de la lista ##numeros##.
+	    Aquí, ```n % 2 == 0``` es la condición que filtra los números pares de la lista ```numeros```.
 	    
 	    **3. Aplicar una función a cada elemento:**
 	    
@@ -68,7 +68,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, la función cuadrado se aplica a cada elemento de la lista ##numeros##.
+	    En este ejemplo, la función cuadrado se aplica a cada elemento de la lista ```numeros```.
 	    
 	    **4. Convertir caracteres a mayúsculas:**
 	    
@@ -80,7 +80,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    La expresión ##fruta.upper()## convierte cada cadena de la lista ##frutas## a mayúsculas.
+	    La expresión ```fruta.upper()``` convierte cada cadena de la lista ```frutas``` a mayúsculas.
 	    
 	h2:  Comprensiones Anidadas 
 	
@@ -100,7 +100,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, la lista ##transpuesta## se genera tomando los elementos por columna en lugar de por fila.
+	    En este ejemplo, la lista ```transpuesta``` se genera tomando los elementos por columna en lugar de por fila.
 	    
 	h2:  Uso de Comprensiones de Listas con Diccionarios y Conjuntos 
 	
@@ -121,7 +121,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, se crea un diccionario ##frutas_precios## a partir de dos listas usando ##zip##.
+	    En este ejemplo, se crea un diccionario ```frutas_precios``` a partir de dos listas usando ```zip```.
 	    
 	h2:  Ejemplo con conjuntos:
 	
@@ -135,7 +135,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, se crea un conjunto ##cuadrados_unicos## con los cuadrados únicos de los números en la lista ##numeros##.
+	    En este ejemplo, se crea un conjunto ```cuadrados_unicos``` con los cuadrados únicos de los números en la lista ```numeros```.
 	    
 	    Las comprensiones de listas son una herramienta poderosa para escribir código más claro y conciso. Facilitan la creación y manipulación de listas de una manera legible y eficiente.
 	    

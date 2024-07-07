@@ -25,7 +25,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    A continuación, se presenta un diagrama de interacción que muestra cómo un cliente y un servidor web interactúan durante una solicitud y respuesta HTTP.
 	    
-	    ##startuml##
+	    ```startuml```
 	    actor Cliente
 	    participant "Servidor Web"
 	    
@@ -37,7 +37,7 @@ Tema(www.cursos.com/tema.stxt):
 	    El cliente envía una solicitud HTTP/HTTPS al servidor web.
 	    El servidor procesa la solicitud y envía una respuesta con el contenido solicitado.
 	    end note
-	    ##enduml##
+	    ```enduml```
 	    
 	h2: Tipos de servidores web
 	

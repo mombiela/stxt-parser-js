@@ -13,7 +13,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Los sets se crean usando llaves ##{}## o la función ##set()##.
+	    Los sets se crean usando llaves ```{}``` o la función ```set()```.
 	    
 	    Ejemplo:
 	Code:
@@ -22,7 +22,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para crear un set vacío, se debe usar la función ##set()##, ya que ##{}## crea un diccionario vacío.
+	    Para crear un set vacío, se debe usar la función ```set()```, ya que ```{}``` crea un diccionario vacío.
 	Code:
 	    set_vacio = set()
 	
@@ -33,14 +33,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Se pueden añadir elementos a un set usando el método ##add()##.
+	    Se pueden añadir elementos a un set usando el método ```add()```.
 	Code:
 	    mi_set.add(5)
 	
 	
 	Text:
 	    
-	    Para añadir múltiples elementos, se puede usar el método ##update()##.
+	    Para añadir múltiples elementos, se puede usar el método ```update()```.
 	Code:
 	    mi_set.update([6, 7])
 	
@@ -51,28 +51,28 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **##remove##**: Elimina un elemento específico. Si el elemento no está en el set, lanza un error ##KeyError##.
+	    *  **```remove```**: Elimina un elemento específico. Si el elemento no está en el set, lanza un error ```KeyError```.
 	Code:
 	    mi_set.remove(3)
 	
 	
 	Text:
 	    
-	    *  **##discard##**: Elimina un elemento específico. Si el elemento no está en el set, no hace nada.
+	    *  **```discard```**: Elimina un elemento específico. Si el elemento no está en el set, no hace nada.
 	Code:
 	    mi_set.discard(4)
 	
 	
 	Text:
 	    
-	    *  **##pop##**: Elimina y devuelve un elemento aleatorio del set.
+	    *  **```pop```**: Elimina y devuelve un elemento aleatorio del set.
 	Code:
 	    elemento = mi_set.pop()
 	
 	
 	Text:
 	    
-	    *  **##clear##**: Elimina todos los elementos del set.
+	    *  **```clear```**: Elimina todos los elementos del set.
 	Code:
 	    mi_set.clear()
 	
@@ -119,7 +119,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **##issubset##**: Devuelve ##True## si todos los elementos del set están en otro set.
+	    *  **```issubset```**: Devuelve ```True``` si todos los elementos del set están en otro set.
 	Code:
 	    set1 = {1, 2, 3}
 	    set2 = {1, 2, 3, 4, 5}
@@ -128,14 +128,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **##issuperset##**: Devuelve ##True## si todos los elementos de otro set están en el set.
+	    *  **```issuperset```**: Devuelve ```True``` si todos los elementos de otro set están en el set.
 	Code:
 	    es_superconjunto = set2.issuperset(set1) # True
 	
 	
 	Text:
 	    
-	    *  **##isdisjoint##**: Devuelve ##True## si los sets no tienen elementos en común.
+	    *  **```isdisjoint```**: Devuelve ```True``` si los sets no tienen elementos en común.
 	Code:
 	    set3 = {6, 7, 8}
 	    son_disjuntos = set1.isdisjoint(set3) # True
@@ -147,7 +147,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Se puede iterar sobre los elementos de un set usando un bucle ##for##.
+	    Se puede iterar sobre los elementos de un set usando un bucle ```for```.
 	Code:
 	    for elemento in mi_set:
 	    print(elemento)

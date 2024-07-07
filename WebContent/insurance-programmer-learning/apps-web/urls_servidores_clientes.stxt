@@ -9,11 +9,11 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Una URL (Uniform Resource Locator) es una dirección que se utiliza para acceder a recursos en la web. Es la forma en que identificamos y localizamos un recurso específico en Internet, como una página web, una imagen o un video. Las URLs están compuestas de varias partes, cada una con un propósito específico.
 	    
-	    * Protocolo: Especifica el método de acceso al recurso. Los más comunes son ##http## y ##https##.
-	    * Dominio: El nombre del servidor donde reside el recurso, por ejemplo, ##www.ejemplo.com##.
-	    * Ruta: Especifica la ubicación exacta del recurso en el servidor, por ejemplo, ##/articulos/tecnologia##.
-	    * Parámetros de consulta: Opcionales, proporcionan información adicional al servidor, por ejemplo, ##?id=1234##.
-	    * Fragmento: Opcional, apunta a una sección específica dentro del recurso, por ejemplo, ###seccion2##.
+	    * Protocolo: Especifica el método de acceso al recurso. Los más comunes son ```http``` y ```https```.
+	    * Dominio: El nombre del servidor donde reside el recurso, por ejemplo, ```www.ejemplo.com```.
+	    * Ruta: Especifica la ubicación exacta del recurso en el servidor, por ejemplo, ```/articulos/tecnologia```.
+	    * Parámetros de consulta: Opcionales, proporcionan información adicional al servidor, por ejemplo, ```?id=1234```.
+	    * Fragmento: Opcional, apunta a una sección específica dentro del recurso, por ejemplo, ```#seccion2```.
 	    
 	    Un ejemplo de URL sería:
 	Code:

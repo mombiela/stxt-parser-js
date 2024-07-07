@@ -24,17 +24,17 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  La declaración ##<!DOCTYPE html>## especifica la versión de HTML que se está utilizando.
+	    *  La declaración ```<!DOCTYPE html>``` especifica la versión de HTML que se está utilizando.
 	    
-	    *  El elemento ##<html>## es el contenedor raíz de todo el contenido de la página web.
+	    *  El elemento ```<html>``` es el contenedor raíz de todo el contenido de la página web.
 	    
-	    *  El elemento ##<head>## contiene metadatos sobre el documento, como el título que se muestra en la pestaña del navegador.
+	    *  El elemento ```<head>``` contiene metadatos sobre el documento, como el título que se muestra en la pestaña del navegador.
 	    
-	    *  El elemento ##<body>## contiene el contenido visible de la página web, como textos, imágenes y otros elementos multimedia.
+	    *  El elemento ```<body>``` contiene el contenido visible de la página web, como textos, imágenes y otros elementos multimedia.
 	    
-	    *  Los elementos de HTML se escriben con etiquetas, que suelen venir en pares: una etiqueta de apertura ##<tag>## y una etiqueta de cierre ##</tag>##.
+	    *  Los elementos de HTML se escriben con etiquetas, que suelen venir en pares: una etiqueta de apertura ```<tag>``` y una etiqueta de cierre ```</tag>```.
 	    
-	    *  Los elementos pueden tener atributos que proporcionan información adicional sobre el elemento. Los atributos se escriben dentro de la etiqueta de apertura y generalmente tienen un formato de nombre-valor, por ejemplo: ##<elemento atributo="valor">##.
+	    *  Los elementos pueden tener atributos que proporcionan información adicional sobre el elemento. Los atributos se escriben dentro de la etiqueta de apertura y generalmente tienen un formato de nombre-valor, por ejemplo: ```<elemento atributo="valor">```.
 	    
 	    *  Aquí tienes un ejemplo más detallado de un documento HTML:
 	    

@@ -9,7 +9,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para definir una clase en Python, utilizamos la palabra clave ##class## seguida del nombre de la clase. Por convención, el nombre de las clases empieza con mayúscula.
+	    Para definir una clase en Python, utilizamos la palabra clave ```class``` seguida del nombre de la clase. Por convención, el nombre de las clases empieza con mayúscula.
 	    
 	Code:
 	    class ***Persona***:
@@ -18,7 +18,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ##Persona## es una clase vacía. La palabra clave ##pass## se usa como un marcador de posición que indica que no hay nada dentro de la clase por el momento.
+	    En este ejemplo, ```Persona``` es una clase vacía. La palabra clave ```pass``` se usa como un marcador de posición que indica que no hay nada dentro de la clase por el momento.
 	    
 	h2:  Atributos y Métodos 
 	
@@ -38,8 +38,8 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    * ##__init__##: Este es un método especial llamado constructor. Se llama automáticamente cuando se crea una nueva instancia de la clase. Se utiliza para inicializar los atributos del objeto.
-	    * ##self##: Es una referencia al objeto actual. Se usa para acceder a los atributos y métodos de la clase desde dentro de la clase.
+	    * ```__init__```: Este es un método especial llamado constructor. Se llama automáticamente cuando se crea una nueva instancia de la clase. Se utiliza para inicializar los atributos del objeto.
+	    * ```self```: Es una referencia al objeto actual. Se usa para acceder a los atributos y métodos de la clase desde dentro de la clase.
 	    
 	h2:  Crear Instancias de una Clase 
 	
@@ -54,7 +54,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Ahora ##persona1## y ##persona2## son dos objetos diferentes de la clase Persona.
+	    Ahora ```persona1``` y ```persona2``` son dos objetos diferentes de la clase Persona.
 	    
 	h2:  Acceder a Atributos y Métodos 
 	
@@ -90,8 +90,8 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    * ##super()##: Se usa para llamar al constructor de la superclase y asegurarse de que los atributos heredados se inicialicen correctamente.
-	    * En vez de ##super().__init__(nombre, edad)## es equivalente: ##Persona.__init__(self, nombre, edad)##, aunque quizá no sea tan claro.
+	    * ```super()```: Se usa para llamar al constructor de la superclase y asegurarse de que los atributos heredados se inicialicen correctamente.
+	    * En vez de ```super().__init__(nombre, edad)``` es equivalente: ```Persona.__init__(self, nombre, edad)```, aunque quizá no sea tan claro.
 	    
 	Code:
 	    empleado1 = Empleado("Carlos", 40, 50000)
@@ -109,5 +109,5 @@ Tema(www.cursos.com/tema.stxt):
 	    * **Objeto**: Una instancia de una clase.
 	    * **Atributo**: Una variable que pertenece a una clase.
 	    * **Método**: Una función que pertenece a una clase.
-	    * ##__init__##: Método constructor, inicializa los atributos de la clase.
+	    * ```__init__```: Método constructor, inicializa los atributos de la clase.
 	    * **Herencia**: Permite crear una nueva clase basada en una clase existente.

@@ -6,8 +6,8 @@ Tema(www.cursos.com/tema.stxt):
 	    Estos operadores se utilizan para comparar objetos.
 	    
 	    |= Operador    |= Descripción                 |= Ejemplo
-	    | ##code:is##     | Es el mismo objeto    | ##code:a is b##
-	    | ##code:is not## | No es el mismo objeto | ##code:a is not b##
+	    | ```code:is```     | Es el mismo objeto    | ```code:a is b```
+	    | ```code:is not``` | No es el mismo objeto | ```code:a is not b```
 	    
 	h2:  Ejemplo: 
 	

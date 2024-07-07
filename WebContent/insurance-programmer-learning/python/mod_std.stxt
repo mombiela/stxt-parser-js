@@ -3,15 +3,15 @@ Tema(www.cursos.com/tema.stxt):
 	h1: Uso de paquetes estándar de Python (os, sys, math, etc.)
 	
 	Text: 
-	    Python viene con una extensa biblioteca estándar que proporciona módulos y paquetes útiles para realizar una amplia variedad de tareas. A continuación, se describen algunos de los módulos estándar más comúnmente utilizados: ##os##, ##sys##, ##math##, y otros.
+	    Python viene con una extensa biblioteca estándar que proporciona módulos y paquetes útiles para realizar una amplia variedad de tareas. A continuación, se describen algunos de los módulos estándar más comúnmente utilizados: ```os```, ```sys```, ```math```, y otros.
 	    
 	h2: Módulo os
 	
 	Text:
 	    
-	    El módulo ##os## proporciona una forma de usar funcionalidades dependientes del sistema operativo como leer o escribir en el sistema de archivos.
+	    El módulo ```os``` proporciona una forma de usar funcionalidades dependientes del sistema operativo como leer o escribir en el sistema de archivos.
 	    
-	    *  ##os.getcwd()##: Devuelve el directorio de trabajo actual.
+	    *  ```os.getcwd()```: Devuelve el directorio de trabajo actual.
 	Code:
 	    import os
 	    
@@ -21,7 +21,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##os.listdir()##: Lista los archivos y directorios en un directorio específico.
+	    *  ```os.listdir()```: Lista los archivos y directorios en un directorio específico.
 	Code:
 	    import os
 	    
@@ -31,7 +31,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##os.mkdir()##: Crea un nuevo directorio.
+	    *  ```os.mkdir()```: Crea un nuevo directorio.
 	Code:
 	    import os
 	    
@@ -40,7 +40,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##os.remove()## y ##os.rmdir()##: Elimina un archivo o un directorio, respectivamente.
+	    *  ```os.remove()``` y ```os.rmdir()```: Elimina un archivo o un directorio, respectivamente.
 	Code:
 	    import os
 	    
@@ -54,9 +54,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El módulo ##sys## proporciona acceso a algunas variables y funciones que interactúan fuertemente con el intérprete de Python.
+	    El módulo ```sys``` proporciona acceso a algunas variables y funciones que interactúan fuertemente con el intérprete de Python.
 	    
-	    *  ##sys.argv##: Lista de argumentos pasados al script de Python.
+	    *  ```sys.argv```: Lista de argumentos pasados al script de Python.
 	Code:
 	    import sys
 	    
@@ -65,7 +65,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##sys.exit()##: Termina el programa con un estado de salida opcional.
+	    *  ```sys.exit()```: Termina el programa con un estado de salida opcional.
 	Code:
 	    import sys
 	    
@@ -74,7 +74,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##sys.path##: Lista de rutas donde Python busca módulos.
+	    *  ```sys.path```: Lista de rutas donde Python busca módulos.
 	Code:
 	    import sys
 	    
@@ -87,9 +87,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El módulo ##math## proporciona acceso a las funciones matemáticas más comunes.
+	    El módulo ```math``` proporciona acceso a las funciones matemáticas más comunes.
 	    
-	    *  ##math.sqrt()##: Devuelve la raíz cuadrada de un número.
+	    *  ```math.sqrt()```: Devuelve la raíz cuadrada de un número.
 	Code:
 	    import math
 	    
@@ -99,7 +99,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##math.factorial()##: Devuelve el factorial de un número.
+	    *  ```math.factorial()```: Devuelve el factorial de un número.
 	Code:
 	    import math
 	    
@@ -109,7 +109,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##math.pow()##: Devuelve el resultado de elevar un número a una potencia.
+	    *  ```math.pow()```: Devuelve el resultado de elevar un número a una potencia.
 	Code:
 	    import math
 	    
@@ -123,9 +123,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El módulo ##datetime## proporciona clases para manipular fechas y horas.
+	    El módulo ```datetime``` proporciona clases para manipular fechas y horas.
 	    
-	    *  ##datetime.datetime.now()##: Devuelve la fecha y hora actual.
+	    *  ```datetime.datetime.now()```: Devuelve la fecha y hora actual.
 	Code:
 	    import datetime
 	    
@@ -135,7 +135,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##datetime.datetime.strptime()##: Convierte una cadena de texto en un objeto datetime.
+	    *  ```datetime.datetime.strptime()```: Convierte una cadena de texto en un objeto datetime.
 	Code:
 	    import datetime
 	    
@@ -146,7 +146,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##datetime.datetime.strftime()##: Convierte un objeto datetime en una cadena de texto.
+	    *  ```datetime.datetime.strftime()```: Convierte un objeto datetime en una cadena de texto.
 	Code:
 	    import datetime
 	    
@@ -161,9 +161,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El módulo ##random## proporciona funciones para generar números aleatorios y realizar operaciones aleatorias.
+	    El módulo ```random``` proporciona funciones para generar números aleatorios y realizar operaciones aleatorias.
 	    
-	    *  ##random.randint()##: Devuelve un número entero aleatorio entre un rango especificado.
+	    *  ```random.randint()```: Devuelve un número entero aleatorio entre un rango especificado.
 	Code:
 	    import random
 	    
@@ -173,7 +173,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##random.choice()##: Devuelve un elemento aleatorio de una secuencia.
+	    *  ```random.choice()```: Devuelve un elemento aleatorio de una secuencia.
 	Code:
 	    import random
 	    
@@ -183,7 +183,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##random.shuffle()##: Mezcla los elementos de una lista.
+	    *  ```random.shuffle()```: Mezcla los elementos de una lista.
 	Code:
 	    import random
 	    
@@ -198,9 +198,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El módulo ##json## permite trabajar con datos en formato JSON.
+	    El módulo ```json``` permite trabajar con datos en formato JSON.
 	    
-	    *  ##json.loads()##: Convierte una cadena JSON en un objeto Python.
+	    *  ```json.loads()```: Convierte una cadena JSON en un objeto Python.
 	Code:
 	    import json
 	    
@@ -211,7 +211,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##json.dumps()##: Convierte un objeto Python en una cadena JSON.
+	    *  ```json.dumps()```: Convierte un objeto Python en una cadena JSON.
 	Code:
 	    import json
 	    
@@ -226,9 +226,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El módulo ##re## proporciona herramientas para trabajar con expresiones regulares.
+	    El módulo ```re``` proporciona herramientas para trabajar con expresiones regulares.
 	    
-	    *  ##re.match()##: Determina si una expresión regular coincide con el comienzo de una cadena.
+	    *  ```re.match()```: Determina si una expresión regular coincide con el comienzo de una cadena.
 	Code:
 	    import re
 	    
@@ -239,7 +239,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##re.search()##: Busca una coincidencia de una expresión regular en toda la cadena.
+	    *  ```re.search()```: Busca una coincidencia de una expresión regular en toda la cadena.
 	Code:
 	    import re
 	    
@@ -250,7 +250,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##re.findall()##: Encuentra todas las coincidencias de una expresión regular en una cadena.
+	    *  ```re.findall()```: Encuentra todas las coincidencias de una expresión regular en una cadena.
 	Code:
 	    import re
 	    
@@ -261,7 +261,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##re.sub()##: Reemplaza las coincidencias de una expresión regular en una cadena con otra cadena.
+	    *  ```re.sub()```: Reemplaza las coincidencias de una expresión regular en una cadena con otra cadena.
 	Code:
 	    import re
 	    
@@ -276,9 +276,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El módulo ##collections## proporciona tipos de datos especializados como ##namedtuple##, ##deque##, ##Counter##, y otros.
+	    El módulo ```collections``` proporciona tipos de datos especializados como ```namedtuple```, ```deque```, ```Counter```, y otros.
 	    
-	    *  ##collections.namedtuple()##: Crea una tupla con nombre.
+	    *  ```collections.namedtuple()```: Crea una tupla con nombre.
 	Code:
 	    import collections
 	    
@@ -291,7 +291,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##collections.Counter()##: Un contador que cuenta la cantidad de elementos en una colección.
+	    *  ```collections.Counter()```: Un contador que cuenta la cantidad de elementos en una colección.
 	Code:
 	    import collections
 	    

@@ -36,17 +36,17 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##SELECT Clientes ASSIGN TO 'CLIENTES.DAT'## define el archivo lógico y lo asigna a un archivo físico.
-	    *  ##ORGANIZATION IS INDEXED## indica que el archivo es indexado.
-	    *  ##ACCESS MODE IS DYNAMIC## permite el acceso tanto secuencial como aleatorio.
-	    *  ##RECORD KEY IS Cliente-ID## define la clave primaria.
-	    *  ##ALTERNATE RECORD KEY IS Cliente-Nombre WITH DUPLICATES## define una clave secundaria permitiendo duplicados.
+	    *  ```SELECT Clientes ASSIGN TO 'CLIENTES.DAT'``` define el archivo lógico y lo asigna a un archivo físico.
+	    *  ```ORGANIZATION IS INDEXED``` indica que el archivo es indexado.
+	    *  ```ACCESS MODE IS DYNAMIC``` permite el acceso tanto secuencial como aleatorio.
+	    *  ```RECORD KEY IS Cliente-ID``` define la clave primaria.
+	    *  ```ALTERNATE RECORD KEY IS Cliente-Nombre WITH DUPLICATES``` define una clave secundaria permitiendo duplicados.
 	    
 	h2: Apertura y cierre de archivos indexados
 	
 	Text:
 	    
-	    Los archivos indexados deben ser abiertos y cerrados adecuadamente utilizando las sentencias ##OPEN## y ##CLOSE##.
+	    Los archivos indexados deben ser abiertos y cerrados adecuadamente utilizando las sentencias ```OPEN``` y ```CLOSE```.
 	    
 	h3: Ejemplo de apertura y cierre de archivos indexados
 	
@@ -67,15 +67,15 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##OPEN I-O Clientes## abre el archivo para operaciones de entrada y salida.
-	    *  Se verifica ##WS-File-Status## para manejar errores al abrir el archivo.
-	    *  ##CLOSE Clientes## cierra el archivo al finalizar.
+	    *  ```OPEN I-O Clientes``` abre el archivo para operaciones de entrada y salida.
+	    *  Se verifica ```WS-File-Status``` para manejar errores al abrir el archivo.
+	    *  ```CLOSE Clientes``` cierra el archivo al finalizar.
 	    
 	h2: Lectura de registros en archivos indexados
 	
 	Text:
 	    
-	    La lectura de registros en archivos indexados se puede hacer de manera secuencial o aleatoria. Para acceso aleatorio, se utiliza la sentencia ##READ## con la clave de registro.
+	    La lectura de registros en archivos indexados se puede hacer de manera secuencial o aleatoria. Para acceso aleatorio, se utiliza la sentencia ```READ``` con la clave de registro.
 	    
 	h3: Ejemplo de lectura secuencial y aleatoria
 	
@@ -111,15 +111,15 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##READ Clientes NEXT RECORD INTO Registro-Cliente## lee el siguiente registro en orden secuencial.
-	    *  ##READ Clientes INTO Registro-Cliente KEY IS Cliente-ID## lee un registro específico usando la clave primaria.
-	    *  ##INVALID KEY## maneja la situación en la que un registro no se encuentra.
+	    *  ```READ Clientes NEXT RECORD INTO Registro-Cliente``` lee el siguiente registro en orden secuencial.
+	    *  ```READ Clientes INTO Registro-Cliente KEY IS Cliente-ID``` lee un registro específico usando la clave primaria.
+	    *  ```INVALID KEY``` maneja la situación en la que un registro no se encuentra.
 	    
 	h2: Escritura y actualización de registros en archivos indexados
 	
 	Text:
 	    
-	    Para escribir y actualizar registros en archivos indexados, se utilizan las sentencias ##WRITE## y ##REWRITE##.
+	    Para escribir y actualizar registros en archivos indexados, se utilizan las sentencias ```WRITE``` y ```REWRITE```.
 	    
 	h3: Ejemplo de escritura y actualización de registros
 	
@@ -148,15 +148,15 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##WRITE Registro-Cliente## escribe un nuevo registro en el archivo.
-	    *  ##REWRITE Registro-Cliente## actualiza el registro actual en el archivo.
-	    *  Se verifica ##WS-File-Status## para manejar errores durante las operaciones.
+	    *  ```WRITE Registro-Cliente``` escribe un nuevo registro en el archivo.
+	    *  ```REWRITE Registro-Cliente``` actualiza el registro actual en el archivo.
+	    *  Se verifica ```WS-File-Status``` para manejar errores durante las operaciones.
 	    
 	h2: Eliminación de registros en archivos indexados
 	
 	Text:
 	    
-	    La eliminación de registros se realiza utilizando la sentencia ##DELETE##.
+	    La eliminación de registros se realiza utilizando la sentencia ```DELETE```.
 	    
 	h3: Ejemplo de eliminación de registros
 	
@@ -176,14 +176,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##DELETE Clientes RECORD KEY IS Cliente-ID## elimina el registro con la clave especificada.
-	    *  Se verifica ##WS-File-Status## para manejar errores durante la eliminación.
+	    *  ```DELETE Clientes RECORD KEY IS Cliente-ID``` elimina el registro con la clave especificada.
+	    *  Se verifica ```WS-File-Status``` para manejar errores durante la eliminación.
 	    
 	h2: Manejo de errores en operaciones con archivos indexados
 	
 	Text:
 	    
-	    Es importante capturar y manejar los posibles errores durante las operaciones con archivos indexados utilizando ##FILE STATUS##.
+	    Es importante capturar y manejar los posibles errores durante las operaciones con archivos indexados utilizando ```FILE STATUS```.
 	    
 	h3: Ejemplo de manejo de errores con FILE STATUS
 	
@@ -213,8 +213,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##FILE STATUS IS WS-File-Status## define una variable para capturar el estado del archivo.
-	    *  Se verifica ##WS-File-Status## para manejar errores en las operaciones de archivo.
+	    *  ```FILE STATUS IS WS-File-Status``` define una variable para capturar el estado del archivo.
+	    *  Se verifica ```WS-File-Status``` para manejar errores en las operaciones de archivo.
 	    
 	h2: Conclusión
 	

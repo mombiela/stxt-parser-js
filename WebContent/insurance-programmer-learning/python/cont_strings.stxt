@@ -13,7 +13,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Los strings se pueden crear usando comillas simples ##''##, comillas dobles ##""## o triples comillas ##''' '''## o ##""" """## para strings multilínea.
+	    Los strings se pueden crear usando comillas simples ```''```, comillas dobles ```""``` o triples comillas ```''' '''``` o ```""" """``` para strings multilínea.
 	    
 	    Ejemplos:
 	Code:
@@ -56,14 +56,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Los strings se pueden concatenar usando el operador ##+##.
+	    Los strings se pueden concatenar usando el operador ```+```.
 	Code:
 	    saludo = 'Hola, ' + 'mundo'
 	
 	
 	Text:
 	    
-	    También se pueden repetir usando el operador ####.
+	    También se pueden repetir usando el operador ``````.
 	Code:
 	    repetir = 'Hola'  3 # 'HolaHolaHola'
 	
@@ -74,21 +74,21 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##upper##: Convierte todos los caracteres a mayúsculas.
+	    *  ```upper```: Convierte todos los caracteres a mayúsculas.
 	Code:
 	    mayusculas = mi_string.upper()
 	
 	
 	Text:
 	    
-	    *  ##lower##: Convierte todos los caracteres a minúsculas.
+	    *  ```lower```: Convierte todos los caracteres a minúsculas.
 	Code:
 	    minusculas = mi_string.lower()
 	
 	
 	Text:
 	    
-	    *  ##strip##: Elimina los espacios en blanco al inicio y al final del string.
+	    *  ```strip```: Elimina los espacios en blanco al inicio y al final del string.
 	Code:
 	    espacios = '    Hola, mundo    '
 	    sin_espacios = espacios.strip()
@@ -96,21 +96,21 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##replace##: Reemplaza todas las ocurrencias de un substring por otro.
+	    *  ```replace```: Reemplaza todas las ocurrencias de un substring por otro.
 	Code:
 	    nuevo_string = mi_string.replace('mundo', 'Python')
 	
 	
 	Text:
 	    
-	    *  ##split##: Divide el string en una lista de substrings basándose en un delimitador.
+	    *  ```split```: Divide el string en una lista de substrings basándose en un delimitador.
 	Code:
 	    lista_palabras = mi_string.split(' ') # ['Hola,', 'mundo']
 	
 	
 	Text:
 	    
-	    *  ##join##: Une una lista de strings en un solo string, usando un delimitador.
+	    *  ```join```: Une una lista de strings en un solo string, usando un delimitador.
 	Code:
 	    palabras = ['Hola,', 'mundo']
 	    frase = ' '.join(palabras)
@@ -122,7 +122,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##f-strings##: Permiten insertar expresiones dentro de un string, utilizando llaves ##{}##.
+	    *  ```f-strings```: Permiten insertar expresiones dentro de un string, utilizando llaves ```{}```.
 	Code:
 	    nombre = 'Juan'
 	    edad = 30
@@ -131,14 +131,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##str.format##: Inserta valores en posiciones específicas usando llaves ##{}##.
+	    *  ```str.format```: Inserta valores en posiciones específicas usando llaves ```{}```.
 	Code:
 	    frase = 'Hola, me llamo {} y tengo {} años.'.format(nombre, edad)
 	
 	
 	Text:
 	    
-	    *  **Operador %**: Formatea strings usando el operador ##%##.
+	    *  **Operador %**: Formatea strings usando el operador ```%```.
 	Code:
 	    frase = 'Hola, me llamo %s y tengo %d años.' % (nombre, edad)
 	
@@ -149,21 +149,21 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **Comprobación de Membresía**: Se puede verificar si un substring está en un string usando ##in##.
+	    *  **Comprobación de Membresía**: Se puede verificar si un substring está en un string usando ```in```.
 	Code:
 	    existe = 'Python' in mi_string
 	
 	
 	Text:
 	    
-	    *  **Longitud del String**: Se puede obtener la longitud de un string usando ##len()##.
+	    *  **Longitud del String**: Se puede obtener la longitud de un string usando ```len()```.
 	Code:
 	    longitud = len(mi_string)
 	
 	
 	Text:
 	    
-	    *  **Iteración**: Se puede iterar sobre los caracteres de un string usando un bucle ##for##.
+	    *  **Iteración**: Se puede iterar sobre los caracteres de un string usando un bucle ```for```.
 	Code:
 	    for caracter in mi_string:
 	    print(caracter)

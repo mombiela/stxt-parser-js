@@ -11,16 +11,16 @@ Tema(www.cursos.com/tema.stxt):
 	    Los selectores en CSS permiten seleccionar y estilizar elementos específicos dentro de un documento HTML. Los selectores básicos son fundamentales para aplicar estilos de manera eficiente y precisa.
 	    
 	    *  **Tipos de selectores básicos**
-	    ##startalert##
+	    ```startalert```
 	    *  **Selector de tipo**: Selecciona todos los elementos de un tipo específico.
 	    *  **Selector de clase**: Selecciona todos los elementos que tienen una clase específica.
 	    *  **Selector de ID**: Selecciona un único elemento que tiene un ID específico.
 	    *  **Selector universal**: Selecciona todos los elementos en la página.
 	    *  **Selector de atributo**: Selecciona elementos que tienen un atributo específico.
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Selector de tipo**
-	    El selector de tipo selecciona todos los elementos de un tipo específico, como todos los párrafos ##<p>## o todos los encabezados ##<h1>##.
+	    El selector de tipo selecciona todos los elementos de un tipo específico, como todos los párrafos ```<p>``` o todos los encabezados ```<h1>```.
 	Code:
 	    p {
 	    color: blue;
@@ -30,7 +30,7 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **Selector de clase**
-	    El selector de clase selecciona todos los elementos que tienen una clase específica, definida por el atributo ##class## en HTML. Se utiliza un punto (.) antes del nombre de la clase.
+	    El selector de clase selecciona todos los elementos que tienen una clase específica, definida por el atributo ```class``` en HTML. Se utiliza un punto (.) antes del nombre de la clase.
 	Code:
 	    .intro {
 	    font-size: 14px;
@@ -41,7 +41,7 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **Selector de ID**
-	    El selector de ID selecciona un único elemento que tiene un ID específico, definido por el atributo ##id## en HTML. Se utiliza un símbolo de almohadilla (#) antes del nombre del ID.
+	    El selector de ID selecciona un único elemento que tiene un ID específico, definido por el atributo ```id``` en HTML. Se utiliza un símbolo de almohadilla (#) antes del nombre del ID.
 	Code:
 	    #header {
 	    background-color: yellow;

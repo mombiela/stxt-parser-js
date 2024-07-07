@@ -13,9 +13,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Un módulo en Python es simplemente un archivo con extensión ##.py## que contiene definiciones y declaraciones de Python. Estos archivos pueden contener funciones, clases y variables, y pueden incluir código ejecutable.
+	    Un módulo en Python es simplemente un archivo con extensión ```.py``` que contiene definiciones y declaraciones de Python. Estos archivos pueden contener funciones, clases y variables, y pueden incluir código ejecutable.
 	    
-	    Ejemplo de un módulo simple (archivo llamado ##mimodulo.py##):
+	    Ejemplo de un módulo simple (archivo llamado ```mimodulo.py```):
 	Code:
 	    # mimodulo.py
 	    def saludar():
@@ -30,7 +30,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para usar el código definido en un módulo, se debe importar dicho módulo en el script o en otro módulo. Esto se hace usando la palabra clave ##import##.
+	    Para usar el código definido en un módulo, se debe importar dicho módulo en el script o en otro módulo. Esto se hace usando la palabra clave ```import```.
 	    
 	    Ejemplo de importación y uso de un módulo:
 	Code:
@@ -42,7 +42,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    También se pueden importar partes específicas de un módulo usando ##from## ... ##import##.
+	    También se pueden importar partes específicas de un módulo usando ```from``` ... ```import```.
 	Code:
 	    from mimodulo import saludar, pi
 	    
@@ -56,16 +56,16 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Un paquete es una forma de estructurar la jerarquía de los módulos de Python usando directorios. Un paquete es un directorio que contiene un archivo especial llamado ##init.py##, el cual puede estar vacío o puede ejecutar algún código de inicialización para el paquete.
+	    Un paquete es una forma de estructurar la jerarquía de los módulos de Python usando directorios. Un paquete es un directorio que contiene un archivo especial llamado ```init.py```, el cual puede estar vacío o puede ejecutar algún código de inicialización para el paquete.
 	    
 	    Ejemplo de estructura de un paquete:
-	    ##startuml##
+	    ```startuml```
 	    package paquete {
 	    init.py
 	    modulo1.py
 	    modulo2.py
 	    }
-	    ##enduml##
+	    ```enduml```
 	    
 	    Para importar módulos desde un paquete, se puede usar la sintaxis de punto.
 	    
@@ -96,7 +96,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para evitar conflictos de nombres o simplemente por conveniencia, se pueden renombrar módulos durante la importación usando ##as##.
+	    Para evitar conflictos de nombres o simplemente por conveniencia, se pueden renombrar módulos durante la importación usando ```as```.
 	Code:
 	    import mimodulo as mm
 	    
@@ -110,7 +110,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Se pueden importar todos los nombres de un módulo usando el asterisco (####). Esto no es recomendado porque puede llevar a un código menos claro.
+	    Se pueden importar todos los nombres de un módulo usando el asterisco (``````). Esto no es recomendado porque puede llevar a un código menos claro.
 	Code:
 	    from mimodulo import
 	    
@@ -124,7 +124,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##dir()##: Devuelve una lista de nombres definidos en un módulo.
+	    *  ```dir()```: Devuelve una lista de nombres definidos en un módulo.
 	Code:
 	    import mimodulo
 	    print(dir(mimodulo))
@@ -132,7 +132,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##help()##: Muestra la documentación del módulo.
+	    *  ```help()```: Muestra la documentación del módulo.
 	Code:
 	    import mimodulo
 	    help(mimodulo)
@@ -144,18 +144,18 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para crear un paquete, simplemente se crea un directorio con un archivo ##init.py## dentro de él. Luego, se pueden añadir módulos adicionales a este directorio.
+	    Para crear un paquete, simplemente se crea un directorio con un archivo ```init.py``` dentro de él. Luego, se pueden añadir módulos adicionales a este directorio.
 	    
 	    Estructura de ejemplo:
-	    ##startuml##
+	    ```startuml```
 	    package mipaquete {
 	    init.py
 	    matematica.py
 	    saludos.py
 	    }
-	    ##enduml##
+	    ```enduml```
 	    
-	    Contenido de ##init.py##:
+	    Contenido de ```init.py```:
 	Code:
 	    # init.py
 	    from .matematica import suma
@@ -178,7 +178,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Python tiene un sistema de gestión de paquetes llamado ##pip##, que permite instalar paquetes externos desde el Python Package Index (PyPI).
+	    Python tiene un sistema de gestión de paquetes llamado ```pip```, que permite instalar paquetes externos desde el Python Package Index (PyPI).
 	    
 	    Para instalar un paquete:
 	Code:

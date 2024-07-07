@@ -9,7 +9,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para declarar una tabla en COBOL, se utiliza la cláusula ##OCCURS##. Esta cláusula define cuántas veces se repite un grupo de datos. Aquí hay un ejemplo básico de cómo declarar una tabla:
+	    Para declarar una tabla en COBOL, se utiliza la cláusula ```OCCURS```. Esta cláusula define cuántas veces se repite un grupo de datos. Aquí hay un ejemplo básico de cómo declarar una tabla:
 	    
 	Code:
 	    WORKING-STORAGE SECTION.
@@ -24,9 +24,9 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##WS-EmployeeTable## es la tabla principal.
-	    *  ##EmployeeRecord## se repite 10 veces, creando un array de registros de empleados.
-	    *  Cada ##EmployeeRecord## contiene los campos ##EmployeeID##, ##EmployeeName## y ##EmployeeSalary##.
+	    *  ```WS-EmployeeTable``` es la tabla principal.
+	    *  ```EmployeeRecord``` se repite 10 veces, creando un array de registros de empleados.
+	    *  Cada ```EmployeeRecord``` contiene los campos ```EmployeeID```, ```EmployeeName``` y ```EmployeeSalary```.
 	    
 	h2: Acceso a Elementos de la Tabla
 	
@@ -50,8 +50,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  El índice ##WS-Index## se inicializa en 1.
-	    *  Los valores se mueven al primer registro de ##EmployeeRecord## usando ##WS-Index##.
+	    *  El índice ```WS-Index``` se inicializa en 1.
+	    *  Los valores se mueven al primer registro de ```EmployeeRecord``` usando ```WS-Index```.
 	    *  Los valores del primer registro se muestran en la pantalla.
 	    
 	h2: Iteración sobre Tablas
@@ -72,14 +72,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  El bucle ##PERFORM VARYING## recorre todos los elementos de la tabla desde 1 hasta 10.
+	    *  El bucle ```PERFORM VARYING``` recorre todos los elementos de la tabla desde 1 hasta 10.
 	    *  Los valores de cada registro se muestran en la pantalla durante cada iteración.
 	    
 	h2: Tablas Multidimensionales
 	
 	Text:
 	    
-	    COBOL también permite declarar tablas multidimensionales utilizando múltiples cláusulas ##OCCURS##. Aquí hay un ejemplo de una tabla bidimensional:
+	    COBOL también permite declarar tablas multidimensionales utilizando múltiples cláusulas ```OCCURS```. Aquí hay un ejemplo de una tabla bidimensional:
 	    
 	Code:
 	    WORKING-STORAGE SECTION.
@@ -95,9 +95,9 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##WS-MultiTable## es una tabla bidimensional.
-	    *  ##Department## se repite 5 veces.
-	    *  Dentro de cada ##Department##, ##Employee## se repite 10 veces.
+	    *  ```WS-MultiTable``` es una tabla bidimensional.
+	    *  ```Department``` se repite 5 veces.
+	    *  Dentro de cada ```Department```, ```Employee``` se repite 10 veces.
 	    
 	    Para acceder a elementos en una tabla bidimensional, se utilizan dos índices:
 	    

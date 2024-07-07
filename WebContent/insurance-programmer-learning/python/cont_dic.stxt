@@ -13,7 +13,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Los diccionarios se crean usando llaves ##{}## y especificando los pares clave-valor separados por comas.
+	    Los diccionarios se crean usando llaves ```{}``` y especificando los pares clave-valor separados por comas.
 	    
 	    Ejemplo:
 	Code:
@@ -26,7 +26,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    También se pueden crear diccionarios usando la función ##dict()##.
+	    También se pueden crear diccionarios usando la función ```dict()```.
 	Code:
 	    mi_diccionario = dict(nombre="Juan", edad=30, ciudad="Madrid")
 	
@@ -47,7 +47,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para evitar errores si la clave no existe, se puede usar el método ##get()##.
+	    Para evitar errores si la clave no existe, se puede usar el método ```get()```.
 	Code:
 	    pais = mi_diccionario.get("pais", "Desconocido")
 	
@@ -76,21 +76,21 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **##del##**: Elimina un par clave-valor usando la clave.
+	    *  **```del```**: Elimina un par clave-valor usando la clave.
 	Code:
 	    del mi_diccionario["ciudad"]
 	
 	
 	Text:
 	    
-	    *  **##pop##**: Elimina y devuelve el valor asociado a una clave.
+	    *  **```pop```**: Elimina y devuelve el valor asociado a una clave.
 	Code:
 	    edad = mi_diccionario.pop("edad")
 	
 	
 	Text:
 	    
-	    *  **##clear##**: Elimina todos los pares clave-valor del diccionario.
+	    *  **```clear```**: Elimina todos los pares clave-valor del diccionario.
 	Code:
 	    mi_diccionario.clear()
 	
@@ -101,21 +101,21 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **##keys##**: Devuelve una vista de las claves del diccionario.
+	    *  **```keys```**: Devuelve una vista de las claves del diccionario.
 	Code:
 	    claves = mi_diccionario.keys()
 	
 	
 	Text:
 	    
-	    *  **##values##**: Devuelve una vista de los valores del diccionario.
+	    *  **```values```**: Devuelve una vista de los valores del diccionario.
 	Code:
 	    valores = mi_diccionario.values()
 	
 	
 	Text:
 	    
-	    *  **##items##**: Devuelve una vista de los pares clave-valor del diccionario.
+	    *  **```items```**: Devuelve una vista de los pares clave-valor del diccionario.
 	Code:
 	    pares = mi_diccionario.items()
 	
@@ -126,7 +126,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Se puede iterar sobre las claves, valores o pares clave-valor de un diccionario usando un bucle ##for##.
+	    Se puede iterar sobre las claves, valores o pares clave-valor de un diccionario usando un bucle ```for```.
 	    
 	    Ejemplo iterando sobre claves:
 	Code:
@@ -171,14 +171,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **##update##**: Actualiza el diccionario con pares clave-valor de otro diccionario o de un iterable de pares clave-valor.
+	    *  **```update```**: Actualiza el diccionario con pares clave-valor de otro diccionario o de un iterable de pares clave-valor.
 	Code:
 	    mi_diccionario.update({"nombre": "Pedro", "edad": 40})
 	
 	
 	Text:
 	    
-	    *  **##setdefault##**: Devuelve el valor de una clave. Si la clave no existe, inserta la clave con el valor proporcionado.
+	    *  **```setdefault```**: Devuelve el valor de una clave. Si la clave no existe, inserta la clave con el valor proporcionado.
 	Code:
 	    ciudad = mi_diccionario.setdefault("ciudad", "Barcelona")
 	

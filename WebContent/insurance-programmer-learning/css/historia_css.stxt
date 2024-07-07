@@ -18,6 +18,6 @@ Tema(www.cursos.com/tema.stxt):
 	    *  **CSS4 y el futuro**
 	    Aunque no hay una especificación oficial llamada CSS4, las tecnologías CSS continúan evolucionando. Nuevas características y módulos se añaden constantemente, mejorando la capacidad de diseño y la eficiencia de los desarrolladores web.
 	    
-	    ##startalert##
+	    ```startalert```
 	    CSS ha evolucionado significativamente desde su creación, adaptándose a las necesidades cambiantes del diseño web y mejorando continuamente para ofrecer mejores herramientas a los desarrolladores.
-	    ##endalert##
+	    ```endalert```

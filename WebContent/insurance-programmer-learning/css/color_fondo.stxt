@@ -11,7 +11,7 @@ Tema(www.cursos.com/tema.stxt):
 	    Las propiedades de color y fondo en CSS permiten definir los colores de texto, fondos y otros elementos gráficos en una página web. Estas propiedades son fundamentales para la creación de diseños visualmente atractivos y consistentes.
 	    
 	    *  **Propiedades de color**
-	    ##startalert##
+	    ```startalert```
 	    *  **color**: Define el color del texto de un elemento.
 	Code:
 	    p {
@@ -38,10 +38,10 @@ Tema(www.cursos.com/tema.stxt):
 	
 	
 	Text:
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Propiedades de fondo**
-	    ##startalert##
+	    ```startalert```
 	    *  **background-color**: Define el color de fondo de un elemento.
 	Code:
 	    div {
@@ -99,10 +99,10 @@ Tema(www.cursos.com/tema.stxt):
 	
 	
 	Text:
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Colores en CSS**
-	    ##startalert##
+	    ```startalert```
 	    *  **Colores nombrados**: CSS reconoce varios nombres de colores predefinidos.
 	Code:
 	    h1 {
@@ -140,7 +140,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	
 	Text:
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Ejemplos prácticos**
 	Code:

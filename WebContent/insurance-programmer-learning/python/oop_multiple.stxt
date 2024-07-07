@@ -48,14 +48,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ##Pato## hereda de ##Volador## y ##Nadador##, y por lo tanto puede usar los métodos ##volar## y ##nadar##.
+	    En este ejemplo, ```Pato``` hereda de ```Volador``` y ```Nadador```, y por lo tanto puede usar los métodos ```volar``` y ```nadar```.
 	    
 	h2:  Orden de Resolución de Métodos (MRO) 
 	
 	Text:
 	    Cuando una clase hereda de múltiples clases, puede haber conflictos en los métodos y atributos que se heredan. Python utiliza un algoritmo llamado C3 Linearization para determinar el orden en el que se deben buscar los métodos y atributos. Este orden se llama "Method Resolution Order" (MRO).
 	    
-	    Puedes ver el MRO de una clase usando el atributo ##__mro__## o la función ##mro()##.
+	    Puedes ver el MRO de una clase usando el atributo ```__mro__``` o la función ```mro()```.
 	    
 	Code:
 	    class A:
@@ -83,13 +83,13 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este caso, ##D## hereda de ##B## y ##C##. Cuando llamamos al método ##metodo## en una instancia de ##D##, Python sigue el MRO y encuentra ##metodo## primero en ##B## antes que en ##C##.
+	    En este caso, ```D``` hereda de ```B``` y ```C```. Cuando llamamos al método ```metodo``` en una instancia de ```D```, Python sigue el MRO y encuentra ```metodo``` primero en ```B``` antes que en ```C```.
 	    
 	h2:  Super() en Herencia Múltiple 
 	
 	Text:
 	    
-	    El uso de ##super()## en herencia múltiple puede ser un poco más complejo, pero sigue las reglas del MRO. Cuando usas ##super()## en un método, llama al siguiente método en el MRO.
+	    El uso de ```super()``` en herencia múltiple puede ser un poco más complejo, pero sigue las reglas del MRO. Cuando usas ```super()``` en un método, llama al siguiente método en el MRO.
 	    
 	Code:
 	    class A:
@@ -124,7 +124,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, cuando llamamos a ##d.metodo()##, se sigue el MRO: ##D##, ##B##, ##C##, ##A##.
+	    En este ejemplo, cuando llamamos a ```d.metodo()```, se sigue el MRO: ```D```, ```B```, ```C```, ```A```.
 	    
 	h2:  Resumen 
 	
@@ -132,6 +132,6 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    * **Herencia múltiple**: Permite que una clase herede de más de una clase base.
 	    * **MRO (Method Resolution Order)**: Determina el orden en el que se buscan métodos y atributos.
-	    * ##super()##: Llama al siguiente método en el MRO.
+	    * ```super()```: Llama al siguiente método en el MRO.
 	    
 	    La herencia múltiple puede ser muy poderosa, pero también puede hacer que el diseño de clases sea más complejo. Es importante usarla con cuidado y entender bien el MRO para evitar conflictos y comportamientos inesperados.

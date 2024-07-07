@@ -22,13 +22,13 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL INCLUDE SQLCA END-EXEC## incluye la estructura SQLCA (SQL Communication Area), que es utilizada para manejar errores y condiciones SQL.
+	    *  ```EXEC SQL INCLUDE SQLCA END-EXEC``` incluye la estructura SQLCA (SQL Communication Area), que es utilizada para manejar errores y condiciones SQL.
 	    
 	h2: Conexión a la base de datos
 	
 	Text:
 	    
-	    Para establecer una conexión con la base de datos, se utilizan las sentencias ##CONNECT## y ##DISCONNECT##.
+	    Para establecer una conexión con la base de datos, se utilizan las sentencias ```CONNECT``` y ```DISCONNECT```.
 	    
 	h3: Ejemplo de conexión a la base de datos
 	
@@ -57,14 +57,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD USING :DB-NAME END-EXEC## establece la conexión a la base de datos utilizando las credenciales proporcionadas.
-	    *  ##SQLCODE## se verifica para asegurar que la conexión fue exitosa.
+	    *  ```EXEC SQL CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD USING :DB-NAME END-EXEC``` establece la conexión a la base de datos utilizando las credenciales proporcionadas.
+	    *  ```SQLCODE``` se verifica para asegurar que la conexión fue exitosa.
 	    
 	h2: Consultas a la base de datos
 	
 	Text:
 	    
-	    Para realizar consultas en la base de datos, se utilizan las sentencias ##SELECT## embebidas.
+	    Para realizar consultas en la base de datos, se utilizan las sentencias ```SELECT``` embebidas.
 	    
 	h3: Ejemplo de consulta a la base de datos
 	
@@ -98,14 +98,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION FROM CLIENTES WHERE CLIENTE_ID = 12345 END-EXEC## ejecuta una consulta SQL que selecciona los datos del cliente con ##CLIENTE_ID## igual a 12345.
-	    *  Los resultados se almacenan en las variables definidas en la sección ##WORKING-STORAGE##.
+	    *  ```EXEC SQL SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION FROM CLIENTES WHERE CLIENTE_ID = 12345 END-EXEC``` ejecuta una consulta SQL que selecciona los datos del cliente con ```CLIENTE_ID``` igual a 12345.
+	    *  Los resultados se almacenan en las variables definidas en la sección ```WORKING-STORAGE```.
 	    
 	h2: Inserción de datos en la base de datos
 	
 	Text:
 	    
-	    Para insertar nuevos registros en la base de datos, se utiliza la sentencia ##INSERT##.
+	    Para insertar nuevos registros en la base de datos, se utiliza la sentencia ```INSERT```.
 	    
 	h3: Ejemplo de inserción de datos
 	
@@ -130,14 +130,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC## inserta un nuevo registro en la tabla CLIENTES.
-	    *  ##SQLCODE## se verifica para asegurar que la inserción fue exitosa.
+	    *  ```EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC``` inserta un nuevo registro en la tabla CLIENTES.
+	    *  ```SQLCODE``` se verifica para asegurar que la inserción fue exitosa.
 	    
 	h2: Actualización de datos en la base de datos
 	
 	Text:
 	    
-	    Para actualizar registros existentes, se utiliza la sentencia ##UPDATE##.
+	    Para actualizar registros existentes, se utiliza la sentencia ```UPDATE```.
 	    
 	h3: Ejemplo de actualización de datos
 	
@@ -163,14 +163,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL UPDATE CLIENTES SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC## actualiza la dirección del cliente con el ID especificado.
-	    *  ##SQLCODE## se verifica para asegurar que la actualización fue exitosa.
+	    *  ```EXEC SQL UPDATE CLIENTES SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC``` actualiza la dirección del cliente con el ID especificado.
+	    *  ```SQLCODE``` se verifica para asegurar que la actualización fue exitosa.
 	    
 	h2: Eliminación de datos en la base de datos
 	
 	Text:
 	    
-	    Para eliminar registros, se utiliza la sentencia ##DELETE##.
+	    Para eliminar registros, se utiliza la sentencia ```DELETE```.
 	    
 	h3: Ejemplo de eliminación de datos
 	
@@ -195,14 +195,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL DELETE FROM CLIENTES WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC## elimina el registro del cliente con el ID especificado.
-	    *  ##SQLCODE## se verifica para asegurar que la eliminación fue exitosa.
+	    *  ```EXEC SQL DELETE FROM CLIENTES WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC``` elimina el registro del cliente con el ID especificado.
+	    *  ```SQLCODE``` se verifica para asegurar que la eliminación fue exitosa.
 	    
 	h2: Manejo de errores y excepciones
 	
 	Text:
 	    
-	    El manejo de errores en operaciones con bases de datos se realiza mediante la verificación del ##SQLCODE## y el uso de la estructura ##SQLCA##.
+	    El manejo de errores en operaciones con bases de datos se realiza mediante la verificación del ```SQLCODE``` y el uso de la estructura ```SQLCA```.
 	    
 	h3: Ejemplo de manejo de errores
 	
@@ -229,13 +229,13 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##SQLCODE## y ##SQLERRMC## se utilizan para verificar y mostrar mensajes de error en operaciones de base de datos.
+	    *  ```SQLCODE``` y ```SQLERRMC``` se utilizan para verificar y mostrar mensajes de error en operaciones de base de datos.
 	    
 	h2: Desconexión de la base de datos
 	
 	Text:
 	    
-	    Para desconectar de la base de datos, se utiliza la sentencia ##DISCONNECT##.
+	    Para desconectar de la base de datos, se utiliza la sentencia ```DISCONNECT```.
 	    
 	h3: Ejemplo de desconexión de la base de datos
 	
@@ -261,8 +261,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL DISCONNECT END-EXEC## desconecta la sesión de la base de datos.
-	    *  ##SQLCODE## se verifica para asegurar que la desconexión fue exitosa.
+	    *  ```EXEC SQL DISCONNECT END-EXEC``` desconecta la sesión de la base de datos.
+	    *  ```SQLCODE``` se verifica para asegurar que la desconexión fue exitosa.
 	    
 	h2: Conclusión
 	

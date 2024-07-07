@@ -7,7 +7,7 @@ Tema(www.cursos.com/tema.stxt):
 	    Los selectores en CSS permiten a los desarrolladores apuntar a elementos específicos dentro de un documento HTML para aplicarles estilos. Existen varios tipos de selectores, cada uno con sus propias características y usos.
 	    
 	    *  **Selectores básicos**
-	    ##startalert##
+	    ```startalert```
 	    *  **Selector de tipo**: Selecciona todos los elementos de un tipo específico.
 	Code:
 	    p {
@@ -54,10 +54,10 @@ Tema(www.cursos.com/tema.stxt):
 	
 	
 	Text:
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Selectores de combinadores**
-	    ##startalert##
+	    ```startalert```
 	    *  **Selector descendiente**: Selecciona elementos que son descendientes de otro elemento.
 	Code:
 	    div p {
@@ -93,10 +93,10 @@ Tema(www.cursos.com/tema.stxt):
 	
 	
 	Text:
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Selectores de pseudoclases**
-	    ##startalert##
+	    ```startalert```
 	    *  **:hover**: Selecciona elementos cuando el usuario pasa el cursor sobre ellos.
 	Code:
 	    a:hover {
@@ -132,10 +132,10 @@ Tema(www.cursos.com/tema.stxt):
 	
 	
 	Text:
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Selectores de pseudoelementos**
-	    ##startalert##
+	    ```startalert```
 	    *  **::before**: Inserta contenido antes del contenido de un elemento.
 	Code:
 	    p::before {
@@ -174,7 +174,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	
 	Text:
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Conclusión**
 	    Conocer los distintos tipos de selectores en CSS es crucial para aplicar estilos de manera eficiente y precisa. Cada tipo de selector tiene su propósito y uso específicos, permitiendo una gran flexibilidad en el diseño y desarrollo de sitios web.

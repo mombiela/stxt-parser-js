@@ -19,7 +19,7 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **Flex Container**:
-	    *  El elemento contenedor que utiliza Flexbox. Se define con la propiedad ##display: flex;## o ##display: inline-flex;##.
+	    *  El elemento contenedor que utiliza Flexbox. Se define con la propiedad ```display: flex;``` o ```display: inline-flex;```.
 	    
 	    *  **Flex Items**:
 	    *  Los elementos hijos directos del contenedor flexible, que se disponen y alinean utilizando Flexbox.
@@ -30,27 +30,27 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    *  **display**:
 	    *  Define el elemento como un contenedor flexible.
-	    *  Ejemplos: ##display: flex;##, ##display: inline-flex;##
+	    *  Ejemplos: ```display: flex;```, ```display: inline-flex;```
 	    
 	    *  **flex-direction**:
 	    *  Define la dirección principal en la que se colocan los elementos flexibles.
-	    *  Valores: ##row##, ##row-reverse##, ##column##, ##column-reverse##
+	    *  Valores: ```row```, ```row-reverse```, ```column```, ```column-reverse```
 	    
 	    *  **flex-wrap**:
 	    *  Controla si los elementos flexibles se envuelven o no dentro del contenedor.
-	    *  Valores: ##nowrap##, ##wrap##, ##wrap-reverse##
+	    *  Valores: ```nowrap```, ```wrap```, ```wrap-reverse```
 	    
 	    *  **justify-content**:
 	    *  Define cómo se distribuye el espacio entre los elementos a lo largo de la dirección principal.
-	    *  Valores: ##flex-start##, ##flex-end##, ##center##, ##space-between##, ##space-around##, ##space-evenly##
+	    *  Valores: ```flex-start```, ```flex-end```, ```center```, ```space-between```, ```space-around```, ```space-evenly```
 	    
 	    *  **align-items**:
 	    *  Define cómo se alinean los elementos a lo largo del eje transversal (perpendicular al eje principal).
-	    *  Valores: ##flex-start##, ##flex-end##, ##center##, ##baseline##, ##stretch##
+	    *  Valores: ```flex-start```, ```flex-end```, ```center```, ```baseline```, ```stretch```
 	    
 	    *  **align-content**:
 	    *  Define cómo se distribuye el espacio entre las líneas cuando hay múltiples líneas de elementos flexibles.
-	    *  Valores: ##flex-start##, ##flex-end##, ##center##, ##space-between##, ##space-around##, ##stretch##
+	    *  Valores: ```flex-start```, ```flex-end```, ```center```, ```space-between```, ```space-around```, ```stretch```
 	    
 	h2: Ejemplo básico de Flexbox
 	
@@ -78,14 +78,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    ##startuml##
+	    ```startuml```
 	    +--------------------------------------+
 	    | Contenedor (display: flex)            |
 	    | +--------+ +--------+ +--------+    |
 	    | | Item 1 | | Item 2 | | Item 3 |    |
 	    | +--------+ +--------+ +--------+    |
 	    +--------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    En este diagrama, se muestra cómo los elementos dentro del contenedor se distribuyen utilizando Flexbox.
 	    

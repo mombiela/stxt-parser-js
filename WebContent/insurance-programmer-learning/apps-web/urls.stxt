@@ -19,19 +19,19 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Veamos cada componente en detalle:
 	    
-	    * **Protocolo**: Especifica el método de acceso al recurso. Los protocolos más comunes son HTTP y HTTPS. Por ejemplo, ##http## y ##https##.
+	    * **Protocolo**: Especifica el método de acceso al recurso. Los protocolos más comunes son HTTP y HTTPS. Por ejemplo, ```http``` y ```https```.
 	    
-	    * **Usuario:Contraseña** (opcional): Proporciona credenciales de autenticación para acceder a ciertos recursos. Esta parte se utiliza raramente en la práctica debido a problemas de seguridad. Ejemplo: ##usuario:contraseña##.
+	    * **Usuario:Contraseña** (opcional): Proporciona credenciales de autenticación para acceder a ciertos recursos. Esta parte se utiliza raramente en la práctica debido a problemas de seguridad. Ejemplo: ```usuario:contraseña```.
 	    
-	    * **Host**: Indica el servidor en el que se encuentra el recurso. Puede ser una dirección IP (ej. ##192.168.1.1##) o un nombre de dominio (ej. ##www.ejemplo.com##).
+	    * **Host**: Indica el servidor en el que se encuentra el recurso. Puede ser una dirección IP (ej. ```192.168.1.1```) o un nombre de dominio (ej. ```www.ejemplo.com```).
 	    
-	    * **Puerto** (opcional): Especifica el puerto del servidor al que se accede. Si no se especifica, se usan los puertos predeterminados (80 para HTTP y 443 para HTTPS). Ejemplo: ##:8080##.
+	    * **Puerto** (opcional): Especifica el puerto del servidor al que se accede. Si no se especifica, se usan los puertos predeterminados (80 para HTTP y 443 para HTTPS). Ejemplo: ```:8080```.
 	    
-	    * **Ruta**: Define la ubicación específica del recurso en el servidor. Se presenta como una ruta de archivo. Ejemplo: ##/directorio/recurso.html##.
+	    * **Ruta**: Define la ubicación específica del recurso en el servidor. Se presenta como una ruta de archivo. Ejemplo: ```/directorio/recurso.html```.
 	    
-	    * **Consulta** (opcional): Contiene parámetros adicionales enviados al servidor. Se inicia con un signo de interrogación (##?##) y los parámetros están separados por el símbolo de ampersand (##&##). Ejemplo: ##?id=123&nombre=juan##.
+	    * **Consulta** (opcional): Contiene parámetros adicionales enviados al servidor. Se inicia con un signo de interrogación (```?```) y los parámetros están separados por el símbolo de ampersand (```&```). Ejemplo: ```?id=123&nombre=juan```.
 	    
-	    * **Fragmento** (opcional): Es una referencia interna dentro del recurso. Se inicia con una almohadilla (#####). Ejemplo: ###seccion2##.
+	    * **Fragmento** (opcional): Es una referencia interna dentro del recurso. Se inicia con una almohadilla (``````#). Ejemplo: ```#seccion2```.
 	    
 	h2: Ejemplo de una URL completa
 	
@@ -59,7 +59,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    # **Formularios**: En los formularios web, las URLs se utilizan para enviar datos al servidor. Los datos del formulario se agregan a la URL como parte de la consulta cuando se utiliza el método ##GET##.
+	    # **Formularios**: En los formularios web, las URLs se utilizan para enviar datos al servidor. Los datos del formulario se agregan a la URL como parte de la consulta cuando se utiliza el método ```GET```.
 	    
 	Code:
 	    <form action="https://www.ejemplo.com/buscar" method="get">

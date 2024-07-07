@@ -3,13 +3,13 @@ Tema(www.cursos.com/tema.stxt):
 	h1: Cómo declarar variables y constantes en COBOL
 	
 	Text: 
-	    Declarar variables y constantes en COBOL es una parte fundamental del desarrollo de programas. Estas declaraciones se realizan principalmente en la sección ##WORKING-STORAGE## de la División de Datos. A continuación se describen los pasos y la sintaxis para declarar variables y constantes.
+	    Declarar variables y constantes en COBOL es una parte fundamental del desarrollo de programas. Estas declaraciones se realizan principalmente en la sección ```WORKING-STORAGE``` de la División de Datos. A continuación se describen los pasos y la sintaxis para declarar variables y constantes.
 	    
 	h2: Declaración de Variables
 	
 	Text:
 	    
-	    Las variables se declaran utilizando la cláusula ##PIC## (Picture), que especifica el tipo y el formato de los datos. Aquí hay algunos ejemplos de cómo declarar diferentes tipos de variables:
+	    Las variables se declaran utilizando la cláusula ```PIC``` (Picture), que especifica el tipo y el formato de los datos. Aquí hay algunos ejemplos de cómo declarar diferentes tipos de variables:
 	    
 	Code:
 	    WORKING-STORAGE SECTION.
@@ -25,18 +25,18 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##WS-EmployeeName##: Una variable de texto de 30 caracteres.
-	    *  ##WS-EmployeeID##: Una variable numérica de 5 dígitos.
-	    *  ##WS-EmployeeSalary##: Una variable numérica con 7 dígitos enteros y 2 decimales.
-	    *  ##WS-EmployeeAge##: Una variable numérica de 3 dígitos con signo.
-	    *  ##WS-PackedNumber##: Una variable numérica empaquetada de 6 dígitos.
-	    *  ##WS-BinaryNumber##: Una variable numérica binaria de 4 dígitos.
+	    *  ```WS-EmployeeName```: Una variable de texto de 30 caracteres.
+	    *  ```WS-EmployeeID```: Una variable numérica de 5 dígitos.
+	    *  ```WS-EmployeeSalary```: Una variable numérica con 7 dígitos enteros y 2 decimales.
+	    *  ```WS-EmployeeAge```: Una variable numérica de 3 dígitos con signo.
+	    *  ```WS-PackedNumber```: Una variable numérica empaquetada de 6 dígitos.
+	    *  ```WS-BinaryNumber```: Una variable numérica binaria de 4 dígitos.
 	    
 	h2: Declaración de Constantes
 	
 	Text:
 	    
-	    Las constantes en COBOL se declaran utilizando la cláusula ##VALUE## para asignar un valor fijo a una variable en el momento de su declaración. Aquí hay algunos ejemplos de cómo declarar constantes:
+	    Las constantes en COBOL se declaran utilizando la cláusula ```VALUE``` para asignar un valor fijo a una variable en el momento de su declaración. Aquí hay algunos ejemplos de cómo declarar constantes:
 	    
 	Code:
 	    WORKING-STORAGE SECTION.
@@ -49,9 +49,9 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##WS-CompanyName##: Una constante de texto con el valor 'ACME Corp'.
-	    *  ##WS-TaxRate##: Una constante numérica con el valor 0.15.
-	    *  ##WS-MaxEmployees##: Una constante numérica con el valor 100.
+	    *  ```WS-CompanyName```: Una constante de texto con el valor 'ACME Corp'.
+	    *  ```WS-TaxRate```: Una constante numérica con el valor 0.15.
+	    *  ```WS-MaxEmployees```: Una constante numérica con el valor 100.
 	    
 	h2: Subniveles en Declaraciones
 	
@@ -69,6 +69,6 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ##WS-EmployeeRecord## es una estructura que contiene tres campos: ##EmployeeID##, ##EmployeeName##, y ##EmployeeSalary##.
+	    En este ejemplo, ```WS-EmployeeRecord``` es una estructura que contiene tres campos: ```EmployeeID```, ```EmployeeName```, y ```EmployeeSalary```.
 	    
 	    La declaración adecuada de variables y constantes en COBOL es crucial para gestionar datos de manera eficiente y asegurar la claridad y mantenibilidad del código.

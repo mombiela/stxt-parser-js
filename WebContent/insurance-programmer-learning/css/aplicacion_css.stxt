@@ -11,7 +11,7 @@ Tema(www.cursos.com/tema.stxt):
 	    CSS se puede aplicar a documentos HTML de varias formas, permitiendo flexibilidad en cómo se gestionan y organizan los estilos. Las tres formas principales de aplicar CSS son: en línea, en el encabezado del documento y a través de hojas de estilo externas.
 	    
 	    *  **CSS en línea**
-	    El CSS en línea se aplica directamente a los elementos HTML usando el atributo ##style##. Esta forma es útil para aplicar estilos únicos a elementos específicos, pero no es ideal para estilos repetitivos.
+	    El CSS en línea se aplica directamente a los elementos HTML usando el atributo ```style```. Esta forma es útil para aplicar estilos únicos a elementos específicos, pero no es ideal para estilos repetitivos.
 	Code:
 	    <p style="color: red; font-size: 16px;">Este es un párrafo estilizado en línea.</p>
 	
@@ -19,7 +19,7 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **CSS en el encabezado del documento**
-	    El CSS se puede definir dentro del elemento ##<style>## en la sección ##<head>## del documento HTML. Este método permite centralizar los estilos en un solo lugar dentro del documento.
+	    El CSS se puede definir dentro del elemento ```<style>``` en la sección ```<head>``` del documento HTML. Este método permite centralizar los estilos en un solo lugar dentro del documento.
 	Code:
 	    <!DOCTYPE html>
 	    <html>
@@ -40,7 +40,7 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **CSS externo**
-	    El CSS externo se coloca en un archivo separado con extensión ##.css## y se enlaza al documento HTML mediante el elemento ##<link>## en la sección ##<head>##. Este es el método más eficiente y organizado, especialmente para sitios web con múltiples páginas.
+	    El CSS externo se coloca en un archivo separado con extensión ```.css``` y se enlaza al documento HTML mediante el elemento ```<link>``` en la sección ```<head>```. Este es el método más eficiente y organizado, especialmente para sitios web con múltiples páginas.
 	Code:
 	    <!-- Archivo HTML -->
 	    <!DOCTYPE html>

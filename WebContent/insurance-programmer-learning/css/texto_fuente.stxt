@@ -4,24 +4,24 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text: 
 	    *  **Propiedades de color del texto**
-	    *  ##color##: Establece el color del texto. Ejemplo: ##color: red;##
-	    *  ##text-decoration##: Define decoraciones adicionales como subrayado, línea a través, etc. Ejemplo: ##text-decoration: underline;##
-	    *  ##text-transform##: Controla la capitalización del texto. Ejemplo: ##text-transform: uppercase;##
+	    *  ```color```: Establece el color del texto. Ejemplo: ```color: red;```
+	    *  ```text-decoration```: Define decoraciones adicionales como subrayado, línea a través, etc. Ejemplo: ```text-decoration: underline;```
+	    *  ```text-transform```: Controla la capitalización del texto. Ejemplo: ```text-transform: uppercase;```
 	    
 	    *  **Propiedades de alineación del texto**
-	    *  ##text-align##: Alinea el texto dentro de su contenedor. Valores comunes: ##left##, ##right##, ##center##, ##justify##. Ejemplo: ##text-align: center;##
-	    *  ##text-indent##: Indenta la primera línea del texto en un contenedor. Ejemplo: ##text-indent: 20px;##
-	    *  ##line-height##: Ajusta la altura de las líneas de texto. Ejemplo: ##line-height: 1.5;##
+	    *  ```text-align```: Alinea el texto dentro de su contenedor. Valores comunes: ```left```, ```right```, ```center```, ```justify```. Ejemplo: ```text-align: center;```
+	    *  ```text-indent```: Indenta la primera línea del texto en un contenedor. Ejemplo: ```text-indent: 20px;```
+	    *  ```line-height```: Ajusta la altura de las líneas de texto. Ejemplo: ```line-height: 1.5;```
 	    
 	    *  **Propiedades de espacio y espaciado del texto**
-	    *  ##letter-spacing##: Ajusta el espacio entre caracteres. Ejemplo: ##letter-spacing: 2px;##
-	    *  ##word-spacing##: Ajusta el espacio entre palabras. Ejemplo: ##word-spacing: 4px;##
+	    *  ```letter-spacing```: Ajusta el espacio entre caracteres. Ejemplo: ```letter-spacing: 2px;```
+	    *  ```word-spacing```: Ajusta el espacio entre palabras. Ejemplo: ```word-spacing: 4px;```
 	    
 	    *  **Propiedades de fuentes**
-	    *  ##font-family##: Especifica la familia de fuentes para el texto. Ejemplo: ##font-family: Arial, sans-serif;##
-	    *  ##font-size##: Define el tamaño del texto. Ejemplo: ##font-size: 16px;##
-	    *  ##font-style##: Establece el estilo de la fuente, como //cursiva//. Ejemplo: ##font-style: italic;##
-	    *  ##font-weight##: Define el grosor del texto. Valores comunes: ##normal##, ##bold##, ##bolder##, ##lighter##. Ejemplo: ##font-weight: bold;##
+	    *  ```font-family```: Especifica la familia de fuentes para el texto. Ejemplo: ```font-family: Arial, sans-serif;```
+	    *  ```font-size```: Define el tamaño del texto. Ejemplo: ```font-size: 16px;```
+	    *  ```font-style```: Establece el estilo de la fuente, como //cursiva//. Ejemplo: ```font-style: italic;```
+	    *  ```font-weight```: Define el grosor del texto. Valores comunes: ```normal```, ```bold```, ```bolder```, ```lighter```. Ejemplo: ```font-weight: bold;```
 	    
 	h2: Ejemplo de uso de propiedades de texto y fuentes
 	
@@ -42,7 +42,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Este ejemplo define un párrafo (##p##) con texto azul, centrado, en mayúsculas, con espacio entre letras de 1px, utilizando la fuente "Times New Roman" con un tamaño de 18px, estilo //cursiva// y grosor **negrita**.
+	    Este ejemplo define un párrafo (```p```) con texto azul, centrado, en mayúsculas, con espacio entre letras de 1px, utilizando la fuente "Times New Roman" con un tamaño de 18px, estilo //cursiva// y grosor **negrita**.
 	    
 	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Text|Documentación sobre propiedades de texto en CSS]]
 	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/CSS_Fonts|Documentación sobre propiedades de fuentes en CSS]]

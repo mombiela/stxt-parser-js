@@ -6,13 +6,13 @@ Tema(www.cursos.com/tema.stxt):
 	    El posicionamiento absoluto permite colocar un elemento en una ubicación específica dentro de su contenedor. Un elemento con posicionamiento absoluto se retira del flujo normal del documento, lo que significa que no afecta la posición de otros elementos y no se ve afectado por ellos. Se posiciona en relación con su contenedor más cercano que tenga un posicionamiento distinto de estático.
 	    
 	    *  **Características del posicionamiento absoluto**:
-	    *  Utiliza la propiedad ##position: absolute;##.
-	    *  Se posiciona en relación con el contenedor más cercano que tenga un posicionamiento relativo, absoluto o fijo. Si no hay ningún contenedor de este tipo, se posiciona en relación con el contenedor inicial (generalmente el ##body##).
-	    *  Las propiedades ##top##, ##right##, ##bottom## y ##left## se utilizan para definir la posición del elemento.
+	    *  Utiliza la propiedad ```position: absolute;```.
+	    *  Se posiciona en relación con el contenedor más cercano que tenga un posicionamiento relativo, absoluto o fijo. Si no hay ningún contenedor de este tipo, se posiciona en relación con el contenedor inicial (generalmente el ```body```).
+	    *  Las propiedades ```top```, ```right```, ```bottom``` y ```left``` se utilizan para definir la posición del elemento.
 	    
 	    *  **Uso del posicionamiento absoluto**:
-	    *  Se especifica ##position: absolute;## en el CSS del elemento.
-	    *  Las propiedades ##top##, ##right##, ##bottom## y ##left## se utilizan para ajustar la posición del elemento respecto a su contenedor posicionado.
+	    *  Se especifica ```position: absolute;``` en el CSS del elemento.
+	    *  Las propiedades ```top```, ```right```, ```bottom``` y ```left``` se utilizan para ajustar la posición del elemento respecto a su contenedor posicionado.
 	    
 	h2: Ejemplo de código CSS con posicionamiento absoluto
 	
@@ -37,11 +37,11 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, un elemento con la clase ##element## tiene un posicionamiento absoluto. Se posiciona 50px desde la parte superior y 100px desde la parte izquierda de su contenedor más cercano con posicionamiento relativo (el div con la clase ##container##). El contenedor tiene un ancho de 400px y una altura de 200px.
+	    En este ejemplo, un elemento con la clase ```element``` tiene un posicionamiento absoluto. Se posiciona 50px desde la parte superior y 100px desde la parte izquierda de su contenedor más cercano con posicionamiento relativo (el div con la clase ```container```). El contenedor tiene un ancho de 400px y una altura de 200px.
 	    
 	    *  **Posicionamiento absoluto en acción**:
 	    
-	    ##startuml##
+	    ```startuml```
 	    container {
 	    posición: relative;
 	    {
@@ -52,7 +52,7 @@ Tema(www.cursos.com/tema.stxt):
 	    }
 	    }
 	    }
-	    ##enduml##
+	    ```enduml```
 	    
 	    En este diagrama, se muestra cómo un elemento con posicionamiento absoluto se coloca dentro de su contenedor posicionado.
 	    

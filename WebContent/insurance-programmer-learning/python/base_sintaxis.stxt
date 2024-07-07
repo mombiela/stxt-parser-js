@@ -4,7 +4,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	h2:  Python como un Lenguaje Indentado 
 	
-	Text: Python utiliza la indentación para definir la estructura del código. A diferencia de otros lenguajes que utilizan llaves ##{}## para delimitar bloques de código, Python utiliza la indentación (espacios o tabuladores) para agrupar sentencias. La correcta indentación es crucial porque determina el alcance y la estructura del código. Por ejemplo:
+	Text: Python utiliza la indentación para definir la estructura del código. A diferencia de otros lenguajes que utilizan llaves ```{}``` para delimitar bloques de código, Python utiliza la indentación (espacios o tabuladores) para agrupar sentencias. La correcta indentación es crucial porque determina el alcance y la estructura del código. Por ejemplo:
 	    
 	Code:
 	    if True:

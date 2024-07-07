@@ -13,7 +13,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Las listas se crean usando corchetes ##[]##.
+	    Las listas se crean usando corchetes ```[]```.
 	    
 	    Ejemplo:
 	Code:
@@ -70,21 +70,21 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **##append##**: Añade un elemento al final de la lista.
+	    *  **```append```**: Añade un elemento al final de la lista.
 	Code:
 	    mi_lista.append(5)
 	
 	
 	Text:
 	    
-	    *  **##insert##**: Inserta un elemento en una posición específica.
+	    *  **```insert```**: Inserta un elemento en una posición específica.
 	Code:
 	    mi_lista.insert(1, 15) # Inserta 15 en la posición 1
 	
 	
 	Text:
 	    
-	    *  **##extend##**: Añade múltiples elementos al final de la lista.
+	    *  **```extend```**: Añade múltiples elementos al final de la lista.
 	Code:
 	    mi_lista.extend([6, 7])
 	
@@ -95,21 +95,21 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **##remove##**: Elimina la primera ocurrencia de un valor.
+	    *  **```remove```**: Elimina la primera ocurrencia de un valor.
 	Code:
 	    mi_lista.remove(3)
 	
 	
 	Text:
 	    
-	    *  **##pop##**: Elimina y devuelve un elemento en una posición específica.
+	    *  **```pop```**: Elimina y devuelve un elemento en una posición específica.
 	Code:
 	    elemento = mi_lista.pop(1) # Elimina y devuelve el elemento en la posición 1
 	
 	
 	Text:
 	    
-	    *  **##clear##**: Elimina todos los elementos de la lista.
+	    *  **```clear```**: Elimina todos los elementos de la lista.
 	Code:
 	    mi_lista.clear()
 	
@@ -120,7 +120,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **Concatenación**: Se pueden concatenar listas usando el operador ##+##.
+	    *  **Concatenación**: Se pueden concatenar listas usando el operador ```+```.
 	Code:
 	    lista1 = [1, 2]
 	    lista2 = [3, 4]
@@ -129,14 +129,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **Repetición**: Se pueden repetir los elementos de una lista usando el operador ####.
+	    *  **Repetición**: Se pueden repetir los elementos de una lista usando el operador ``````.
 	Code:
 	    lista_repetida = lista1  3 # [1, 2, 1, 2, 1, 2]
 	
 	
 	Text:
 	    
-	    *  **Comprobación de Membresía**: Se puede verificar si un elemento está en una lista usando ##in##.
+	    *  **Comprobación de Membresía**: Se puede verificar si un elemento está en una lista usando ```in```.
 	Code:
 	    existe = 3 in mi_lista
 	
@@ -147,28 +147,28 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **##sort##**: Ordena los elementos de la lista.
+	    *  **```sort```**: Ordena los elementos de la lista.
 	Code:
 	    mi_lista.sort()
 	
 	
 	Text:
 	    
-	    *  **##reverse##**: Invierte el orden de los elementos de la lista.
+	    *  **```reverse```**: Invierte el orden de los elementos de la lista.
 	Code:
 	    mi_lista.reverse()
 	
 	
 	Text:
 	    
-	    *  **##index##**: Devuelve el índice de la primera ocurrencia de un valor.
+	    *  **```index```**: Devuelve el índice de la primera ocurrencia de un valor.
 	Code:
 	    indice = mi_lista.index(20)
 	
 	
 	Text:
 	    
-	    *  **##count##**: Devuelve el número de ocurrencias de un valor.
+	    *  **```count```**: Devuelve el número de ocurrencias de un valor.
 	Code:
 	    contador = mi_lista.count(20)
 	
@@ -194,7 +194,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Se puede iterar sobre los elementos de una lista usando un bucle ##for##.
+	    Se puede iterar sobre los elementos de una lista usando un bucle ```for```.
 	Code:
 	    for elemento in mi_lista:
 	    print(elemento)
@@ -206,9 +206,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para copiar una lista, se puede usar el método ##copy## o la notación de rebanado.
+	    Para copiar una lista, se puede usar el método ```copy``` o la notación de rebanado.
 	    
-	    Ejemplo con ##copy##:
+	    Ejemplo con ```copy```:
 	Code:
 	    lista_copiada = mi_lista.copy()
 	

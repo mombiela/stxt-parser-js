@@ -11,7 +11,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    A continuación se presentan los métodos HTTP más utilizados:
 	    
-	    * **GET**: El método ##GET## solicita un recurso específico del servidor. Es el método más común y se utiliza principalmente para recuperar datos. Las solicitudes ##GET## no deben tener efectos secundarios (es decir, deben ser seguras y no alterar el estado del servidor).
+	    * **GET**: El método ```GET``` solicita un recurso específico del servidor. Es el método más común y se utiliza principalmente para recuperar datos. Las solicitudes ```GET``` no deben tener efectos secundarios (es decir, deben ser seguras y no alterar el estado del servidor).
 	    
 	Code:
 	    GET /recurso HTTP/1.1
@@ -20,7 +20,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    * **POST**: El método ##POST## se utiliza para enviar datos al servidor, generalmente para crear o actualizar un recurso. A diferencia de ##GET##, las solicitudes ##POST## pueden tener efectos secundarios y no son idempotentes (pueden causar cambios en el servidor cada vez que se ejecutan).
+	    * **POST**: El método ```POST``` se utiliza para enviar datos al servidor, generalmente para crear o actualizar un recurso. A diferencia de ```GET```, las solicitudes ```POST``` pueden tener efectos secundarios y no son idempotentes (pueden causar cambios en el servidor cada vez que se ejecutan).
 	    
 	Code:
 	    POST /recurso HTTP/1.1
@@ -33,7 +33,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    * **PUT**: El método ##PUT## se utiliza para actualizar un recurso existente o crear uno nuevo si no existe. Las solicitudes ##PUT## son idempotentes, lo que significa que aplicar la misma solicitud varias veces no debería cambiar el resultado.
+	    * **PUT**: El método ```PUT``` se utiliza para actualizar un recurso existente o crear uno nuevo si no existe. Las solicitudes ```PUT``` son idempotentes, lo que significa que aplicar la misma solicitud varias veces no debería cambiar el resultado.
 	    
 	Code:
 	    PUT /recurso/123 HTTP/1.1
@@ -46,7 +46,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    * **DELETE**: El método ##DELETE## se utiliza para eliminar un recurso específico del servidor. Al igual que ##PUT##, las solicitudes ##DELETE## son idempotentes.
+	    * **DELETE**: El método ```DELETE``` se utiliza para eliminar un recurso específico del servidor. Al igual que ```PUT```, las solicitudes ```DELETE``` son idempotentes.
 	    
 	Code:
 	    DELETE /recurso/123 HTTP/1.1
@@ -55,7 +55,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    * **HEAD**: El método ##HEAD## es similar a ##GET##, pero solo solicita los encabezados de la respuesta, sin el cuerpo. Se utiliza principalmente para obtener metadatos sobre un recurso, como su tamaño o tipo, sin transferir el contenido completo.
+	    * **HEAD**: El método ```HEAD``` es similar a ```GET```, pero solo solicita los encabezados de la respuesta, sin el cuerpo. Se utiliza principalmente para obtener metadatos sobre un recurso, como su tamaño o tipo, sin transferir el contenido completo.
 	    
 	Code:
 	    HEAD /recurso HTTP/1.1
@@ -64,7 +64,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    * **OPTIONS**: El método ##OPTIONS## se utiliza para describir las opciones de comunicación disponibles para el recurso objetivo. Es útil para determinar las capacidades del servidor o las políticas de CORS (Cross-Origin Resource Sharing).
+	    * **OPTIONS**: El método ```OPTIONS``` se utiliza para describir las opciones de comunicación disponibles para el recurso objetivo. Es útil para determinar las capacidades del servidor o las políticas de CORS (Cross-Origin Resource Sharing).
 	    
 	Code:
 	    OPTIONS /recurso HTTP/1.1

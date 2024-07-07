@@ -6,12 +6,12 @@ Tema(www.cursos.com/tema.stxt):
 	    Estos operadores se utilizan para comparar dos valores.
 	    
 	    |= Operador    |= Descripción     |= Ejemplo
-	    | ##code:==## | Igual a           | ##code:a == b##
-	    | ##code:!=## | No igual a        | ##code:a != b##
-	    | ##code:>##  | Mayor que         | ##code:a > b##
-	    | ##code:<##  | Menor que         | ##code:a < b##
-	    | ##code:>=## | Mayor o igual que | ##code:a >= b##
-	    | ##code:<=## | Menor o igual que | ##code:a <= b##
+	    | ```code:==``` | Igual a           | ```code:a == b```
+	    | ```code:!=``` | No igual a        | ```code:a != b```
+	    | ```code:>```  | Mayor que         | ```code:a > b```
+	    | ```code:<```  | Menor que         | ```code:a < b```
+	    | ```code:>=``` | Mayor o igual que | ```code:a >= b```
+	    | ```code:<=``` | Menor o igual que | ```code:a <= b```
 	    
 	h2:  Ejemplo: 
 	

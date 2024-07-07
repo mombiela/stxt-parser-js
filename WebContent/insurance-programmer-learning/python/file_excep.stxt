@@ -7,7 +7,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El manejo de excepciones en Python permite controlar los errores que pueden ocurrir durante la ejecución de un programa. Usando las estructuras ##try##, ##except##, y ##finally##, se puede gestionar de manera adecuada estos errores, asegurando que el programa pueda manejar situaciones inesperadas sin detenerse abruptamente.
+	    El manejo de excepciones en Python permite controlar los errores que pueden ocurrir durante la ejecución de un programa. Usando las estructuras ```try```, ```except```, y ```finally```, se puede gestionar de manera adecuada estos errores, asegurando que el programa pueda manejar situaciones inesperadas sin detenerse abruptamente.
 	    
 	h2: Estructura Básica
 	
@@ -30,7 +30,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El bloque ##try## contiene el código que puede producir una excepción. Si no ocurre ninguna excepción, el bloque ##except## es ignorado y el programa continúa con la siguiente instrucción después del bloque ##try##.
+	    El bloque ```try``` contiene el código que puede producir una excepción. Si no ocurre ninguna excepción, el bloque ```except``` es ignorado y el programa continúa con la siguiente instrucción después del bloque ```try```.
 	    
 	    Ejemplo:
 	Code:
@@ -47,7 +47,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El bloque ##except## se ejecuta si ocurre una excepción en el bloque ##try##. Se puede especificar el tipo de excepción a capturar.
+	    El bloque ```except``` se ejecuta si ocurre una excepción en el bloque ```try```. Se puede especificar el tipo de excepción a capturar.
 	    
 	    Ejemplo:
 	Code:
@@ -69,7 +69,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Se puede capturar cualquier excepción usando un bloque ##except## sin especificar el tipo de excepción.
+	    Se puede capturar cualquier excepción usando un bloque ```except``` sin especificar el tipo de excepción.
 	Code:
 	    try:
 	    resultado = 10 / 0
@@ -83,7 +83,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El bloque ##else## se ejecuta si no ocurre ninguna excepción en el bloque ##try##.
+	    El bloque ```else``` se ejecuta si no ocurre ninguna excepción en el bloque ```try```.
 	Code:
 	    try:
 	    resultado = 10 / 2
@@ -99,7 +99,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El bloque ##finally## contiene el código que se ejecuta siempre, ocurra o no una excepción. Es útil para liberar recursos o realizar tareas de limpieza.
+	    El bloque ```finally``` contiene el código que se ejecuta siempre, ocurra o no una excepción. Es útil para liberar recursos o realizar tareas de limpieza.
 	    
 	    Ejemplo:
 	Code:
@@ -118,7 +118,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Se pueden lanzar excepciones manualmente usando la palabra clave ##raise##.
+	    Se pueden lanzar excepciones manualmente usando la palabra clave ```raise```.
 	Code:
 	    raise ValueError("Este es un error personalizado.")
 	
@@ -129,7 +129,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Se pueden definir excepciones personalizadas creando una nueva clase que herede de la clase base ##Exception##.
+	    Se pueden definir excepciones personalizadas creando una nueva clase que herede de la clase base ```Exception```.
 	Code:
 	    class MiExcepcion(Exception):
 	    def init(self, mensaje):

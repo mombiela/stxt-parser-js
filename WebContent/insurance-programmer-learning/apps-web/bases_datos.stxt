@@ -126,10 +126,10 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Ejemplo de consultas SQL comunes:
 	    
-	    #  Seleccionar datos: ##SELECT * FROM Usuarios##
-	    #  Insertar datos: ##INSERT INTO Usuarios (Nombre, Correo) VALUES ('Juan', 'juan@example.com')##
-	    #  Actualizar datos: ##UPDATE Usuarios SET Correo = 'nuevo_correo@example.com' WHERE Nombre = 'Juan'##
-	    #  Eliminar datos: ##DELETE FROM Usuarios WHERE Nombre = 'Juan'##
+	    #  Seleccionar datos: ```SELECT * FROM Usuarios```
+	    #  Insertar datos: ```INSERT INTO Usuarios (Nombre, Correo) VALUES ('Juan', 'juan@example.com')```
+	    #  Actualizar datos: ```UPDATE Usuarios SET Correo = 'nuevo_correo@example.com' WHERE Nombre = 'Juan'```
+	    #  Eliminar datos: ```DELETE FROM Usuarios WHERE Nombre = 'Juan'```
 	    
 	h2: Normalización
 	

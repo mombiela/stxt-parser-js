@@ -34,6 +34,6 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, la sección FILE define un archivo llamado ##EmployeeFile## con una estructura de registro que incluye el ID del empleado, el nombre y el salario. La sección WORKING-STORAGE declara variables temporales para contar empleados y sumar los salarios totales. La sección LINKAGE define parámetros que se pasan a este programa desde otros programas.
+	    En este ejemplo, la sección FILE define un archivo llamado ```EmployeeFile``` con una estructura de registro que incluye el ID del empleado, el nombre y el salario. La sección WORKING-STORAGE declara variables temporales para contar empleados y sumar los salarios totales. La sección LINKAGE define parámetros que se pasan a este programa desde otros programas.
 	    
 	    La División de Datos es crucial para establecer cómo se manejan los datos dentro del programa COBOL, asegurando que todos los elementos de datos estén claramente definidos y organizados. Esta estructura facilita el manejo de datos complejos y asegura que el programa pueda acceder y manipular la información de manera eficiente.

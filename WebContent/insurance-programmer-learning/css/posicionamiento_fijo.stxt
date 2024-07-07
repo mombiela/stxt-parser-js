@@ -6,14 +6,14 @@ Tema(www.cursos.com/tema.stxt):
 	    El posicionamiento fijo permite colocar un elemento en una ubicación específica dentro de la ventana del navegador, independientemente del desplazamiento de la página. Un elemento con posicionamiento fijo se retira del flujo normal del documento y se posiciona en relación con la ventana del navegador, manteniéndose fijo en esa posición incluso cuando se desplaza la página.
 	    
 	    *  **Características del posicionamiento fijo**:
-	    *  Utiliza la propiedad ##position: fixed;##.
+	    *  Utiliza la propiedad ```position: fixed;```.
 	    *  Se posiciona en relación con la ventana del navegador.
-	    *  Las propiedades ##top##, ##right##, ##bottom## y ##left## se utilizan para definir la posición del elemento.
+	    *  Las propiedades ```top```, ```right```, ```bottom``` y ```left``` se utilizan para definir la posición del elemento.
 	    *  El elemento permanece en su posición fija incluso cuando la página se desplaza.
 	    
 	    *  **Uso del posicionamiento fijo**:
-	    *  Se especifica ##position: fixed;## en el CSS del elemento.
-	    *  Las propiedades ##top##, ##right##, ##bottom## y ##left## se utilizan para ajustar la posición del elemento respecto a la ventana del navegador.
+	    *  Se especifica ```position: fixed;``` en el CSS del elemento.
+	    *  Las propiedades ```top```, ```right```, ```bottom``` y ```left``` se utilizan para ajustar la posición del elemento respecto a la ventana del navegador.
 	    
 	h2: Ejemplo de código CSS con posicionamiento fijo
 	
@@ -35,11 +35,11 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, un elemento con la clase ##header## tiene un posicionamiento fijo. Se posiciona en la parte superior de la ventana del navegador y tiene un ancho del 100%, una altura de 50px, un color de fondo azul oscuro y el texto centrado vertical y horizontalmente. Este encabezado permanecerá en la parte superior de la ventana del navegador incluso cuando se desplaza la página.
+	    En este ejemplo, un elemento con la clase ```header``` tiene un posicionamiento fijo. Se posiciona en la parte superior de la ventana del navegador y tiene un ancho del 100%, una altura de 50px, un color de fondo azul oscuro y el texto centrado vertical y horizontalmente. Este encabezado permanecerá en la parte superior de la ventana del navegador incluso cuando se desplaza la página.
 	    
 	    *  **Posicionamiento fijo en acción**:
 	    
-	    ##startuml##
+	    ```startuml```
 	    +-------------------------------+
 	    | Ventana del navegador         |
 	    | +-------------------------+  |
@@ -49,7 +49,7 @@ Tema(www.cursos.com/tema.stxt):
 	    | Contenido de la página      |
 	    |                              |
 	    +-------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    En este diagrama, se muestra cómo un elemento con posicionamiento fijo se mantiene en su lugar dentro de la ventana del navegador.
 	    

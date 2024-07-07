@@ -8,42 +8,42 @@ Tema(www.cursos.com/tema.stxt):
 	    *  **justify-content**:
 	    *  Define cómo se distribuyen los ítems a lo largo del eje principal del contenedor.
 	    *  Valores:
-	    *  ##flex-start##: Los ítems se alinean al inicio del contenedor (valor predeterminado).
-	    *  ##flex-end##: Los ítems se alinean al final del contenedor.
-	    *  ##center##: Los ítems se alinean al centro del contenedor.
-	    *  ##space-between##: El espacio entre los ítems se distribuye uniformemente.
-	    *  ##space-around##: El espacio alrededor de los ítems se distribuye uniformemente.
-	    *  ##space-evenly##: El espacio entre los ítems se distribuye uniformemente con igual espacio antes, entre y después de ellos.
+	    *  ```flex-start```: Los ítems se alinean al inicio del contenedor (valor predeterminado).
+	    *  ```flex-end```: Los ítems se alinean al final del contenedor.
+	    *  ```center```: Los ítems se alinean al centro del contenedor.
+	    *  ```space-between```: El espacio entre los ítems se distribuye uniformemente.
+	    *  ```space-around```: El espacio alrededor de los ítems se distribuye uniformemente.
+	    *  ```space-evenly```: El espacio entre los ítems se distribuye uniformemente con igual espacio antes, entre y después de ellos.
 	    
 	    *  **align-items**:
 	    *  Define cómo se alinean los ítems a lo largo del eje transversal del contenedor.
 	    *  Valores:
-	    *  ##flex-start##: Los ítems se alinean al inicio del eje transversal.
-	    *  ##flex-end##: Los ítems se alinean al final del eje transversal.
-	    *  ##center##: Los ítems se alinean al centro del eje transversal.
-	    *  ##baseline##: Los ítems se alinean según la línea base del texto.
-	    *  ##stretch##: Los ítems se estiran para llenar el contenedor (valor predeterminado).
+	    *  ```flex-start```: Los ítems se alinean al inicio del eje transversal.
+	    *  ```flex-end```: Los ítems se alinean al final del eje transversal.
+	    *  ```center```: Los ítems se alinean al centro del eje transversal.
+	    *  ```baseline```: Los ítems se alinean según la línea base del texto.
+	    *  ```stretch```: Los ítems se estiran para llenar el contenedor (valor predeterminado).
 	    
 	    *  **align-self**:
-	    *  Permite alinear individualmente un ítem flexible a lo largo del eje transversal, sobrescribiendo la alineación definida por ##align-items## del contenedor.
+	    *  Permite alinear individualmente un ítem flexible a lo largo del eje transversal, sobrescribiendo la alineación definida por ```align-items``` del contenedor.
 	    *  Valores:
-	    *  ##auto##: Usa el valor de ##align-items## del contenedor.
-	    *  ##flex-start##: Alinea el ítem al inicio del eje transversal.
-	    *  ##flex-end##: Alinea el ítem al final del eje transversal.
-	    *  ##center##: Alinea el ítem al centro del eje transversal.
-	    *  ##baseline##: Alinea el ítem según la línea base del texto.
-	    *  ##stretch##: Estira el ítem para llenar el contenedor (valor predeterminado).
+	    *  ```auto```: Usa el valor de ```align-items``` del contenedor.
+	    *  ```flex-start```: Alinea el ítem al inicio del eje transversal.
+	    *  ```flex-end```: Alinea el ítem al final del eje transversal.
+	    *  ```center```: Alinea el ítem al centro del eje transversal.
+	    *  ```baseline```: Alinea el ítem según la línea base del texto.
+	    *  ```stretch```: Estira el ítem para llenar el contenedor (valor predeterminado).
 	    
 	    *  **align-content**:
 	    *  Define cómo se distribuyen las líneas de ítems flexibles cuando hay espacio extra en el contenedor.
 	    *  Solo tiene efecto cuando hay múltiples líneas de ítems flexibles.
 	    *  Valores:
-	    *  ##flex-start##: Las líneas se alinean al inicio del contenedor.
-	    *  ##flex-end##: Las líneas se alinean al final del contenedor.
-	    *  ##center##: Las líneas se alinean al centro del contenedor.
-	    *  ##space-between##: El espacio entre las líneas se distribuye uniformemente.
-	    *  ##space-around##: El espacio alrededor de las líneas se distribuye uniformemente.
-	    *  ##stretch##: Las líneas se estiran para llenar el contenedor (valor predeterminado).
+	    *  ```flex-start```: Las líneas se alinean al inicio del contenedor.
+	    *  ```flex-end```: Las líneas se alinean al final del contenedor.
+	    *  ```center```: Las líneas se alinean al centro del contenedor.
+	    *  ```space-between```: El espacio entre las líneas se distribuye uniformemente.
+	    *  ```space-around```: El espacio alrededor de las líneas se distribuye uniformemente.
+	    *  ```stretch```: Las líneas se estiran para llenar el contenedor (valor predeterminado).
 	    
 	h2: Ejemplo de código CSS para alineación y distribución en Flexbox
 	
@@ -67,20 +67,20 @@ Tema(www.cursos.com/tema.stxt):
 	    En este ejemplo:
 	    
 	    *  El contenedor Flexbox:
-	    *  Se define como un contenedor flexible con ##display: flex;##.
-	    *  Los ítems se colocan en una fila con ##flex-direction: row;##.
-	    *  Los ítems se alinean al centro del eje principal con ##justify-content: center;##.
-	    *  Los ítems se estiran para llenar el contenedor en el eje transversal con ##align-items: stretch;##.
-	    *  Las líneas de ítems se distribuyen uniformemente con ##align-content: space-between;##.
+	    *  Se define como un contenedor flexible con ```display: flex;```.
+	    *  Los ítems se colocan en una fila con ```flex-direction: row;```.
+	    *  Los ítems se alinean al centro del eje principal con ```justify-content: center;```.
+	    *  Los ítems se estiran para llenar el contenedor en el eje transversal con ```align-items: stretch;```.
+	    *  Las líneas de ítems se distribuyen uniformemente con ```align-content: space-between;```.
 	    
 	    *  Un ítem individual:
-	    *  Se alinea al final del eje transversal con ##align-self: flex-end;##.
+	    *  Se alinea al final del eje transversal con ```align-self: flex-end;```.
 	    
 	h2: Diagrama de alineación y distribución en Flexbox
 	
 	Text:
 	    
-	    ##startuml##
+	    ```startuml```
 	    +------------------------------------------------+
 	    | Contenedor (display: flex)                      |
 	    |            justify-content: center              |
@@ -95,7 +95,7 @@ Tema(www.cursos.com/tema.stxt):
 	    | | Item 3         | | Item 4         |          |
 	    | +----------------+ +----------------+          |
 	    +------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    En este diagrama, se muestra cómo los ítems se alinean y se distribuyen dentro del contenedor Flexbox utilizando las propiedades mencionadas.
 	    

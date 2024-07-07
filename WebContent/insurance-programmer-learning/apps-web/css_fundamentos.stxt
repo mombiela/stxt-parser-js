@@ -11,11 +11,11 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Los selectores se utilizan para apuntar a los elementos HTML que queremos estilizar. Aquí están algunos de los selectores más comunes:
 	    
-	    *  Selector de tipo: Selecciona todos los elementos de un tipo específico. Ejemplo: ##p## selecciona todos los párrafos.
-	    *  Selector de clase: Selecciona todos los elementos con una clase específica. Se define con un punto seguido del nombre de la clase. Ejemplo: ##.miClase##.
-	    *  Selector de ID: Selecciona un único elemento con un ID específico. Se define con un símbolo de almohadilla seguido del ID. Ejemplo: ###miID##.
-	    *  Selector universal: Selecciona todos los elementos. Se define con un asterisco. Ejemplo: ##*##.
-	    *  Selectores de atributo: Selecciona elementos en función de un atributo o su valor. Ejemplo: ##a[href]## selecciona todos los enlaces con un atributo href.
+	    *  Selector de tipo: Selecciona todos los elementos de un tipo específico. Ejemplo: ```p``` selecciona todos los párrafos.
+	    *  Selector de clase: Selecciona todos los elementos con una clase específica. Se define con un punto seguido del nombre de la clase. Ejemplo: ```.miClase```.
+	    *  Selector de ID: Selecciona un único elemento con un ID específico. Se define con un símbolo de almohadilla seguido del ID. Ejemplo: ```#miID```.
+	    *  Selector universal: Selecciona todos los elementos. Se define con un asterisco. Ejemplo: ```*```.
+	    *  Selectores de atributo: Selecciona elementos en función de un atributo o su valor. Ejemplo: ```a[href]``` selecciona todos los enlaces con un atributo href.
 	    
 	    Ejemplo de selectores en CSS:
 	    
@@ -45,11 +45,11 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Las propiedades CSS se utilizan para definir estilos específicos para los elementos seleccionados. Algunas de las propiedades más comunes incluyen:
 	    
-	    *  Color y fondo: ##color##, ##background-color##
-	    *  Tipografía: ##font-family##, ##font-size##, ##font-weight##, ##text-align##
-	    *  Espaciado: ##margin##, ##padding##
-	    *  Bordes: ##border##, ##border-radius##
-	    *  Dimensiones: ##width##, ##height##
+	    *  Color y fondo: ```color```, ```background-color```
+	    *  Tipografía: ```font-family```, ```font-size```, ```font-weight```, ```text-align```
+	    *  Espaciado: ```margin```, ```padding```
+	    *  Bordes: ```border```, ```border-radius```
+	    *  Dimensiones: ```width```, ```height```
 	    
 	    Ejemplo de uso de propiedades CSS:
 	    
@@ -108,9 +108,9 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    CSS permite crear diseños de página complejos mediante diversas técnicas. Aquí hay algunas de las más utilizadas:
 	    
-	    *  Floats: Se utilizan para posicionar elementos a la izquierda o derecha. Ejemplo: ##float: left;##.
-	    *  Flexbox: Un modelo de diseño unidimensional que distribuye el espacio entre los elementos de un contenedor y permite alinear los elementos de manera predecible. Ejemplo: ##display: flex;##.
-	    *  Grid: Un modelo de diseño bidimensional que permite crear layouts más complejos. Ejemplo: ##display: grid;##.
+	    *  Floats: Se utilizan para posicionar elementos a la izquierda o derecha. Ejemplo: ```float: left;```.
+	    *  Flexbox: Un modelo de diseño unidimensional que distribuye el espacio entre los elementos de un contenedor y permite alinear los elementos de manera predecible. Ejemplo: ```display: flex;```.
+	    *  Grid: Un modelo de diseño bidimensional que permite crear layouts más complejos. Ejemplo: ```display: grid;```.
 	    
 	    Ejemplo de Flexbox:
 	    

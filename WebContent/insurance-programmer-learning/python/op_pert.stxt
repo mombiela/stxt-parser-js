@@ -6,8 +6,8 @@ Tema(www.cursos.com/tema.stxt):
 	    Estos operadores se utilizan para verificar si un valor o variable está presente en una secuencia (como una lista, tupla, diccionario, etc.).
 	    
 	    |= Operador    |= Descripción                 |= Ejemplo
-	    | ##code:in##     | Está presente en    | ##code:a in b##
-	    | ##code:not## in | No está presente en | ##code:a not in b##
+	    | ```code:in```     | Está presente en    | ```code:a in b```
+	    | ```code:not``` in | No está presente en | ```code:a not in b```
 	    
 	h2:  Ejemplo: 
 	

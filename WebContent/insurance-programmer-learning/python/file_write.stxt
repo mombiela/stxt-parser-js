@@ -13,13 +13,13 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para abrir un archivo en Python, se utiliza la función ##open()##. Esta función acepta dos parámetros principales: el nombre del archivo y el modo de apertura.
+	    Para abrir un archivo en Python, se utiliza la función ```open()```. Esta función acepta dos parámetros principales: el nombre del archivo y el modo de apertura.
 	    
 	    Modos comunes de apertura:
-	    *  ##'r'##: Lectura (modo predeterminado). El archivo debe existir.
-	    *  ##'w'##: Escritura. Crea un archivo nuevo o sobrescribe el existente.
-	    *  ##'a'##: Añadir. Abre el archivo para añadir datos al final sin sobrescribir.
-	    *  ##'b'##: Modo binario. Se usa junto con otros modos (por ejemplo, ##'rb'##, ##'wb'##).
+	    *  ```'r'```: Lectura (modo predeterminado). El archivo debe existir.
+	    *  ```'w'```: Escritura. Crea un archivo nuevo o sobrescribe el existente.
+	    *  ```'a'```: Añadir. Abre el archivo para añadir datos al final sin sobrescribir.
+	    *  ```'b'```: Modo binario. Se usa junto con otros modos (por ejemplo, ```'rb'```, ```'wb'```).
 	    
 	    Ejemplo:
 	Code:
@@ -34,21 +34,21 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Para leer datos de un archivo, se pueden usar varios métodos dependiendo de las necesidades:
 	    
-	    *  ##read()##: Lee todo el contenido del archivo como una cadena.
+	    *  ```read()```: Lee todo el contenido del archivo como una cadena.
 	Code:
 	    contenido = archivo.read()
 	
 	
 	Text:
 	    
-	    *  ##readline()##: Lee una sola línea del archivo.
+	    *  ```readline()```: Lee una sola línea del archivo.
 	Code:
 	    linea = archivo.readline()
 	
 	
 	Text:
 	    
-	    *  ##readlines()##: Lee todas las líneas del archivo y las devuelve como una lista.
+	    *  ```readlines()```: Lee todas las líneas del archivo y las devuelve como una lista.
 	Code:
 	    lineas = archivo.readlines()
 	
@@ -70,7 +70,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Para escribir datos en un archivo, se pueden usar varios métodos:
 	    
-	    *  ##write()##: Escribe una cadena en el archivo.
+	    *  ```write()```: Escribe una cadena en el archivo.
 	Code:
 	    with open("ejemplo.txt", "w") as archivo:
 	    archivo.write("Hola, mundo!")
@@ -78,7 +78,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  ##writelines()##: Escribe una lista de cadenas en el archivo.
+	    *  ```writelines()```: Escribe una lista de cadenas en el archivo.
 	Code:
 	    lineas = ["Primera línea\n", "Segunda línea\n"]
 	    with open("ejemplo.txt", "w") as archivo:
@@ -91,7 +91,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para añadir datos al final de un archivo sin sobrescribir el contenido existente, se utiliza el modo ##'a'##.
+	    Para añadir datos al final de un archivo sin sobrescribir el contenido existente, se utiliza el modo ```'a'```.
 	Code:
 	    with open("ejemplo.txt", "a") as archivo:
 	    archivo.write("Añadiendo nueva línea.")
@@ -103,7 +103,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para trabajar con archivos binarios, se utilizan los modos ##'rb'## y ##'wb'##.
+	    Para trabajar con archivos binarios, se utilizan los modos ```'rb'``` y ```'wb'```.
 	    
 	    Ejemplo de lectura binaria:
 	Code:
@@ -125,7 +125,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El uso de ##with## para abrir archivos es una práctica recomendada, ya que asegura que los archivos se cierren correctamente después de su uso, incluso si ocurre una excepción.
+	    El uso de ```with``` para abrir archivos es una práctica recomendada, ya que asegura que los archivos se cierren correctamente después de su uso, incluso si ocurre una excepción.
 	    
 	    Ejemplo:
 	Code:
@@ -140,7 +140,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  **Eficiencia y Seguridad**: El uso de ##with## asegura que los archivos se cierren adecuadamente, evitando pérdidas de datos y liberando recursos.
+	    *  **Eficiencia y Seguridad**: El uso de ```with``` asegura que los archivos se cierren adecuadamente, evitando pérdidas de datos y liberando recursos.
 	    *  **Flexibilidad**: Diferentes modos de apertura permiten una gran variedad de operaciones de lectura y escritura.
 	    *  **Compatibilidad con Textos y Binarios**: Python permite trabajar con archivos de texto y binarios de manera sencilla.
 	    

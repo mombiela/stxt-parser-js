@@ -31,7 +31,7 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **Tipos de selectores basados en atributos**
-	    ##startalert##
+	    ```startalert```
 	    *  **Atributo presente**: Selecciona elementos que tienen un atributo específico.
 	Code:
 	    a[target] {
@@ -76,14 +76,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	
 	Text:
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Ventajas de usar selectores basados en atributos**
-	    ##startalert##
+	    ```startalert```
 	    *  **Flexibilidad**: Permiten seleccionar elementos basados en una variedad de criterios de atributos.
 	    *  **Precisión**: Ofrecen un alto grado de precisión en la selección de elementos.
 	    *  **Compatibilidad**: Funcionan bien con otros selectores y se pueden combinar para una mayor especificidad.
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Ejemplos de uso común**
 	Code:

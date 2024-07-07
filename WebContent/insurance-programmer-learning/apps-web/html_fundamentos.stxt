@@ -17,8 +17,8 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    *  //Etiquetas//: Las etiquetas HTML están encerradas entre corchetes angulares, como ##<div>## y ##</div>##.
-	    *  //Atributos//: Las etiquetas pueden tener atributos que proporcionan información adicional sobre el elemento, como ##<a href="url">Enlace</a>##.
+	    *  //Etiquetas//: Las etiquetas HTML están encerradas entre corchetes angulares, como ```<div>``` y ```</div>```.
+	    *  //Atributos//: Las etiquetas pueden tener atributos que proporcionan información adicional sobre el elemento, como ```<a href="url">Enlace</a>```.
 	    *  //Contenido//: Es el texto o los elementos anidados dentro de una etiqueta HTML.
 	    
 	h2: Estructura básica de un documento HTML
@@ -43,23 +43,23 @@ Tema(www.cursos.com/tema.stxt):
 	
 	
 	Text:
-	    *  ##<!DOCTYPE html>##: Declara el tipo de documento y la versión de HTML que se está utilizando. HTML5 es la versión más reciente y comúnmente utilizada.
-	    *  ##<html>##: El elemento raíz que encierra todo el contenido de la página web.
-	    *  ##<head>##: Contiene metadatos sobre el documento, como el título, enlaces a hojas de estilo, y metaetiquetas.
-	    *  ##<title>##: Define el título del documento que se muestra en la barra de título del navegador o en la pestaña.
-	    *  ##<meta>##: Proporciona metadatos adicionales como el conjunto de caracteres y la configuración de la vista del dispositivo.
-	    *  ##<body>##: Contiene el contenido visible de la página web, como texto, imágenes, enlaces, y otros elementos multimedia.
+	    *  ```<!DOCTYPE html>```: Declara el tipo de documento y la versión de HTML que se está utilizando. HTML5 es la versión más reciente y comúnmente utilizada.
+	    *  ```<html>```: El elemento raíz que encierra todo el contenido de la página web.
+	    *  ```<head>```: Contiene metadatos sobre el documento, como el título, enlaces a hojas de estilo, y metaetiquetas.
+	    *  ```<title>```: Define el título del documento que se muestra en la barra de título del navegador o en la pestaña.
+	    *  ```<meta>```: Proporciona metadatos adicionales como el conjunto de caracteres y la configuración de la vista del dispositivo.
+	    *  ```<body>```: Contiene el contenido visible de la página web, como texto, imágenes, enlaces, y otros elementos multimedia.
 	    
 	h2: Elementos comunes en HTML
 	
 	Text:
 	    
-	    #  Encabezados: Los encabezados se utilizan para definir títulos y subtítulos en un documento. Los niveles van de ##<h1>## a ##<h6>##, siendo ##<h1>## el más importante.
-	    #  Párrafos: Los párrafos se definen con ##<p>## y se utilizan para contener bloques de texto.
-	    #  Listas: Las listas pueden ser ordenadas (##<ol>##) o desordenadas (##<ul>##), y los elementos de la lista se definen con ##<li>##.
-	    #  Enlaces: Los enlaces se crean con ##<a>## y permiten la navegación entre diferentes páginas o recursos.
-	    #  Imágenes: Las imágenes se insertan utilizando ##<img>## con atributos como ##src## (fuente de la imagen) y ##alt## (texto alternativo).
-	    #  Divisiones y spans: ##<div>## y ##<span>## se utilizan para agrupar y aplicar estilos a bloques de contenido y texto en línea, respectivamente.
+	    #  Encabezados: Los encabezados se utilizan para definir títulos y subtítulos en un documento. Los niveles van de ```<h1>``` a ```<h6>```, siendo ```<h1>``` el más importante.
+	    #  Párrafos: Los párrafos se definen con ```<p>``` y se utilizan para contener bloques de texto.
+	    #  Listas: Las listas pueden ser ordenadas (```<ol>```) o desordenadas (```<ul>```), y los elementos de la lista se definen con ```<li>```.
+	    #  Enlaces: Los enlaces se crean con ```<a>``` y permiten la navegación entre diferentes páginas o recursos.
+	    #  Imágenes: Las imágenes se insertan utilizando ```<img>``` con atributos como ```src``` (fuente de la imagen) y ```alt``` (texto alternativo).
+	    #  Divisiones y spans: ```<div>``` y ```<span>``` se utilizan para agrupar y aplicar estilos a bloques de contenido y texto en línea, respectivamente.
 	    
 	    Ejemplo de elementos comunes:
 	    

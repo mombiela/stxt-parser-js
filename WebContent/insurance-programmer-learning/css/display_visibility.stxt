@@ -5,24 +5,24 @@ Tema(www.cursos.com/tema.stxt):
 	Text: 
 	    *  **Propiedad display**:
 	    
-	    La propiedad ##display## controla cómo se muestra un elemento en la página. Puede cambiar el comportamiento del elemento desde ser un contenedor de nivel de bloque hasta un elemento de línea, o incluso ocultarlo.
+	    La propiedad ```display``` controla cómo se muestra un elemento en la página. Puede cambiar el comportamiento del elemento desde ser un contenedor de nivel de bloque hasta un elemento de línea, o incluso ocultarlo.
 	    
 	    *  **Valores comunes de display**:
-	    *  ##block##: Hace que el elemento sea un contenedor de bloque, ocupando todo el ancho disponible. Ejemplo: ##display: block;##
-	    *  ##inline##: Hace que el elemento sea un contenedor en línea, ocupando solo el espacio necesario. Ejemplo: ##display: inline;##
-	    *  ##inline-block##: Hace que el elemento sea un contenedor en línea, pero permite establecer dimensiones. Ejemplo: ##display: inline-block;##
-	    *  ##none##: Oculta el elemento y lo elimina del flujo del documento. Ejemplo: ##display: none;##
-	    *  ##flex##: Hace que el elemento sea un contenedor flexible (flex container). Ejemplo: ##display: flex;##
-	    *  ##grid##: Hace que el elemento sea un contenedor de cuadrícula (grid container). Ejemplo: ##display: grid;##
+	    *  ```block```: Hace que el elemento sea un contenedor de bloque, ocupando todo el ancho disponible. Ejemplo: ```display: block;```
+	    *  ```inline```: Hace que el elemento sea un contenedor en línea, ocupando solo el espacio necesario. Ejemplo: ```display: inline;```
+	    *  ```inline-block```: Hace que el elemento sea un contenedor en línea, pero permite establecer dimensiones. Ejemplo: ```display: inline-block;```
+	    *  ```none```: Oculta el elemento y lo elimina del flujo del documento. Ejemplo: ```display: none;```
+	    *  ```flex```: Hace que el elemento sea un contenedor flexible (flex container). Ejemplo: ```display: flex;```
+	    *  ```grid```: Hace que el elemento sea un contenedor de cuadrícula (grid container). Ejemplo: ```display: grid;```
 	    
 	    *  **Propiedad visibility**:
 	    
-	    La propiedad ##visibility## controla la visibilidad de un elemento sin quitarlo del flujo del documento. A diferencia de ##display: none##, los elementos ocultos con ##visibility## siguen ocupando espacio en el diseño.
+	    La propiedad ```visibility``` controla la visibilidad de un elemento sin quitarlo del flujo del documento. A diferencia de ```display: none```, los elementos ocultos con ```visibility``` siguen ocupando espacio en el diseño.
 	    
 	    *  **Valores comunes de visibility**:
-	    *  ##visible##: Hace que el elemento sea visible. Este es el valor predeterminado. Ejemplo: ##visibility: visible;##
-	    *  ##hidden##: Oculta el elemento pero deja el espacio que ocupa en el diseño. Ejemplo: ##visibility: hidden;##
-	    *  ##collapse##: Solo aplicable a elementos de fila de tabla. Oculta el elemento y quita su espacio en el diseño. Ejemplo: ##visibility: collapse;##
+	    *  ```visible```: Hace que el elemento sea visible. Este es el valor predeterminado. Ejemplo: ```visibility: visible;```
+	    *  ```hidden```: Oculta el elemento pero deja el espacio que ocupa en el diseño. Ejemplo: ```visibility: hidden;```
+	    *  ```collapse```: Solo aplicable a elementos de fila de tabla. Oculta el elemento y quita su espacio en el diseño. Ejemplo: ```visibility: collapse;```
 	    
 	h2: Ejemplo de uso de propiedades display y visibility
 	
@@ -49,14 +49,14 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    En este ejemplo:
-	    *  Un elemento con la clase ##block-element## se muestra como un contenedor de bloque que ocupa todo el ancho disponible.
-	    *  Un elemento con la clase ##inline-element## se muestra como un contenedor en línea con texto de color azul.
-	    *  Un elemento con la clase ##hidden-element## se oculta, pero sigue ocupando espacio en el diseño.
-	    *  Un elemento con la clase ##none-element## se oculta y se elimina del flujo del documento.
+	    *  Un elemento con la clase ```block-element``` se muestra como un contenedor de bloque que ocupa todo el ancho disponible.
+	    *  Un elemento con la clase ```inline-element``` se muestra como un contenedor en línea con texto de color azul.
+	    *  Un elemento con la clase ```hidden-element``` se oculta, pero sigue ocupando espacio en el diseño.
+	    *  Un elemento con la clase ```none-element``` se oculta y se elimina del flujo del documento.
 	    
 	    *  **Propiedades display y visibility en acción**:
 	    
-	    ##startuml##
+	    ```startuml```
 	    +--------------------------+
 	    | display: block                  |
 	    | +----------------------+ |
@@ -75,9 +75,9 @@ Tema(www.cursos.com/tema.stxt):
 	    | |  ocupa espacio)           |
 	    | +----------------------+ |
 	    +--------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
-	    En este diagrama, se muestra cómo diferentes valores de ##display## y ##visibility## afectan la visibilidad y el espacio ocupado por los elementos.
+	    En este diagrama, se muestra cómo diferentes valores de ```display``` y ```visibility``` afectan la visibilidad y el espacio ocupado por los elementos.
 	    
 	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/display|Documentación sobre la propiedad display en CSS]]
 	    *  [[https://developer.mozilla.org/es/docs/Web/CSS/visibility|Documentación sobre la propiedad visibility en CSS]]

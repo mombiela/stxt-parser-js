@@ -15,7 +15,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    ##startuml##
+	    ```startuml```
 	    :Contenido:
 	    |
 	    |-----------------|
@@ -24,7 +24,7 @@ Tema(www.cursos.com/tema.stxt):
 	    |                Borde |
 	    |-----------------|
 	    |                          Margen |
-	    ##enduml##
+	    ```enduml```
 	    
 	    *  **Contenido**: El área donde se muestra el contenido del elemento, como texto, imágenes, etc.
 	    *  **Relleno**: El espacio entre el contenido del elemento y su borde. El relleno aumenta el tamaño total de la caja.
@@ -36,16 +36,16 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **Contenido**:
-	    *  Tamaño controlado por ##width## y ##height##.
+	    *  Tamaño controlado por ```width``` y ```height```.
 	    
 	    *  **Relleno**:
-	    *  Controlado por ##padding##.
+	    *  Controlado por ```padding```.
 	    
 	    *  **Borde**:
-	    *  Controlado por ##border##.
+	    *  Controlado por ```border```.
 	    
 	    *  **Margen**:
-	    *  Controlado por ##margin##.
+	    *  Controlado por ```margin```.
 	    
 	h2: Ejemplo de CSS del modelo de caja
 	

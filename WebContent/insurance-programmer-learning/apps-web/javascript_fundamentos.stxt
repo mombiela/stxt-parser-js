@@ -9,11 +9,11 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En JavaScript, puedes declarar variables usando ##var##, ##let##, o ##const##.
+	    En JavaScript, puedes declarar variables usando ```var```, ```let```, o ```const```.
 	    
-	    ##var## se utilizaba tradicionalmente, pero ahora es menos común debido a su alcance de función.
-	    ##let## se usa para declarar variables que pueden cambiar de valor y tiene alcance de bloque.
-	    ##const## se usa para declarar variables que no deben cambiar de valor y también tiene alcance de bloque.
+	    ```var``` se utilizaba tradicionalmente, pero ahora es menos común debido a su alcance de función.
+	    ```let``` se usa para declarar variables que pueden cambiar de valor y tiene alcance de bloque.
+	    ```const``` se usa para declarar variables que no deben cambiar de valor y también tiene alcance de bloque.
 	Code:
 	    let nombre = 'Juan';
 	    const edad = 30;
@@ -28,11 +28,11 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    JavaScript tiene varios tipos de datos, incluyendo:
 	    
-	    *  Números: ##let num = 25;##
-	    *  Cadenas de texto: ##let saludo = 'Hola';##
-	    *  Booleanos: ##let esVerdad = true;##
-	    *  Objetos: ##let persona = { nombre: 'Juan', edad: 30 };##
-	    *  Arrays: ##let colores = ['rojo', 'verde', 'azul'];##
+	    *  Números: ```let num = 25;```
+	    *  Cadenas de texto: ```let saludo = 'Hola';```
+	    *  Booleanos: ```let esVerdad = true;```
+	    *  Objetos: ```let persona = { nombre: 'Juan', edad: 30 };```
+	    *  Arrays: ```let colores = ['rojo', 'verde', 'azul'];```
 	    
 	h2: Operadores
 	
@@ -40,10 +40,10 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    JavaScript utiliza varios operadores, tales como:
 	    
-	    *  Operadores aritméticos: ##+##, ##-##, ##*##, ##/##, ##%##
-	    *  Operadores de asignación: ##=##, ##+=##, ##-=##
-	    *  Operadores de comparación: ##==##, ##!=##, ##===##, ##!==##
-	    *  Operadores lógicos: ##&&##, ##||##, ##!##
+	    *  Operadores aritméticos: ```+```, ```-```, ```*```, ```/```, ```%```
+	    *  Operadores de asignación: ```=```, ```+=```, ```-=```
+	    *  Operadores de comparación: ```==```, ```!=```, ```===```, ```!==```
+	    *  Operadores lógicos: ```&&```, ```||```, ```!```
 	    
 	h2: Estructuras de Control
 	
@@ -51,8 +51,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    JavaScript incluye estructuras de control como:
 	    
-	    *  Condicionales: ##if##, ##else if##, ##else##
-	    *  Bucles: ##for##, ##while##, ##do while##
+	    *  Condicionales: ```if```, ```else if```, ```else```
+	    *  Bucles: ```for```, ```while```, ```do while```
 	    *  Switch: para múltiples condiciones
 	    
 	Code:
@@ -101,10 +101,10 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    JavaScript se utiliza para interactuar y manipular el Document Object Model (DOM) de una página web. Algunos métodos comunes incluyen:
 	    
-	    *  ##document.getElementById(id)##: Selecciona un elemento por su ID.
-	    *  ##document.querySelector(selector)##: Selecciona el primer elemento que coincide con el selector.
-	    *  ##document.createElement(tag)##: Crea un nuevo elemento HTML.
-	    *  ##element.appendChild(child)##: Añade un nuevo elemento como hijo.
+	    *  ```document.getElementById(id)```: Selecciona un elemento por su ID.
+	    *  ```document.querySelector(selector)```: Selecciona el primer elemento que coincide con el selector.
+	    *  ```document.createElement(tag)```: Crea un nuevo elemento HTML.
+	    *  ```element.appendChild(child)```: Añade un nuevo elemento como hijo.
 	    
 	Code:
 	    const miElemento = document.getElementById('mi-id');
@@ -122,7 +122,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Los eventos permiten que JavaScript responda a interacciones del usuario, como clics, movimientos del ratón o envío de formularios.
 	    
-	    *  ##element.addEventListener(event, function)##: Asocia una función a un evento específico.
+	    *  ```element.addEventListener(event, function)```: Asocia una función a un evento específico.
 	    
 	Code:
 	    const boton = document.querySelector('button');

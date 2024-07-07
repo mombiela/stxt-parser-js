@@ -3,7 +3,7 @@ Tema(www.cursos.com/tema.stxt):
 	h1: Definición de áreas en CSS Grid
 	
 	Text: 
-	    La definición de áreas en CSS Grid permite nombrar y organizar las secciones de la cuadrícula, lo que facilita la colocación de los ítems en posiciones específicas dentro del contenedor de cuadrícula. Esto se logra utilizando la propiedad ##grid-template-areas## junto con la propiedad ##grid-area## en los ítems individuales.
+	    La definición de áreas en CSS Grid permite nombrar y organizar las secciones de la cuadrícula, lo que facilita la colocación de los ítems en posiciones específicas dentro del contenedor de cuadrícula. Esto se logra utilizando la propiedad ```grid-template-areas``` junto con la propiedad ```grid-area``` en los ítems individuales.
 	    
 	    *  **grid-template-areas**:
 	    *  Permite definir y nombrar áreas dentro de la cuadrícula.
@@ -19,8 +19,8 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **grid-area**:
-	    *  Asigna un ítem a una de las áreas nombradas definidas por ##grid-template-areas##.
-	    *  Ejemplo: ##grid-area: header;##
+	    *  Asigna un ítem a una de las áreas nombradas definidas por ```grid-template-areas```.
+	    *  Ejemplo: ```grid-area: header;```
 	    
 	h2: Ejemplo de código CSS para la definición de áreas en CSS Grid
 	
@@ -58,15 +58,15 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    En este ejemplo:
-	    *  El contenedor de cuadrícula tiene tres columnas y tres filas definidas con ##grid-template-columns## y ##grid-template-rows##.
-	    *  Las áreas de cuadrícula se definen con ##grid-template-areas##, nombrando las áreas como "header", "sidebar", "content" y "footer".
-	    *  Los ítems se posicionan utilizando ##grid-area##, asignando cada ítem a una de las áreas nombradas.
+	    *  El contenedor de cuadrícula tiene tres columnas y tres filas definidas con ```grid-template-columns``` y ```grid-template-rows```.
+	    *  Las áreas de cuadrícula se definen con ```grid-template-areas```, nombrando las áreas como "header", "sidebar", "content" y "footer".
+	    *  Los ítems se posicionan utilizando ```grid-area```, asignando cada ítem a una de las áreas nombradas.
 	    
 	h2: Diagrama de áreas en CSS Grid
 	
 	Text:
 	    
-	    ##startuml##
+	    ```startuml```
 	    +--------------------------------------------------+
 	    | Contenedor (display: grid)                       |
 	    |          grid-template-areas:                      |
@@ -82,7 +82,7 @@ Tema(www.cursos.com/tema.stxt):
 	    | | footer                   |      footer              |
 	    | +-------------------+-------------------+--------|
 	    +--------------------------------------------------+
-	    ##enduml##
+	    ```enduml```
 	    
 	    En este diagrama, se muestra cómo las áreas nombradas se organizan dentro del contenedor de cuadrícula y cómo los ítems se posicionan en esas áreas utilizando las propiedades mencionadas.
 	    

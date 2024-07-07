@@ -21,9 +21,9 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    Donde:
-	    *  ##lambda## es la palabra clave para definir una función lambda.
-	    *  ##argumentos## es una lista separada por comas de los argumentos que la función toma.
-	    *  ##expresión## es una única expresión cuyo resultado será el valor de retorno de la función.
+	    *  ```lambda``` es la palabra clave para definir una función lambda.
+	    *  ```argumentos``` es una lista separada por comas de los argumentos que la función toma.
+	    *  ```expresión``` es una única expresión cuyo resultado será el valor de retorno de la función.
 	    
 	    Ejemplo:
 	Code:
@@ -33,18 +33,18 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ##mi_lambda## es una función lambda que toma dos argumentos ##x## y ##y##, y devuelve su suma.
+	    En este ejemplo, ```mi_lambda``` es una función lambda que toma dos argumentos ```x``` y ```y```, y devuelve su suma.
 	    
 	h2: Usos Comunes de las Funciones Lambda
 	
 	Text:
 	    
-	    *  **En funciones de orden superior**: Las funciones lambda se usan frecuentemente como argumentos para funciones de orden superior como ##map##, ##filter## y ##sorted##.
+	    *  **En funciones de orden superior**: Las funciones lambda se usan frecuentemente como argumentos para funciones de orden superior como ```map```, ```filter``` y ```sorted```.
 	    *  **En funciones de callback**: Las funciones lambda son útiles cuando se necesita definir una función rápida para ser usada como callback.
 	    
 	    Ejemplos:
 	    
-	    Usando ##map## con una función lambda:
+	    Usando ```map``` con una función lambda:
 	Code:
 	    numeros = [1, 2, 3, 4]
 	    cuadrados = list(map(lambda x : x**2, numeros))
@@ -53,7 +53,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Usando ##filter## con una función lambda:
+	    Usando ```filter``` con una función lambda:
 	Code:
 	    numeros = [1, 2, 3, 4]
 	    pares = list(filter(lambda x : x % 2 == 0, numeros))
@@ -62,7 +62,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Usando ##sorted## con una función lambda para ordenar por una clave específica:
+	    Usando ```sorted``` con una función lambda para ordenar por una clave específica:
 	Code:
 	    puntos = [(1, 2), (3, 1), (5, 0)]
 	    ordenados = sorted(puntos, key=lambda p : p[1])
@@ -93,7 +93,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Las funciones lambda y las funciones definidas con ##def## tienen propósitos diferentes:
+	    Las funciones lambda y las funciones definidas con ```def``` tienen propósitos diferentes:
 	    
 	    *  **Funciones lambda**: Son útiles para definir funciones pequeñas y desechables en el lugar donde se necesitan.
 	    *  **Funciones definidas con "def"**: Son mejores para definir funciones complejas o reutilizables con múltiples declaraciones y lógica detallada.

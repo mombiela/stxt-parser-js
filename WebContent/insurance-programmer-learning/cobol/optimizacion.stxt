@@ -185,13 +185,13 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Elige sentencias COBOL que sean más eficientes para la tarea específica. Por ejemplo, utiliza ##PERFORM## en lugar de ##GO TO## para bucles y control de flujo.
+	    Elige sentencias COBOL que sean más eficientes para la tarea específica. Por ejemplo, utiliza ```PERFORM``` en lugar de ```GO TO``` para bucles y control de flujo.
 	    
 	h3: Ejemplo de uso de @@PERFORM@@ en lugar de @@GO TO@@
 	
 	Text:
 	    
-	    Antes (con ##GO TO##):
+	    Antes (con ```GO TO```):
 	    
 	Code:
 	    PROCEDURE DIVISION.
@@ -210,7 +210,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Después (con ##PERFORM##):
+	    Después (con ```PERFORM```):
 	    
 	Code:
 	    PROCEDURE DIVISION.
@@ -234,7 +234,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##PERFORM## proporciona un control de flujo más claro y eficiente que ##GO TO##.
+	    *  ```PERFORM``` proporciona un control de flujo más claro y eficiente que ```GO TO```.
 	    
 	h2: Conclusión
 	

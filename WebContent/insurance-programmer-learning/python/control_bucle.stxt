@@ -10,7 +10,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El bucle ##for## en Python se utiliza para iterar sobre
+	    El bucle ```for``` en Python se utiliza para iterar sobre
 	    una secuencia (como una lista, una tupla, un diccionario,
 	    un conjunto o una cadena de caracteres). A medida que itera,
 	    el bucle ejecuta el bloque de código para cada elemento en la secuencia.
@@ -38,15 +38,15 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, el bucle ##for## iterará sobre
-	    cada elemento de la lista ##frutas## y imprimirá cada fruta.
+	    En este ejemplo, el bucle ```for``` iterará sobre
+	    cada elemento de la lista ```frutas``` y imprimirá cada fruta.
 	    
 	h2:  Uso de range() en for:
 	
 	Text:
 	    
-	    El método ##range()## se usa a menudo
-	    con ##for## para generar una secuencia de números.
+	    El método ```range()``` se usa a menudo
+	    con ```for``` para generar una secuencia de números.
 	    
 	h2:  Ejemplo:
 	
@@ -65,8 +65,8 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El bucle ##while## ejecuta el bloque de código
-	    mientras la condición especificada sea verdadera (##True##).
+	    El bucle ```while``` ejecuta el bloque de código
+	    mientras la condición especificada sea verdadera (```True```).
 	    
 	h2:  Sintaxis:
 	
@@ -92,9 +92,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, el bucle ##while## continuará
-	    ejecutándose mientras ##i## sea menor que ##5##.
-	    Después de cada iteración, ##i## se incrementa en 1.
+	    En este ejemplo, el bucle ```while``` continuará
+	    ejecutándose mientras ```i``` sea menor que ```5```.
+	    Después de cada iteración, ```i``` se incrementa en 1.
 	    
 	h2:  Control de bucles 
 	
@@ -106,7 +106,7 @@ Tema(www.cursos.com/tema.stxt):
 	    * **break**: Termina el bucle inmediatamente.
 	    * **continue**: Salta a la siguiente iteración del bucle.
 	    * **else**: Ejecuta un bloque de código
-	    al final del bucle, a menos que se haya terminado con ##break##.
+	    al final del bucle, a menos que se haya terminado con ```break```.
 	    
 	h2:  Ejemplo de break:
 	
@@ -122,7 +122,7 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    Este bucle imprimirá los números del 0 al 4
-	    y luego se detendrá cuando ##i## sea igual a 5.
+	    y luego se detendrá cuando ```i``` sea igual a 5.
 	    
 	h2:  Ejemplo de continue:
 	
@@ -138,8 +138,8 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    Este bucle imprimirá los números impares del 0 al 9,
-	    ya que ##continue## hace que el bucle salte a la
-	    siguiente iteración cuando ##i## es par.
+	    ya que ```continue``` hace que el bucle salte a la
+	    siguiente iteración cuando ```i``` es par.
 	    
 	h2:  Ejemplo de else en bucles:
 	
@@ -161,8 +161,8 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    A veces, puedes necesitar combinar bucles ##for##
-	    y ##while## para resolver problemas más complejos.
+	    A veces, puedes necesitar combinar bucles ```for```
+	    y ```while``` para resolver problemas más complejos.
 	    
 	h2:  Ejemplo:
 	
@@ -179,9 +179,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, el bucle ##while## continuará
+	    En este ejemplo, el bucle ```while``` continuará
 	    ejecutándose hasta que el usuario escriba "salir".
-	    Para cada entrada del usuario, el bucle ##for##
+	    Para cada entrada del usuario, el bucle ```for```
 	    imprimirá cada letra de la entrada.
 	    
 	h2:  Importancia de la indentación 
@@ -202,7 +202,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En resumen, los bucles ##for## y ##while## en Python son
+	    En resumen, los bucles ```for``` y ```while``` en Python son
 	    herramientas poderosas para repetir la ejecución de bloques de código.
 	    Entender cómo y cuándo usarlos es esencial para
 	    escribir programas efectivos y eficientes.

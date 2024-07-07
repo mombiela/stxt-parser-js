@@ -18,8 +18,8 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    # El usuario ingresa una ##URL## en el navegador.
-	    # El navegador envía una ##petición HTTP## al servidor correspondiente a la URL.
+	    # El usuario ingresa una ```URL``` en el navegador.
+	    # El navegador envía una ```petición HTTP``` al servidor correspondiente a la URL.
 	    # El servidor procesa la petición y responde con el recurso solicitado (como una página HTML, un archivo de imagen, etc.).
 	    # El navegador recibe el recurso y lo muestra al usuario.
 	    
@@ -27,7 +27,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Cuando se ingresa una URL en el navegador, como [[http://example.com]], el navegador realiza una ##petición HTTP## al servidor. A continuación se muestra un ejemplo de una petición HTTP y una respuesta del servidor:
+	    Cuando se ingresa una URL en el navegador, como [[http://example.com]], el navegador realiza una ```petición HTTP``` al servidor. A continuación se muestra un ejemplo de una petición HTTP y una respuesta del servidor:
 	    
 	Code:
 	    GET /index.html HTTP/1.1

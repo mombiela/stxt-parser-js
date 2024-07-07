@@ -18,7 +18,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Los subprogramas son módulos que contienen lógica específica y pueden ser llamados desde otros programas o subprogramas. Un subprograma en COBOL incluye una ##IDENTIFICATION DIVISION##, una ##ENVIRONMENT DIVISION##, una ##DATA DIVISION## y una ##PROCEDURE DIVISION##.
+	    Los subprogramas son módulos que contienen lógica específica y pueden ser llamados desde otros programas o subprogramas. Un subprograma en COBOL incluye una ```IDENTIFICATION DIVISION```, una ```ENVIRONMENT DIVISION```, una ```DATA DIVISION``` y una ```PROCEDURE DIVISION```.
 	    
 	h3: Ejemplo de un subprograma
 	
@@ -53,14 +53,14 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  El subprograma ##Calculo-Interes## calcula el interés sobre un capital dado una tasa de interés.
-	    *  Los parámetros se pasan a través de la ##LINKAGE SECTION## y se utilizan en la ##PROCEDURE DIVISION##.
+	    *  El subprograma ```Calculo-Interes``` calcula el interés sobre un capital dado una tasa de interés.
+	    *  Los parámetros se pasan a través de la ```LINKAGE SECTION``` y se utilizan en la ```PROCEDURE DIVISION```.
 	    
 	h2: Llamada a subprogramas desde el programa principal
 	
 	Text:
 	    
-	    El programa principal llama a los subprogramas utilizando la sentencia ##CALL##, pasando los parámetros necesarios.
+	    El programa principal llama a los subprogramas utilizando la sentencia ```CALL```, pasando los parámetros necesarios.
 	    
 	h3: Ejemplo de llamada a un subprograma
 	
@@ -88,8 +88,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  El programa principal define y pasa los parámetros ##WS-Tasa-Interes##, ##WS-Capital## y ##WS-Interes## al subprograma ##Calculo-Interes##.
-	    *  Después de la llamada, se muestra el interés calculado utilizando ##DISPLAY##.
+	    *  El programa principal define y pasa los parámetros ```WS-Tasa-Interes```, ```WS-Capital``` y ```WS-Interes``` al subprograma ```Calculo-Interes```.
+	    *  Después de la llamada, se muestra el interés calculado utilizando ```DISPLAY```.
 	    
 	h2: Uso de secciones y párrafos
 	
@@ -126,7 +126,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  El procedimiento principal llama a diferentes secciones utilizando ##PERFORM##.
+	    *  El procedimiento principal llama a diferentes secciones utilizando ```PERFORM```.
 	    *  Cada sección contiene lógica específica, mejorando la organización del código.
 	    
 	h2: Conclusión

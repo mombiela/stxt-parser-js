@@ -10,19 +10,19 @@ Tema(www.cursos.com/tema.stxt):
 	    El propósito principal de CSS es separar el contenido de la presentación visual. Esto permite a los desarrolladores mantener el código HTML limpio y enfocado en la estructura, mientras que el CSS maneja todos los aspectos visuales del diseño.
 	    
 	    *  **Ventajas de usar CSS**
-	    ##startalert##
+	    ```startalert```
 	    *  **Mantenimiento fácil**: Separar el contenido del estilo facilita la actualización y mantenimiento del sitio web.
 	    *  **Consistencia**: Aplicar estilos globales asegura una apariencia uniforme en todas las páginas del sitio.
 	    *  **Reutilización de código**: Los estilos definidos en una hoja de estilo externa pueden ser reutilizados en múltiples documentos HTML.
 	    *  **Carga más rápida**: Los navegadores pueden descargar y cachear una única hoja de estilo, reduciendo el tiempo de carga de las páginas.
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Componentes clave de CSS**
-	    ##startalert##
+	    ```startalert```
 	    *  **Selectores**: Permiten apuntar a elementos específicos en el documento HTML para aplicarles estilos.
 	    *  **Propiedades**: Definen los aspectos visuales como colores, fuentes, márgenes y más.
 	    *  **Valores**: Especifican cómo se debe aplicar la propiedad a un elemento.
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Ejemplo simple de CSS**
 	Code:

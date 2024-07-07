@@ -6,12 +6,12 @@ Tema(www.cursos.com/tema.stxt):
 	    Estos operadores se utilizan para comparar (operar) los números a nivel de bits.
 	    
 	    |= Operador    |= Descripción       |= Ejemplo
-	    | ##code:&##   | AND bit a bit      | ##code:a & b##
-	    | ##code:|##   | OR bit a bit       | ##code:a | b##
-	    | ##code:^##   | XOR bit a bit      | ##code:a ^ b##
-	    | ##code: ~ ## | NOT bit a bit      | ##code: ~a ##
-	    | ##code:<<##  | Desplazamiento izq | ##code:a << b##
-	    | ##code:>>##  | Desplazamiento der | ##code:a >> b##
+	    | ```code:&```   | AND bit a bit      | ```code:a & b```
+	    | ```code:|```   | OR bit a bit       | ```code:a | b```
+	    | ```code:^```   | XOR bit a bit      | ```code:a ^ b```
+	    | ```code: ~ ``` | NOT bit a bit      | ```code: ~a ```
+	    | ```code:<<```  | Desplazamiento izq | ```code:a << b```
+	    | ```code:>>```  | Desplazamiento der | ```code:a >> b```
 	    
 	h2:  Ejemplo: 
 	

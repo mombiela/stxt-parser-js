@@ -13,13 +13,13 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Un módulo en Python es simplemente un archivo con extensión ##.py## que contiene definiciones y declaraciones de Python. Puedes crear tus propios módulos para organizar funciones, clases y variables relacionadas.
+	    Un módulo en Python es simplemente un archivo con extensión ```.py``` que contiene definiciones y declaraciones de Python. Puedes crear tus propios módulos para organizar funciones, clases y variables relacionadas.
 	    
 	    Ejemplo de un módulo simple:
 	    
-	    Crea un archivo llamado ##mimodulo.py##.
+	    Crea un archivo llamado ```mimodulo.py```.
 	    Añade algunas funciones y variables a este archivo.
-	    Contenido de ##mimodulo.py##:
+	    Contenido de ```mimodulo.py```:
 	Code:
 	    # mimodulo.py
 	    def saludar():
@@ -33,7 +33,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para utilizar este módulo en otro script, simplemente impórtalo usando ##import##.
+	    Para utilizar este módulo en otro script, simplemente impórtalo usando ```import```.
 	    
 	    Ejemplo de uso del módulo:
 	    
@@ -61,23 +61,23 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Un paquete es una colección de módulos organizados en directorios que incluyen un archivo especial ##init.py##. Este archivo puede estar vacío o puede ejecutar algún código de inicialización para el paquete.
+	    Un paquete es una colección de módulos organizados en directorios que incluyen un archivo especial ```init.py```. Este archivo puede estar vacío o puede ejecutar algún código de inicialización para el paquete.
 	    
 	    Ejemplo de creación de un paquete:
 	    
-	    Crea un directorio llamado ##mipaquete##.
-	    Dentro de ##mipaquete##, crea un archivo vacío llamado ##init.py##.
+	    Crea un directorio llamado ```mipaquete```.
+	    Dentro de ```mipaquete```, crea un archivo vacío llamado ```init.py```.
 	    Añade otros módulos al directorio.
 	    Estructura del paquete:
-	    ##startuml##
+	    ```startuml```
 	    package mipaquete {
 	    init.py
 	    modulo1.py
 	    modulo2.py
 	    }
-	    ##enduml##
+	    ```enduml```
 	    
-	    Contenido de ##modulo1.py##:
+	    Contenido de ```modulo1.py```:
 	Code:
 	    # modulo1.py
 	    def funcion1():
@@ -86,7 +86,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Contenido de ##modulo2.py##:
+	    Contenido de ```modulo2.py```:
 	Code:
 	    # modulo2.py
 	    def funcion2():
@@ -126,9 +126,9 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    El archivo ##init.py## puede contener código de inicialización para el paquete, lo que permite ejecutar algún código cuando se importa el paquete.
+	    El archivo ```init.py``` puede contener código de inicialización para el paquete, lo que permite ejecutar algún código cuando se importa el paquete.
 	    
-	    Ejemplo de contenido de ##init.py##:
+	    Ejemplo de contenido de ```init.py```:
 	Code:
 	    # init.py
 	    from .modulo1 import funcion1
@@ -151,7 +151,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Python tiene un sistema de gestión de paquetes llamado ##pip##, que permite instalar paquetes externos desde el Python Package Index (PyPI).
+	    Python tiene un sistema de gestión de paquetes llamado ```pip```, que permite instalar paquetes externos desde el Python Package Index (PyPI).
 	    
 	    Para instalar un paquete:
 	Code:
@@ -183,7 +183,7 @@ Tema(www.cursos.com/tema.stxt):
 	    Aquí tienes un ejemplo completo que muestra cómo crear y usar un módulo y un paquete en Python.
 	    
 	    Estructura del proyecto:
-	    ##startuml##
+	    ```startuml```
 	    proyecto/
 	    main.py
 	    mimodulo.py
@@ -191,9 +191,9 @@ Tema(www.cursos.com/tema.stxt):
 	    init.py
 	    modulo1.py
 	    modulo2.py
-	    ##enduml##
+	    ```enduml```
 	    
-	    Contenido de ##mimodulo.py##:
+	    Contenido de ```mimodulo.py```:
 	Code:
 	    # mimodulo.py
 	    def saludar():
@@ -204,7 +204,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Contenido de ##mipaquete/modulo1.py##:
+	    Contenido de ```mipaquete/modulo1.py```:
 	Code:
 	    # modulo1.py
 	    def funcion1():
@@ -213,7 +213,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Contenido de ##mipaquete/modulo2.py##:
+	    Contenido de ```mipaquete/modulo2.py```:
 	Code:
 	    # modulo2.py
 	    def funcion2():
@@ -222,7 +222,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Contenido de ##mipaquete/init.py##:
+	    Contenido de ```mipaquete/init.py```:
 	Code:
 	    # init.py
 	    from .modulo1 import funcion1
@@ -231,7 +231,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Contenido de ##main.py##:
+	    Contenido de ```main.py```:
 	Code:
 	    import mimodulo
 	    import mipaquete

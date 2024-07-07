@@ -7,7 +7,7 @@ Tema(www.cursos.com/tema.stxt):
 	    Los selectores de clase en CSS permiten aplicar estilos a uno o más elementos que comparten una misma clase. Esto proporciona una manera flexible y reutilizable de definir estilos para elementos específicos dentro de un documento HTML.
 	    
 	    *  **Definición y sintaxis**
-	    Una clase se define en HTML utilizando el atributo ##class##. En CSS, el selector de clase se denota con un punto (.) seguido del nombre de la clase.
+	    Una clase se define en HTML utilizando el atributo ```class```. En CSS, el selector de clase se denota con un punto (.) seguido del nombre de la clase.
 	Code:
 	    <!DOCTYPE html>
 	    <html>
@@ -29,11 +29,11 @@ Tema(www.cursos.com/tema.stxt):
 	Text:
 	    
 	    *  **Ventajas de usar selectores de clase**
-	    ##startalert##
+	    ```startalert```
 	    *  **Reutilización**: Permiten aplicar los mismos estilos a múltiples elementos, facilitando la consistencia y el mantenimiento.
 	    *  **Flexibilidad**: Un elemento puede tener múltiples clases, lo que permite combinar estilos de diferentes clases.
 	    *  **Especificidad controlada**: Las clases tienen una especificidad mayor que los selectores de tipo, permitiendo un control más preciso sobre los estilos aplicados.
-	    ##endalert##
+	    ```endalert```
 	    
 	    *  **Múltiples clases en un elemento**
 	    Un elemento HTML puede tener múltiples clases, separadas por espacios. Cada clase aplicada al elemento influirá en su estilo.

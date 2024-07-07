@@ -6,9 +6,9 @@ Tema(www.cursos.com/tema.stxt):
 	    Estos operadores se utilizan para combinar sentencias condicionales.
 	    
 	    |= Operador    |= Descripción                 |= Ejemplo
-	    | ##code:and## | Y lógico        | ##code:a and b##
-	    | ##code:or##  | O lógico        | ##code:a or b##
-	    | ##code:not## | Negación lógica | ##code:not a##
+	    | ```code:and``` | Y lógico        | ```code:a and b```
+	    | ```code:or```  | O lógico        | ```code:a or b```
+	    | ```code:not``` | Negación lógica | ```code:not a```
 	    
 	h2:  Ejemplo: 
 	

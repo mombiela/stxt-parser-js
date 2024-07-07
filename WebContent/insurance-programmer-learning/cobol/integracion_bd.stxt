@@ -23,13 +23,13 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL INCLUDE SQLCA END-EXEC## incluye la estructura SQLCA, que es utilizada para manejar errores y condiciones SQL.
+	    *  ```EXEC SQL INCLUDE SQLCA END-EXEC``` incluye la estructura SQLCA, que es utilizada para manejar errores y condiciones SQL.
 	    
 	h2: Conexión a la base de datos
 	
 	Text:
 	    
-	    La conexión a una base de datos se establece mediante la sentencia ##CONNECT##. Es crucial manejar correctamente las credenciales y la información de conexión.
+	    La conexión a una base de datos se establece mediante la sentencia ```CONNECT```. Es crucial manejar correctamente las credenciales y la información de conexión.
 	    
 	h3: Ejemplo de conexión a la base de datos
 	
@@ -58,8 +58,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD USING :DB-NAME END-EXEC## establece la conexión a la base de datos utilizando las credenciales proporcionadas.
-	    *  ##SQLCODE## se verifica para asegurar que la conexión fue exitosa.
+	    *  ```EXEC SQL CONNECT :DB-USER IDENTIFIED BY :DB-PASSWORD USING :DB-NAME END-EXEC``` establece la conexión a la base de datos utilizando las credenciales proporcionadas.
+	    *  ```SQLCODE``` se verifica para asegurar que la conexión fue exitosa.
 	    
 	h2: Operaciones básicas de SQL
 	
@@ -99,7 +99,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION FROM CLIENTES WHERE CLIENTE_ID = 12345 END-EXEC## ejecuta una consulta SQL para obtener los datos de un cliente específico.
+	    *  ```EXEC SQL SELECT CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION INTO :CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION FROM CLIENTES WHERE CLIENTE_ID = 12345 END-EXEC``` ejecuta una consulta SQL para obtener los datos de un cliente específico.
 	    
 	h3: Ejemplo de inserción (INSERT)
 	
@@ -124,7 +124,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC## inserta un nuevo registro en la tabla CLIENTES.
+	    *  ```EXEC SQL INSERT INTO CLIENTES (CLIENTE_ID, CLIENTE_NOMBRE, CLIENTE_DIRECCION) VALUES (:CLIENTE-ID, :CLIENTE-NOMBRE, :CLIENTE-DIRECCION) END-EXEC``` inserta un nuevo registro en la tabla CLIENTES.
 	    
 	h3: Ejemplo de actualización (UPDATE)
 	
@@ -150,7 +150,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL UPDATE CLIENTES SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC## actualiza la dirección del cliente con el ID especificado.
+	    *  ```EXEC SQL UPDATE CLIENTES SET CLIENTE_DIRECCION = :CLIENTE-DIRECCION WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC``` actualiza la dirección del cliente con el ID especificado.
 	    
 	h3: Ejemplo de eliminación (DELETE)
 	
@@ -175,13 +175,13 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL DELETE FROM CLIENTES WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC## elimina el registro del cliente con el ID especificado.
+	    *  ```EXEC SQL DELETE FROM CLIENTES WHERE CLIENTE_ID = :CLIENTE-ID END-EXEC``` elimina el registro del cliente con el ID especificado.
 	    
 	h2: Manejo de transacciones
 	
 	Text:
 	    
-	    El manejo de transacciones es crucial para asegurar la integridad de los datos. Las sentencias ##COMMIT## y ##ROLLBACK## se utilizan para manejar transacciones.
+	    El manejo de transacciones es crucial para asegurar la integridad de los datos. Las sentencias ```COMMIT``` y ```ROLLBACK``` se utilizan para manejar transacciones.
 	    
 	h3: Ejemplo de manejo de transacciones
 	
@@ -209,8 +209,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL COMMIT END-EXEC## confirma la transacción si la operación de actualización es exitosa.
-	    *  ##EXEC SQL ROLLBACK END-EXEC## revierte los cambios si ocurre un error.
+	    *  ```EXEC SQL COMMIT END-EXEC``` confirma la transacción si la operación de actualización es exitosa.
+	    *  ```EXEC SQL ROLLBACK END-EXEC``` revierte los cambios si ocurre un error.
 	    
 	h2: Manejo de errores y excepciones
 	
@@ -246,7 +246,7 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##SQLCODE## y ##SQLERRMC## se utilizan para verificar y mostrar mensajes de error en operaciones de
+	    *  ```SQLCODE``` y ```SQLERRMC``` se utilizan para verificar y mostrar mensajes de error en operaciones de
 	    
 	    base de datos.
 	    
@@ -254,7 +254,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Para desconectar de la base de datos, se utiliza la sentencia ##DISCONNECT##.
+	    Para desconectar de la base de datos, se utiliza la sentencia ```DISCONNECT```.
 	    
 	h3: Ejemplo de desconexión de la base de datos
 	
@@ -278,8 +278,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    En este ejemplo:
 	    
-	    *  ##EXEC SQL DISCONNECT END-EXEC## desconecta la sesión de la base de datos.
-	    *  ##SQLCODE## se verifica para asegurar que la desconexión fue exitosa.
+	    *  ```EXEC SQL DISCONNECT END-EXEC``` desconecta la sesión de la base de datos.
+	    *  ```SQLCODE``` se verifica para asegurar que la desconexión fue exitosa.
 	    
 	h2: Conclusión
 	

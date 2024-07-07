@@ -9,7 +9,7 @@ Tema(www.cursos.com/tema.stxt):
 	h2:  Sentencia if 
 	
 	Text:
-	    La sentencia ##if## evalúa una condición. Si la condición es verdadera (##True##), se ejecuta el bloque de código indentado bajo el ##if##.
+	    La sentencia ```if``` evalúa una condición. Si la condición es verdadera (```True```), se ejecuta el bloque de código indentado bajo el ```if```.
 	    
 	Code:
 	    x = 10
@@ -19,14 +19,14 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ##x## es mayor que ##5##, por lo tanto,
+	    En este ejemplo, ```x``` es mayor que ```5```, por lo tanto,
 	    la condición es verdadera y se imprime "x es mayor que 5".
 	    
 	h2:  Sentencia elif 
 	
 	Text:
-	    La sentencia ##elif## (abreviatura de "else if") permite verificar múltiples condiciones.
-	    Si la condición ##if## inicial es falsa, Python evalúa la siguiente condición ##elif##.
+	    La sentencia ```elif``` (abreviatura de "else if") permite verificar múltiples condiciones.
+	    Si la condición ```if``` inicial es falsa, Python evalúa la siguiente condición ```elif```.
 	    
 	Code:
 	    x = 10
@@ -38,15 +38,15 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este caso, la primera condición ##if## es falsa (##x## no es mayor que ##15##),
-	    pero la segunda condición ##elif## es verdadera (##x## es mayor que ##5##),
+	    En este caso, la primera condición ```if``` es falsa (```x``` no es mayor que ```15```),
+	    pero la segunda condición ```elif``` es verdadera (```x``` es mayor que ```5```),
 	    por lo que se imprime "x es mayor que 5 pero menor o igual a 15".
 	    
 	h2:  Sentencia else 
 	
 	Text:
-	    La sentencia ##else## se usa para ejecutar un bloque de código
-	    si todas las condiciones anteriores (##if## y ##elif##) son falsas.
+	    La sentencia ```else``` se usa para ejecutar un bloque de código
+	    si todas las condiciones anteriores (```if``` y ```elif```) son falsas.
 	    
 	Code:
 	    x = 3
@@ -60,13 +60,13 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Aquí, ambas condiciones (##if## y ##elif##) son falsas,
-	    por lo que se ejecuta el bloque ##else## y se imprime "x es 5 o menor".
+	    Aquí, ambas condiciones (```if``` y ```elif```) son falsas,
+	    por lo que se ejecuta el bloque ```else``` y se imprime "x es 5 o menor".
 	    
 	h2:  Ejemplo Completo 
 	
 	Text:
-	    Un ejemplo completo utilizando ##if##, ##elif##, y ##else##:
+	    Un ejemplo completo utilizando ```if```, ```elif```, y ```else```:
 	    
 	Code:
 	    edad = int(input("Introduce tu edad: "))
@@ -92,7 +92,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    Puedes combinar múltiples condiciones en una sola sentencia
-	    ##if## usando operadores lógicos como ##and##, ##or##, y ##not##.
+	    ```if``` usando operadores lógicos como ```and```, ```or```, y ```not```.
 	    
 	Code:
 	    x = 20
@@ -102,7 +102,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En este ejemplo, ambas condiciones (##x > 10## y ##x < 30##) deben
+	    En este ejemplo, ambas condiciones (```x > 10``` y ```x < 30```) deben
 	    ser verdaderas para que el bloque de código se ejecute.
 	    
 	h2:  Importancia de la indentación 
@@ -122,7 +122,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    En resumen, las estructuras condicionales (##if##, ##elif##, ##else##) en Python
+	    En resumen, las estructuras condicionales (```if```, ```elif```, ```else```) en Python
 	    permiten ejecutar diferentes bloques de código basados en condiciones,
 	    facilitando la toma de decisiones en tus programas.
 	    La correcta comprensión y uso de estas estructuras es esencial para cualquier programador.
