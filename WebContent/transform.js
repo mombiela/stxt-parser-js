@@ -9,11 +9,13 @@ export function transform(hash, node)
 	content.append(mainConent);
 	
 	// Para debug
+	/*
 	let result = $("<div class='container-fluid'>");
 	result.append("<h2>HASH: " + hash + "</h2>");
 	let pre = $("<pre>").text(node.toString());
 	result.append(pre);
 	content.append(result);
+	*/
 	
 	// Insertamos childs
 	const innerContent = $("#inner_content");
