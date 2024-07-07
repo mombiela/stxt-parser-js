@@ -47,7 +47,7 @@ function renderChild(child, parent)
 	}
 	else if(name == "text")
 	{
-		$("<pre>").text(text).appendTo(parent);
+		$("<div>").html(marked.parse(text)).appendTo(parent);
 	}
 	else if(name == "code" || name == "plantuml")
 	{
