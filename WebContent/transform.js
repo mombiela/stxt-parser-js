@@ -26,18 +26,17 @@ export function transform(hash, node)
 
 function renderChild(child, parent)
 {
-	const node = $("<div>").addClass("node_" + child.getName());
 	const name = child.getName();
 	const text = child.getText();
 	const childs = child.getChilds();
 	
 	if(name == "h1" || name == "title")
 	{
-		$("<h1>").text(text).appendTo(node).appendTo(parent);
+		$("<h1>").text(text).appendTo(parent);
 	}
 	else if (name == "part")
 	{
-		$("<h3>").text(text + "->" + childs.length).appendTo(node).appendTo(parent);
+		$("<h3>").text(text + "->" + childs.length).appendTo(parent);
 	}
 	else
 	{
