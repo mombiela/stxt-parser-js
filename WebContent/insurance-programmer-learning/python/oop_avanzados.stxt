@@ -9,7 +9,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Un método de clase recibe la clase como primer argumento implícito, que se suele denominar ##cls##. Se utiliza el decorador ##@classmethod##.
+	    Un método de clase recibe la clase como primer argumento implícito, que se suele denominar ```cls```. Se utiliza el decorador ```@classmethod```.
 	    
 	Code:
 	    class MiClase:
@@ -33,7 +33,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Un método estático no recibe ni la instancia (##self##) ni la clase (##cls##) como primer argumento. Se utiliza el decorador ##@staticmethod##.
+	    Un método estático no recibe ni la instancia (```self```) ni la clase (```cls```) como primer argumento. Se utiliza el decorador ```@staticmethod```.
 	    
 	Code:
 	    class MiClase:
@@ -53,8 +53,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    **Método `__str__` y `__repr__@@
 	    
-	    * ##__str__##: Define el comportamiento de la función ##str()## y ##print()##.
-	    * ##__repr__##: Define el comportamiento de la función ##repr()##, que debería devolver una representación detallada del objeto.
+	    * ```__str__```: Define el comportamiento de la función ```str()``` y ```print()```.
+	    * ```__repr__```: Define el comportamiento de la función ```repr()```, que debería devolver una representación detallada del objeto.
 	    
 	Code:
 	    class MiClase:
@@ -103,7 +103,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Además de los decoradores ##@property##, ##@getter##, y ##@setter##, Python permite definir propiedades de manera más avanzada para controlar el acceso a los atributos.
+	    Además de los decoradores ```@property```, ```@getter```, y ```@setter```, Python permite definir propiedades de manera más avanzada para controlar el acceso a los atributos.
 	    
 	Code:
 	    class MiClase:
@@ -164,7 +164,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	Text:
 	    
-	    Las clases abstractas no se pueden instanciar y están destinadas a ser subclaseadas. Python proporciona el módulo ##abc## para definir clases abstractas y métodos abstractos.
+	    Las clases abstractas no se pueden instanciar y están destinadas a ser subclaseadas. Python proporciona el módulo ```abc``` para definir clases abstractas y métodos abstractos.
 	    
 	Code:
 	    from abc import ABC, abstractmethod
@@ -191,8 +191,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    Hemos cubierto muchos aspectos avanzados de las clases en Python:
 	    
-	    * **Métodos de Clase y Métodos Estáticos**: Uso de ##@classmethod## y ##@staticmethod##.
-	    * **Métodos Especiales (Dunder Methods)**: Como ##__str__##, ##__repr__##, y métodos de comparación.
-	    * **Propiedades Avanzadas**: Uso de ##@property## y control avanzado de acceso a atributos.
+	    * **Métodos de Clase y Métodos Estáticos**: Uso de ```@classmethod``` y ```@staticmethod```.
+	    * **Métodos Especiales (Dunder Methods)**: Como ```__str__```, ```__repr__```, y métodos de comparación.
+	    * **Propiedades Avanzadas**: Uso de ```@property``` y control avanzado de acceso a atributos.
 	    * **Herencia Múltiple y Resolución de Conflictos**: Cómo Python maneja el MRO.
-	    * **Clases Abstractas**: Uso del módulo ##abc## para definir clases y métodos abstractos.
+	    * **Clases Abstractas**: Uso del módulo ```abc``` para definir clases y métodos abstractos.
