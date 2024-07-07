@@ -1,0 +1,80 @@
+Tema(www.cursos.com/tema.stxt):
+
+	h1: Cabecera primer nivel
+	h2:	Cabecera segundo nivel
+	h3:	Cabecera tercer nivel
+	
+	text:
+		Esto es un texto normal en formato wiki.
+		
+		Hola mundo, otra tabla\
+		Y otra tabla.
+		
+		**Esto es negrita**	y _Esto es cursiva_\
+		y ```Esto es un código```. Se puede hacer un salto de línea seguido:\
+		Ahora un ejemplo de una lista:
+		
+		* Elem 1
+		* Elem 2
+	
+	code:
+		Actress (www.example.com/actress.stxt):
+			Name: Angelina
+			Birthday: 2/21/1979
+		
+	assert:
+		Esto es un assert
+					
+	code:
+		<h1>Esto es un código html</h1>
+		<h2>Esto es un código html</h2>
+			<p>Esto es un código html</p>
+		
+	alert:
+		Esto es un alert
+					
+	text:
+		Decimos que dos ##gramáticas## son equivalentes si cualquier documento
+		tiene la misma forma compactada; a excepción del namespace del primer nodo.
+		
+		Este es el ejemplo anterior de internacionalización,
+		en el que hacíamos que la forma compactada fuera la misma.
+		
+	plantuml:
+		@startuml
+	    left to right direction
+	    actor Guest as g
+	    package Professional {
+	      actor Chef as c
+	      actor "Food Critic" as fc
+	    }
+	    package Restaurant {
+	      usecase "Eat Food" as UC1
+	      usecase "Pay for Food" as UC2
+	      usecase "Drink" as UC3
+	      usecase "Review" as UC4
+	    }
+	    fc --> UC4
+	    @enduml
+	
+	h3: Otra cabecera
+		
+	plantuml:
+		@startuml
+	    left to right direction
+	    actor Guest as g
+	    package Professional {
+	      actor Chef as c
+	      actor "Food Critic" as fc
+	    }
+	    package Restaurant {
+	      usecase "Eat Food" as UC1
+	      usecase "Pay for Food" as UC2
+	      usecase "Drink" as UC3
+	      usecase "Review" as UC4
+	    }
+	    fc --> UC4
+	    g --> UC1
+	    g --> UC2
+	    g --> UC3
+	    @enduml

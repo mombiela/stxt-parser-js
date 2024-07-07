@@ -34,7 +34,8 @@ Un párrafo con **negritas** y *cursivas*.
 | Fila 1, Col 1 | Fila 1, Col 2 | Fila 1, Col 3 |
 | Fila 2, Col 1 | Fila 2, Col 2 | Fila 2, Col 3 |
 
-Hola mundo, otra tabla
+Hola mundo, otra tabla\\
+Y otra tabla.
 
 | fdfsafas     | fsafas          |  fsdafasfas    |
 | --------- | ----------- | ----------|
@@ -49,7 +50,10 @@ Hola mundo, otra tabla
 `;
 
             // Convierte el texto Markdown a HTML usando marked.parse
+            console.log("ORIGINAL TEXt = " + markdownText);
+            console.log("*******************************")
             var htmlContent = marked.parse(markdownText);
+            console.log("HTMLCONTENT = " + htmlContent);
 
             // Coloca el HTML en el div de salida
             document.getElementById('output').innerHTML = htmlContent;
