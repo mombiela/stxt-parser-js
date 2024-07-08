@@ -51,6 +51,14 @@ function renderChild(child, parent)
 	{
 		$("<div>").html(marked.parse(text)).appendTo(parent);
 	}
+	else if(name == "alert")
+	{
+		$("<div class='alert'>").html(marked.parse(text)).appendTo(parent);
+	}
+	else if(name == "assert")
+	{
+		$("<div class='assert'>").html(marked.parse(text)).appendTo(parent);
+	}
 	else if(name == "code")
 	{
 		$("<pre class='code'>").text(text).appendTo(parent);
