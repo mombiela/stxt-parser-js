@@ -53,7 +53,7 @@ function renderChild(child, parent)
 	}
 	else if(name == "alert")
 	{
-		$("<div class='alert'>").html(marked.parse(text)).appendTo(parent);
+		$("<div class='alerta'>").html(marked.parse(text)).appendTo(parent);
 	}
 	else if(name == "assert")
 	{
