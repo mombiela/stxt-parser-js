@@ -24,15 +24,8 @@ export const mainConent = `
 	<div class="container-xxl" id="main_content">
 		<div class="row">
 			<div class="col-12 col-lg-8">
-				<div id="inner_content"></div>
 				#parse("navigation.vm")
-			
-				#set($plantuml = 0)
-				#set($code = 0)
-				#foreach($node in $doc.getChilds())
-					#parse("node.vm")
-				#end
-				
+				<div id="inner_content"></div>
 				#parse("navigation.vm")
 			</div>
 			<div class="col-12 col-lg-4">
