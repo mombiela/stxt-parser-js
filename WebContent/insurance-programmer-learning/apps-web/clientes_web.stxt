@@ -75,7 +75,8 @@ Tema(www.cursos.com/tema.stxt):
 	    
 	    A continuación se presenta un diagrama de interacción que ilustra cómo un cliente web y un servidor web interactúan durante una solicitud y respuesta HTTP.
 	    
-	    ```startuml```
+	Plantuml:  
+	    @startuml
 	    actor Cliente
 	    participant "Servidor Web"
 	    
@@ -87,7 +88,7 @@ Tema(www.cursos.com/tema.stxt):
 	    El cliente envía una solicitud HTTP/HTTPS al servidor web.
 	    El servidor procesa la solicitud y envía una respuesta con el contenido solicitado.
 	    end note
-	    ```enduml```
+	    @enduml
 	    
 	h2: Conclusión
 	
