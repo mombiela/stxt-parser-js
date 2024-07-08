@@ -94,6 +94,7 @@ async function buildContent(hashIni)
 		const node = (await parser.parse(contentFromUrl))[0];
 
 		transform(hashIni, node);
+		plantuml_runonce();
 	}
 	catch(exception)
 	{

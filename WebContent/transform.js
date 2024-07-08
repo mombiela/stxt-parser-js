@@ -51,9 +51,13 @@ function renderChild(child, parent)
 	{
 		$("<div>").html(marked.parse(text)).appendTo(parent);
 	}
-	else if(name == "code" || name == "plantuml")
+	else if(name == "code")
 	{
 		$("<pre class='code'>").text(text).appendTo(parent);
+	}
+	else if(name == "plantuml")
+	{
+		$("<img>").attr("uml", text).appendTo(parent);
 	}
 	else if (name == "part")
 	{
