@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantUML Diagram</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/plantuml-encoder/1.2.3/plantuml-encoder.min.js"></script>
+</head>
+<body>
+    <div id="diagram-container"></div>
+
+    <script>
+        // Tu diagrama en formato PlantUML
+        const plantUMLSource = `
+            @startuml
+            actor Alice
+            actor Bob
+
+            Alice -> Bob : Hello Bob!
+            Bob -> Alice : Hi Alice!
+            Alice -> Bob : How are you?
+            Bob -> Alice : I'm good, thanks!
+            @enduml
+        `;
+
+        // Codifica el diagrama usando plantuml-encoder
+        const encodedDiagram = plantumlEncoder.encode(plantUMLSource);
+
+        // Crea la URL para el servidor PlantUML
+        const diagramURL = `http://www.plantuml.com/plantuml/svg/${encodedDiagram}`;
+
+        // Inserta el diagrama en la página
+        const diagramContainer = document.getElementById('diagram-container');
+        const imgElement = document.createElement('img');
+        imgElement.src = diagramURL;
+        diagramContainer.appendChild(imgElement);
+    </script>
+</body>
+</html>
