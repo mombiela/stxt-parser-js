@@ -1,4 +1,7 @@
-export async function makeNavigation(isDir, hashParts) {
+import { getUrlContent, getUrlContentCors } from '../js/Utils.js';
+import { STXTParser } from '../js/STXTParser.js';
+
+export async function makeNavigation(isDir, hashParts, parser) {
 	let result = {};
 	
 	console.log("ISDIR: " + isDir);
@@ -9,13 +12,25 @@ export async function makeNavigation(isDir, hashParts) {
 			{url:"https://www.google.es", descrip:"Google"},
 	];
 	
+	let indexDocs = [];
 	if (hashParts.length > 1)
 	{
 		let page = "";
 		for (let i = 0; i<hashParts.length-1; i++)
 		{
-			page = page + "/" + hashParts[i];
-			console.log("BUSCAR: " + page + "/index.stxt");
+			try
+			{
+				page = page + "/" + hashParts[i];
+				console.log("BUSCAR: " + page + "/index.stxt");
+				let indexDoc = await getUrlContent(page + "/index.stxt"); // TODO Hay que hacerlo bien, con dominio, cors si es necesario, etc
+				console.log(indexDoc);
+				const node = (await parser.parse(indexDoc))[0];
+				console.log(node.toString());
+			}
+			catch (e)
+			{
+				console.log("ERROR PAGE: " + page + "\n" + e);
+			}
 		}
 	}
 	

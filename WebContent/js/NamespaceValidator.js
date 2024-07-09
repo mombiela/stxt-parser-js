@@ -56,7 +56,6 @@ export class NamespaceValidator {
 
     static verifyCount(chNode, num, node) {
         const count = chNode.getNum();
-		console.log("!!!verifyCount: " + count);
         if (count == "*") return;
         else if (count == "?") {
 			if (num > 1)
