@@ -2,6 +2,7 @@ import { getUrlContent, getUrlContentCors } from './js/Utils.js';
 import { STXTParser } from '../js/STXTParser.js';
 import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
 import { transform } from './transform.js';
+import { makeNavigation } from './navigation.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
@@ -51,11 +52,11 @@ async function buildContent(hashIni)
 		hash = hash.substring(1);
 		
 		// Is dir?
-		let isDir = hash.endsWith("/");
+		const isDir = hash.endsWith("/");
 		if (isDir) hash = hash.substring(0, hash.length -1);
 		
 		// Miramos si es local o remota y que tenga params v�lidos
-		let hashParts = hash.split("/");
+		const hashParts = hash.split("/");
 		
 		// Miramos tamaño máximo
 		if (hashParts.length > 5)  return buildError("Page definition not valid");
@@ -86,13 +87,16 @@ async function buildContent(hashIni)
 		else 								contentFromUrl = await getUrlContent(stxtUrl + "?ts=" + new Date().getTime());
 		
 		// Final
-		
 	    const namespaceRetriever = new NamespaceRetriever();
 		await namespaceRetriever.addGrammarDefinition(grammar1);
 		await namespaceRetriever.addGrammarDefinition(grammar2);
 		const parser = new STXTParser(namespaceRetriever);
 		const node = (await parser.parse(contentFromUrl))[0];
+		
+		// Make navigation
+		const navigation = makeNavigation(isDir, hashParts);
 
+		// Transform page
 		transform(hashIni, node);
 		plantuml_runonce();
 	}

@@ -28,7 +28,7 @@ export const mainConent = `
 				<div id="inner_content"></div>
 				#parse("navigation.vm")
 			</div>
-			<div class="col-12 col-lg-4">
+			<div class="col-12 col-lg-4 publi">
 				<p>
 					Aquí va la publicidad.<br>
 					Aquí va la publicidad.<br>
