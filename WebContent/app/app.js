@@ -1,4 +1,4 @@
-import { getUrlContent, getUrlContentCors } from './js/Utils.js';
+import { getUrlContent, getUrlContentCors } from '../js/Utils.js';
 import { STXTParser } from '../js/STXTParser.js';
 import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
 import { transform } from './transform.js';
