@@ -136,10 +136,9 @@ function replaceWithEmpty(text) {
 
 function insertNavigation(navigation)
 {
+	// Hilo de ariadna
 	console.log("NAVIGATION: " + JSON.stringify(navigation,null,3));
-	
 	const hiloAriadna = $("#hilo_ariadna");
-	
 	const hilo = navigation.hilo_ariadna;
 	if (hilo && hilo.length>0)
 	{
@@ -159,7 +158,37 @@ function insertNavigation(navigation)
 		$("#hilo_ariadna").html("&nbsp;");
 	}
 	
+	// Navegación
+	if (navigation.next || navigation.prev)
+	{
+		const navDiv = $("<div class='row avigation'>Navigation</div>").appendTo("#nav1");
+		
+		
+		navDiv.clone().appendTo("#nav2");
+	}
 	
+	
+	/*
+	#if(${navigation.getNext(${doc_name})} || ${navigation.getPrevious(${doc_name})})
+	<div class="row" id="navigation">
+		<div class="col-6">
+			#if(${navigation.getPrevious(${doc_name})})
+				<a href="${navigation.getPrevious(${doc_name})}">
+					&#x25C4; Anterior
+				</a>
+			#end
+		</div>
+		
+		<div class="col-6 text-end">
+			#if(${navigation.getNext(${doc_name})})
+				<a href="${navigation.getNext(${doc_name})}">
+					Siguiente &#x25BA;
+				</a>
+			#end
+		</div>
+	</div>
+	#end
+	*/
 	
 	
 }
