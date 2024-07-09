@@ -24,9 +24,9 @@ export const mainConent = `
 	<div class="container-xxl" id="main_content">
 		<div class="row">
 			<div class="col-12 col-lg-8">
-				<div id="nav1"></div>
+				<div id="nav1" class="navigation"></div>
 				<div id="inner_content"></div>
-				<div id="nav2"></div>
+				<div id="nav2" class="navigation"></div>
 			</div>
 			<div class="col-12 col-lg-4 publi">
 				<p>

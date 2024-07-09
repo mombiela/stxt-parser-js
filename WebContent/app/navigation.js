@@ -21,8 +21,8 @@ export async function makeNavigation(isDir, hashParts) {
 	
 	if (!isDir)
 	{
-		result.prev = {url:"https://www.semantictext.info", descrip:"Previa"};
-		result.next = {url:"https://www.semantictext.info", descrip:"Siguiente"};
+		result.prev = {url:"https://www.semantictext.info", descrip:"<< Previa"};
+		result.next = {url:"https://www.semantictext.info", descrip:"Siguiente >>"};
 	}
 	
 	
