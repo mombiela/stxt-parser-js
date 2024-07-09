@@ -1,2 +1,2 @@
 cd %~dp0
-node-sass scss -o WebContent --output-style compressed
+node-sass scss -o WebContent/css --output-style compressed
