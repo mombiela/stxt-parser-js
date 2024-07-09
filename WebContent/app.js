@@ -97,7 +97,7 @@ async function buildContent(hashIni)
 		const navigation = await makeNavigation(isDir, hashParts);
 
 		// Transform page
-		transform(hashIni, node);
+		transform(hashIni, node, navigation);
 		plantuml_runonce();
 	}
 	catch(exception)

@@ -1,7 +1,7 @@
 import { mainConent } from './transform_main.js';
 import { LineSplitter } from './js/LineSplitter.js';
 
-export function transform(hash, node) 
+export function transform(hash, node, navigation) 
 {
     const content = $("#content");
 
@@ -27,6 +27,9 @@ export function transform(hash, node)
 		let child = childs[i];
 		renderChild(child, innerContent);
 	}
+	
+	// Insertamos navegación
+	insertNavigation(navigation);
 }
 
 function renderChild(child, parent)
@@ -127,5 +130,37 @@ function replaceWithEmpty(text) {
     return text.replace(/\*\*\*(.*?)\*\*\*/g, "$1");
 }
 
+/* ********** */
+/* Navegación */
+/* ********** */
 
+function insertNavigation(navigation)
+{
+	console.log("NAVIGATION: " + JSON.stringify(navigation,null,3));
+	
+	const hiloAriadna = $("#hilo_ariadna");
+	
+	const hilo = navigation.hilo_ariadna;
+	if (hilo && hilo.length>0)
+	{
+		$("#hilo_ariadna").empty();
+		for (let i = 0; i<hilo.length; i++)
+		{
+			let elem = hilo[i];
+			$("<a>").attr("href",elem.url).text(elem.descrip).appendTo(hiloAriadna);
+			if (i != hilo.length -1)
+			{
+				$("<span>").text(">").appendTo(hiloAriadna);
+			}
+		}
+	}
+	else
+	{
+		$("#hilo_ariadna").html("&nbsp;");
+	}
+	
+	
+	
+	
+}
 

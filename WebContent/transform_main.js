@@ -17,7 +17,7 @@ export const mainConent = `
 	<div class="container-xxl p-1 px-3" id="top_bar">
 		<div class="row">
 			<div class="col">
-				<span class="p-0 m-0">INDEX: DOC NAME!!</span>
+				<span class="p-0 m-0" id="hilo_ariadna">INDEX: DOC NAME!!</span>
 			</div>
 		</div>
 	</div>
