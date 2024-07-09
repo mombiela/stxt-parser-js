@@ -9,16 +9,18 @@ export async function makeNavigation(isDir, hashParts) {
 			{url:"https://www.google.es", descrip:"Google"},
 	];
 	
-	if (!isDir && hashParts.length > 1)
+	if (hashParts.length > 1)
 	{
 		let page = "";
 		for (let i = 0; i<hashParts.length-1; i++)
 		{
 			page = page + "/" + hashParts[i];
+			console.log("BUSCAR: " + page + "/index.stxt");
 		}
-		page = page + "/index.stxt";
-		console.log("INDEX = " + page);
-		
+	}
+	
+	if (!isDir)
+	{
 		result.prev = {url:"https://www.semantictext.info", descrip:"Previa"};
 		result.next = {url:"https://www.semantictext.info", descrip:"Siguiente"};
 	}
