@@ -6,7 +6,7 @@ import { Processor } from './Processor.js';
 
 export class Parser {
     constructor() {
-        this.debug = true;
+        this.debug = false;
         this.nodeProcessors = [];
         this.document = null;
         this.stack = [];
