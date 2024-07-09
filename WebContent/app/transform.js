@@ -161,35 +161,14 @@ function insertNavigation(navigation)
 	// Navegación
 	if (navigation.next || navigation.prev)
 	{
-		const navDiv = $("<div class='row avigation'>Navigation</div>").appendTo("#nav1");
-		
+		const navDiv = $("<div class='row avigation'></div>").appendTo("#nav1");
+		const prev = $("<div class='col-6'>").appendTo(navDiv);
+		const next = $("<div class='col-6 text-end'>").appendTo(navDiv);
+
+		if (navigation.next) $("<a>").attr("href", navigation.next.url).text(navigation.next.descrip).appendTo(next);
+		if (navigation.prev) $("<a>").attr("href", navigation.prev.url).text(navigation.prev.descrip).appendTo(prev);
 		
 		navDiv.clone().appendTo("#nav2");
 	}
-	
-	
-	/*
-	#if(${navigation.getNext(${doc_name})} || ${navigation.getPrevious(${doc_name})})
-	<div class="row" id="navigation">
-		<div class="col-6">
-			#if(${navigation.getPrevious(${doc_name})})
-				<a href="${navigation.getPrevious(${doc_name})}">
-					&#x25C4; Anterior
-				</a>
-			#end
-		</div>
-		
-		<div class="col-6 text-end">
-			#if(${navigation.getNext(${doc_name})})
-				<a href="${navigation.getNext(${doc_name})}">
-					Siguiente &#x25BA;
-				</a>
-			#end
-		</div>
-	</div>
-	#end
-	*/
-	
-	
 }
 
