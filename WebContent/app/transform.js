@@ -1,4 +1,4 @@
-import { mainConent } from './transform_main.js';
+import { mainConent } from './template.js';
 import { LineSplitter } from '../js/LineSplitter.js';
 
 export function transform(hash, node, navigation) 
