@@ -1,4 +1,4 @@
-export function makeNavigation(isDir, hashParts) {
+export async function makeNavigation(isDir, hashParts) {
 	console.log("ISDIR: " + isDir);
 	console.log("hashParts: " + hashParts);
 	

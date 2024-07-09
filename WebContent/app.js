@@ -94,7 +94,7 @@ async function buildContent(hashIni)
 		const node = (await parser.parse(contentFromUrl))[0];
 		
 		// Make navigation
-		const navigation = makeNavigation(isDir, hashParts);
+		const navigation = await makeNavigation(isDir, hashParts);
 
 		// Transform page
 		transform(hashIni, node);
