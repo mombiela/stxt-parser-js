@@ -19,7 +19,7 @@ Tema(www.cursos.com/tema.stxt):
 	
 	code:
 		Actress (www.example.com/actress.stxt):
-			Name: Angelina
+			***Name: Angelina***
 			Birthday: 2/21/1979
 		
 	assert:
