@@ -40,7 +40,7 @@ function renderChild(child, parent)
 	
 	if(name == "h1" || name == "title")
 	{
-		$("<h1>").text(text).appendTo(parent);
+		$("<h1 class='text-center'>").text(text).appendTo(parent);
 	}
 	else if(name == "h2")
 	{
