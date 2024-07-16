@@ -20,7 +20,7 @@ export async function makeNavigation(isDir, hashParts, parser) {
 				let indexDoc = await getUrlContent(page + "/index.stxt"); // TODO Hay que hacerlo bien, con dominio, cors si es necesario, etc
 				console.log(indexDoc);
 				const node = (await parser.parse(indexDoc))[0];
-				indexDocs[i] = node;
+				indexDocs.push(node);
 			}
 			catch (e)
 			{
@@ -51,6 +51,33 @@ export async function makeNavigation(isDir, hashParts, parser) {
 	
 	result["hilo_ariadna"] = hiloAriadna;
 
+
+	// Previous y next
+	if (!isDir && indexDocs.length>=1)
+	{
+		let lastDoc = indexDocs[indexDocs.length-1];
+		//console.log("LAST DOC: \n" + lastDoc);
+		let allDocs = [];
+		
+		let parts = lastDoc.getChildsByName("part");
+		for (let i = 0; i<parts.length; i++)
+		{
+			let temas = parts[i].getChildsByName("tema");
+			for (let j = 0; j<temas.length; j++)
+			{
+				let tema = temas[j];
+				allDocs.push(tema);
+			}
+		}
+		
+		for (let i = 0; i<allDocs.length; i++)
+		{
+			let tema = allDocs[i];
+			console.log("TEMA! = " + tema);
+		}
+				
+	}
+	
 	if (!isDir)
 	{
 		result.prev = {url:"https://www.semantictext.info", descrip:"<< Previa"};
