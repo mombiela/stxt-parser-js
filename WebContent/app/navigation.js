@@ -44,7 +44,7 @@ export async function makeNavigation(isDir, hashParts, parser) {
 		let nextElem = {};
 		last = last + hashParts[i] + "/";
 		nextElem.url = last;
-		nextElem.descrip = hashParts[i];
+		nextElem.descrip = node.getChild("title").getText();
 		hiloAriadna.push(nextElem);
 	}	
 	
