@@ -11,6 +11,21 @@ a {
 	color: #ff4b9c !important;
 }
 
+table {
+	border: 1px solid #3937a3;
+}
+
+tr, td, th {
+	border: 1px solid #3937a3;
+	padding: 0px 3px;
+}
+
+th {
+	background-color: #f0f0ff;
+	color: #3937a3;
+	text-align: center;
+}
+
 /* ******************************** */
 /* Content, main_header and top-bar */
 /* ******************************** */
