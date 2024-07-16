@@ -7,11 +7,6 @@ export async function makeNavigation(isDir, hashParts, parser) {
 	console.log("ISDIR: " + isDir);
 	console.log("hashParts: " + hashParts);
 	
-	result["hilo_ariadna"] = [
-			{url:"https://www.semantictext.info", descrip:"Otro"},
-			{url:"https://www.google.es", descrip:"Google"},
-	];
-	
 	let indexDocs = [];
 	if (hashParts.length > 1)
 	{
@@ -25,7 +20,7 @@ export async function makeNavigation(isDir, hashParts, parser) {
 				let indexDoc = await getUrlContent(page + "/index.stxt"); // TODO Hay que hacerlo bien, con dominio, cors si es necesario, etc
 				console.log(indexDoc);
 				const node = (await parser.parse(indexDoc))[0];
-				console.log(node.toString());
+				indexDocs[i] = node;
 			}
 			catch (e)
 			{
@@ -33,7 +28,28 @@ export async function makeNavigation(isDir, hashParts, parser) {
 			}
 		}
 	}
+
+	// TODO Eliminar
+	for (let i = 0; i<indexDocs.length; i++)
+	{
+		console.log(indexDocs[i].toString());
+	}	
+
+	// Hilo Ariadna
+	let hiloAriadna = [];
+	let last = "#";
+	for (let i = 0; i<indexDocs.length; i++)
+	{
+		let node = indexDocs[i];
+		let nextElem = {};
+		last = last + hashParts[i] + "/";
+		nextElem.url = last;
+		nextElem.descrip = hashParts[i];
+		hiloAriadna.push(nextElem);
+	}	
 	
+	result["hilo_ariadna"] = hiloAriadna;
+
 	if (!isDir)
 	{
 		result.prev = {url:"https://www.semantictext.info", descrip:"<< Previa"};
