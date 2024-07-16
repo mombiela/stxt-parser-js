@@ -8,10 +8,10 @@ export async function makeNavigation(isDir, hashParts, parser) {
 	console.log("hashParts: " + hashParts);
 	
 	let indexDocs = [];
-	if (hashParts.length > 1)
+	if (hashParts.length >= 1)
 	{
 		let page = "";
-		for (let i = 0; i<hashParts.length-1; i++)
+		for (let i = 0; i<hashParts.length; i++)
 		{
 			try
 			{
@@ -36,7 +36,8 @@ export async function makeNavigation(isDir, hashParts, parser) {
 	}	
 
 	// Hilo Ariadna
-	let hiloAriadna = [];
+	let hiloAriadna = [{url: "#", descrip: "Global Campus"}];
+	
 	let last = "#";
 	for (let i = 0; i<indexDocs.length; i++)
 	{
