@@ -1,5 +1,6 @@
 import { getUrlContent, getUrlContentCors } from '../js/Utils.js';
 import { STXTParser } from '../js/STXTParser.js';
+import { LineSplitter } from '../js/LineSplitter.js';
 
 export async function makeNavigation(isDir, hashParts, parser) {
 	let result = {};
@@ -56,7 +57,6 @@ export async function makeNavigation(isDir, hashParts, parser) {
 	if (!isDir && indexDocs.length>=1)
 	{
 		let lastDoc = indexDocs[indexDocs.length-1];
-		//console.log("LAST DOC: \n" + lastDoc);
 		let allDocs = [];
 		
 		let parts = lastDoc.getChildsByName("part");
@@ -70,20 +70,36 @@ export async function makeNavigation(isDir, hashParts, parser) {
 			}
 		}
 		
+		//console.log("LAST DOC: \n" + lastDoc);
+		let lastPart = hashParts[hashParts.length-1];
+		console.log("LAST PART = " + lastPart);
 		for (let i = 0; i<allDocs.length; i++)
 		{
 			let tema = allDocs[i];
-			console.log("TEMA! = " + tema);
+			let temaUrl = LineSplitter.split(tema.getText()).prefix;
+			if (temaUrl == lastPart)
+			{
+				console.log("TEMA! = " + tema + " -> " + last + lastPart);
+				
+				if (i>0)
+				{
+					tema = allDocs[i-1];
+					temaUrl = LineSplitter.split(tema.getText()).prefix;
+					let temaDesc = LineSplitter.split(tema.getText()).centralText;
+					result.prev = {url:last + temaUrl, descrip: "<< " + temaDesc};
+				}
+				if (i<allDocs.length-1)
+				{
+					tema = allDocs[i+1];
+					temaUrl = LineSplitter.split(tema.getText()).prefix;
+					let temaDesc = LineSplitter.split(tema.getText()).centralText;
+					result.next = {url:last + temaUrl, descrip: temaDesc + " >>"};
+				}
+			}
 		}
 				
 	}
-	
-	if (!isDir)
-	{
-		result.prev = {url:"https://www.semantictext.info", descrip:"<< Previa"};
-		result.next = {url:"https://www.semantictext.info", descrip:"Siguiente >>"};
-	}
-	
+
 	
 	return result;
 }
