@@ -29,11 +29,11 @@ async function ContentLoaded()
     // Escuchar los cambios en el hash de la URL
     window.addEventListener("hashchange", loadPage);
 
-    // Cargar la p�gina correcta al cargar la p�gina inicial
+    // Cargar la página correcta al cargar la página inicial
     await loadPage();
 } 
 
-// Funci�n para cargar la p�gina correcta basada en el hash
+// Funci�n para cargar la página correcta basada en el hash
 async function loadPage() 
 {
     const hash = window.location.hash || "#index";
@@ -99,6 +99,9 @@ async function buildContent(hashIni)
 		// Transform page
 		transform(hashIni, node, navigation);
 		plantuml_runonce();
+		
+		// Insertamos en fuente
+		$("#link_source_code").attr("href", stxtUrl);
 	}
 	catch(exception)
 	{

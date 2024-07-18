@@ -21,7 +21,7 @@ export const mainConent = `
 			</div>
 			<div class="col-2 text-end">
 				<span class="p-0 m-0" id="source_page">
-					<a href="" target="" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a>
+					<a id="link_source_code" href="" target="" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a>
 				</span>
 			</div>
 		</div>
