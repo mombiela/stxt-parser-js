@@ -165,8 +165,16 @@ function insertNavigation(navigation)
 		const prev = $("<div class='col-6'>").appendTo(navDiv);
 		const next = $("<div class='col-6 text-end'>").appendTo(navDiv);
 
-		if (navigation.next) $("<a>").attr("href", navigation.next.url).text(navigation.next.descrip).appendTo(next); // &#x25C4;
-		if (navigation.prev) $("<a>").attr("href", navigation.prev.url).text(navigation.prev.descrip).appendTo(prev); // &#x25BA;
+		if (navigation.prev)
+		{
+			let a = $("<a>").attr("href", navigation.prev.url).text(navigation.prev.descrip).appendTo(prev);	
+			a.html("&#x25C4; " + a.html());
+		}
+		if (navigation.next)
+		{
+		 	let a = $("<a>").attr("href", navigation.next.url).text(navigation.next.descrip).appendTo(next); 	
+			a.html(a.html() + " &#x25BA;");
+		}
 		
 		navDiv.clone().appendTo("#nav2");
 	}

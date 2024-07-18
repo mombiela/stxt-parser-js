@@ -86,14 +86,14 @@ export async function makeNavigation(isDir, hashParts, parser) {
 					tema = allDocs[i-1];
 					temaUrl = LineSplitter.split(tema.getText()).prefix;
 					let temaDesc = LineSplitter.split(tema.getText()).centralText;
-					result.prev = {url:last + temaUrl, descrip: "<< " + temaDesc};
+					result.prev = {url:last + temaUrl, descrip: temaDesc};
 				}
 				if (i<allDocs.length-1)
 				{
 					tema = allDocs[i+1];
 					temaUrl = LineSplitter.split(tema.getText()).prefix;
 					let temaDesc = LineSplitter.split(tema.getText()).centralText;
-					result.next = {url:last + temaUrl, descrip: temaDesc + " >>"};
+					result.next = {url:last + temaUrl, descrip: temaDesc};
 				}
 			}
 		}
