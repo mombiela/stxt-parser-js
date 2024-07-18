@@ -15,8 +15,7 @@ let grammar1 = `Namespace: www.cursos.com/tema.stxt
 		code: (*) TEXT
 		plantuml: (*) TEXT
 		assert: (*) TEXT
-		alert: (*) TEXT
-		html: (*) TEXT`;
+		alert: (*) TEXT`;
 		
 let grammar2 = `Namespace: www.cursos.com/index.stxt
 	Index:

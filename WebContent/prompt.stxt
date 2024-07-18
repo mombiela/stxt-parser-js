@@ -2,40 +2,40 @@ Tema(www.cursos.com/tema.stxt):
 
 	h1: Prompts de cursos
 	
-	html:
-		<h3>Procesado de portapapeles</h3>
-		<p><button onclick="processClipboardText()">Procesar Portapapeles</button></p>
-		<p>Usar después de copiar cada respuesta de cada apartado para procesar los caracteres especiales</p>
-		<script type="text/javascript">// <![CDATA[
-		        async function processClipboardText() {
-		            try {
-		                // Accede al contenido del portapapeles
-		                const text = await navigator.clipboard.readText();
-		                
-		                // Realiza las sustituciones de texto
-		                let modifiedText = text
-		                                       .replace(/¿I¿/g, '//')
-		                                       .replace(/¿N¿@@/g, '@@')
-		                                       .replace(/@@¿N¿/g, '@@')
-		                                       .replace(/¿N¿/g, '**')
-		                                       .replace(/¡x¡/g, '* ')
-		                                       .replace(/¡n¡/g, '# ')
-		                                       .replace(/¿/g, ' ')
-		                                       .replace(/@link_ini@/g, '[[')
-		                                       .replace(/@link_end@/g, ']]')
-		                                       .replace(/@@startquote@@/g, '@@startalert@@')
-		                                       .replace(/@@endquote@@/g, '@@endalert@@');
-		                
-		                // Copia el texto modificado al portapapeles
-		                await navigator.clipboard.writeText(modifiedText);
-		                
-		                console.log('Texto procesado y copiado al portapapeles:', modifiedText);
-		                alert('Texto procesado y copiado al portapapeles:');
-		            } catch (err) {
-		                console.error('Error al acceder al portapapeles:', err);
-		            }
-		        }
-		// ]]></script>
+#	html:
+#		<h3>Procesado de portapapeles</h3>
+#		<p><button onclick="processClipboardText()">Procesar Portapapeles</button></p>
+#		<p>Usar después de copiar cada respuesta de cada apartado para procesar los caracteres especiales</p>
+#		<script type="text/javascript">// <![CDATA[
+#		        async function processClipboardText() {
+#		            try {
+#		                // Accede al contenido del portapapeles
+#		                const text = await navigator.clipboard.readText();
+#		                
+#		                // Realiza las sustituciones de texto
+#		                let modifiedText = text
+#		                                       .replace(/¿I¿/g, '//')
+#		                                       .replace(/¿N¿@@/g, '@@')
+#		                                       .replace(/@@¿N¿/g, '@@')
+#		                                       .replace(/¿N¿/g, '**')
+#		                                       .replace(/¡x¡/g, '* ')
+#		                                       .replace(/¡n¡/g, '# ')
+#		                                       .replace(/¿/g, ' ')
+#		                                       .replace(/@link_ini@/g, '[[')
+#		                                       .replace(/@link_end@/g, ']]')
+#		                                       .replace(/@@startquote@@/g, '@@startalert@@')
+#		                                       .replace(/@@endquote@@/g, '@@endalert@@');
+#		                
+#		                // Copia el texto modificado al portapapeles
+#		                await navigator.clipboard.writeText(modifiedText);
+#		                
+#		                console.log('Texto procesado y copiado al portapapeles:', modifiedText);
+#		                alert('Texto procesado y copiado al portapapeles:');
+#		            } catch (err) {
+#		                console.error('Error al acceder al portapapeles:', err);
+#		            }
+#		        }
+#		// ]]></script>
 	
 	h2: Prompt temario curso
 	
