@@ -1,6 +1,7 @@
 import { getUrlContent, getUrlContentCors } from '../js/Utils.js';
 import { STXTParser } from '../js/STXTParser.js';
 import { LineSplitter } from '../js/LineSplitter.js';
+import { esDominioValido } from './utils.js';
 
 export async function makeNavigation(isDir, hashParts, parser) {
 	let result = {};
@@ -18,7 +19,16 @@ export async function makeNavigation(isDir, hashParts, parser) {
 			{
 				page = page + "/" + hashParts[i];
 				console.log("BUSCAR: " + page + "/index.stxt");
-				let indexDoc = await getUrlContent(page + "/index.stxt"); // TODO Hay que hacerlo bien, con dominio, cors si es necesario, etc
+
+				if (esDominioValido(hashParts[0]))
+				{
+					let indexDoc = await getUrlContentCors("https://" + page.substring(1) + "/index.stxt" + "?ts=" + new Date().getTime());
+				}
+				else
+				{
+					let indexDoc = await getUrlContent(page + "/index.stxt" + "?ts=" + new Date().getTime());
+				}
+				
 				console.log(indexDoc);
 				const node = (await parser.parse(indexDoc))[0];
 				indexDocs.push(node);

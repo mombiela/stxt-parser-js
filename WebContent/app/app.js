@@ -3,6 +3,7 @@ import { STXTParser } from '../js/STXTParser.js';
 import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
 import { transform } from './transform.js';
 import { makeNavigation } from './navigation.js';
+import { esDominioValido } from './utils.js';
 
 document.addEventListener("DOMContentLoaded", ContentLoaded);
 
@@ -116,13 +117,6 @@ async function buildContent(hashIni)
 function buildError(message)
 {
 	return "<h1>" + message + "</h1>"
-}
-
-function esDominioValido(dominio) 
-{
-    // Expresi�n regular para verificar nombres de dominio v�lidos
-    const regexDominio = /^([a-zA-Z0-9-_]{1,63}\.)+[a-zA-Z]{2,6}$/;
-    return regexDominio.test(dominio);
 }
 
 function esNombrePaginaValido(pagina) 
