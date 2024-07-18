@@ -16,8 +16,13 @@ export const mainConent = `
 	</div>
 	<div class="container-xxl p-1 px-3" id="top_bar">
 		<div class="row">
-			<div class="col">
+			<div class="col-10">
 				<span class="p-0 m-0" id="hilo_ariadna">INDEX: DOC NAME!!</span>
+			</div>
+			<div class="col-2 text-end">
+				<span class="p-0 m-0" id="source_page">
+					<a href="" target="" title="Source STxT">&#x25BC;&#x25BC;&#x25BC;</a>
+				</span>
 			</div>
 		</div>
 	</div>
