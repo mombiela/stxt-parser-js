@@ -41,7 +41,9 @@ export const mainConent = `
 	</div>
 	<div class="container-xxl mt-3" id="footer">
 		<div class="row">
-			<p>Footer &copy;</p>
+			<footer>
+				<p>&copy; 2024 - Este obra está bajo una <a style="text-decoration:underline" rel="license" href="https://raw.githubusercontent.com/mombiela/semantic-web-builder/master/LICENSE">Licencia MIT</a>.</p>
+			</footer>
 		</div>
 	</div>
 `;
