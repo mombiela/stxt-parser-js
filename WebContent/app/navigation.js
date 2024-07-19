@@ -20,13 +20,14 @@ export async function makeNavigation(isDir, hashParts, parser) {
 				page = page + "/" + hashParts[i];
 				console.log("BUSCAR: " + page + "/index.stxt");
 
+				let indexDoc = null;
 				if (esDominioValido(hashParts[0]))
 				{
-					let indexDoc = await getUrlContentCors("https://" + page.substring(1) + "/index.stxt" + "?ts=" + new Date().getTime());
+					indexDoc = await getUrlContentCors("https://" + page.substring(1) + "/index.stxt" + "?ts=" + new Date().getTime());
 				}
 				else
 				{
-					let indexDoc = await getUrlContent(page + "/index.stxt" + "?ts=" + new Date().getTime());
+					indexDoc = await getUrlContent(page + "/index.stxt" + "?ts=" + new Date().getTime());
 				}
 				
 				console.log(indexDoc);
