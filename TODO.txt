@@ -1,3 +1,4 @@
+* Libro STXT, rehacer de forma más senzilla, con global campus
 * Editor stxt
 	* Pantalla principal + Texto
 	* Descargar fichero resultado
