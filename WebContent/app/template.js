@@ -2,7 +2,7 @@ export const mainConent = `
 	<div id="main_header" class="container-xxl">
 		<div class="row">
 			<div class="col-12 p-0">
-				<h1 class="m-0 p-0">Insurance Programmer Learning</h3>
+				<h1 class="m-0 p-0">Tech Wizard Academy</h3>
 			</div>
 		</div>
 		<div class="row">
