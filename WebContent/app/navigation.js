@@ -41,12 +41,6 @@ export async function makeNavigation(isDir, hashParts, parser) {
 		}
 	}
 
-	// TODO Eliminar
-	for (let i = 0; i<indexDocs.length; i++)
-	{
-		console.log(indexDocs[i].toString());
-	}	
-
 	// Hilo Ariadna
 	let hiloAriadna = [{url: "#", descrip: "Global Campus"}];
 	
@@ -62,7 +56,6 @@ export async function makeNavigation(isDir, hashParts, parser) {
 	}	
 	
 	result["hilo_ariadna"] = hiloAriadna;
-
 
 	// Previous y next
 	if (!isDir && indexDocs.length>=1)
@@ -92,6 +85,10 @@ export async function makeNavigation(isDir, hashParts, parser) {
 			{
 				console.log("TEMA! = " + tema + " -> " + last + lastPart);
 				
+				if (i == 0)
+				{
+					result.prev = {url:last, descrip: "INDEX"};
+				}
 				if (i>0)
 				{
 					tema = allDocs[i-1];
@@ -107,8 +104,7 @@ export async function makeNavigation(isDir, hashParts, parser) {
 					result.next = {url:last + temaUrl, descrip: temaDesc};
 				}
 			}
-		}
-				
+		}				
 	}
 
 	
