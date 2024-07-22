@@ -1,0 +1,29 @@
+* Editor stxt
+	* Pantalla principal + Texto
+	* Descargar fichero resultado
+	* 
+* Latex formulas matemáticas
+
+* Torres: donde están los maestros
+* Itinerarios (~Grado, ~Carrera, te va dando títulos)
+	* Modulos (~Asignaturas)
+		* Lecciones (~Temas)
+		
+Ejemplos:
+
+* Torre Informática
+* Torre Telecomunicaciones
+* Torre Mecánica
+* Torre Matemáticas
+* Torre Física
+* Torre Química
+* Torre Biología
+* Torre Electricidad
+* Torre Electrónica
+* Torre Empresa
+* Torre Diseño
+* Torre Automatización y Robótica
+* Torre Materiales
+* Torre Arquitectura
+* Torre Oposiciones
+* Torre Derecho
