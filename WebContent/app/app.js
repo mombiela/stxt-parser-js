@@ -63,12 +63,27 @@ async function buildContent(hashIni)
 		
 		// Miramos partes
 		let stxtUrl = hashParts[0];
-		if (esDominioValido(stxtUrl))				stxtUrl = "https://" + stxtUrl;
-		else if (esNombrePaginaValido(stxtUrl))		stxtUrl = obtenerBaseURL() + "/" + stxtUrl;
-		else										return buildError("Page definition not valid");
+		let startIndex = 1;
+		if (esDominioValido(stxtUrl))
+		{
+			stxtUrl = "https://" + stxtUrl;	
+		}
+		else if (hashParts.length >=3 && hashParts[0]=="github")
+		{
+			stxtUrl = "https://raw.githubusercontent.com/" + hashParts[1] + "/" + hashParts[2] + "/master/";
+			startIndex = 3;
+		}
+		else if (esNombrePaginaValido(stxtUrl))
+		{
+			stxtUrl = obtenerBaseURL() + "/" + stxtUrl;	
+		}
+		else
+		{
+			return buildError("Page definition not valid");			
+		}
 		
 		// Miramos otras partes
-		for (let i = 1; i<hashParts.length; i++)
+		for (let i = startIndex; i<hashParts.length; i++)
 		{
 			if (hashParts[i].length == 0) throw new Exception();
 			stxtUrl = stxtUrl + "/" + hashParts[i]; 
