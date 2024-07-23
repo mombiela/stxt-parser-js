@@ -1,4 +1,4 @@
-import { getUrlContent, getUrlContentCors } from '../js/Utils.js';
+import { getUrlContent } from '../js/Utils.js';
 import { STXTParser } from '../js/STXTParser.js';
 import { LineSplitter } from '../js/LineSplitter.js';
 import { esDominioValido } from './utils.js';
@@ -19,18 +19,9 @@ export async function makeNavigation(isDir, hashParts, parser) {
 			{
 				page = page + "/" + hashParts[i];
 				console.log("BUSCAR: " + page + "/index.stxt");
-
-				let indexDoc = null;
-				if (esDominioValido(hashParts[0]))
-				{
-					indexDoc = await getUrlContentCors("https://" + page.substring(1) + "/index.stxt" + "?ts=" + new Date().getTime());
-				}
-				else
-				{
-					indexDoc = await getUrlContent(page + "/index.stxt" + "?ts=" + new Date().getTime());
-				}
+				let indexDoc = await getUrlContent(page + "/index.stxt" + "?ts=" + new Date().getTime());
 				
-				console.log(indexDoc);
+				//console.log(indexDoc);
 				const node = (await parser.parse(indexDoc))[0];
 				indexDocs.push(node);
 			}

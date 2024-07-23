@@ -18,18 +18,6 @@ export async function getUrlContent(url) {
     return text;
 }
 
-export async function getUrlContentCors(url) {
-    const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
-
-    const response = await fetch(proxyUrl);
-
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const text = await response.text();
-    return text;
-}
 export function uniform(name) {
     return name.trim().toLowerCase();
 }

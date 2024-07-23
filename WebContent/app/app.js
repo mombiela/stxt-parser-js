@@ -1,4 +1,4 @@
-import { getUrlContent, getUrlContentCors } from '../js/Utils.js';
+import { getUrlContent } from '../js/Utils.js';
 import { STXTParser } from '../js/STXTParser.js';
 import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
 import { transform } from './transform.js';
@@ -94,12 +94,8 @@ async function buildContent(hashIni)
 		else     	stxtUrl += ".stxt";
 		
 		// Obtenemos content
-		let contentFromUrl = "";
-		
 		console.log("URL = " + stxtUrl);
-		
-		if (esDominioValido(hashParts[0]))	contentFromUrl = await getUrlContentCors(stxtUrl + "?ts=" + new Date().getTime());
-		else 								contentFromUrl = await getUrlContent(stxtUrl + "?ts=" + new Date().getTime());
+		let contentFromUrl = await getUrlContent(stxtUrl + "?ts=" + new Date().getTime());
 		
 		// Final
 	    const namespaceRetriever = new NamespaceRetriever();
