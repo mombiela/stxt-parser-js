@@ -1,0 +1,25 @@
+{
+  "name": "aaa-parser-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/joan.costa.mombiela/stxt-parser-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/joan.costa.mombiela/stxt-parser-js/issues"
+  },
+  "homepage": "https://gitlab.com/joan.costa.mombiela/stxt-parser-js#readme",
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
