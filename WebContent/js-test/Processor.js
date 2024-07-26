@@ -1,6 +1,4 @@
-import { Processor } from '../js/stxt-parser.js';
-import { Node } from '../js/stxt-parser.js';
-
+import { Processor,Node } from '../js/stxt-parser.js';
 
 export async function testProcessor() {
     let result = "";

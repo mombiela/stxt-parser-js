@@ -1,10 +1,4 @@
-import { NamespaceRetriever } from '../js/stxt-parser.js';
-import { NamespaceRawTransformer } from '../js/stxt-parser.js';
-import { STXTParser } from '../js/stxt-parser.js';
-import { Parser } from '../js/stxt-parser.js';
-import { Node } from '../js/stxt-parser.js';
-import { ParseException } from '../js/stxt-parser.js';
-import { getUrlContent } from '../js/stxt-parser.js';
+import { getUrlContent, ParseException, Node, Parser, STXTParser, NamespaceRawTransformer, NamespaceRetriever } from '../js/stxt-parser.js';
 
 export async function TestParserSTX01Raw()
 {

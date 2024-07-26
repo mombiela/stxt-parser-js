@@ -1,6 +1,4 @@
-import { Namespace } from '../js/stxt-parser.js';
-import { NamespaceNode } from '../js/stxt-parser.js';
-import { NamespaceChild } from '../js/stxt-parser.js';
+import { Namespace,NamespaceNode,NamespaceChild } from '../js/stxt-parser.js';
 
 export async function testNamespace() {
     let result = "";
