@@ -1,4 +1,4 @@
-var MyBundle = (function (exports) {
+var STXT = (function (exports) {
   'use strict';
 
   class Constants {
