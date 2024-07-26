@@ -1,4 +1,4 @@
-import { uniform, cleanupString } from '../js/Utils.js';
+import { uniform, cleanupString, getUrlContent } from '../js/Utils.js';
 
 export async function testUtils() {
     let result = "";

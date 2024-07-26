@@ -11,7 +11,7 @@ export async function TestParserSTX01()
 	// Buscamos contents
 	let g_client = await getUrlContent("/namespaces/client.stxt");
 	let g_doc_simple = await getUrlContent("/namespaces/doc_simple.stxt");
-	let client =  await getUrlContent("/js-test/docs/client.stxt?ts=" + new Date().getTime());
+	let client =  await getUrlContent("/docs/client.stxt?ts=" + new Date().getTime());
 	console.log(client);
 	/*
 	let parser = new Parser();
