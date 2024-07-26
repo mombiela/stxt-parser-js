@@ -3,6 +3,6 @@ module.exports = {
   output: {
     file: 'dist/stxt-parser.js',
     format: 'iife',
-    name: 'MyBundle'
+    name: 'STXT'
   }
 };

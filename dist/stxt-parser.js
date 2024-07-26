@@ -11,13 +11,13 @@ var MyBundle = (function (exports) {
     static NAMESPACE = 'Namespace';
   }
 
-  class ParseException extends Error {
+  let ParseException$1 = class ParseException extends Error {
       constructor(message, line) {
           super(`Line ${line}: ${message}`);
           this.line = line;
           this.name = "ParseException";
       }
-  }
+  };
 
   const EMPTY_LINE = /^\s*$/;
   const COMMENT_LINE = /^\s*#.*$/;
@@ -71,7 +71,7 @@ var MyBundle = (function (exports) {
               if (lastNodeMultiline && level >= stackSize) break;
           }
 
-          if (spaces !== 0) throw new ParseException("Invalid number spaces", numLine);
+          if (spaces !== 0) throw new ParseException$1("Invalid number spaces", numLine);
 
           // In case of text, check if it's a comment or not to preserve empty line (depends on the comment's level)
           if (lastNodeMultiline && level < stackSize) {
@@ -125,6 +125,138 @@ var MyBundle = (function (exports) {
           if (centralText && centralText.length === 0) centralText = null;
           
           return new LineSplitter(prefix, centralText, suffix);
+      }
+  }
+
+  class NamespaceChild {
+      constructor() {
+          this.name = '';
+          this.namespace = '';
+          this.num = '';
+      }
+
+      getName() {
+          return this.name;
+      }
+
+      setName(name) {
+          this.name = name;
+      }
+
+      getNamespace() {
+          return this.namespace;
+      }
+
+      setNamespace(namespace) {
+          this.namespace = namespace;
+      }
+
+      getNum() {
+          return this.num;
+      }
+
+      setNum(num) {
+          this.num = num;
+      }
+
+      toString() {
+          let builder = `NamespaceChild [name=${this.name}, num=${this.num}`;
+          if (this.namespace) {
+              builder += `, namespace=${this.namespace}`;
+          }
+          builder += "]";
+          return builder;
+      }
+  }
+
+  class NamespaceNode {
+      constructor() {
+          this.name = '';
+          this.type = '';
+          this.childs = new Map();
+          this.values = new Set();
+      }
+
+      getValues() {
+          return this.values;
+      }
+
+      setValues(values) {
+          this.values = values;
+      }
+
+      getName() {
+          return this.name;
+      }
+
+      setName(name) {
+          this.name = name;
+      }
+
+      getChilds() {
+          return this.childs;
+      }
+
+      setChilds(childs) {
+          this.childs = childs;
+      }
+
+      setChild(name, child) {
+          this.childs.set(name, child);
+      }
+
+      getType() {
+          return this.type;
+      }
+
+      setType(type) {
+          this.type = type;
+      }
+
+      toString() {
+          return `NamespaceNode [name=${this.name}, type=${this.type}, values=${Array.from(this.values)}, childs=${Array.from(this.childs.entries()).map(([key, value]) => `${key}=${value.toString()}`)}]`;
+      }
+  }
+
+  class Namespace {
+      constructor() {
+          this.nodes = new Map();
+          this.name = '';
+      }
+
+      getNodes() {
+          return this.nodes;
+      }
+
+      getNode(name) {
+          return this.nodes.get(name);
+      }
+
+      setNode(name, node) {
+          this.nodes.set(name, node);
+      }
+
+      setNodes(nodes) {
+          this.nodes = new Map(Object.entries(nodes));
+      }
+
+      getName() {
+          return this.name;
+      }
+
+      setName(name) {
+          this.name = name;
+      }
+
+      toString() {
+          let builder = `Namespace: ${this.name}\n`;
+          for (const [nodeName, node] of this.nodes.entries()) {
+              builder += `NODE: ${node.getName()}, type: ${node.getType()} -> ${Array.from(node.getValues()).join(", ")}\n`;
+              for (const [childName, child] of node.getChilds().entries()) {
+                  builder += `\tChild: ${child.toString()}\n`;
+              }
+          }
+          return builder;
       }
   }
 
@@ -349,6 +481,167 @@ var MyBundle = (function (exports) {
       }
   }
 
+  class NamespaceRawTransformer {
+      static async transformRawNode(node) {
+          let currentNamespace = new Namespace();
+
+          // Node name
+          let nodeName = node.getName();
+
+          // Validation
+          const nodeNameSplit = LineSplitter.split(nodeName);
+          nodeName = nodeNameSplit.centralText;
+
+          if (!Constants.NAMESPACE.toLowerCase() === nodeName.toLowerCase()) {
+              throw new ParseException$1("Line not valid: " + nodeName, node.getLineCreation());
+          }
+
+          if (nodeNameSplit.suffix !== null) {
+              throw new ParseException$1("Namespace name not allowed in namespace definition: " + nodeNameSplit.suffix, node.getLineCreation());
+          }
+
+          if (nodeNameSplit.prefix !== null) {
+              throw new ParseException$1("Line not valid with prefix", node.getLineCreation());
+          }
+
+          // Create namespace
+          this.validateNamespaceFormat(node.getValue(), node.getLineCreation());
+          currentNamespace.setName(node.getValue());
+
+          for (const n of node.getChilds()) {
+              await this.updateNamespace(n, currentNamespace);
+          }
+
+          // Return namespace
+          return currentNamespace;
+      }
+
+      // ----
+      // Node
+      // ----
+      
+      static async updateNamespace(node, currentNamespace) {
+          const name = node.getName();
+          let type = null;
+
+          if (node.getValue() !== null) {
+              const nodeParts = LineSplitter.split(node.getValue());
+              type = nodeParts.centralText;
+          }
+
+          // Nodo normal
+          let nsNode = currentNamespace.getNode(name);
+          if (!nsNode) 
+  		{
+              nsNode = new NamespaceNode();
+              nsNode.setName(name);
+              nsNode.setType(type);
+              currentNamespace.setNode(name, nsNode);
+              if (type !== null) this.validateType(type, node);
+              if (type === null) nsNode.setType(NamespaceType.getDefault());
+
+              if (node.getValues().length > 0) {
+                  const allowedValues = new Set();
+                  for (const value of node.getValues()) {
+                      allowedValues.add(value.getValue().trim());
+                  }
+
+                  if (NamespaceType.isValuesType(type)) {
+                      nsNode.setValues(allowedValues);
+                  } else {
+                      throw new ParseException$1("Type not allow values: " + type, node.getLineCreation());
+                  }
+              }
+          } else {
+              if (type !== null) {
+                  throw new ParseException$1("Type should be defined the first time only", node.getLineCreation());
+              }
+          }
+
+          const childs = node.getChilds();
+
+          if (childs !== null) {
+              if (NamespaceType.isMultiline(type) && childs.length > 0) {
+                  throw new ParseException$1("Type " + type + " not allows childs", childs[0].getLineCreation());
+              }
+
+              for (const child of childs) {
+                  const childName = child.getName();
+                  if (childName !== "") {
+                      // New child
+                      const nsChild = new NamespaceChild();
+                      nsNode.getChilds().set(childName, nsChild);
+
+                      // Add name
+                      nsChild.setName(childName);
+
+                      // Add count
+                      const value = child.getValue();
+
+                      if (value !== null) {
+                          // VALUE/PATTERN
+                          const split = LineSplitter.split(value);
+                          const num = split.prefix;
+                          if (num === null) throw new ParseException$1("Count is required", child.getLineCreation());
+                          if (!NamespaceType.isValidCount(num)) throw new ParseException$1("Count is not valid: " + num, child.getLineCreation());
+                          const namespace = split.suffix;
+                          nsChild.setNum(num !== null ? num : "*");
+                          nsChild.setNamespace(namespace);
+                          if (namespace !== null) {
+                              if (!isValidNamespace(namespace)) {
+                                  throw new ParseException$1("Namespace not valid: " + namespace, child.getLineCreation());
+                              }
+
+                              if (split.centralText !== null) {
+                                  throw new ParseException$1("Namespace not allow type: " + namespace, child.getLineCreation());
+                              }
+                          }
+                      }
+
+                      // process child (only if not contains namespace!)
+                      if (nsChild.getNamespace() === null) {
+                          await this.updateNamespace(child, currentNamespace);
+                      }
+                  }
+              }
+          }
+      }
+
+      // -------------------
+      // M�todos utilitarios
+      // -------------------
+
+      static validateNamespaceFormat(namespace, lineNumber) {
+          if (!isValidNamespace(namespace)) {
+              throw new ParseException$1("Namespace not valid: " + namespace, lineNumber);
+          }
+      }
+
+      static validateType(type, node) {
+          if (!isValidType(type)) {
+              throw new ParseException$1("Type not valid: " + type, node.getLineCreation());
+          }
+      }
+  }
+
+  class Processor {
+      async processNodeOnCreation(node) {
+          throw new ParseException$1("Method 'processNodeOnCreation' must be implemented.");
+      }
+
+      async processNodeOnCompletion(node) {
+          throw new ParseException$1("Method 'processNodeOnCompletion' must be implemented.");
+      }
+
+      async processBeforeAdd(parent, child) {
+          throw new ParseException$1("Method 'processBeforeAdd' must be implemented.");
+      }
+
+      async processAfterAdd(parent, child) {
+          throw new ParseException$1("Method 'processAfterAdd' must be implemented.");
+      }
+  }
+
   class Parser {
       constructor() {
           this.debug = false;
@@ -402,7 +695,7 @@ var MyBundle = (function (exports) {
           }
 
           if (lineIndent.indentLevel > this.currentLevel + 1) 
-              throw new ParseException("Level of indent incorrect: " + lineIndent.indentLevel, this.lineNumber);
+              throw new ParseException$1("Level of indent incorrect: " + lineIndent.indentLevel, this.lineNumber);
           
           this.currentLevel = lineIndent.indentLevel;
           const node = await this.createNode(lineIndent);
@@ -449,7 +742,7 @@ var MyBundle = (function (exports) {
           let value = null;
           
           const i = line.indexOf(':');
-          if (i === -1) throw new ParseException("Line not valid: " + line, this.lineNumber);
+          if (i === -1) throw new ParseException$1("Line not valid: " + line, this.lineNumber);
 
           name = line.substring(0, i).trim();
           value = line.substring(i + 1);
@@ -504,8 +797,95 @@ var MyBundle = (function (exports) {
       }
   }
 
+  async function getUrlContent(url) {
+      const headers = new Headers({
+          "User-Agent": "Mozilla/5.0",
+          "Accept-Language": "en-US,en;q=0.5",
+          "Accept": "text/html"
+      });
+
+      const response = await fetch(url, {
+          method: 'GET',
+          headers: headers
+      });
+
+      if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const text = await response.text();
+      return text;
+  }
+
+  function uniform(name) {
+      return name.trim().toLowerCase();
+  }
+
   function cleanupString(input) {
       return input.replace(/[\r\n\t]+|\s+/g, '');
+  }
+
+  class NamespaceRetriever {
+      constructor(allowInternet = false) {
+          this.CACHE = new Map();
+          this.allowInternet = allowInternet;
+      }
+
+      addGrammarDefinition(content, expected = null) {
+          return new Promise(async (resolve, reject) => {
+              try {
+                  // Parse raw Content
+                  const parser = new Parser();
+                  const namespacesNodes = await parser.parse(content);
+
+                  // Get result
+                  const namespaces = [];
+                  for (const n of namespacesNodes) {
+                      namespaces.push(await NamespaceRawTransformer.transformRawNode(n));
+                  }
+
+                  if (expected !== null && (namespaces.length !== 1 || namespaces[0].getName() !== expected)) {
+                      reject(new ParseException(`Namespace is ${namespaces[0].getName()}, expected: ${expected}`, 0));
+                  }
+
+                  // Add result
+                  for (const ns of namespaces) {
+                      const name = ns.getName();
+                      if (this.CACHE.has(name)) {
+                          reject(new ParseException(`Namespace already exist: ${name}`, 0));
+                      }
+                      this.CACHE.set(name, ns);
+                  }
+                  resolve();
+              } catch (error) {
+                  reject(error);
+              }
+          });
+      }
+
+      getAllNamespaces() {
+          return new Set(this.CACHE.keys());
+      }
+
+      async getNameSpace(namespace) {
+          if (this.CACHE.has(namespace)) {
+              return this.CACHE.get(namespace);
+          }
+
+          // Search on the internet
+          if (this.allowInternet) {
+              try {
+                  const uri = new URL(`https://${namespace}`);
+                  const fileContent = await getUrlContent(uri);
+                  await this.addGrammarDefinition(fileContent, namespace);
+                  return this.CACHE.get(namespace);
+              } catch (error) {
+                  throw new Error(`Error retrieving namespace: ${error.message}`);
+              }
+          }
+
+          return this.CACHE.get(namespace);
+      }
   }
 
   const P_BOOLEAN = /^(true|false)$/;
@@ -542,7 +922,7 @@ var MyBundle = (function (exports) {
           if (NamespaceType.TIMESTAMP === nodeType) return this.validateTimestamp(n);
           if (NamespaceType.ENUM === nodeType) return this.validateEnum(n, nsNode.getValues());
           if (NamespaceType.REGEX === nodeType) return this.validateRegex(n, nsNode.getValues());
-          throw new ParseException("Node type not supported: " + nodeType, n.getLineCreation());
+          throw new ParseException$1("Node type not supported: " + nodeType, n.getLineCreation());
       }
 
       static async validateCount(nsNode, node) {
@@ -563,27 +943,27 @@ var MyBundle = (function (exports) {
           if (count == "*") return;
           else if (count == "?") {
   			if (num > 1)
-              	throw new ParseException(`Node '${node.getName()}' can have only 1 child of name '${chNode.getName()}' and have ${num}`, node.getLineCreation());
+              	throw new ParseException$1(`Node '${node.getName()}' can have only 1 child of name '${chNode.getName()}' and have ${num}`, node.getLineCreation());
           }
           else if (count == "+") {
   			if (num == 0)
-              	throw new ParseException(`Node '${node.getName()}' should have at least 1 child of name '${chNode.getName()}'`, node.getLineCreation());
+              	throw new ParseException$1(`Node '${node.getName()}' should have at least 1 child of name '${chNode.getName()}'`, node.getLineCreation());
           }
           else if (count.endsWith("+")) {
               const expectedNum = parseInt(count.slice(0, -1), 10);
               if (num < expectedNum) {
-                  throw new ParseException(`Node '${node.getName()}' should have at least ${expectedNum} childs of name '${chNode.getName()}', and have ${num}`, node.getLineCreation());
+                  throw new ParseException$1(`Node '${node.getName()}' should have at least ${expectedNum} childs of name '${chNode.getName()}', and have ${num}`, node.getLineCreation());
               }
           }
           else if (count.endsWith("-")) {
               const expectedNum = parseInt(count.slice(0, -1), 10);
               if (num > expectedNum) {
-                  throw new ParseException(`Node '${node.getName()}' should have maximum of ${expectedNum} childs of name '${chNode.getName()}', and have ${num}`, node.getLineCreation());
+                  throw new ParseException$1(`Node '${node.getName()}' should have maximum of ${expectedNum} childs of name '${chNode.getName()}', and have ${num}`, node.getLineCreation());
               }
           } else {
               const expectedNum = parseInt(count, 10);
               if (expectedNum !== num) {
-                  throw new ParseException(`Node '${node.getName()}' should have ${expectedNum} of child of name '${chNode.getName()}', and have ${num}`, node.getLineCreation());
+                  throw new ParseException$1(`Node '${node.getName()}' should have ${expectedNum} of child of name '${chNode.getName()}', and have ${num}`, node.getLineCreation());
               }
           }
       }
@@ -622,7 +1002,7 @@ var MyBundle = (function (exports) {
 
       static validateEmpty(n) {
           if (n.getValue() !== null || (n.getValues() !== null && n.getValues().length > 0)) {
-              throw new ParseException(`Node '${n.getName()}' has to be empty`, n.getLineCreation());
+              throw new ParseException$1(`Node '${n.getName()}' has to be empty`, n.getLineCreation());
           }
       }
       
@@ -630,14 +1010,14 @@ var MyBundle = (function (exports) {
           try {
               atob(cleanupString(n.getText()));
           } catch (e) {
-              throw new ParseException(`Node '${n.getName()}' Invalid Base64`, n.getLineCreation());
+              throw new ParseException$1(`Node '${n.getName()}' Invalid Base64`, n.getLineCreation());
           }
       }
       
       static validateHexadecimal(n) {
           const hex = cleanupString(n.getText());
           const m = P_HEXADECIMAL.exec(hex);
-          if (!m) throw new ParseException(`Node '${n.getName()}' Invalid hexadecimal`, n.getLineCreation());
+          if (!m) throw new ParseException$1(`Node '${n.getName()}' Invalid hexadecimal`, n.getLineCreation());
       }
       
       static validateText(n) {
@@ -646,7 +1026,7 @@ var MyBundle = (function (exports) {
       
       static validateEnum(n, values) {
           if (!values.has(n.getValue())) {
-              throw new ParseException(`Node '${n.getName()}' has value not allowed: ${n.getValue()}`, n.getLineCreation());
+              throw new ParseException$1(`Node '${n.getName()}' has value not allowed: ${n.getValue()}`, n.getLineCreation());
           }
       }
       
@@ -655,12 +1035,12 @@ var MyBundle = (function (exports) {
               const p = new RegExp(value);
               if (p.test(n.getValue())) return;
           }
-          throw new ParseException(`Node '${n.getName()}' has value not allowed: ${n.getValue()}`, n.getLineCreation());
+          throw new ParseException$1(`Node '${n.getName()}' has value not allowed: ${n.getValue()}`, n.getLineCreation());
       }
       
       static validateUrl(n) {
           if (!this.isValidURL(n.getValue())) {
-              throw new ParseException(`Invalid URL: ${n.getValue()}`, n.getLineCreation());
+              throw new ParseException$1(`Invalid URL: ${n.getValue()}`, n.getLineCreation());
           }
       }
 
@@ -675,7 +1055,45 @@ var MyBundle = (function (exports) {
 
       static validateValueWithPattern(n, pattern, error) {
           const m = pattern.exec(n.getValue());
-          if (!m) throw new ParseException(`${n.getName()}: ${error} (${n.getValue()})`, n.getLineCreation());
+          if (!m) throw new ParseException$1(`${n.getName()}: ${error} (${n.getValue()})`, n.getLineCreation());
+      }
+  }
+
+  class RawCustomProcessor extends Processor {
+      constructor() {
+          super();
+          this.multilineNodes = new Set();
+          this.allowedNames = new Set();
+      }
+
+      setMultilineNodes(multilineNodes) {
+          this.multilineNodes = multilineNodes;
+      }
+
+      setAllowedNames(allowedNames) {
+          this.allowedNames = allowedNames;
+      }
+
+      async processNodeOnCreation(node) {
+          if (this.multilineNodes && this.multilineNodes.has(node.getName())) {
+              node.setMultiline(true);
+          }
+
+          if (this.allowedNames && !this.allowedNames.has(node.getName())) {
+              throw new ParseException$1("Node name not allowed: " + node.getName(), node.getLineCreation());
+          }
+      }
+
+      async processNodeOnCompletion(node) {
+          // No operation
+      }
+
+      async processBeforeAdd(parent, child) {
+          // No operation
+      }
+
+      async processAfterAdd(parent, child) {
+          // No operation
       }
   }
 
@@ -720,7 +1138,7 @@ var MyBundle = (function (exports) {
           // Check child name exist
           const nsChild = nsNodeParent.getChilds().get(child.getName());
           if (!nsChild) {
-              throw new ParseException("Name not valid: " + child.getName(), child.getLineCreation());
+              throw new ParseException$1("Name not valid: " + child.getName(), child.getLineCreation());
           }
 
           // Obtenemos el namespace del child
@@ -731,13 +1149,13 @@ var MyBundle = (function (exports) {
           // Buscamos namespace
           const namespaceChild = await this.namespaceRetriever.getNameSpace(namespaceChildString);
           if (!namespaceChild) {
-              throw new ParseException("Not found namespace " + namespaceChildString, child.getLineCreation());
+              throw new ParseException$1("Not found namespace " + namespaceChildString, child.getLineCreation());
           }
 
           // Buscamos definici�n de nodo
           const childNode = namespaceChild.getNode(child.getName());
           if (!childNode) {
-              throw new ParseException("Not found " + child.getName() + " in namespace " + namespaceChildString, child.getLineCreation());
+              throw new ParseException$1("Not found " + child.getName() + " in namespace " + namespaceChildString, child.getLineCreation());
           }
 
           // Insertamos seg�n tipo
@@ -760,19 +1178,19 @@ var MyBundle = (function (exports) {
 
           // Validate prefix
           if (prefix !== null) {
-              throw new ParseException("Prefix not allowed in node name: " + prefix, node.getLineCreation());
+              throw new ParseException$1("Prefix not allowed in node name: " + prefix, node.getLineCreation());
           }
 
           // Get namespace
           const ns = await this.namespaceRetriever.getNameSpace(namespace);
           if (!ns) {
-              throw new ParseException("Namespace unknown: " + namespace, node.getLineCreation());
+              throw new ParseException$1("Namespace unknown: " + namespace, node.getLineCreation());
           }
 
           // Check exist name
           const nsNode = ns.getNode(name);
           if (!nsNode) {
-              throw new ParseException("Name " + name + " not found in namespace " + namespace, node.getLineCreation());
+              throw new ParseException$1("Name " + name + " not found in namespace " + namespace, node.getLineCreation());
           }
 
           // Cambiamos nombre
@@ -787,7 +1205,7 @@ var MyBundle = (function (exports) {
           if (node.getValues() !== null) {
               for (const nl of node.getValues()) {
                   if (nl.isExplicit()) {
-                      throw new ParseException("No allowed explicit multilines in NS documents", nl.getLineCreation());
+                      throw new ParseException$1("No allowed explicit multilines in NS documents", nl.getLineCreation());
                   }
               }
           }
@@ -801,7 +1219,33 @@ var MyBundle = (function (exports) {
       }
   }
 
+  exports.Constants = Constants;
+  exports.LineIndent = LineIndent;
+  exports.LineSplitter = LineSplitter;
+  exports.Namespace = Namespace;
+  exports.NamespaceChild = NamespaceChild;
+  exports.NamespaceNode = NamespaceNode;
+  exports.NamespaceRawTransformer = NamespaceRawTransformer;
+  exports.NamespaceRetriever = NamespaceRetriever;
+  exports.NamespaceType = NamespaceType;
+  exports.NamespaceValidator = NamespaceValidator;
+  exports.Node = Node;
+  exports.NodeLine = NodeLine;
+  exports.ParseException = ParseException$1;
+  exports.Parser = Parser;
+  exports.Processor = Processor;
+  exports.RawCustomProcessor = RawCustomProcessor;
   exports.STXTParser = STXTParser;
+  exports.STXTProcessor = STXTProcessor;
+  exports.cleanupString = cleanupString;
+  exports.getDefault = getDefault;
+  exports.getUrlContent = getUrlContent;
+  exports.isMultiline = isMultiline;
+  exports.isValidCount = isValidCount;
+  exports.isValidNamespace = isValidNamespace;
+  exports.isValidType = isValidType;
+  exports.isValuesType = isValuesType;
+  exports.uniform = uniform;
 
   return exports;
 
