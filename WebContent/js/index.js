@@ -14,7 +14,7 @@ export * from './ParseException.js';
 export * from './Parser.js';
 export * from './Processor.js';
 export * from './RawCustomProcessor.js';
-export * from './STXTParser.js';
+import {STXTParser} from './STXTParser.js';
 export * from './STXTProcessor.js';
 export * from './Utils.js';
 
