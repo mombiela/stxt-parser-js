@@ -1,4 +1,4 @@
-import { Constants } from '../js/Constants.js';
+import { Constants } from '../js/stxt-parser.js';
 
 export async function testConstants()
 {

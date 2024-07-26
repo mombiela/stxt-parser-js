@@ -1,4 +1,4 @@
-import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
+import { NamespaceRetriever } from '../js/stxt-parser.js';
 
 export async function testNamespaceRetriever() {
     let result = "";

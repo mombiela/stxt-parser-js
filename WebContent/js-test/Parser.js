@@ -1,5 +1,5 @@
-import { Parser } from '../js/Parser.js';
-import { Processor } from '../js/Processor.js';
+import { Parser } from '../js/stxt-parser.js';
+import { Processor } from '../js/stxt-parser.js';
 
 export async function testParser() {
     let result = "";

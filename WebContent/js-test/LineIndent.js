@@ -1,4 +1,4 @@
-import { LineIndent } from '../js/LineIndent.js';
+import { LineIndent } from '../js/stxt-parser.js';
 
 export async function testLineIndent() {
     let result = "";

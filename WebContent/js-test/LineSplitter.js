@@ -1,4 +1,4 @@
-import { LineSplitter } from '../js/LineSplitter.js';
+import { LineSplitter } from '../js/stxt-parser.js';
 
 export async function testLineSplitter() {
     let result = "";

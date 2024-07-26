@@ -1,4 +1,4 @@
-import { isValidType, isMultiline, isValuesType, isValidNamespace, isValidCount, getDefault} from '../js/NamespaceType.js';
+import { isValidType, isMultiline, isValuesType, isValidNamespace, isValidCount, getDefault} from '../js/stxt-parser.js';
 
 export async function testNamespaceType() {
     let result = "";

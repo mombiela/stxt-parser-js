@@ -1,5 +1,5 @@
-import { RawCustomProcessor } from '../js/RawCustomProcessor.js';
-import { Node } from '../js/Node.js';
+import { RawCustomProcessor } from '../js/stxt-parser.js';
+import { Node } from '../js/stxt-parser.js';
 
 export async function testRawCustomProcessor() {
     let result = "";

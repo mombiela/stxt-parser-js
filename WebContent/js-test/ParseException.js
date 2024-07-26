@@ -1,4 +1,4 @@
-import { ParseException } from '../js/ParseException.js';
+import { ParseException } from '../js/stxt-parser.js';
 
 export async function testParseException() {
     let result = "";

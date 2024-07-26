@@ -1,5 +1,5 @@
-import { Processor } from '../js/Processor.js';
-import { Node } from '../js/Node.js';
+import { Processor } from '../js/stxt-parser.js';
+import { Node } from '../js/stxt-parser.js';
 
 
 export async function testProcessor() {

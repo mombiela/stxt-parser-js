@@ -1,5 +1,5 @@
-import { STXTParser } from '../js/STXTParser.js';
-import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
+import { STXTParser } from '../js/stxt-parser.js';
+import { NamespaceRetriever } from '../js/stxt-parser.js';
 
 export async function testSTXTParser() {
     let result = "";

@@ -1,6 +1,6 @@
-import { NamespaceValidator } from '../js/NamespaceValidator.js';
-import { NamespaceNode } from '../js/NamespaceNode.js';
-import { Node } from '../js/Node.js';
+import { NamespaceValidator } from '../js/stxt-parser.js';
+import { NamespaceNode } from '../js/stxt-parser.js';
+import { Node } from '../js/stxt-parser.js';
 
 export async function testNamespaceValidator() {
     let result = "";

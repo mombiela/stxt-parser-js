@@ -1,10 +1,10 @@
-import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
-import { NamespaceRawTransformer } from '../js/NamespaceRawTransformer.js';
-import { STXTParser } from '../js/STXTParser.js';
-import { Parser } from '../js/Parser.js';
-import { Node } from '../js/Node.js';
-import { ParseException } from '../js/ParseException.js';
-import { getUrlContent } from '../js/Utils.js';
+import { NamespaceRetriever } from '../js/stxt-parser.js';
+import { NamespaceRawTransformer } from '../js/stxt-parser.js';
+import { STXTParser } from '../js/stxt-parser.js';
+import { Parser } from '../js/stxt-parser.js';
+import { Node } from '../js/stxt-parser.js';
+import { ParseException } from '../js/stxt-parser.js';
+import { getUrlContent } from '../js/stxt-parser.js';
 
 export async function TestParserSTX01Raw()
 {

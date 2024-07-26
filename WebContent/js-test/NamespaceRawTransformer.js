@@ -1,5 +1,5 @@
-import { NamespaceRawTransformer } from '../js/NamespaceRawTransformer.js';
-import { Node } from '../js/Node.js';
+import { NamespaceRawTransformer } from '../js/stxt-parser.js';
+import { Node } from '../js/stxt-parser.js';
 
 export async function testNamespaceRawTransformer() {
     let result = "";

@@ -1,6 +1,6 @@
-import { STXTProcessor } from '../js/STXTProcessor.js';
-import { NamespaceRetriever } from '../js/NamespaceRetriever.js';
-import { Node } from '../js/Node.js';
+import { STXTProcessor } from '../js/stxt-parser.js';
+import { NamespaceRetriever } from '../js/stxt-parser.js';
+import { Node } from '../js/stxt-parser.js';
 
 export async function testSTXTProcessor() {
     let result = "";

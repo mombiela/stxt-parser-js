@@ -1,4 +1,4 @@
-import { NodeLine } from '../js/NodeLine.js';
+import { NodeLine } from '../js/stxt-parser.js';
 
 export async function testNodeLine() {
     let result = "";
