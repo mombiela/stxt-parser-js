@@ -1,4 +1,5 @@
 import { NodeLine } from './NodeLine.js';
+import { LineSplitter } from './LineSplitter.js';
 
 export class Node {
     constructor(line, level, name, value) {
@@ -72,6 +73,18 @@ export class Node {
 
         return result.replace(/(\s*\r?\n)+$/, "");
     }
+    
+    getTextPrefix() {
+		return LineSplitter.split(this.getText()).prefix;
+	}
+	
+    getTextSufix() {
+		return LineSplitter.split(this.getText()).suffix;
+	}
+	
+    getTextCentral() {
+		return LineSplitter.split(this.getText()).centralText;
+	}
 
     getChildsByName(cname) {
         return this.childs.filter(child => child.getName() === cname);

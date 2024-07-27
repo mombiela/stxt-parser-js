@@ -432,6 +432,18 @@ class Node {
 
         return result.replace(/(\s*\r?\n)+$/, "");
     }
+    
+    getTextPrefix() {
+		return LineSplitter.split(this.getText()).prefix;
+	}
+	
+    getTextSufix() {
+		return LineSplitter.split(this.getText()).suffix;
+	}
+	
+    getTextCentral() {
+		return LineSplitter.split(this.getText()).centralText;
+	}
 
     getChildsByName(cname) {
         return this.childs.filter(child => child.getName() === cname);
