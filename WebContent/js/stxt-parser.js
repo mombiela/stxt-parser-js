@@ -1227,4 +1227,4 @@ class STXTParser extends Parser {
     }
 }
 
-export { Constants, LineIndent, LineSplitter, Namespace, NamespaceChild, NamespaceNode, NamespaceRawTransformer, NamespaceRetriever, NamespaceType, NamespaceValidator, Node, NodeLine, ParseException$1 as ParseException, Parser, Processor, RawCustomProcessor, STXTParser, STXTProcessor, cleanupString, getDefault, getUrlContent, isMultiline, isValidCount, isValidNamespace, isValidType, isValuesType, uniform };
+export { LineSplitter, NamespaceRetriever, Node, ParseException$1 as ParseException, Parser, Processor, RawCustomProcessor, STXTParser, STXTProcessor, cleanupString, getUrlContent, uniform };
