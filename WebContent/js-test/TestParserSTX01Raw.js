@@ -3,9 +3,10 @@ import { getUrlContent, ParseException, Node, Parser, STXTParser, NamespaceRawTr
 export async function TestParserSTX01Raw()
 {
 	// Buscamos contents
-	let g_client = await getUrlContent("/namespaces/client.stxt");
-	let g_doc_simple = await getUrlContent("/namespaces/doc_simple.stxt");
-	let client_raw =  await getUrlContent("/docs/client_raw.stxt?ts=" + new Date().getTime());
+	let ts = "?ts=" + new Date().getTime();
+	let g_client = await getUrlContent("/namespaces/client.stxt" + ts);
+	let g_doc_simple = await getUrlContent("/namespaces/doc_simple.stxt" + ts);
+	let client_raw =  await getUrlContent("/docs/client_raw.stxt" + ts);
 	console.log(client_raw);
 	/*
 	let parser = new Parser();
